@@ -1,0 +1,11 @@
+﻿Installing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Installing service Print_WindowsService...
+Service Print_WindowsService has been successfully installed.
+Creating EventLog source Print_WindowsService in log Application...
+Committing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog

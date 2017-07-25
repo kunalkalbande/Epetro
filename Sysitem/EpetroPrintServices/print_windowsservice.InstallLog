@@ -1,0 +1,83 @@
+﻿Uninstalling assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Removing EventLog source Print_WindowsService.
+Service Print_WindowsService is being removed from the system...
+Service Print_WindowsService was successfully removed from the system.
+Uninstalling assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Removing EventLog source Print_WindowsService.
+Service Print_WindowsService is being removed from the system...
+Service Print_WindowsService was successfully removed from the system.
+Uninstalling assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Removing EventLog source Print_WindowsService.
+Service Print_WindowsService is being removed from the system...
+Service Print_WindowsService was successfully removed from the system.
+Uninstalling assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Removing EventLog source Print_WindowsService.
+Warning: The source Print_WindowsService is not registered on the local machine.
+Service Print_WindowsService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Installing service Print_WindowsService...
+Service Print_WindowsService has been successfully installed.
+Creating EventLog source Print_WindowsService in log Application...
+Committing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Installing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Installing service Print_WindowsService...
+Service Print_WindowsService has been successfully installed.
+Creating EventLog source Print_WindowsService in log Application...
+Committing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Uninstalling assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Removing EventLog source Print_WindowsService.
+Attempt to stop service Print_WindowsService.
+Service Print_WindowsService is being removed from the system...
+Service Print_WindowsService was successfully removed from the system.
+Installing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Installing service Print_WindowsService...
+Service Print_WindowsService has been successfully installed.
+Creating EventLog source Print_WindowsService in log Application...
+Committing assembly 'c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\epetroprintservices\print_windowsservice.InstallLog
+Installing assembly 'c:\inetpub\wwwroot\epetro\sysitem\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\sysitem\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\sysitem\epetroprintservices\print_windowsservice.InstallLog
+Installing service Print_WindowsService...
+Service Print_WindowsService has been successfully installed.
+Creating EventLog source Print_WindowsService in log Application...
+Committing assembly 'c:\inetpub\wwwroot\epetro\sysitem\epetroprintservices\print_windowsservice.exe'.
+Affected parameters are:
+   assemblypath = c:\inetpub\wwwroot\epetro\sysitem\epetroprintservices\print_windowsservice.exe
+   logfile = c:\inetpub\wwwroot\epetro\sysitem\epetroprintservices\print_windowsservice.InstallLog

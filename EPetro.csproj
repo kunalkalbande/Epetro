@@ -1,0 +1,1481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFA0CCD1-F4DD-4168-AD1A-1DA55FDEFBE1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>EPetro</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EPetro</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySecurity">
+      <Name>MySecurity</Name>
+      <HintPath>D:\ePetro\MySecurity\MySecurity\bin\Debug\MySecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\EPetro.dll" />
+    <Content Include="bin\EPetro.pdb" />
+    <Content Include="HeaderFooter\CompanyLogo\large size.jpg" />
+    <Content Include="HeaderFooter\CompanyLogo\largesize.gif" />
+    <Content Include="HeaderFooter\CompanyLogo\Logo.gif" />
+    <Content Include="HeaderFooter\CompanyLogo\logo1.jpg" />
+    <Content Include="HeaderFooter\CompanyLogo\small size.gif" />
+    <Content Include="HeaderFooter\DTPicker\agenda.js" />
+    <Content Include="HeaderFooter\DTPicker\contrast.css" />
+    <Content Include="HeaderFooter\DTPicker\contrast.js" />
+    <Content Include="HeaderFooter\DTPicker\ipopeng.htm" />
+    <Content Include="HeaderFooter\DTPicker\plugins.js" />
+    <Content Include="HeaderFooter\DTPicker\StyleSheet.css" />
+    <Content Include="HeaderFooter\Footer.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="HeaderFooter\Header.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="HeaderFooter\Header1.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="HeaderFooter\images\blank.gif" />
+    <Content Include="HeaderFooter\images\button.gif" />
+    <Content Include="HeaderFooter\images\button.jpg" />
+    <Content Include="HeaderFooter\images\Header.swf" />
+    <Content Include="HeaderFooter\images\intro.swf" />
+    <Content Include="HeaderFooter\images\large size.jpg" />
+    <Content Include="HeaderFooter\images\largesize.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_01.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_03.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_09.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_10.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_12.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_15.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_19.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_21.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_23.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_26.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_28.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_30.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_31.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_33.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_35.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_36.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_37.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_38.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_40.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_42.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_44.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_46.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_48.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_53.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_56.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_58.gif" />
+    <Content Include="HeaderFooter\images\Login-Page_61.gif" />
+    <Content Include="HeaderFooter\images\logo.gif" />
+    <Content Include="HeaderFooter\images\logo.jpg" />
+    <Content Include="HeaderFooter\images\Logo1.gif" />
+    <Content Include="HeaderFooter\images\logo1.jpg" />
+    <Content Include="HeaderFooter\images\Logout.jpg" />
+    <Content Include="HeaderFooter\images\medium size.jpg" />
+    <Content Include="HeaderFooter\images\menu.htm" />
+    <Content Include="HeaderFooter\images\Menu_02.gif" />
+    <Content Include="HeaderFooter\images\Menu_03.gif" />
+    <Content Include="HeaderFooter\images\Menu_04.gif" />
+    <Content Include="HeaderFooter\images\Menu_05.gif" />
+    <Content Include="HeaderFooter\images\Menu_06.gif" />
+    <Content Include="HeaderFooter\images\Menu_07.gif" />
+    <Content Include="HeaderFooter\images\Menu_07_02.gif" />
+    <Content Include="HeaderFooter\images\Menu_08.gif" />
+    <Content Include="HeaderFooter\images\Menu_09.gif" />
+    <Content Include="HeaderFooter\images\Menu_09_02.gif" />
+    <Content Include="HeaderFooter\images\Menu_10.gif" />
+    <Content Include="HeaderFooter\images\Menu_11.gif" />
+    <Content Include="HeaderFooter\images\Menu_12.gif" />
+    <Content Include="HeaderFooter\images\Menu_13.gif" />
+    <Content Include="HeaderFooter\images\Menu_14.gif" />
+    <Content Include="HeaderFooter\images\Menu_15.gif" />
+    <Content Include="HeaderFooter\images\Menu_16.gif" />
+    <Content Include="HeaderFooter\images\Menu_22.gif" />
+    <Content Include="HeaderFooter\images\Menu_23.gif" />
+    <Content Include="HeaderFooter\images\server.jpg" />
+    <Content Include="HeaderFooter\images\small size.gif" />
+    <Content Include="HeaderFooter\images\small size.jpg" />
+    <Content Include="HeaderFooter\images\spacer.gif" />
+    <Content Include="HeaderFooter\images\stm31.js" />
+    <Content Include="HeaderFooter\images\stop.jpg" />
+    <Content Include="LoginHome\HomePage.aspx" />
+    <Content Include="LoginHome\Login.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Accounts\cashbill.aspx" />
+    <Content Include="Module\Accounts\Ledger.aspx" />
+    <Content Include="Module\Accounts\Payment.aspx" />
+    <Content Include="Module\Accounts\Taxentry_Master.aspx" />
+    <Content Include="Module\Accounts\voucher.aspx" />
+    <Content Include="Module\Admin\BackupRestore.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Admin\ModuleManagement\ModuleManage.aspx" />
+    <Content Include="Module\Admin\OrganisationDetails.aspx" />
+    <Content Include="Module\Admin\Privileges.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Admin\Roles.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Admin\User_Profile.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Employee\Addtadance_Register.aspx" />
+    <Content Include="Module\Employee\Employee_Entry.aspx" />
+    <Content Include="Module\Employee\Employee_List.aspx" />
+    <Content Include="Module\Employee\Employee_Update.aspx" />
+    <Content Include="Module\Employee\Leave_Assignment.aspx" />
+    <Content Include="Module\Employee\Leave_Register.aspx" />
+    <Content Include="Module\Employee\OT_Register.aspx" />
+    <Content Include="Module\Employee\Salary_Statement.aspx" />
+    <Content Include="Module\Employee\Shift_Asignment.aspx" />
+    <Content Include="Module\Employee\Shift_Entry.aspx" />
+    <Content Include="Module\Help\AboutUs.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Help\ContactDetails.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Module\Help\Help\Help.aspx" />
+    <Content Include="Module\Help\Images\Forms\attendanceEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\attendanceRegister.jpg" />
+    <Content Include="Module\Help\Images\Forms\Backup&amp;Restore.jpg" />
+    <Content Include="Module\Help\Images\Forms\BeatEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\BeatEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\Cashbilling.jpg" />
+    <Content Include="Module\Help\Images\Forms\CashbillingUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\CreditBill.jpg" />
+    <Content Include="Module\Help\Images\Forms\CreditBillDetails.jpg" />
+    <Content Include="Module\Help\Images\Forms\CustomerList.jpg" />
+    <Content Include="Module\Help\Images\Forms\CustomerUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\CustomerVehicleEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\CustomerVehicleUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\CutomerEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\CutomerlistDetails.jpg" />
+    <Content Include="Module\Help\Images\Forms\DailyOperationEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\DailyOperationEntryEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\EmployeeDriver.jpg" />
+    <Content Include="Module\Help\Images\Forms\EmployeeEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\EmployeeList.jpg" />
+    <Content Include="Module\Help\Images\Forms\EployeeListDetails.jpg" />
+    <Content Include="Module\Help\Images\Forms\EployeeUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\FuelPurchaseEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\FuelPurchaseUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\HomePage.jpg" />
+    <Content Include="Module\Help\Images\Forms\image007.jpg" />
+    <Content Include="Module\Help\Images\Forms\Ladger.jpg" />
+    <Content Include="Module\Help\Images\Forms\LadgerCreation.jpg" />
+    <Content Include="Module\Help\Images\Forms\LeaveApplication.jpg" />
+    <Content Include="Module\Help\Images\Forms\LeaveReport.jpg" />
+    <Content Include="Module\Help\Images\Forms\LeaveSanction.jpg" />
+    <Content Include="Module\Help\Images\Forms\Login.jpg" />
+    <Content Include="Module\Help\Images\Forms\Login1.jpg" />
+    <Content Include="Module\Help\Images\Forms\MachineEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\machineEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\NozzelEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\NozzelEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\Organisation.jpg" />
+    <Content Include="Module\Help\Images\Forms\OrganisationEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\OrherPurchaseUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\OtherPurchaseEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\OverTimeRegister.jpg" />
+    <Content Include="Module\Help\Images\Forms\Payment.jpg" />
+    <Content Include="Module\Help\Images\Forms\PaymentEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\PriceUpdation.jpg" />
+    <Content Include="Module\Help\Images\Forms\Privileges.jpg" />
+    <Content Include="Module\Help\Images\Forms\PrivilegesSelect1Mod.jpg" />
+    <Content Include="Module\Help\Images\Forms\ProductEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\ProductEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\PurchaseInvoice.jpg" />
+    <Content Include="Module\Help\Images\Forms\PurchaseReturn.jpg" />
+    <Content Include="Module\Help\Images\Forms\PurchaseReturnEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\Receipt.jpg" />
+    <Content Include="Module\Help\Images\Forms\ReceiptEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\Role.jpg" />
+    <Content Include="Module\Help\Images\Forms\RoleEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\RouteEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\RouteUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\SalaryStatement.jpg" />
+    <Content Include="Module\Help\Images\Forms\SaleInvoice.jpg" />
+    <Content Include="Module\Help\Images\Forms\SalesInvoiceEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\SalesInvoiceSlip.jpg" />
+    <Content Include="Module\Help\Images\Forms\SalesReturn.jpg" />
+    <Content Include="Module\Help\Images\Forms\SalesReturnEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\ShiftAssignment.jpg" />
+    <Content Include="Module\Help\Images\Forms\ShiftEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\SlipEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\SlipUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\StockAdjustment.jpg" />
+    <Content Include="Module\Help\Images\Forms\TankEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\TankEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\TaxEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\UserProfile.jpg" />
+    <Content Include="Module\Help\Images\Forms\UserProfileEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\VehicleEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\VehicleLogbook.jpg" />
+    <Content Include="Module\Help\Images\Forms\VehicleLogbookEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\VehicleUpdate.jpg" />
+    <Content Include="Module\Help\Images\Forms\VendorEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\VendorList.jpg" />
+    <Content Include="Module\Help\Images\Forms\VendorListDetails.jpg" />
+    <Content Include="Module\Help\Images\Forms\VoucherEdit.jpg" />
+    <Content Include="Module\Help\Images\Forms\VoucherEntry.jpg" />
+    <Content Include="Module\Help\Images\Forms\VoucherUpdate.jpg" />
+    <Content Include="Module\Help\Images\Report\AttendanceReport.jpg" />
+    <Content Include="Module\Help\Images\Report\BalanceSheet.jpg" />
+    <Content Include="Module\Help\Images\Report\BankRecondiliation.jpg" />
+    <Content Include="Module\Help\Images\Report\CashsalesReport.jpg" />
+    <Content Include="Module\Help\Images\Report\CrediutFleetCardSales.jpg" />
+    <Content Include="Module\Help\Images\Report\CustomerbillAgeing.jpg" />
+    <Content Include="Module\Help\Images\Report\CustomerDataMining.jpg" />
+    <Content Include="Module\Help\Images\Report\CustomerLedgerSummary.jpg" />
+    <Content Include="Module\Help\Images\Report\CustomerWiseSales.jpg" />
+    <Content Include="Module\Help\Images\Report\CustomerWiseSlip.jpg" />
+    <Content Include="Module\Help\Images\Report\CutomereVehicleEntry.jpg" />
+    <Content Include="Module\Help\Images\Report\DailsalesRecord.jpg" />
+    <Content Include="Module\Help\Images\Report\DailySalesCumACSheet.jpg" />
+    <Content Include="Module\Help\Images\Report\DailyTankReading.jpg" />
+    <Content Include="Module\Help\Images\Report\DayBookRepor.jpg" />
+    <Content Include="Module\Help\Images\Report\DencityRegister.jpg" />
+    <Content Include="Module\Help\Images\Report\DendityRegister.jpg" />
+    <Content Include="Module\Help\Images\Report\DensityChart.jpg" />
+    <Content Include="Module\Help\Images\Report\Govt.StockRegister.jpg" />
+    <Content Include="Module\Help\Images\Report\LadgerReport.jpg" />
+    <Content Include="Module\Help\Images\Report\MachineReport.jpg" />
+    <Content Include="Module\Help\Images\Report\MontlySellingReport.jpg" />
+    <Content Include="Module\Help\Images\Report\NozzleReport.jpg" />
+    <Content Include="Module\Help\Images\Report\PriceList.jpg" />
+    <Content Include="Module\Help\Images\Report\ProductWiseSales.jpg" />
+    <Content Include="Module\Help\Images\Report\PurchaseBook.jpg" />
+    <Content Include="Module\Help\Images\Report\ROIAnlysisReport.jpg" />
+    <Content Include="Module\Help\Images\Report\SalesBookReport.jpg" />
+    <Content Include="Module\Help\Images\Report\SlipReport.jpg" />
+    <Content Include="Module\Help\Images\Report\StockLedgerTable.jpg" />
+    <Content Include="Module\Help\Images\Report\StockMovejment.jpg" />
+    <Content Include="Module\Help\Images\Report\StockReport.jpg" />
+    <Content Include="Module\Help\Images\Report\TankReport.jpg" />
+    <Content Include="Module\Help\Images\Report\TaxReport.jpg" />
+    <Content Include="Module\Help\Images\Report\TreddingAccounts.jpg" />
+    <Content Include="Module\Help\Images\Report\VatReport.jpg" />
+    <Content Include="Module\Help\Images\Report\VehicleLogReport.jpg" />
+    <Content Include="Module\Inventory\CashSalesInvoice.aspx" />
+    <Content Include="Module\Inventory\Credit_Bill.aspx" />
+    <Content Include="Module\Inventory\FuelPurchase.aspx" />
+    <Content Include="Module\Inventory\Payment_Receipt.aspx" />
+    <Content Include="Module\Inventory\Price_Updation.aspx" />
+    <Content Include="Module\Inventory\Product_Entry.aspx" />
+    <Content Include="Module\Inventory\PurchaseBill.aspx" />
+    <Content Include="Module\Inventory\PurchaseInvoice.aspx" />
+    <Content Include="Module\Inventory\PurchaseReturn.aspx" />
+    <Content Include="Module\Inventory\SalesInvoice.aspx" />
+    <Content Include="Module\Inventory\SalesReturn.aspx" />
+    <Content Include="Module\Inventory\StockAdjustment.aspx" />
+    <Content Include="Module\Logistics\Routeedit.aspx" />
+    <Content Include="Module\Logistics\Vechile_entryform.aspx" />
+    <Content Include="Module\Logistics\Vehicle.aspx" />
+    <Content Include="Module\Logistics\Vehicle_logbook.aspx" />
+    <Content Include="Module\Parties\BeatMaster_Entry.aspx" />
+    <Content Include="Module\Parties\CustDataMining_PrintPreview.aspx" />
+    <Content Include="Module\Parties\CustomerVehicleEntry.aspx" />
+    <Content Include="Module\Parties\Customer_Entry.aspx" />
+    <Content Include="Module\Parties\Customer_List.aspx" />
+    <Content Include="Module\Parties\Customer_Update.aspx" />
+    <Content Include="Module\Parties\Slip_Entry.aspx" />
+    <Content Include="Module\Parties\Supplier_Entry.aspx" />
+    <Content Include="Module\Parties\Supplier_List.aspx" />
+    <Content Include="Module\Parties\Supplier_Update.aspx" />
+    <Content Include="Module\PetrolPump\DailyOperationEntries.aspx" />
+    <Content Include="Module\PetrolPump\MachineEntry.aspx" />
+    <Content Include="Module\PetrolPump\NozzleEntry.aspx" />
+    <Content Include="Module\PetrolPump\TankEntry.aspx" />
+    <Content Include="Module\Reports\AttendenceReport.aspx" />
+    <Content Include="Module\Reports\BalanceSheet.aspx" />
+    <Content Include="Module\Reports\BankReconcillation.aspx" />
+    <Content Include="Module\Reports\CashBillingReport.aspx" />
+    <Content Include="Module\Reports\CreditFleetCardSalesReport.aspx" />
+    <Content Include="Module\Reports\CustomerDataMining.aspx" />
+    <Content Include="Module\Reports\CustomerLedgerSummary.aspx" />
+    <Content Include="Module\Reports\CustomerVehicleEntryReport.aspx" />
+    <Content Include="Module\Reports\CustomerWiseReconsi.aspx" />
+    <Content Include="Module\Reports\CustomerwiseSalesReport.aspx" />
+    <Content Include="Module\Reports\Customer_Bill_Ageing.aspx" />
+    <Content Include="Module\Reports\DailySalesCumActSheet.aspx" />
+    <Content Include="Module\Reports\DailySalesRecord.aspx" />
+    <Content Include="Module\Reports\DailySalesRecord_PrintPreview.aspx" />
+    <Content Include="Module\Reports\DayBookReport.aspx" />
+    <Content Include="Module\Reports\DensityChart.aspx" />
+    <Content Include="Module\Reports\DensityRegister_PrintPreview.aspx" />
+    <Content Include="Module\Reports\Density_Register.aspx" />
+    <Content Include="Module\Reports\GovtStockRegister.aspx" />
+    <Content Include="Module\Reports\GovtStockRegister_PrintPreview.aspx" />
+    <Content Include="Module\Reports\LeaveReport.aspx" />
+    <Content Include="Module\Reports\LedgerReport.aspx" />
+    <Content Include="Module\Reports\MachineReport.aspx" />
+    <Content Include="Module\Reports\MeterReadingReport.aspx" />
+    <Content Include="Module\Reports\MonthlySellingReport.aspx" />
+    <Content Include="Module\Reports\NozzleReport.aspx" />
+    <Content Include="Module\Reports\PriceList.aspx" />
+    <Content Include="Module\Reports\ProductWiseSales.aspx" />
+    <Content Include="Module\Reports\PurchaseBook.aspx" />
+    <Content Include="Module\Reports\PurchaseBook_PrintPreview.aspx" />
+    <Content Include="Module\Reports\ROIPrint.aspx" />
+    <Content Include="Module\Reports\ROI_ANALYSIS.aspx" />
+    <Content Include="Module\Reports\SaleBook.aspx" />
+    <Content Include="Module\Reports\SalesBook_PrintPreview.aspx" />
+    <Content Include="Module\Reports\SlipMasterReport.aspx" />
+    <Content Include="Module\Reports\StockLedgerReport.aspx" />
+    <Content Include="Module\Reports\StockMovement.aspx" />
+    <Content Include="Module\Reports\StockReport.aspx" />
+    <Content Include="Module\Reports\TankDipReport.aspx" />
+    <Content Include="Module\Reports\TankReport.aspx" />
+    <Content Include="Module\Reports\TaxReport.aspx" />
+    <Content Include="Module\Reports\TradingAccount.aspx" />
+    <Content Include="Module\Reports\VAT_Report.aspx" />
+    <Content Include="Module\Reports\VehicleLogReport.aspx" />
+    <Content Include="Sysitem\AccessDeny.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Sysitem\EpetroPrintServices\print.exe" />
+    <Content Include="Sysitem\EPetroWeb.config" />
+    <Content Include="Sysitem\Error.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Sysitem\ErrorPage.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Sysitem\Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Sysitem\Js\Beat.js" />
+    <Content Include="Sysitem\Js\Cash.js" />
+    <Content Include="Sysitem\Js\ConvertDensity.js" />
+    <Content Include="Sysitem\Js\Fuel.js" />
+    <Content Include="Sysitem\Js\Purchase.js" />
+    <Content Include="Sysitem\Js\Sales.js" />
+    <Content Include="Sysitem\Js\Validations.js" />
+    <Content Include="Sysitem\Service.aspx" />
+    <Content Include="Sysitem\Styles.css" />
+    <Content Include="Web.config" />
+    <Compile Include="HeaderFooter\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HeaderFooter\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HeaderFooter\Header1.ascx.cs">
+      <DependentUpon>Header1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginHome\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginHome\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\cashbill.aspx.cs">
+      <DependentUpon>cashbill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Ledger.aspx.cs">
+      <DependentUpon>Ledger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Taxentry_Master.aspx.cs">
+      <DependentUpon>Taxentry_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\voucher.aspx.cs">
+      <DependentUpon>voucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\BackupRestore.aspx.cs">
+      <DependentUpon>BackupRestore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\ModuleManagement\ModuleManage.aspx.cs">
+      <DependentUpon>ModuleManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\OrganisationDetails.aspx.cs">
+      <DependentUpon>OrganisationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\Privileges.aspx.cs">
+      <DependentUpon>Privileges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\User_Profile.aspx.cs">
+      <DependentUpon>User_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Addtadance_Register.aspx.cs">
+      <DependentUpon>Addtadance_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Employee_Entry.aspx.cs">
+      <DependentUpon>Employee_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Employee_List.aspx.cs">
+      <DependentUpon>Employee_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Employee_Update.aspx.cs">
+      <DependentUpon>Employee_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Leave_Assignment.aspx.cs">
+      <DependentUpon>Leave_Assignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Leave_Register.aspx.cs">
+      <DependentUpon>Leave_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\OT_Register.aspx.cs">
+      <DependentUpon>OT_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Salary_Statement.aspx.cs">
+      <DependentUpon>Salary_Statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Shift_Asignment.aspx.cs">
+      <DependentUpon>Shift_Asignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Employee\Shift_Entry.aspx.cs">
+      <DependentUpon>Shift_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Help\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Help\ContactDetails.aspx.cs">
+      <DependentUpon>ContactDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Help\Help\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\CashSalesInvoice.aspx.cs">
+      <DependentUpon>CashSalesInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Credit_Bill.aspx.cs">
+      <DependentUpon>Credit_Bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\FuelPurchase.aspx.cs">
+      <DependentUpon>FuelPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Payment_Receipt.aspx.cs">
+      <DependentUpon>Payment_Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Price_Updation.aspx.cs">
+      <DependentUpon>Price_Updation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Product_Entry.aspx.cs">
+      <DependentUpon>Product_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\PurchaseBill.aspx.cs">
+      <DependentUpon>PurchaseBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\PurchaseInvoice.aspx.cs">
+      <DependentUpon>PurchaseInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\PurchaseReturn.aspx.cs">
+      <DependentUpon>PurchaseReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\SalesInvoice.aspx.cs">
+      <DependentUpon>SalesInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\SalesReturn.aspx.cs">
+      <DependentUpon>SalesReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\StockAdjustment.aspx.cs">
+      <DependentUpon>StockAdjustment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Logistics\Routeedit.aspx.cs">
+      <DependentUpon>Routeedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Logistics\Vechile_entryform.aspx.cs">
+      <DependentUpon>Vechile_entryform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Logistics\Vehicle.aspx.cs">
+      <DependentUpon>Vehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Logistics\Vehicle_logbook.aspx.cs">
+      <DependentUpon>Vehicle_logbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\BeatMaster_Entry.aspx.cs">
+      <DependentUpon>BeatMaster_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\CustDataMining_PrintPreview.aspx.cs">
+      <DependentUpon>CustDataMining_PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\CustomerVehicleEntry.aspx.cs">
+      <DependentUpon>CustomerVehicleEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Customer_Entry.aspx.cs">
+      <DependentUpon>Customer_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Customer_List.aspx.cs">
+      <DependentUpon>Customer_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Customer_Update.aspx.cs">
+      <DependentUpon>Customer_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Slip_Entry.aspx.cs">
+      <DependentUpon>Slip_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Supplier_Entry.aspx.cs">
+      <DependentUpon>Supplier_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Supplier_List.aspx.cs">
+      <DependentUpon>Supplier_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Parties\Supplier_Update.aspx.cs">
+      <DependentUpon>Supplier_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\PetrolPump\DailyOperationEntries.aspx.cs">
+      <DependentUpon>DailyOperationEntries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\PetrolPump\MachineEntry.aspx.cs">
+      <DependentUpon>MachineEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\PetrolPump\NozzleEntry.aspx.cs">
+      <DependentUpon>NozzleEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\PetrolPump\TankEntry.aspx.cs">
+      <DependentUpon>TankEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\AttendenceReport.aspx.cs">
+      <DependentUpon>AttendenceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\BalanceSheet.aspx.cs">
+      <DependentUpon>BalanceSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\BankReconcillation.aspx.cs">
+      <DependentUpon>BankReconcillation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CashBillingReport.aspx.cs">
+      <DependentUpon>CashBillingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CreditFleetCardSalesReport.aspx.cs">
+      <DependentUpon>CreditFleetCardSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CustomerDataMining.aspx.cs">
+      <DependentUpon>CustomerDataMining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CustomerLedgerSummary.aspx.cs">
+      <DependentUpon>CustomerLedgerSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CustomerVehicleEntryReport.aspx.cs">
+      <DependentUpon>CustomerVehicleEntryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CustomerWiseReconsi.aspx.cs">
+      <DependentUpon>CustomerWiseReconsi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\CustomerwiseSalesReport.aspx.cs">
+      <DependentUpon>CustomerwiseSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\Customer_Bill_Ageing.aspx.cs">
+      <DependentUpon>Customer_Bill_Ageing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\DailySalesCumActSheet.aspx.cs">
+      <DependentUpon>DailySalesCumActSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\DailySalesRecord.aspx.cs">
+      <DependentUpon>DailySalesRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\DailySalesRecord_PrintPreview.aspx.cs">
+      <DependentUpon>DailySalesRecord_PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\DayBookReport.aspx.cs">
+      <DependentUpon>DayBookReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\DensityChart.aspx.cs">
+      <DependentUpon>DensityChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\DensityRegister_PrintPreview.aspx.cs">
+      <DependentUpon>DensityRegister_PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\Density_Register.aspx.cs">
+      <DependentUpon>Density_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\GovtStockRegister.aspx.cs">
+      <DependentUpon>GovtStockRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\GovtStockRegister_PrintPreview.aspx.cs">
+      <DependentUpon>GovtStockRegister_PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\LeaveReport.aspx.cs">
+      <DependentUpon>LeaveReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\LedgerReport.aspx.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\MachineReport.aspx.cs">
+      <DependentUpon>MachineReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\MeterReadingReport.aspx.cs">
+      <DependentUpon>MeterReadingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\MonthlySellingReport.aspx.cs">
+      <DependentUpon>MonthlySellingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\NozzleReport.aspx.cs">
+      <DependentUpon>NozzleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\PriceList.aspx.cs">
+      <DependentUpon>PriceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\ProductWiseSales.aspx.cs">
+      <DependentUpon>ProductWiseSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\PurchaseBook.aspx.cs">
+      <DependentUpon>PurchaseBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\PurchaseBook_PrintPreview.aspx.cs">
+      <DependentUpon>PurchaseBook_PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\ROIPrint.aspx.cs">
+      <DependentUpon>ROIPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\ROI_ANALYSIS.aspx.cs">
+      <DependentUpon>ROI_ANALYSIS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\SaleBook.aspx.cs">
+      <DependentUpon>SaleBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\SalesBook_PrintPreview.aspx.cs">
+      <DependentUpon>SalesBook_PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\SlipMasterReport.aspx.cs">
+      <DependentUpon>SlipMasterReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\StockLedgerReport.aspx.cs">
+      <DependentUpon>StockLedgerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\StockMovement.aspx.cs">
+      <DependentUpon>StockMovement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\StockReport.aspx.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\TankDipReport.aspx.cs">
+      <DependentUpon>TankDipReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\TankReport.aspx.cs">
+      <DependentUpon>TankReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\TaxReport.aspx.cs">
+      <DependentUpon>TaxReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\TradingAccount.aspx.cs">
+      <DependentUpon>TradingAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\VAT_Report.aspx.cs">
+      <DependentUpon>VAT_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Reports\VehicleLogReport.aspx.cs">
+      <DependentUpon>VehicleLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sysitem\AccessDeny.aspx.cs">
+      <DependentUpon>AccessDeny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sysitem\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\CreateLogFiles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\DbOperations_LATEST.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\EmployeeClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\GenUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\InventoryClass1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\InventoyCLass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\MasterClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\MessageBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\PartiesClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\PetrolPumpClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Classes\StringUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sysitem\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sysitem\Service.aspx.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="HeaderFooter\Footer.ascx.resx">
+      <DependentUpon>Footer.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderFooter\Header.ascx.resx">
+      <DependentUpon>Header.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderFooter\Header1.ascx.resx">
+      <DependentUpon>Header1.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginHome\HomePage.aspx.resx">
+      <DependentUpon>HomePage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginHome\Login.aspx.resx">
+      <DependentUpon>Login.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\cashbill.aspx.resx">
+      <DependentUpon>cashbill.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Ledger.aspx.resx">
+      <DependentUpon>Ledger.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Payment.aspx.resx">
+      <DependentUpon>Payment.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Taxentry_Master.aspx.resx">
+      <DependentUpon>Taxentry_Master.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\voucher.aspx.resx">
+      <DependentUpon>voucher.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Admin\BackupRestore.aspx.resx">
+      <DependentUpon>BackupRestore.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Admin\ModuleManagement\ModuleManage.aspx.resx">
+      <DependentUpon>ModuleManage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Admin\OrganisationDetails.aspx.resx">
+      <DependentUpon>OrganisationDetails.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Admin\Privileges.aspx.resx">
+      <DependentUpon>Privileges.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Admin\Roles.aspx.resx">
+      <DependentUpon>Roles.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Admin\User_Profile.aspx.resx">
+      <DependentUpon>User_Profile.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Addtadance_Register.aspx.resx">
+      <DependentUpon>Addtadance_Register.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Employee_Entry.aspx.resx">
+      <DependentUpon>Employee_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Employee_List.aspx.resx">
+      <DependentUpon>Employee_List.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Employee_Update.aspx.resx">
+      <DependentUpon>Employee_Update.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Leave_Assignment.aspx.resx">
+      <DependentUpon>Leave_Assignment.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Leave_Register.aspx.resx">
+      <DependentUpon>Leave_Register.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\OT_Register.aspx.resx">
+      <DependentUpon>OT_Register.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Salary_Statement.aspx.resx">
+      <DependentUpon>Salary_Statement.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Shift_Asignment.aspx.resx">
+      <DependentUpon>Shift_Asignment.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Employee\Shift_Entry.aspx.resx">
+      <DependentUpon>Shift_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Help\AboutUs.aspx.resx">
+      <DependentUpon>AboutUs.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Help\ContactDetails.aspx.resx">
+      <DependentUpon>ContactDetails.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Help\Help\Help.aspx.resx">
+      <DependentUpon>Help.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\CashSalesInvoice.aspx.resx">
+      <DependentUpon>CashSalesInvoice.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Credit_Bill.aspx.resx">
+      <DependentUpon>Credit_Bill.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\FuelPurchase.aspx.resx">
+      <DependentUpon>FuelPurchase.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Payment_Receipt.aspx.resx">
+      <DependentUpon>Payment_Receipt.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Price_Updation.aspx.resx">
+      <DependentUpon>Price_Updation.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Product_Entry.aspx.resx">
+      <DependentUpon>Product_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\PurchaseBill.aspx.resx">
+      <DependentUpon>PurchaseBill.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\PurchaseInvoice.aspx.resx">
+      <DependentUpon>PurchaseInvoice.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\PurchaseReturn.aspx.resx">
+      <DependentUpon>PurchaseReturn.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\SalesInvoice.aspx.resx">
+      <DependentUpon>SalesInvoice.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\SalesReturn.aspx.resx">
+      <DependentUpon>SalesReturn.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\StockAdjustment.aspx.resx">
+      <DependentUpon>StockAdjustment.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Logistics\Routeedit.aspx.resx">
+      <DependentUpon>Routeedit.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Logistics\Vechile_entryform.aspx.resx">
+      <DependentUpon>Vechile_entryform.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Logistics\Vehicle.aspx.resx">
+      <DependentUpon>Vehicle.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Logistics\Vehicle_logbook.aspx.resx">
+      <DependentUpon>Vehicle_logbook.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\BeatMaster_Entry.aspx.resx">
+      <DependentUpon>BeatMaster_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\CustDataMining_PrintPreview.aspx.resx">
+      <DependentUpon>CustDataMining_PrintPreview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\CustomerVehicleEntry.aspx.resx">
+      <DependentUpon>CustomerVehicleEntry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Customer_Entry.aspx.resx">
+      <DependentUpon>Customer_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Customer_List.aspx.resx">
+      <DependentUpon>Customer_List.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Customer_Update.aspx.resx">
+      <DependentUpon>Customer_Update.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Slip_Entry.aspx.resx">
+      <DependentUpon>Slip_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Supplier_Entry.aspx.resx">
+      <DependentUpon>Supplier_Entry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Supplier_List.aspx.resx">
+      <DependentUpon>Supplier_List.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Parties\Supplier_Update.aspx.resx">
+      <DependentUpon>Supplier_Update.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\PetrolPump\DailyOperationEntries.aspx.resx">
+      <DependentUpon>DailyOperationEntries.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\PetrolPump\MachineEntry.aspx.resx">
+      <DependentUpon>MachineEntry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\PetrolPump\NozzleEntry.aspx.resx">
+      <DependentUpon>NozzleEntry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\PetrolPump\TankEntry.aspx.resx">
+      <DependentUpon>TankEntry.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\AttendenceReport.aspx.resx">
+      <DependentUpon>AttendenceReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\BalanceSheet.aspx.resx">
+      <DependentUpon>BalanceSheet.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\BankReconcillation.aspx.resx">
+      <DependentUpon>BankReconcillation.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CashBillingReport.aspx.resx">
+      <DependentUpon>CashBillingReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CreditFleetCardSalesReport.aspx.resx">
+      <DependentUpon>CreditFleetCardSalesReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CustomerDataMining.aspx.resx">
+      <DependentUpon>CustomerDataMining.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CustomerLedgerSummary.aspx.resx">
+      <DependentUpon>CustomerLedgerSummary.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CustomerVehicleEntryReport.aspx.resx">
+      <DependentUpon>CustomerVehicleEntryReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CustomerWiseReconsi.aspx.resx">
+      <DependentUpon>CustomerWiseReconsi.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\CustomerwiseSalesReport.aspx.resx">
+      <DependentUpon>CustomerwiseSalesReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\Customer_Bill_Ageing.aspx.resx">
+      <DependentUpon>Customer_Bill_Ageing.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\DailySalesCumActSheet.aspx.resx">
+      <DependentUpon>DailySalesCumActSheet.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\DailySalesRecord.aspx.resx">
+      <DependentUpon>DailySalesRecord.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\DailySalesRecord_PrintPreview.aspx.resx">
+      <DependentUpon>DailySalesRecord_PrintPreview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\DayBookReport.aspx.resx">
+      <DependentUpon>DayBookReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\DensityChart.aspx.resx">
+      <DependentUpon>DensityChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\DensityRegister_PrintPreview.aspx.resx">
+      <DependentUpon>DensityRegister_PrintPreview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\Density_Register.aspx.resx">
+      <DependentUpon>Density_Register.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\GovtStockRegister.aspx.resx">
+      <DependentUpon>GovtStockRegister.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\GovtStockRegister_PrintPreview.aspx.resx">
+      <DependentUpon>GovtStockRegister_PrintPreview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\LeaveReport.aspx.resx">
+      <DependentUpon>LeaveReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\LedgerReport.aspx.resx">
+      <DependentUpon>LedgerReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\MachineReport.aspx.resx">
+      <DependentUpon>MachineReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\MeterReadingReport.aspx.resx">
+      <DependentUpon>MeterReadingReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\MonthlySellingReport.aspx.resx">
+      <DependentUpon>MonthlySellingReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\NozzleReport.aspx.resx">
+      <DependentUpon>NozzleReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\PriceList.aspx.resx">
+      <DependentUpon>PriceList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\ProductWiseSales.aspx.resx">
+      <DependentUpon>ProductWiseSales.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\PurchaseBook.aspx.resx">
+      <DependentUpon>PurchaseBook.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\PurchaseBook_PrintPreview.aspx.resx">
+      <DependentUpon>PurchaseBook_PrintPreview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\ROIPrint.aspx.resx">
+      <DependentUpon>ROIPrint.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\ROI_ANALYSIS.aspx.resx">
+      <DependentUpon>ROI_ANALYSIS.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\SaleBook.aspx.resx">
+      <DependentUpon>SaleBook.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\SalesBook_PrintPreview.aspx.resx">
+      <DependentUpon>SalesBook_PrintPreview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\SlipMasterReport.aspx.resx">
+      <DependentUpon>SlipMasterReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\StockLedgerReport.aspx.resx">
+      <DependentUpon>StockLedgerReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\StockMovement.aspx.resx">
+      <DependentUpon>StockMovement.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\StockReport.aspx.resx">
+      <DependentUpon>StockReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\TankDipReport.aspx.resx">
+      <DependentUpon>TankDipReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\TankReport.aspx.resx">
+      <DependentUpon>TankReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\TaxReport.aspx.resx">
+      <DependentUpon>TaxReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\TradingAccount.aspx.resx">
+      <DependentUpon>TradingAccount.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\VAT_Report.aspx.resx">
+      <DependentUpon>VAT_Report.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Reports\VehicleLogReport.aspx.resx">
+      <DependentUpon>VehicleLogReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sysitem\AccessDeny.aspx.resx">
+      <DependentUpon>AccessDeny.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sysitem\Error.aspx.resx">
+      <DependentUpon>Error.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sysitem\ErrorPage.aspx.resx">
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sysitem\Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sysitem\Service.aspx.resx">
+      <DependentUpon>Service.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HeaderFooter\images\Thumbs.db" />
+    <None Include="Module\Help\Images\Forms\Thumbs.db" />
+    <None Include="Module\Help\Images\Report\Thumbs.db" />
+    <None Include="Sysitem\Logs\4-9-2007.log" />
+    <None Include="Sysitem\Logs\5-9-2007.log" />
+    <None Include="Sysitem\Logs\6-9-2007.log" />
+    <None Include="Sysitem\Logs\7-9-2007.log" />
+    <None Include="Sysitem\Logs\8-9-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\1-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\1-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\1-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\1-5-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\1-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\10-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\10-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\10-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\10-6-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\10-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\10-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\11-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\11-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\11-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\11-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\12-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\12-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\12-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\12-6-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\12-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\13-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\13-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\13-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\13-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\14-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\14-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\14-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\14-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\14-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\14-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\14-5-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\14-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\15-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\15-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\15-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\15-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\15-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\16-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\16-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\16-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\16-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\16-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\17-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\17-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\17-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\17-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\17-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\17-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\18-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\18-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\18-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\18-5-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\18-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\19-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\19-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\19-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\19-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\19-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\2-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\2-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\2-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\2-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\2-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\2-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\2-9-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\20-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\20-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\20-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\20-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\20-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\20-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\21-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\21-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\21-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\21-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\21-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\21-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\22-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\22-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\22-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\22-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\22-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\23-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\23-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\23-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\23-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\23-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\24-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\24-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\24-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\24-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\24-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\24-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\24-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\25-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\25-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\25-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\25-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\25-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\25-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\26-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\26-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\26-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\26-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\27-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\27-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\27-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\27-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\27-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\27-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\27-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\27-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\28-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\28-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\28-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\28-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\28-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\28-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\28-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\29-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\29-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\29-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\29-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\3-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\3-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\3-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\3-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\3-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\3-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\30-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\30-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\30-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\30-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\30-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\30-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\30-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\31-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\31-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\31-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\31-7-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\31-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\4-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\4-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\5-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\5-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\5-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\5-4-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\5-6-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\5-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\6-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\6-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\6-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\6-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\6-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\6-6-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\6-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\7-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\7-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\7-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\7-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\7-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\7-6-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\7-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\8-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\8-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\8-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\8-2-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\8-3-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\8-6-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\8-8-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\9-1-2007.log" />
+    <None Include="Sysitem\Logs\New Folder\9-11-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\9-12-2006.log" />
+    <None Include="Sysitem\Logs\New Folder\9-8-2007.log" />
+    <None Include="Sysitem\Web.INI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Install\" />
+    <Folder Include="InvoiceDesigner\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4176</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/EPetro</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
