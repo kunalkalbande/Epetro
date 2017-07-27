@@ -46,7 +46,7 @@ function window_onload()
 							<TR>
 								<TD>Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 								<TD><asp:textbox id="txtDateTo" runat="server" Width="110px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD>Stock Location&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
 									<asp:dropdownlist id="drpstore" runat="server" CssClass="FontStyle"></asp:dropdownlist></TD>
