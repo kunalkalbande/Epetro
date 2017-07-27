@@ -327,6 +327,12 @@
 		<script language="javascript" id="sales" src="../../Sysitem/Js/Fuel.js"></script>
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<LINK href="../../Sysitem/Styles.css" type="text/css" rel="stylesheet">
+	    <style type="text/css">
+            .auto-style1 {
+                font-family: Arial;
+                font-size: 8pt;
+            }
+        </style>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" name="Form1" method="post" runat="server">
@@ -367,7 +373,7 @@
 										</TR>
 										<TR>
 											<TD>Invoice Date</TD>
-											<TD><asp:TextBox id="lblInvoiceDate" runat="server" Width="100px" ReadOnly="True" BorderStyle="None"
+											<TD><asp:TextBox id="lblInvoiceDate" runat="server" Width="100px" ReadOnly="True" BorderStyle="Groove"
 													CssClass="FontStyle"></asp:TextBox>
 												<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.lblInvoiceDate);return false;">
 													<IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
@@ -456,15 +462,15 @@
 											<TD align="center"><FONT color="#990066">Amount</FONT></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType1" runat="server" Width="100px" Height="8px" onchange="getProdName(this,document.Form1.DropProd1,document.Form1.DropPack1,document.Form1.txtRate1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
+											<TD><asp:dropdownlist id="DropType1" runat="server" Width="100px" Height="17px" onchange="getProdName(this,document.Form1.DropProd1,document.Form1.DropPack1,document.Form1.txtRate1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd1" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType1,this,document.Form1.DropPack1,document.Form1.txtRate1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
+											<TD><asp:dropdownlist id="DropProd1" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType1,this,document.Form1.DropPack1,document.Form1.txtRate1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName1" style="WIDTH: 140px" type="hidden" name="txtProdName1" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack1" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType1,document.Form1.DropProd1,this,document.Form1.txtRate1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
+											<td><asp:dropdownlist id="DropPack1" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType1,document.Form1.DropProd1,this,document.Form1.txtRate1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack1" style="WIDTH: 100px" type="hidden" name="txtPack1" runat="server"></td>
@@ -477,17 +483,17 @@
 										</TR>
 										<TR>
 											<TD><asp:dropdownlist id="DropType2" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd2,document.Form1.DropPack2,document.Form1.txtRate2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
-													CssClass="FontStyle">
+													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD>
-												<P><asp:dropdownlist id="DropProd2" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType2,this,document.Form1.DropPack2,document.Form1.txtRate2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
+												<P><asp:dropdownlist id="DropProd2" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType2,this,document.Form1.DropPack2,document.Form1.txtRate2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
 														CssClass="FontStyle">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist><INPUT id="txtProdName2" style="WIDTH: 140px" type="hidden" name="txtProdName2" runat="server"></P>
 											</TD>
 											<td>
-												<P><asp:dropdownlist id="DropPack2" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType2,document.Form1.DropProd2,this,document.Form1.txtRate2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
+												<P><asp:dropdownlist id="DropPack2" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType2,document.Form1.DropProd2,this,document.Form1.txtRate2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
 														CssClass="FontStyle">
 														<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 													</asp:dropdownlist><INPUT id="txtPack2" style="WIDTH: 100px" type="hidden" name="txtPack2" runat="server"></P>
@@ -501,14 +507,14 @@
 										</TR>
 										<TR>
 											<TD><asp:dropdownlist id="DropType3" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd3,document.Form1.DropPack3,document.Form1.txtRate3,document.Form1.txtProdName3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
-													CssClass="FontStyle">
+													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd3" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType3,this,document.Form1.DropPack3,document.Form1.txtRate3,document.Form1.txtProdName3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
+											<TD><asp:dropdownlist id="DropProd3" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType3,this,document.Form1.DropPack3,document.Form1.txtRate3,document.Form1.txtProdName3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName3" style="WIDTH: 140px" type="hidden" name="txtProdName3" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack3" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType3,document.Form1.DropProd3,this,document.Form1.txtRate3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
+											<td><asp:dropdownlist id="DropPack3" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType3,document.Form1.DropProd3,this,document.Form1.txtRate3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack3" style="WIDTH: 91px" type="hidden" name="txtPack3" runat="server"></td>
@@ -521,14 +527,14 @@
 										</TR>
 										<TR>
 											<TD><asp:dropdownlist id="DropType4" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd4,document.Form1.DropPack4,document.Form1.txtRate4,document.Form1.txtProdName4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
-													CssClass="FontStyle">
+													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd4" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType4,this,document.Form1.DropPack4,document.Form1.txtRate4,document.Form1.txtProdName4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
+											<TD><asp:dropdownlist id="DropProd4" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType4,this,document.Form1.DropPack4,document.Form1.txtRate4,document.Form1.txtProdName4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName4" style="WIDTH: 140px" type="hidden" name="txtProdName4" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack4" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType4,document.Form1.DropProd4,this,document.Form1.txtRate4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
+											<td><asp:dropdownlist id="DropPack4" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType4,document.Form1.DropProd4,this,document.Form1.txtRate4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack4" style="WIDTH: 91px" type="hidden" name="txtPack4" runat="server"></td>
@@ -541,14 +547,14 @@
 										</TR>
 										<TR>
 											<TD><asp:dropdownlist id="DropType5" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd5,document.Form1.DropPack5,document.Form1.txtRate5,document.Form1.txtProdName5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
-													CssClass="FontStyle">
+													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd5" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType5,this,document.Form1.DropPack5,document.Form1.txtRate5,document.Form1.txtProdName5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
+											<TD><asp:dropdownlist id="DropProd5" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType5,this,document.Form1.DropPack5,document.Form1.txtRate5,document.Form1.txtProdName5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName5" style="WIDTH: 140px" type="hidden" name="txtProdName5" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack5" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType5,document.Form1.DropProd5,this,document.Form1.txtRate5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
+											<td><asp:dropdownlist id="DropPack5" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType5,document.Form1.DropProd5,this,document.Form1.txtRate5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack5" style="WIDTH: 91px" type="hidden" name="txtPack5" runat="server"></td>
@@ -561,14 +567,14 @@
 										</TR>
 										<TR>
 											<TD><asp:dropdownlist id="DropType6" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd6,document.Form1.DropPack6,document.Form1.txtRate6,document.Form1.txtProdName6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
-													CssClass="FontStyle">
+													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd6" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType6,this,document.Form1.DropPack6,document.Form1.txtRate6,document.Form1.txtProdName6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
+											<TD><asp:dropdownlist id="DropProd6" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType6,this,document.Form1.DropPack6,document.Form1.txtRate6,document.Form1.txtProdName6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName6" style="WIDTH: 140px" type="hidden" name="txtProdName6" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack6" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType6,document.Form1.DropProd6,this,document.Form1.txtRate6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
+											<td><asp:dropdownlist id="DropPack6" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType6,document.Form1.DropProd6,this,document.Form1.txtRate6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack6" style="WIDTH: 91px" type="hidden" name="txtPack6" runat="server"></td>
@@ -581,14 +587,14 @@
 										</TR>
 										<TR>
 											<TD><asp:dropdownlist id="DropType7" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd7,document.Form1.DropPack7,document.Form1.txtRate7,document.Form1.txtProdName7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
-													CssClass="FontStyle">
+													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd7" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType7,this,document.Form1.DropPack7,document.Form1.txtRate7,document.Form1.txtProdName7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
+											<TD><asp:dropdownlist id="DropProd7" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType7,this,document.Form1.DropPack7,document.Form1.txtRate7,document.Form1.txtProdName7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName7" style="WIDTH: 140px" type="hidden" name="txtProdName7" runat="server"></TD>
-											<TD><asp:dropdownlist id="DropPack7" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType7,document.Form1.DropProd7,this,document.Form1.txtRate7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
+											<TD><asp:dropdownlist id="DropPack7" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType7,document.Form1.DropProd7,this,document.Form1.txtRate7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack7" style="WIDTH: 91px" type="hidden" name="txtPack7" runat="server"></TD>
@@ -600,15 +606,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType8" runat="server" Width="100px" Height="8px" onchange="getProdName(this,document.Form1.DropProd8,document.Form1.DropPack8,document.Form1.txtRate8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
+											<TD><asp:dropdownlist id="DropType8" runat="server" Width="100px" Height="17px" onchange="getProdName(this,document.Form1.DropProd8,document.Form1.DropPack8,document.Form1.txtRate8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd8" runat="server" Width="140px" Height="8px" onchange="getPack(document.Form1.DropType8,this,document.Form1.DropPack8,document.Form1.txtRate8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
-													CssClass="FontStyle">
+											<TD><asp:dropdownlist id="DropProd8" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType8,this,document.Form1.DropPack8,document.Form1.txtRate8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
+													CssClass="auto-style1">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName8" style="WIDTH: 140px" type="hidden" name="txtProdName8" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack8" runat="server" Width="100px" Height="8px" onchange="getStock(document.Form1.DropType8,document.Form1.DropProd8,this,document.Form1.txtRate8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
+											<td><asp:dropdownlist id="DropPack8" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType8,document.Form1.DropProd8,this,document.Form1.txtRate8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack8" style="WIDTH: 91px" type="hidden" name="txtPack8" runat="server"></td>
@@ -661,9 +667,9 @@
 								<TD>&nbsp;</TD>
 								<TD></TD>
 								<TD>VAT
-									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" BackColor="#FFE0C0" GroupName="VAT"
+									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" GroupName="VAT"
 										ToolTip="Not Applied"></asp:radiobutton>
-									<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" BackColor="#C0FFC0" GroupName="VAT"
+									<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" GroupName="VAT"
 										ToolTip="Apply" Checked="True"></asp:radiobutton>
 								</TD>
 								<TD>

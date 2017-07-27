@@ -1530,7 +1530,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD>Rate / (KL)</TD>
                 <TD align=right><asp:textbox id=txtRate1 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
                 <TD align=right><asp:textbox id=txtRate2 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRate3 onblur=calc() runat="server" Width="86" CssClass="FontStyle" Height="21" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRate3 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" Height="21" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
                 <TD align=right><asp:textbox id=txtRate4 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Density in Physical</TD>
@@ -1620,7 +1620,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD align=right><asp:textbox id=txtTransportCharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Other Levis Value</TD>
-                <TD align=right><asp:textbox id=txtOther1 runat="server" Width="85px" CssClass="FontStyle" Height="24px" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtOther1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
                 <TD align=right><asp:textbox id=txtOther2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
                 <TD align=right><asp:textbox id=txtOther3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
                 <TD align=right><asp:textbox id=txtOther4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
