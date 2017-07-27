@@ -373,7 +373,7 @@ namespace EPetro.Module.Admin
 				}
 				if(LblCompanyID.Visible==true)
 				{
-					if(LblCompanyID.Text=="1002")
+					if(LblCompanyID.Text=="")
 					{
 						MessageBox.Show("Organisation Details Already Stored ");
 						return;
