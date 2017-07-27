@@ -440,7 +440,7 @@ if(document.Form1.txtAmount1.value != "")
 									<TD align="center">&nbsp; Voucher Date <FONT color="#ff0000">*</FONT>
 										<asp:requiredfieldvalidator id="Requiredfieldvalidator1" runat="server" ErrorMessage="Please Enter Voucher Date"
 											ControlToValidate="txtDate" ForeColor="White">*</asp:requiredfieldvalidator></TD>
-									<TD colSpan="2"><asp:textbox id="txtDate" runat="server" Width="84px" CssClass="FontStyle" ReadOnly="True" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+									<TD colSpan="2"><asp:textbox id="txtDate" runat="server" Width="84px" CssClass="FontStyle" ReadOnly="True" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 												border="0"></A></TD>
 								</TR>
 					</TD>
