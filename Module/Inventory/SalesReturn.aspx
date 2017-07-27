@@ -616,8 +616,8 @@ var TempQty = new Array(document.Form1.tmpQty1,document.Form1.tmpQty2,document.F
 								<TD></TD>
 								<TD>VAT
 									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" Enabled="False" ToolTip="Not Applied"
-										GroupName="VAT" ></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" Enabled="False" ToolTip="Applied"
-										GroupName="VAT" Checked="True"></asp:radiobutton></TD>
+										GroupName="VAT" BackColor="#FFE0C0"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" Enabled="False" ToolTip="Applied"
+										GroupName="VAT" BackColor="#C0FFC0" Checked="True"></asp:radiobutton></TD>
 								<TD><asp:textbox id="txtVAT" runat="server" Width="124px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>

@@ -1494,7 +1494,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD><asp:textbox id=txtVInvoiceNo runat="server" Width="166px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" onkeypress="return GetOnlyNumbers(this, event, false,false);" MaxLength="9"></asp:textbox></TD></TR>
               <TR>
                 <TD>Invoice Date <asp:requiredfieldvalidator id=RequiredFieldValidator3 runat="server" ControlToValidate="txtVInvoiceDate" ErrorMessage="Please Fill Vendor Invoice Date">*</asp:requiredfieldvalidator></TD>
-                <TD><asp:textbox id=txtVInvoiceDate runat="server" Width="110px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtVInvoiceDate);return false;" href="javascript:void(0)" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD></TR></TABLE></TD></TR>
+                <TD><asp:textbox id=txtVInvoiceDate runat="server" Width="110px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtVInvoiceDate);return false;" href="javascript:void(0)" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD></TR></TABLE></TD></TR>
         <TR>
           <TD vAlign=top align=center colSpan=2>
             <TABLE cellSpacing=0 cellPadding=0 width=580>

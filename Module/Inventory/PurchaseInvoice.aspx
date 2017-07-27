@@ -375,7 +375,7 @@
 											<TD>Invoice Date</TD>
 											<TD><asp:TextBox id="lblInvoiceDate" runat="server" Width="100px" ReadOnly="True" BorderStyle="Groove"
 													CssClass="FontStyle"></asp:TextBox>
-												<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.lblInvoiceDate);return false;">
+												<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.lblInvoiceDate);return false;">
 													<IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 														border="0"></A>
 											</TD>
@@ -430,7 +430,7 @@
 											<TD>&nbsp; Invoice Date&nbsp;
 											</TD>
 											<TD colSpan="2"><asp:textbox id="txtVInvoiceDate" runat="server" Width="173px" Height="20px" BorderStyle="Groove"
-													ReadOnly="True" CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtVInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+													ReadOnly="True" CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtVInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 														border="0"></A></TD>
 										</TR>
 									</TABLE>
@@ -667,9 +667,9 @@
 								<TD>&nbsp;</TD>
 								<TD></TD>
 								<TD>VAT
-									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" GroupName="VAT"
+									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" BackColor="#FFE0C0" GroupName="VAT"
 										ToolTip="Not Applied"></asp:radiobutton>
-									<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" GroupName="VAT"
+									<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" BackColor="#C0FFC0" GroupName="VAT"
 										ToolTip="Apply" Checked="True"></asp:radiobutton>
 								</TD>
 								<TD>

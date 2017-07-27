@@ -566,7 +566,7 @@
 											<TR>
 												<TD>&nbsp; Invoice Date</TD>
 												<TD><asp:textbox id="lblInvoiceDate" runat="server" Width="90" BorderStyle="Groove" ReadOnly="True"
-														CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.lblInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+														CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.lblInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 															border="0"></A></TD>
 											</TR>
 											<TR>
@@ -605,7 +605,7 @@
 													<TD>&nbsp;&nbsp;Trans. Date</TD>
 													<TD>
 														<asp:TextBox id="txtChallanDate" Width="90" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"
-															Runat="server"></asp:TextBox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtChallanDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+															Runat="server"></asp:TextBox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtChallanDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 																border="0"></A></TD>
 												</TR>
 											</asp:panel></TABLE>
@@ -840,8 +840,8 @@
 										CssClass="FontStyle"></asp:textbox></TD>
 								<TD></TD>
 								<TD>VAT
-									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" ToolTip="Not Applied" 
-										GroupName="VAT" Checked="True"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" ToolTip="Apply"
+									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" ToolTip="Not Applied" BackColor="#FFE0C0"
+										GroupName="VAT" Checked="True"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" ToolTip="Apply" BackColor="#C0FFC0"
 										GroupName="VAT"></asp:radiobutton></TD>
 								<TD style="HEIGHT: 27px"><asp:textbox id="txtVAT" runat="server" Width="124px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
