@@ -336,7 +336,7 @@ namespace EPetro.Module.Inventory
 					checkPrevileges();
 					//txtGrandTotal.Attributes.Add("onblur","javascript:GetGrandTotal()");
 					//txtGrandTotal.Attributes.Add("onclick","javascript:GetGrandTotal()");
-					lblInvoiceDate.Text=GenUtil.str2MMDDYYYY (DateTime.Today.ToShortDateString());
+					lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());
 					lblEntryTime.Text=DateTime.Now.ToString();
 					lblETime.Text=DateTime.Now.ToString();
 					TotalDisc.Text="";
