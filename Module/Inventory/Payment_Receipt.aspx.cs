@@ -109,7 +109,15 @@ namespace EPetro.Module.Inventory
 			{
 				try
 				{
-					Cache["RecAmt"]="0";
+                    txtReceivedDate.Attributes.Add("readonly", "readonly");
+                    txtDate.Attributes.Add("readonly", "readonly");
+                    txtCr.Attributes.Add("readonly", "readonly");
+                    txtFinalDues.Attributes.Add("readonly", "readonly");
+                    txtTotalBalance.Attributes.Add("readonly", "readonly");
+                    Textbox1.Attributes.Add("readonly", "readonly");
+                    Textbox3.Attributes.Add("readonly", "readonly");
+                    Textbox2.Attributes.Add("readonly", "readonly");
+                    Cache["RecAmt"]="0";
 					CustName="";
 					PanReceiptNo.Visible=false;
 					PanBankInfo.Visible=false;

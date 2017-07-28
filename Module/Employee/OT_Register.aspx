@@ -49,7 +49,7 @@
 							<TR>
 								<TD>Date&nbsp;<FONT color="#ff0000">*</FONT>
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtDate" ErrorMessage="Please Select Overtime Date">*</asp:requiredfieldvalidator><FONT color="red"></FONT></TD>
-								<TD colSpan="3"><asp:textbox id="txtDate" runat="server" Width="136px" ReadOnly="True" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.OT_Register.txtDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+								<TD colSpan="3"><asp:textbox id="txtDate" runat="server" Width="136px"  CssClass="FontStyle" BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.OT_Register.txtDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 							</TR>
 							<TR>

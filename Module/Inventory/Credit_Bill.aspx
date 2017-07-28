@@ -23,7 +23,7 @@
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
 			<uc1:header id="Header1" runat="server"></uc1:header><asp:textbox id="TextBox1" style="Z-INDEX: 102; LEFT: 528px; POSITION: absolute; TOP: 8px" runat="server"
-				Visible="False" Enabled="False" BorderStyle="None" ReadOnly="True"></asp:textbox><asp:textbox id="TextBox2" style="Z-INDEX: 103; LEFT: 152px; POSITION: absolute; TOP: 8px" runat="server"
+				Visible="False" Enabled="False" BorderStyle="None" ></asp:textbox><asp:textbox id="TextBox2" style="Z-INDEX: 103; LEFT: 152px; POSITION: absolute; TOP: 8px" runat="server"
 				Visible="False" Width="8px"></asp:textbox>
 			<table height="288" width="764" align="center">
 				<TBODY>
@@ -73,10 +73,10 @@
 					</TR>
 					<TR vAlign="top" height="15">
 						<TD></TD>
-						<TD align="center">&nbsp;&nbsp;From&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:textbox id="txtDateFrom" runat="server" BorderStyle="Groove" ReadOnly="True" Width="80px"
+						<TD align="center">&nbsp;&nbsp;From&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:textbox id="txtDateFrom" runat="server" BorderStyle="Groove"  Width="80px"
 								CssClass="FontStyle"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>&nbsp;&nbsp;To&nbsp;&nbsp;
-							<asp:textbox id="txtDateTO" runat="server" BorderStyle="Groove" ReadOnly="True" Width="80px"
+							<asp:textbox id="txtDateTO" runat="server" BorderStyle="Groove"  Width="80px"
 								CssClass="FontStyle"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateTO);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>&nbsp;&nbsp;Sales Type&nbsp;&nbsp;<asp:dropdownlist id="DropSalesType" runat="server" Width="130px" CssClass="FontStyle">
 								<asp:ListItem Value="All">All</asp:ListItem>

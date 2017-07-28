@@ -162,7 +162,15 @@ namespace EPetro.Module.Accounts
 //				FuelWiseTotalLtr();
 				if(!Page.IsPostBack)
 				{
-					count=0;
+                    TextBox1.Attributes.Add("readonly", "readonly");
+                    TxtCrLimit.Attributes.Add("readonly", "readonly");
+                    lblInvoiceDate.Attributes.Add("readonly", "readonly");
+                    txtAvStock1.Attributes.Add("readonly", "readonly");
+                    txtRate1.Attributes.Add("readonly", "readonly");
+                    txtAvStock2.Attributes.Add("readonly", "readonly");
+                    txtRate2.Attributes.Add("readonly", "readonly");
+                    txtGrandTotal.Attributes.Add("readonly", "readonly");
+                    count =0;
 					dropInvoiceNo.Visible=false;
 					checkPrevileges();
 					//GetProducts();

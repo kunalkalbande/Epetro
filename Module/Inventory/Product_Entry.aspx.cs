@@ -129,7 +129,8 @@ namespace EPetro.Module.Inventory
 			{
 				try
 				{
-					checkPrevileges();
+                    txtTotalQty.Attributes.Add("readonly", "readonly");
+                    checkPrevileges();
 					InventoryClass obj=new InventoryClass (); 
 					lb.Visible=false;
 					txtunit.Enabled = false;

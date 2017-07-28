@@ -194,7 +194,7 @@ function chkSelect1(t)
 					<td></td>
 					<td colSpan="2">Received 
 						Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:textbox id="txtReceivedDate" Width="80" Runat="server" CssClass="fontstyle" BorderStyle="Groove"
-							ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtReceivedDate);return false;"><IMG class="PopcalTrigger" id="Img2" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+							></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtReceivedDate);return false;"><IMG class="PopcalTrigger" id="Img2" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0" runat="server"></A></td>
 				</tr>
 				<tr>
@@ -281,7 +281,7 @@ function chkSelect1(t)
 												<TD>Date</TD>
 												<TD height="10">
 													<asp:textbox id="txtDate" runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove"
-														ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+														></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 															border="0" runat="server"></A></TD>
 											</TR>
 										</asp:panel></TABLE>
@@ -293,8 +293,8 @@ function chkSelect1(t)
 										</TR>
 										<TR>
 											<TD align="right"><asp:textbox id="txtCr" runat="server" Width="31px" CssClass="FontStyle" BorderStyle="Groove"
-													ReadOnly="True"></asp:textbox><asp:textbox id="txtFinalDues" runat="server" Width="96px" CssClass="FontStyle" BorderStyle="Groove"
-													ReadOnly="True"></asp:textbox></TD>
+													></asp:textbox><asp:textbox id="txtFinalDues" runat="server" Width="96px" CssClass="FontStyle" BorderStyle="Groove"
+													></asp:textbox></TD>
 										</TR>
 										<TR>
 											<TD></TD>
@@ -308,12 +308,12 @@ function chkSelect1(t)
 							<TR>
 								<TD>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<asp:textbox id="txtTotalBalance" runat="server" Width="96px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox></TD>
+										></asp:textbox></TD>
 								<TD align="right"><asp:textbox id="Textbox1" runat="server" Width="96px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox>&nbsp;</TD>
+										></asp:textbox>&nbsp;</TD>
 								<TD align="right"><asp:textbox id="Textbox3" runat="server" Width="31px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox><asp:textbox id="Textbox2" runat="server" Width="96px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox>&nbsp;</TD>
+										></asp:textbox><asp:textbox id="Textbox2" runat="server" Width="96px" CssClass="FontStyle" BorderStyle="Groove"
+										></asp:textbox>&nbsp;</TD>
 							</TR>
 							<tr>
 								<td align="center">Narration</td>

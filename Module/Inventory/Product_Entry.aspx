@@ -239,7 +239,7 @@
 										runat="server" Width="78px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtBox" runat="server"
 										Width="78px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox></TD>
 								<TD>Package&nbsp;Qty&nbsp; <FONT color="red">*</FONT></TD>
-								<TD><asp:textbox id="txtTotalQty" runat="server" Width="58px" BorderStyle="Groove" ReadOnly="True"
+								<TD><asp:textbox id="txtTotalQty" runat="server" Width="58px" BorderStyle="Groove" 
 										CssClass="FontStyle"></asp:textbox><asp:dropdownlist id="DropPackUnit" runat="server" Width="60px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="Kg.">Kg.</asp:ListItem>

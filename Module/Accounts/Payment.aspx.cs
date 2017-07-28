@@ -85,7 +85,8 @@ namespace EPetro.Module.Accounts
 			}
 			if(!IsPostBack)
 			{
-				txtDate.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
+                txtDate.Attributes.Add("readonly", "readonly");
+                txtDate.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
 				checkPrivileges();
 				PanAmount.Visible=true;
 				PanBankInfo.Visible=false;

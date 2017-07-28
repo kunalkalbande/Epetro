@@ -120,8 +120,23 @@ namespace EPetro.Module.Inventory
 			{
 				try
 				{
-				//	checkPrevileges();
-					lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
+                    TextBox1.Attributes.Add("readonly", "readonly");
+                    TxtCrLimit.Attributes.Add("readonly", "readonly");
+                    txtPetrolSales.Attributes.Add("readonly", "readonly");
+                    txtDieselSales.Attributes.Add("readonly", "readonly");
+                    txtSPetrolSales.Attributes.Add("readonly", "readonly");
+                    txtSDieselSales.Attributes.Add("readonly", "readonly");
+                    txtRate1.Attributes.Add("readonly", "readonly");
+                    txtAmount1.Attributes.Add("readonly", "readonly");
+                    txtRate2.Attributes.Add("readonly", "readonly");
+                    txtAmount2.Attributes.Add("readonly", "readonly");
+                    txtRate3.Attributes.Add("readonly", "readonly");
+                    txtAmount3.Attributes.Add("readonly", "readonly");
+                    txtRate4.Attributes.Add("readonly", "readonly");
+                    txtAmount4.Attributes.Add("readonly", "readonly");
+                    txtGrandTotal.Attributes.Add("readonly", "readonly");
+                    //	checkPrevileges();
+                    lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
 					lblEntryTime.Text=DateTime.Now.ToString ();
 					//lblEntryBy.Text =Session["User_Name"].ToString();
 					

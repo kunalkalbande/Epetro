@@ -191,6 +191,7 @@ namespace EPetro.Module.Employee
 			}
 			if(!IsPostBack)
 			{
+                
 				#region Check Privileges
 				checkPrivileges();
 				if(View_flag=="0")

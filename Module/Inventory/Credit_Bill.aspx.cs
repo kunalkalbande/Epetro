@@ -89,7 +89,10 @@ namespace EPetro.Module.Inventory
 				}
 				if(!IsPostBack)
 				{
-					DropBillNo.Visible=false;
+                    TextBox1.Attributes.Add("readonly", "readonly");
+                    txtDateFrom.Attributes.Add("readonly", "readonly");
+                    txtDateTO.Attributes.Add("readonly", "readonly");
+                    DropBillNo.Visible=false;
 					checkPrevileges();
 					//lblDate.Text=DateTime.Today.Day.ToString()+"/"+DateTime.Today.Month.ToString()+"/"+DateTime.Today.Year.ToString();
 					//txtDateFrom.Text=lblDate.Text.ToString();

@@ -67,8 +67,9 @@ namespace EPetro.Module.Employee
 			txtDate.Text=DateTime.Today.Day.ToString()+"/"+DateTime.Today.Month.ToString()+"/"+DateTime.Today.Year.ToString();
 			if(!Page.IsPostBack)
 			{
-				#region Check Privileges
-				int i;
+                txtDate.Attributes.Add("readonly", "readonly");
+                #region Check Privileges
+                int i;
 				string View_flag="0", Add_Flag="0", Edit_Flag="0", Del_Flag="0";
 				string Module="2";
 				string SubModule="4";

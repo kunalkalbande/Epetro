@@ -67,7 +67,7 @@
 										<asp:textbox id="txtCheque" runat="server" Width="87px" CssClass="FontStyle" MaxLength="15" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp; 
 										Date
 										<asp:textbox id="txtDate" runat="server" Width="112px" CssClass="FontStyle" BorderStyle="Groove"
-											ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+											></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 												border="0" runat="server"></A></TD>
 								</TR>
 							</asp:panel><asp:panel id="PanAmount" runat="server">

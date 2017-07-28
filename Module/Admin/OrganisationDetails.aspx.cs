@@ -112,9 +112,11 @@ namespace EPetro.Module.Admin
 				{
 					try
 					{
-						#region Check Privileges
-						// Checks the user id adminnistrator or not ?
-						if(Session["User_ID"].ToString ()!="1001")
+                        txtDateFrom.Attributes.Add("readonly", "readonly");
+                        txtDateTo.Attributes.Add("readonly", "readonly");
+                        #region Check Privileges
+                        // Checks the user id adminnistrator or not ?
+                        if (Session["User_ID"].ToString ()!="1001")
 							Response.Redirect("../../Sysitem/AccessDeny.aspx",false);
 						#endregion
 						getbeat();

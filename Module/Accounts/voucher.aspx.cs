@@ -123,7 +123,12 @@ namespace EPetro.Module.Inventory
 			}
 			if(!IsPostBack)
 			{
-				LedgerID=new ArrayList();
+                txtDate.Attributes.Add("readonly", "readonly");
+                txtLCr.Attributes.Add("readonly", "readonly");
+                txtRCr.Attributes.Add("readonly", "readonly");
+                txtLDr.Attributes.Add("readonly", "readonly");
+                txtRDr.Attributes.Add("readonly", "readonly");
+                LedgerID =new ArrayList();
 				checkPrevileges();
 				getID();
 				txtNarration.Value = "";

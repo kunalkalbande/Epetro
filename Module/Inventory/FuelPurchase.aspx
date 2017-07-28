@@ -1484,7 +1484,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD>Place</TD>
                 <TD><INPUT class=FontStyle id=lblPlace 
                   style="WIDTH: 166px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 21px; BORDER-BOTTOM-STYLE: groove" 
-                  readOnly type=text size=22 name=lblPlace 
+                   type=text size=22 name=lblPlace 
                   runat="server"></TD></TR>
               <TR>
                 <TD>Vehicle No <asp:requiredfieldvalidator id=RequiredFieldValidator1 runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Fill Vehicle No.">*</asp:requiredfieldvalidator></TD>
@@ -1494,7 +1494,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD><asp:textbox id=txtVInvoiceNo runat="server" Width="166px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" onkeypress="return GetOnlyNumbers(this, event, false,false);" MaxLength="9"></asp:textbox></TD></TR>
               <TR>
                 <TD>Invoice Date <asp:requiredfieldvalidator id=RequiredFieldValidator3 runat="server" ControlToValidate="txtVInvoiceDate" ErrorMessage="Please Fill Vendor Invoice Date">*</asp:requiredfieldvalidator></TD>
-                <TD><asp:textbox id=txtVInvoiceDate runat="server" Width="110px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtVInvoiceDate);return false;" href="javascript:void(0)" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD></TR></TABLE></TD></TR>
+                <TD><asp:textbox id=txtVInvoiceDate runat="server" Width="110px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" ></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtVInvoiceDate);return false;" href="javascript:void(0)" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD></TR></TABLE></TD></TR>
         <TR>
           <TD vAlign=top align=center colSpan=2>
             <TABLE cellSpacing=0 cellPadding=0 width=580>
@@ -1528,10 +1528,10 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD align=right><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id=txtQty4 onblur=calc3() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="5"></asp:textbox></TD></TR>
               <TR>
                 <TD>Rate / (KL)</TD>
-                <TD align=right><asp:textbox id=txtRate1 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRate2 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRate3 onblur=calc() runat="server" Width="86" CssClass="FontStyle" Height="21" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRate4 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtRate1 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRate2 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRate3 onblur=calc() runat="server" Width="86" CssClass="FontStyle" Height="21" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRate4 onblur=calc() runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Density in Physical</TD>
                 <TD align=right><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,false);" id=txtDensityInPhysical1 onblur=checkden(this) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="3"></asp:textbox></TD>
@@ -1559,10 +1559,10 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
               <TR>
                 <TD id=TD1 style="HEIGHT: 22px">Density 
                   Variation</TD>
-                <TD align=right><asp:textbox id=txtDensityVariation1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDensityVariation2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDensityVariation3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDensityVariation4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtDensityVariation1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDensityVariation2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDensityVariation3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDensityVariation4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Density After Decantation</TD>
                 <TD align=right><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,false);" id=txtDenAfterDec1 onblur=checkden(this) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="3"></asp:textbox></TD>
@@ -1584,76 +1584,76 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD align=right><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id=txtConvDenAfterDec4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Reduction Others</TD>
-                <TD align=right><asp:textbox id=txtReduction1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtReduction2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtReduction3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtReduction4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtReduction1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtReduction2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtReduction3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtReduction4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Entry Tax</TD>
-                <TD align=right><asp:textbox id=txtEntryTax1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtEntryTax2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtEntryTax3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtEntryTax4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtEntryTax1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtEntryTax2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtEntryTax3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtEntryTax4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>RPG Charges</TD>
-                <TD align=right><asp:textbox id=txtRPGCharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRPGCharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRPGCharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRPGCharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtRPGCharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRPGCharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRPGCharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRPGCharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>RPG Surcharge</TD>
-                <TD align=right><asp:textbox id=txtRPGSurcharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRPGSurcharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRPGSurcharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtRPGSurcharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtRPGSurcharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRPGSurcharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRPGSurcharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtRPGSurcharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Local Transport Charge</TD>
-                <TD align=right><asp:textbox id=txtLTC1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLTC2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLTC3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLTC4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtLTC1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLTC2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLTC3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLTC4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Transportation Charge</TD>
-                <TD align=right><asp:textbox id=txtTransportCharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtTransportCharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtTransportCharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtTransportCharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtTransportCharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtTransportCharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtTransportCharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtTransportCharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Other Levis Value</TD>
-                <TD align=right><asp:textbox id=txtOther1 runat="server" Width="85px" CssClass="FontStyle" Height="24px" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtOther2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtOther3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtOther4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtOther1 runat="server" Width="85px" CssClass="FontStyle" Height="24px" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtOther2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtOther3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtOther4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Vat</TD>
-                <TD align=right><asp:textbox id=txtLST1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLST2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLST3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLST4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtLST1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLST2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLST3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLST4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>LST Surcharge</TD>
-                <TD align=right><asp:textbox id=txtLSTSurcharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLSTSurcharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLSTSurcharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLSTSurcharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtLSTSurcharge1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLSTSurcharge2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLSTSurcharge3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLSTSurcharge4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>License Fee Recovery</TD>
-                <TD align=right><asp:textbox id=txtLFR1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLFR2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLFR3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtLFR4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtLFR1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLFR2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLFR3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtLFR4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>DO/ FO/ BC/ Charge</TD>
-                <TD align=right><asp:textbox id=txtDO1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDO2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDO3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDO4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtDO1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDO2 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDO3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDO4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Total Amount</TD>
-                <TD align=right><asp:textbox id=txtAmount1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtAmount2 runat="server" Width="85px" DESIGNTIMEDRAGDROP="526" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtAmount3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtAmount4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtAmount1 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtAmount2 runat="server" Width="85px" DESIGNTIMEDRAGDROP="526" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtAmount3 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtAmount4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove"  MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD colSpan=5><asp:button id=cmdtot runat="server" Width="32px" Visible="False" Font-Bold="True" ToolTip="View Total Cost of Selected Product" Text="GT" Font-Names="Verdana" Font-Italic="True" Font-Size="XX-Small"></asp:button></TD></TR></TABLE></TD></TR></table>
       <TABLE style="WIDTH: 595px" cellSpacing=0 cellPadding=0 
@@ -1663,7 +1663,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
             Scheme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
           <TD style="WIDTH: 251px"><asp:textbox id=txtPromoScheme runat="server" Width="246px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox></TD>
           <TD>Grand Total</TD>
-          <TD><asp:textbox id=txtGrandTotal runat="server" Width="123px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True"></asp:textbox></TD></TR>
+          <TD><asp:textbox id=txtGrandTotal runat="server" Width="123px" CssClass="FontStyle" BorderStyle="Groove" ></asp:textbox></TD></TR>
         <TR>
           <TD>Remark</TD>
           <TD style="WIDTH: 251px"><asp:textbox id=txtRemark runat="server" Width="246px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox></TD>
@@ -1673,14 +1673,14 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
 <asp:ListItem Value="Per">%</asp:ListItem>
 <asp:ListItem Value="Rs" Selected="True">Rs.</asp:ListItem>
 <asp:ListItem Value="KL">KL</asp:ListItem>
-									</asp:dropdownlist><asp:textbox id=TotalDisc runat="server" Width="46px" Height="22px" BorderStyle="None" ReadOnly="True"></asp:textbox></TD></TR>
+									</asp:dropdownlist><asp:textbox id=TotalDisc runat="server" Width="46px" Height="22px" BorderStyle="None" ></asp:textbox></TD></TR>
         <TR>
           <TD>Message</TD>
-          <TD style="WIDTH: 251px"><asp:textbox id=txtMessage runat="server" Width="246px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True"></asp:textbox></TD>
+          <TD style="WIDTH: 251px"><asp:textbox id=txtMessage runat="server" Width="246px" CssClass="FontStyle" BorderStyle="Groove" ></asp:textbox></TD>
           <TD>Net 
             Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-          <TD><asp:textbox id=txtNetAmount runat="server" Width="124px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True"></asp:textbox></TD></TR>
+          <TD><asp:textbox id=txtNetAmount runat="server" Width="124px" CssClass="FontStyle" BorderStyle="Groove" ></asp:textbox></TD></TR>
         <TR>
           <TD>Entry&nbsp;By</TD>
           <TD style="WIDTH: 251px"><asp:label id=lblEntryBy runat="server"></asp:label></TD>
