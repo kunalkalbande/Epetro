@@ -190,7 +190,9 @@ namespace EPetro.Module.Accounts
 					FuelWiseTotalLtr();
 					CreateLogFiles.ErrorLog("Form:cashbilling.aspx,Method:PageLoad.  user "+uid);
 				}
-			}
+                lblInvoiceDate.Text = Request.Form["lblInvoiceDate"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["lblInvoiceDate"].ToString().Trim();
+                //lblInvoiceDate.Text = Request.Form["lblInvoiceDate"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["lblInvoiceDate"].ToString().Trim();
+            }
 			catch(Exception ex)
 			{
 				CreateLogFiles.ErrorLog("Form:cashbilling.aspx,Method:PageLoad.  EXCEPTION: "+ ex.Message+"  user "+uid);

@@ -331,7 +331,8 @@ namespace EPetro.Module.Inventory
 					Button1.Enabled = false; 
 				}
 			}
-		}
+            lblInvoiceDate.Text = Request.Form["lblInvoiceDate"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["lblInvoiceDate"].ToString().Trim();
+        }
 
 		/// <summary>
 		/// This method is used to check the slip no is used or not with the help of java script on run time.

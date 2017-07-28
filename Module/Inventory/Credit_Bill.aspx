@@ -33,10 +33,10 @@
 								<tr vAlign="top">
 									<td vAlign="top"><asp:image id="imgSample" runat="server" Width="48px" Height="51px"></asp:image></td>
 									<td vAlign="top" align="center"><asp:label id="txtname1" runat="server" Width="472px" Height="8px" Font-Size="X-Small" Font-Bold="True"
-											ForeColor="DarkGreen"></asp:label><br>
-										<asp:label id="txtdet1" runat="server" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"></asp:label><br>
-										<asp:label id="txtadd1" runat="server" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"></asp:label><br>
-										<asp:label id="txtci11" Width="224px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"
+											ForeColor="DarkGreen" Visible="false"></asp:label><br>
+										<asp:label id="txtdet1" runat="server" Visible="false" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"></asp:label><br>
+										<asp:label id="txtadd1" runat="server" Visible="false" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"></asp:label><br>
+										<asp:label id="txtci11" Width="224px" Visible="false" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"
 											Runat="server"></asp:label><br>
 										<!--<P>-->
 										<!--	<table style="WIDTH: 487px; HEIGHT: 90px" border=0>
@@ -57,7 +57,7 @@
 												<td height=10></td>
 											</tr>
 										</table>-->
-										<!--</P>--></td></FONT></FONT></tr>
+										<!--</P>--><font  color="DarkGreen" size="4">Credit Bill</font></td></tr>
 							</table>
 							<!-- <P></P>-->
 							<hr align="center">
