@@ -196,7 +196,31 @@ namespace EPetro.Module.Inventory
 			{
 				try
 				{
-					Vendor_ID="0";
+                    lblInvoiceDate.Attributes.Add("readonly", "readonly");
+                    lblPlace.Attributes.Add("readonly", "readonly");
+                    txtVInvoiceDate.Attributes.Add("readonly", "readonly");
+                    txtRate1.Attributes.Add("readonly", "readonly");
+                    txtAmount1.Attributes.Add("readonly", "readonly");
+                    txtRate2.Attributes.Add("readonly", "readonly");
+                    txtAmount2.Attributes.Add("readonly", "readonly");
+                    txtRate3.Attributes.Add("readonly", "readonly");
+                    txtAmount3.Attributes.Add("readonly", "readonly");
+                    txtRate4.Attributes.Add("readonly", "readonly");
+                    txtAmount4.Attributes.Add("readonly", "readonly");
+                    txtRate5.Attributes.Add("readonly", "readonly");
+                    txtAmount5.Attributes.Add("readonly", "readonly");
+                    txtRate6.Attributes.Add("readonly", "readonly");
+                    txtAmount6.Attributes.Add("readonly", "readonly");
+                    txtRate7.Attributes.Add("readonly", "readonly");
+                    txtAmount7.Attributes.Add("readonly", "readonly");
+                    txtRate8.Attributes.Add("readonly", "readonly");
+                    txtAmount8.Attributes.Add("readonly", "readonly");
+                    txtGrandTotal.Attributes.Add("readonly", "readonly");
+                    txtMessage.Attributes.Add("readonly", "readonly");
+                    txtVAT.Attributes.Add("readonly", "readonly");
+                    txtNetAmount.Attributes.Add("readonly", "readonly");
+
+                    Vendor_ID ="0";
 					CheckMode="";
 					txtVInvoiceDate.Text=DateTime.Now.Day+"/"+DateTime.Now.Month+"/"+DateTime.Now.Year;
 					checkPrevileges();

@@ -40,11 +40,11 @@
 						<table width="700" align="center">
 							<tr>
 								<td align="right" width="10%">From Date</td>
-								<td align="center" width="20%"><asp:textbox id="txtDateFrom" runat="server" Width="80px" ReadOnly="True" BorderStyle="Groove"
+								<td align="center" width="20%"><asp:textbox id="txtDateFrom" runat="server" Width="80px"  BorderStyle="Groove"
 										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
 								<td align="center" width="10%">To Date</td>
-								<td width="20%"><asp:textbox id="txtDateTo" runat="server" Width="80px" ReadOnly="True" BorderStyle="Groove"
+								<td width="20%"><asp:textbox id="txtDateTo" runat="server" Width="80px"  BorderStyle="Groove"
 										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
 								<td align="center" colSpan="2" width="40%"><asp:button id="btnView" Width="65" Text="View" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"

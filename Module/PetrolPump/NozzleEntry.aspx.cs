@@ -60,7 +60,9 @@ namespace EPetro.Module.PetrolPump
 			FillID();
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                lblNozzleName.Attributes.Add("readonly", "readonly");
+
+                uid =(Session["User_Name"].ToString());
 			}
 			catch(Exception ex)
 			{

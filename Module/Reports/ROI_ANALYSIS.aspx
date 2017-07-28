@@ -122,7 +122,7 @@
 										size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtSalesPerformanceDate);return false;"><IMG class="PopcalTrigger" id="Img40" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td align="center" colSpan="3" height="19">&nbsp; Cumulative upto &nbsp;<input id="txtCummulativeuptoDate" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtCummulativeuptoDate);return false;"><IMG class="PopcalTrigger" id="Img2" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtCummulativeuptoDate);return false;"><IMG class="PopcalTrigger" id="Img2" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<tr>
@@ -319,7 +319,7 @@
 								<td colSpan="4" height="19"><input language="javascript" id="txt3a" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="3" height="19"><input id="txt3adatepk" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt3adatepk);return false;"><IMG class="PopcalTrigger" id="Img3" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt3adatepk);return false;"><IMG class="PopcalTrigger" id="Img3" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<tr>
@@ -327,7 +327,7 @@
 								<td colSpan="4" height="19"><input id="txt3b" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="3" height="19"><input id="txt3bdatepk" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt3bdatepk);return false;"><IMG class="PopcalTrigger" id="Img4" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt3bdatepk);return false;"><IMG class="PopcalTrigger" id="Img4" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<tr>
@@ -335,7 +335,7 @@
 								<td colSpan="4" height="19"><input id="txt3c" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="3" height="19"><input id="txt3cdatepk" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt3cdatepk);return false;"><IMG class="PopcalTrigger" id="Img5" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt3cdatepk);return false;"><IMG class="PopcalTrigger" id="Img5" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<tr>
@@ -516,7 +516,7 @@
 							</tr>
 							<tr>
 								<td colSpan="4">&nbsp; Stock as on <input id="txt5bstdate" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" name="Text1" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt5bstdate);return false;"><IMG class="PopcalTrigger" id="Img39" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										type="text" size="20" name="Text1" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt5bstdate);return false;"><IMG class="PopcalTrigger" id="Img39" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A><br>
 									(Date of inspection)</td>
 								<td><input id="txt5BStockonlastDtMS93" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
@@ -832,7 +832,7 @@
 								<td width="9%" colSpan="6" style="HEIGHT: 32px">&nbsp; a) Painting Last Done On 
 									(DD-MM-YY)</td>
 								<td width="15%" colSpan="2" style="HEIGHT: 32px"><input id="txt10_3_aDate" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt10_3_aDate);return false;"><IMG class="PopcalTrigger" id="Img6" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt10_3_aDate);return false;"><IMG class="PopcalTrigger" id="Img6" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<tr>
@@ -1349,7 +1349,7 @@
 								<td colSpan="13">&nbsp; a) Date of Last Visit by Mobile Lab :
 								</td>
 								<td colSpan="5"><input id="txt17a_Date" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt17a_Date);return false;">
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt17a_Date);return false;">
 										<IMG class="PopcalTrigger" id="Img36" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="3">Result</td>
@@ -1360,7 +1360,7 @@
 								<td width="4%" colSpan="13">&nbsp; b) Date of Last LDs Sample Drawn :
 								</td>
 								<td width="4%" colSpan="5"><input id="txt17b_Date" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt17b_Date);return false;">
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt17b_Date);return false;">
 										<IMG class="PopcalTrigger" id="Img37" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td width="1%" colSpan="3">Result</td>
@@ -1371,7 +1371,7 @@
 								<td width="4%" colSpan="13">&nbsp; c) Date of Last Nozzle Sample drawn :
 								</td>
 								<td width="4%" colSpan="5"><input id="txt17c_Date" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt17c_Date);return false;">
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt17c_Date);return false;">
 										<IMG class="PopcalTrigger" id="Img38" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td width="1%" colSpan="3">Result</td>
@@ -1545,27 +1545,27 @@
 							<tr>
 								<td colSpan="2">&nbsp; d) Date of Breakdown Report</td>
 								<td><input id="txt18_5dN1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN1);return false;"><IMG class="PopcalTrigger" id="Img7" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN1);return false;"><IMG class="PopcalTrigger" id="Img7" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5dN2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN2);return false;"><IMG class="PopcalTrigger" id="Img8" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN2);return false;"><IMG class="PopcalTrigger" id="Img8" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5dN3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN3);return false;"><IMG class="PopcalTrigger" id="Img9" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN3);return false;"><IMG class="PopcalTrigger" id="Img9" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5dN4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN4);return false;"><IMG class="PopcalTrigger" id="Img10" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN4);return false;"><IMG class="PopcalTrigger" id="Img10" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5dN5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN5);return false;"><IMG class="PopcalTrigger" id="Img11" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN5);return false;"><IMG class="PopcalTrigger" id="Img11" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5dN6" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN6);return false;"><IMG class="PopcalTrigger" id="Img12" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5dN6);return false;"><IMG class="PopcalTrigger" id="Img12" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 							</tr>
@@ -1573,27 +1573,27 @@
 								<td colSpan="2">&nbsp; e) Date of C/Man Visit to RO
 								</td>
 								<td><input id="txt18_5eN1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN1);return false;"><IMG class="PopcalTrigger" id="Img24" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN1);return false;"><IMG class="PopcalTrigger" id="Img24" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5eN2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN2);return false;"><IMG class="PopcalTrigger" id="Img25" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN2);return false;"><IMG class="PopcalTrigger" id="Img25" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5eN3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN3);return false;"><IMG class="PopcalTrigger" id="Img26" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN3);return false;"><IMG class="PopcalTrigger" id="Img26" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5eN4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN4);return false;"><IMG class="PopcalTrigger" id="Img27" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN4);return false;"><IMG class="PopcalTrigger" id="Img27" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5eN5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN5);return false;"><IMG class="PopcalTrigger" id="Img28" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN5);return false;"><IMG class="PopcalTrigger" id="Img28" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5eN6" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN6);return false;"><IMG class="PopcalTrigger" id="Img29" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5eN6);return false;"><IMG class="PopcalTrigger" id="Img29" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 							</tr>
@@ -1601,27 +1601,27 @@
 								<td colSpan="2">&nbsp; f) Date of completion of Repair
 								</td>
 								<td><input id="txt18_5fN1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN1);return false;"><IMG class="PopcalTrigger" id="Img30" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN1);return false;"><IMG class="PopcalTrigger" id="Img30" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5fN2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN2);return false;"><IMG class="PopcalTrigger" id="Img31" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN2);return false;"><IMG class="PopcalTrigger" id="Img31" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5fN3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN3);return false;"><IMG class="PopcalTrigger" id="Img32" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN3);return false;"><IMG class="PopcalTrigger" id="Img32" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5fN4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN4);return false;"><IMG class="PopcalTrigger" id="Img33" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN4);return false;"><IMG class="PopcalTrigger" id="Img33" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5fN5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN5);return false;"><IMG class="PopcalTrigger" id="Img34" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN5);return false;"><IMG class="PopcalTrigger" id="Img34" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 								<td><input id="txt18_5fN6" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN6);return false;"><IMG class="PopcalTrigger" id="Img35" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt18_5fN6);return false;"><IMG class="PopcalTrigger" id="Img35" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"><br>
 										</A></td>
 							</tr>
@@ -1666,7 +1666,7 @@
 								<td colSpan="2"><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt19_0srno1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" runat="server" class="FontStyle"></td>
 								<td colSpan="1"><input id="txt19_0Date1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date1);return false;"><IMG class="PopcalTrigger" id="Img13" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date1);return false;"><IMG class="PopcalTrigger" id="Img13" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt19_0Action1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1677,7 +1677,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt19_0srno2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt19_0Date2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date2);return false;"><IMG class="PopcalTrigger" id="Img14" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date2);return false;"><IMG class="PopcalTrigger" id="Img14" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt19_0Action2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1688,7 +1688,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt19_0srno3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt19_0Date3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date3);return false;"><IMG class="PopcalTrigger" id="Img15" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date3);return false;"><IMG class="PopcalTrigger" id="Img15" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt19_0Action3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1699,7 +1699,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt19_0srno4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt19_0Date4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date4);return false;"><IMG class="PopcalTrigger" id="Img16" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date4);return false;"><IMG class="PopcalTrigger" id="Img16" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt19_0Action4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1710,7 +1710,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt19_0srno5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt19_0Date5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date5);return false;"><IMG class="PopcalTrigger" id="Img17" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt19_0Date5);return false;"><IMG class="PopcalTrigger" id="Img17" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt19_0Action5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1730,7 +1730,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt20_0srno1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt20_0Date1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date1);return false;"><IMG class="PopcalTrigger" id="Img18" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date1);return false;"><IMG class="PopcalTrigger" id="Img18" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt20_0Action1" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1741,7 +1741,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt20_0srno2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt20_0Date2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date2);return false;"><IMG class="PopcalTrigger" id="Img19" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date2);return false;"><IMG class="PopcalTrigger" id="Img19" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt20_0Action2" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1752,7 +1752,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt20_0srno3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt20_0Date3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date3);return false;"><IMG class="PopcalTrigger" id="Img20" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date3);return false;"><IMG class="PopcalTrigger" id="Img20" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt20_0Action3" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1763,7 +1763,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt20_0srno4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt20_0Date4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date4);return false;"><IMG class="PopcalTrigger" id="Img21" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date4);return false;"><IMG class="PopcalTrigger" id="Img21" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt20_0Action4" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1774,7 +1774,7 @@
 								<td><input onkeypress="return GetOnlyNumbers(this, event, false,true)" id="txt20_0srno5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2"><input id="txt20_0Date5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date5);return false;"><IMG class="PopcalTrigger" id="Img22" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txt20_0Date5);return false;"><IMG class="PopcalTrigger" id="Img22" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td colSpan="2"><input id="txt20_0Action5" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
@@ -1801,7 +1801,7 @@
 							<tr>
 								<td width="12%" colSpan="5">&nbsp;</td>
 								<td width="12%" colSpan="3">&nbsp;Date&nbsp;&nbsp; <input id="txtIOCDate" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-										readOnly type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtIOCDate);return false;"><IMG class="PopcalTrigger" id="Img23" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										 type="text" size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtIOCDate);return false;"><IMG class="PopcalTrigger" id="Img23" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<TR align="center">

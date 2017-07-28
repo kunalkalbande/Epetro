@@ -102,7 +102,25 @@ namespace EPetro.Module.Inventory
 				uid=(Session["User_Name"].ToString());
 				if(!Page.IsPostBack)
 				{
-					checkPrevileges(); 
+                    txtOutStoreIn1.Attributes.Add("readonly", "readonly");
+                    txtOutStoreIn2.Attributes.Add("readonly", "readonly");
+                    txtOutStoreIn3.Attributes.Add("readonly", "readonly");
+                    txtOutStoreIn4.Attributes.Add("readonly", "readonly");
+                    txtTotalOutQtyPack.Attributes.Add("readonly", "readonly");
+                    txtTotalOutQtyLtr.Attributes.Add("readonly", "readonly");
+                    txtInStoreIn1.Attributes.Add("readonly", "readonly");
+                    txtInStoreIn2.Attributes.Add("readonly", "readonly");
+                    txtInStoreIn3.Attributes.Add("readonly", "readonly");
+                    txtInStoreIn4.Attributes.Add("readonly", "readonly");
+                    txtTotalInQtyPack.Attributes.Add("readonly", "readonly");
+                    txtTotalInQtyLtr.Attributes.Add("readonly", "readonly");
+
+
+
+
+
+
+                    checkPrevileges(); 
 					fillCombo();
 					getStoreIn();
 					getID();

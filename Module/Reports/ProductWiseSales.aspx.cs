@@ -55,7 +55,9 @@ namespace EPetro.Module.Inventory
 		{
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                txtDateTo.Attributes.Add("readonly", "readonly");
+                uid =(Session["User_Name"].ToString());
 			}
 			catch(Exception ex)
 			{

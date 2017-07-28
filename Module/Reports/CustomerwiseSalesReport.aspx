@@ -36,14 +36,14 @@
 						<TABLE id="Table1">
 							<TR>
 								<TD style="HEIGHT: 31px" align="left">Date From</TD>
-								<TD style="HEIGHT: 31px" align="left"><asp:textbox id="txtDateFrom" runat="server" Width="110px" ReadOnly="True" BorderStyle="Groove"
+								<TD style="HEIGHT: 31px" align="left"><asp:textbox id="txtDateFrom" runat="server" Width="110px"  BorderStyle="Groove"
 										CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"
 										href="javascript:void(0)"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A>
 									<asp:requiredfieldvalidator id="rfvDateFrom" runat="server" ErrorMessage="Please Select From Date From the Calender"
 										ControlToValidate="txtDateFrom">*</asp:requiredfieldvalidator></TD>
 								<TD style="HEIGHT: 31px" align="left">Date To</TD>
-								<TD style="HEIGHT: 31px" align="left"><asp:textbox id="Textbox1" runat="server" Width="110px" ReadOnly="True" BorderStyle="Groove"
+								<TD style="HEIGHT: 31px" align="left"><asp:textbox id="Textbox1" runat="server" Width="110px"  BorderStyle="Groove"
 										CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.Textbox1);return false;"
 										href="javascript:void(0)"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A>

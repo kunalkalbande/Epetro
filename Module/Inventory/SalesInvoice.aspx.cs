@@ -256,7 +256,46 @@ namespace EPetro.Module.Inventory
 			{
 				try
 				{
-					checkPrevileges();
+                    TextBox1.Attributes.Add("readonly", "readonly");
+                    TxtCrLimit1.Attributes.Add("readonly", "readonly");
+                    lblInvoiceDate.Attributes.Add("readonly", "readonly");
+                    txtChallanDate.Attributes.Add("readonly", "readonly");
+                    lblPlace.Attributes.Add("readonly", "readonly");
+                    lblDueDate.Attributes.Add("readonly", "readonly");
+                    lblCurrBalance.Attributes.Add("readonly", "readonly");
+                    lblCreditLimit.Attributes.Add("readonly", "readonly");
+                    txtAvStock1.Attributes.Add("readonly", "readonly");
+                    txtRate1.Attributes.Add("readonly", "readonly");
+                    txtAmount1.Attributes.Add("readonly", "readonly");
+                    txtAvStock2.Attributes.Add("readonly", "readonly");
+                    txtRate2.Attributes.Add("readonly", "readonly");
+                    txtAmount2.Attributes.Add("readonly", "readonly");
+                    txtAvStock3.Attributes.Add("readonly", "readonly");
+                    txtRate3.Attributes.Add("readonly", "readonly");
+                    txtAmount3.Attributes.Add("readonly", "readonly");
+                    txtAvStock4.Attributes.Add("readonly", "readonly");
+                    txtRate4.Attributes.Add("readonly", "readonly");
+                    txtAmount4.Attributes.Add("readonly", "readonly");
+                    txtAvStock5.Attributes.Add("readonly", "readonly");
+                    txtRate5.Attributes.Add("readonly", "readonly");
+                    txtAmount5.Attributes.Add("readonly", "readonly");
+                    txtAvStock6.Attributes.Add("readonly", "readonly");
+                    txtRate6.Attributes.Add("readonly", "readonly");
+                    txtAmount6.Attributes.Add("readonly", "readonly");
+                    txtAvStock7.Attributes.Add("readonly", "readonly");
+                    txtRate7.Attributes.Add("readonly", "readonly");
+                    txtAmount7.Attributes.Add("readonly", "readonly");
+                    txtAvStock8.Attributes.Add("readonly", "readonly");
+                    txtRate8.Attributes.Add("readonly", "readonly");
+                    txtAmount8.Attributes.Add("readonly", "readonly");
+                    txtGrandTotal.Attributes.Add("readonly", "readonly");
+                    txtMessage.Attributes.Add("readonly", "readonly");
+                    txtVAT.Attributes.Add("readonly", "readonly");
+                    txtNetAmount.Attributes.Add("readonly", "readonly");
+
+
+
+                    checkPrevileges();
 					txtChallanDate.Text=DateTime.Now.Day+"/"+DateTime.Now.Month+"/"+DateTime.Now.Year;
 					lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
 					lblEntryTime.Text=DateTime.Now.ToString ();

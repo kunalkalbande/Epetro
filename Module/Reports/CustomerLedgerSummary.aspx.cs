@@ -65,7 +65,9 @@ namespace EPetro.Module.Accounts
 		{
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                txtDateTo.Attributes.Add("readonly", "readonly");
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                uid =(Session["User_Name"].ToString());
 			}
 			catch(Exception ex)
 			{

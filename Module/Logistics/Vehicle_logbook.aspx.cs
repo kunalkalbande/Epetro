@@ -100,7 +100,12 @@ namespace EPetro.Module.Logistics
 
 				if(!Page.IsPostBack)
 				{
-					checkPrevileges(); 
+                    txtVehiclename.Attributes.Add("readonly", "readonly");
+                    txtdrivername.Attributes.Add("readonly", "readonly");
+                    txtBiltyDate.Attributes.Add("readonly", "readonly");
+                    txtmeterreadpre.Attributes.Add("readonly", "readonly");
+
+                    checkPrevileges(); 
 					txtDOE.Text = System.DateTime.Now.Day+"/"+System.DateTime.Now.Month+"/"+System.DateTime.Now.Year;
 					txtBiltyDate.Text = System.DateTime.Now.Day+"/"+System.DateTime.Now.Month+"/"+System.DateTime.Now.Year;
 					getID();

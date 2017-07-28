@@ -38,11 +38,11 @@
 								<TR>
 									<TD vAlign="middle" align="center">Date From
 										<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtDateFrom" ErrorMessage="Date Required">*</asp:requiredfieldvalidator></TD>
-									<TD style="WIDTH: 181px"><asp:textbox id="txtDateTo" runat="server" Width="115px" ReadOnly="True" BorderStyle="Groove"
+									<TD style="WIDTH: 181px"><asp:textbox id="txtDateTo" runat="server" Width="115px"  BorderStyle="Groove"
 											CssClass="FontStyle"></asp:textbox><A onClick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 												border="0"></A></TD>
 									<TD vAlign="middle" align="center" colSpan="1" rowSpan="1">To</TD>
-									<TD><asp:textbox id="txtDateFrom" runat="server" Width="115px" ReadOnly="True" BorderStyle="Groove"
+									<TD><asp:textbox id="txtDateFrom" runat="server" Width="115px"  BorderStyle="Groove"
 											CssClass="FontStyle"></asp:textbox><A onClick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 												border="0"></A></TD>
 								</TR>

@@ -373,7 +373,7 @@
 										</TR>
 										<TR>
 											<TD>Invoice Date</TD>
-											<TD><asp:TextBox id="lblInvoiceDate" runat="server" Width="100px" ReadOnly="True" BorderStyle="Groove"
+											<TD><asp:TextBox id="lblInvoiceDate" runat="server" Width="100px"  BorderStyle="Groove"
 													CssClass="FontStyle"></asp:TextBox>
 												<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.lblInvoiceDate);return false;">
 													<IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
@@ -409,7 +409,7 @@
 										<TR>
 											<TD>&nbsp; Place</TD>
 											<TD colSpan="2"><INPUT id="lblPlace" style="WIDTH: 170px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
-													readOnly type="text" size="23" name="lblPlace" runat="server" class="FontStyle"></TD>
+													 type="text" size="23" name="lblPlace" runat="server" class="FontStyle"></TD>
 										</TR>
 										<TR>
 											<TD>&nbsp; Vehicle No&nbsp;
@@ -430,7 +430,7 @@
 											<TD>&nbsp; Invoice Date&nbsp;
 											</TD>
 											<TD colSpan="2"><asp:textbox id="txtVInvoiceDate" runat="server" Width="173px" Height="20px" BorderStyle="Groove"
-													ReadOnly="True" CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtVInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+													 CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtVInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 														border="0"></A></TD>
 										</TR>
 									</TABLE>
@@ -476,9 +476,9 @@
 												</asp:dropdownlist><INPUT id="txtPack1" style="WIDTH: 100px" type="hidden" name="txtPack1" runat="server"></td>
 											<TD><asp:textbox id="txtQty1" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate1" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate1" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount1" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount1" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -500,9 +500,9 @@
 											</td>
 											<TD><asp:textbox id="txtQty2" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate2" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate2" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount2" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount2" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -520,9 +520,9 @@
 												</asp:dropdownlist><INPUT id="txtPack3" style="WIDTH: 91px" type="hidden" name="txtPack3" runat="server"></td>
 											<TD><asp:textbox id="txtQty3" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate3" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate3" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount3" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount3" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -540,9 +540,9 @@
 												</asp:dropdownlist><INPUT id="txtPack4" style="WIDTH: 91px" type="hidden" name="txtPack4" runat="server"></td>
 											<TD><asp:textbox id="txtQty4" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate4" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate4" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount4" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount4" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -560,9 +560,9 @@
 												</asp:dropdownlist><INPUT id="txtPack5" style="WIDTH: 91px" type="hidden" name="txtPack5" runat="server"></td>
 											<TD><asp:textbox id="txtQty5" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate5" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate5" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount5" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount5" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -580,9 +580,9 @@
 												</asp:dropdownlist><INPUT id="txtPack6" style="WIDTH: 91px" type="hidden" name="txtPack6" runat="server"></td>
 											<TD><asp:textbox id="txtQty6" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate6" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate6" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount6" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount6" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -600,9 +600,9 @@
 												</asp:dropdownlist><INPUT id="txtPack7" style="WIDTH: 91px" type="hidden" name="txtPack7" runat="server"></TD>
 											<TD><asp:textbox id="txtQty7" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate7" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate7" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount7" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount7" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -620,9 +620,9 @@
 												</asp:dropdownlist><INPUT id="txtPack8" style="WIDTH: 91px" type="hidden" name="txtPack8" runat="server"></td>
 											<TD><asp:textbox id="txtQty8" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtRate8" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtRate8" onblur="calc()" runat="server" Width="52px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtAmount8" runat="server" Width="80px" BorderStyle="Groove" ReadOnly="True"
+											<TD><asp:textbox id="txtAmount8" runat="server" Width="80px" BorderStyle="Groove" 
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 									</TABLE>
@@ -635,7 +635,7 @@
 								<TD><asp:textbox id="txtPromoScheme" runat="server" Width="230px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="49"></asp:textbox></TD>
 								<TD>Grand Total</TD>
-								<TD><asp:textbox id="txtGrandTotal" runat="server" Width="123px" BorderStyle="Groove" ReadOnly="True"
+								<TD><asp:textbox id="txtGrandTotal" runat="server" Width="123px" BorderStyle="Groove" 
 										CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
@@ -654,7 +654,7 @@
 							<TR>
 								<TD>Message</TD>
 								<TD>
-									<asp:textbox id="txtMessage" runat="server" Width="230px" BorderStyle="Groove" ReadOnly="True"
+									<asp:textbox id="txtMessage" runat="server" Width="230px" BorderStyle="Groove" 
 										CssClass="FontStyle"></asp:textbox></TD>
 								<TD>Discount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 								<TD><asp:textbox id="txtDisc" onblur="GetNetAmount()" runat="server" Width="67px" Height="22px" BorderStyle="Groove"
@@ -673,13 +673,13 @@
 										ToolTip="Apply" Checked="True"></asp:radiobutton>
 								</TD>
 								<TD>
-									<asp:textbox id="txtVAT" runat="server" Width="124px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+									<asp:textbox id="txtVAT" runat="server" Width="124px" BorderStyle="Groove"  CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD></TD>
 								<TD></TD>
 								<TD>Net Amount</TD>
-								<TD><asp:textbox id="txtNetAmount" runat="server" Width="124px" BorderStyle="Groove" ReadOnly="True"
+								<TD><asp:textbox id="txtNetAmount" runat="server" Width="124px" BorderStyle="Groove" 
 										CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>

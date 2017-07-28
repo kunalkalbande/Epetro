@@ -62,7 +62,9 @@ namespace EPetro.Module.Reports
 		{
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                Textbox1.Attributes.Add("readonly", "readonly");
+                uid =(Session["User_Name"].ToString());
 				// if the user is admin. then visible the update interest button and make the Ineterest Text field editable to modify or vice versa.
 				if(Session["User_ID"].ToString().Equals("1001") )
 				{

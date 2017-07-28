@@ -376,7 +376,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></td>
-											<td><asp:textbox id="txtOutStoreIn1" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></td>
+											<td><asp:textbox id="txtOutStoreIn1" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></td>
 											<td><asp:textbox id="txtOutQtyPack1" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd1,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></td>
 											<td><asp:textbox id="txtOutQtyLtr1" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd1,this);"
@@ -387,7 +387,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:textbox id="txtOutStoreIn2" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtOutStoreIn2" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
 											<TD><asp:textbox id="txtOutQtyPack2" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd2,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
 											<TD><asp:textbox id="txtOutQtyLtr2" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd2,this);"
@@ -398,7 +398,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:textbox id="txtOutStoreIn3" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtOutStoreIn3" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
 											<TD><asp:textbox id="txtOutQtyPack3" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd3,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
 											<TD><asp:textbox id="txtOutQtyLtr3" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd3,this);"
@@ -409,7 +409,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:textbox id="txtOutStoreIn4" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtOutStoreIn4" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
 											<TD><asp:textbox id="txtOutQtyPack4" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd4,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
 											<TD><asp:textbox id="txtOutQtyLtr4" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd4,this);"
@@ -418,9 +418,9 @@ var InPackTotal = 0;
 										<TR>
 											<TD><STRONG style="COLOR: #006400">Total Out:</STRONG></TD>
 											<TD>&nbsp;</TD>
-											<TD><asp:textbox id="txtTotalOutQtyPack" runat="server" Width="40px" ReadOnly="True" CssClass="FontStyle"
+											<TD><asp:textbox id="txtTotalOutQtyPack" runat="server" Width="40px"  CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtTotalOutQtyLtr" runat="server" Width="40px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtTotalOutQtyLtr" runat="server" Width="40px"  CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 									</table>
 								</td>
@@ -447,7 +447,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></td>
-											<td><asp:textbox id="txtInStoreIn1" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></td>
+											<td><asp:textbox id="txtInStoreIn1" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></td>
 											<td><asp:textbox id="txtInQtyPack1" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr1,document.Form1.txtOutQtyLtr1);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></td>
 											<td><asp:textbox id="txtInQtyLtr1" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr1,document.Form1.txtOutQtyLtr1);"
@@ -458,7 +458,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:textbox id="txtInStoreIn2" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtInStoreIn2" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
 											<TD><asp:textbox id="txtInQtyPack2" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr2,document.Form1.txtOutQtyLtr2);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
 											<TD><asp:textbox id="txtInQtyLtr2" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr2,document.Form1.txtOutQtyLtr2);"
@@ -469,7 +469,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:textbox id="txtInStoreIn3" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtInStoreIn3" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
 											<TD><asp:textbox id="txtInQtyPack3" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr3,document.Form1.txtOutQtyLtr3);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
 											<TD><asp:textbox id="txtInQtyLtr3" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr3,document.Form1.txtOutQtyLtr3);"
@@ -480,7 +480,7 @@ var InPackTotal = 0;
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD style="HEIGHT: 21px"><asp:textbox id="txtInStoreIn4" runat="server" Width="70px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD style="HEIGHT: 21px"><asp:textbox id="txtInStoreIn4" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
 											<TD style="HEIGHT: 21px"><asp:textbox id="txtInQtyPack4" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr4,document.Form1.txtOutQtyLtr4);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
 											<TD style="HEIGHT: 21px"><asp:textbox id="txtInQtyLtr4" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr4,document.Form1.txtOutQtyLtr4);"
@@ -489,9 +489,9 @@ var InPackTotal = 0;
 										<TR>
 											<TD><STRONG style="COLOR: #006400">Total IN:</STRONG></TD>
 											<TD>&nbsp;</TD>
-											<TD><asp:textbox id="txtTotalInQtyPack" runat="server" Width="40px" ReadOnly="True" CssClass="FontStyle"
+											<TD><asp:textbox id="txtTotalInQtyPack" runat="server" Width="40px"  CssClass="FontStyle"
 													MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtTotalInQtyLtr" runat="server" Width="40px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+											<TD><asp:textbox id="txtTotalInQtyLtr" runat="server" Width="40px"  CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 									</table>
 								</td>

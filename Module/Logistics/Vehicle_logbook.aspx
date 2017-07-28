@@ -91,7 +91,7 @@
 									</asp:dropdownlist></TD>
 								<TD>&nbsp;Vehicle&nbsp;Name&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 									<asp:textbox id="txtVehiclename" runat="server" Width="132px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox></TD>
+										></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;DOE (Date of Entry)
@@ -99,7 +99,7 @@
 								<TD><asp:textbox id="txtDOE" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txtDOE);return false;">&nbsp;</A></TD>
 								<TD>&nbsp;Driver's Name&nbsp;&nbsp;&nbsp;
 									<asp:textbox id="txtdrivername" runat="server" Width="161px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox></TD>
+										></asp:textbox></TD>
 								<td>&nbsp;Bilty 
 									No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,false);" id="txtBiltyNo" Width="132px"
@@ -115,14 +115,14 @@
 										CssClass="FontStyle" BorderStyle="Groove" MaxLength="10" Runat="server"></asp:textbox></td>
 								<td>&nbsp;Bilty 
 									Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:textbox id="txtBiltyDate" Width="80px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True"
+									<asp:textbox id="txtBiltyDate" Width="80px" CssClass="FontStyle" BorderStyle="Groove" 
 										Runat="server"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtBiltyDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
 							</tr>
 							<TR>
 								<TD colSpan="2">&nbsp;Meter Reading&nbsp;&nbsp; (Previous Day)&nbsp;&nbsp;&nbsp;
 									<asp:textbox id="txtmeterreadpre" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"
-										ReadOnly="True"></asp:textbox></TD>
+										></asp:textbox></TD>
 								<td>&nbsp;Meter Reading (Current Day)<FONT color="#ff0033">*</FONT><asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Current Meter Reading"
 										ControlToValidate="txtmeterreadcurr">*</asp:requiredfieldvalidator>&nbsp;<asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtmeterreadcurr"
 										runat="server" Width="91px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox></td>

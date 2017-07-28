@@ -76,7 +76,7 @@ function window_onblur() {
 								<TD>
 									<asp:label id="Label1" runat="server">No. of Slips</asp:label></TD>
 								<TD style="WIDTH: 171px"><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,false);" id="txtTotalSlips"
-										runat="server" Width="104px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+										runat="server" Width="104px" BorderStyle="Groove"  CssClass="FontStyle"></asp:textbox></TD>
 								<TD colSpan="2"></TD>
 							</TR>
 							<TR>

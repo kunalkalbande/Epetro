@@ -63,7 +63,9 @@ namespace EPetro.Module.Reports
 		{
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                Textbox1.Attributes.Add("readonly", "readonly");
+                uid =(Session["User_Name"].ToString());
 			}
 			catch(Exception es)
 			{

@@ -33,11 +33,11 @@
 				</TR>
 				<tr height=20>
 					<td align="center">Date From</td>
-					<td><asp:textbox id="txtDateFrom" runat="server" Width="110px" ReadOnly="True" CssClass="FontStyle"
+					<td><asp:textbox id="txtDateFrom" runat="server" Width="110px"  CssClass="FontStyle"
 							BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A></td>
 					<td align=center>Date To</td>
-					<td><asp:textbox id="txtDateTo" runat="server" Width="110px" ReadOnly="True" CssClass="FontStyle"
+					<td><asp:textbox id="txtDateTo" runat="server" Width="110px"  CssClass="FontStyle"
 							BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A></td>
 					<TD vAlign="top" align="center"><asp:button id="btnShow" runat="server" Width="70px" Text="View" ForeColor="White" BackColor="ForestGreen"

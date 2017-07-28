@@ -113,7 +113,18 @@ namespace Epetro.Form.Logistics
 
 				if(!Page.IsPostBack)
 				{
-					checkPrevileges();
+                    txtEngineOilDate.Attributes.Add("readonly", "readonly");
+                    txtgeardt.Attributes.Add("readonly", "readonly");
+                    txtbreakdt.Attributes.Add("readonly", "readonly");
+                    txtcoolentdt.Attributes.Add("readonly", "readonly");
+                    txtgreasedt.Attributes.Add("readonly", "readonly");
+                    txttransmissiondt.Attributes.Add("readonly", "readonly");
+
+
+
+
+
+                    checkPrevileges();
 					# region Dropdown Vehicle type
 					/*SqlConnection con;
 					SqlCommand cmdselect;

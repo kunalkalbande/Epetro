@@ -63,8 +63,11 @@ namespace EPetro.Module.PetrolPump
 		private void Page_Load(object sender, System.EventArgs e)
 		{
 			if(!Page.IsPostBack)
-			{	
-				Button1.Visible=false;
+			{
+                lblTankName.Attributes.Add("readonly", "readonly");
+
+
+                Button1.Visible=false;
 				getTankNo();
 			}
 			fillID();

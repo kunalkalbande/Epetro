@@ -61,7 +61,9 @@ namespace EPetro.Module.Reports
 		{
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                Textbox1.Attributes.Add("readonly", "readonly");
+                uid =(Session["User_Name"].ToString());
 				// Put user code to initialize the page here
 				if(!IsPostBack)
 				{

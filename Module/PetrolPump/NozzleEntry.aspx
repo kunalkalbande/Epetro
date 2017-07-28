@@ -50,7 +50,7 @@
 							<TR>
 								<TD>Nozzle&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 								<TD><asp:textbox id="lblNozzleName" runat="server" ForeColor="Purple" BorderStyle="None" Width="164px"
-										ReadOnly="True" CssClass="FontStyle"></asp:textbox></TD>
+										 CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD style="HEIGHT: 14px">Machine Name <FONT color="#ff0000">*</FONT>

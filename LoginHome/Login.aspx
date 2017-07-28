@@ -181,7 +181,7 @@
 					</TD>
 					<TD height="32"></TD>
 					<TD width="215" height="32" colSpan="3" background="../HeaderFooter/images/Login-Page_44.gif">&nbsp;&nbsp;&nbsp;
-						<asp:textbox id="txtDateFrom" runat="server" Width="140px" ReadOnly="True" BorderStyle="Groove"
+						<asp:textbox id="txtDateFrom" runat="server" Width="140px"  BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox>
 						&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"
 							id="a1"><IMG class="PopcalTrigger" alt="" src="../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"

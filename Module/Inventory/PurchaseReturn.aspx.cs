@@ -157,7 +157,61 @@ namespace EPetro.Module.Inventory
 			// Put user code to initialize the page here
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                TxtCrLimit1.Attributes.Add("readonly", "readonly");
+                lblVendInvoiceNo.Attributes.Add("readonly", "readonly");
+                lblVendInvoiceDate.Attributes.Add("readonly", "readonly");
+                lblVendName.Attributes.Add("readonly", "readonly");
+                lblPlace.Attributes.Add("readonly", "readonly");
+                lblVehicleNo.Attributes.Add("readonly", "readonly");
+                txtProdName1.Attributes.Add("readonly", "readonly");
+                txtPack1.Attributes.Add("readonly", "readonly");
+                txtRate1.Attributes.Add("readonly", "readonly");
+                txtAmount1.Attributes.Add("readonly", "readonly");
+                txtProdName2.Attributes.Add("readonly", "readonly");
+                txtPack2.Attributes.Add("readonly", "readonly");
+                txtRate2.Attributes.Add("readonly", "readonly");
+                txtAmount2.Attributes.Add("readonly", "readonly");
+                txtProdName3.Attributes.Add("readonly", "readonly");
+                txtPack3.Attributes.Add("readonly", "readonly");
+                txtRate3.Attributes.Add("readonly", "readonly");
+                txtAmount3.Attributes.Add("readonly", "readonly");
+                txtProdName4.Attributes.Add("readonly", "readonly");
+                txtPack4.Attributes.Add("readonly", "readonly");
+                txtRate4.Attributes.Add("readonly", "readonly");
+                txtAmount4.Attributes.Add("readonly", "readonly");
+                txtProdName5.Attributes.Add("readonly", "readonly");
+                txtPack5.Attributes.Add("readonly", "readonly");
+                txtRate5.Attributes.Add("readonly", "readonly");
+                txtAmount5.Attributes.Add("readonly", "readonly");
+                txtProdName6.Attributes.Add("readonly", "readonly");
+                txtPack6.Attributes.Add("readonly", "readonly");
+                txtRate6.Attributes.Add("readonly", "readonly");
+                txtAmount6.Attributes.Add("readonly", "readonly");
+                TextBox1.Attributes.Add("readonly", "readonly");
+                txtProdName7.Attributes.Add("readonly", "readonly");
+                txtPack7.Attributes.Add("readonly", "readonly");
+                txtRate7.Attributes.Add("readonly", "readonly");
+                txtAmount7.Attributes.Add("readonly", "readonly");
+                txtProdName8.Attributes.Add("readonly", "readonly");
+                txtPack8.Attributes.Add("readonly", "readonly");
+                txtRate8.Attributes.Add("readonly", "readonly");
+                txtAmount8.Attributes.Add("readonly", "readonly");
+                txtPromoScheme.Attributes.Add("readonly", "readonly");
+                txtGrandTotal.Attributes.Add("readonly", "readonly");
+                txtRemark.Attributes.Add("readonly", "readonly");
+                txtCashDisc.Attributes.Add("readonly", "readonly");
+                txtCashDiscType.Attributes.Add("readonly", "readonly");
+                txtMessage.Attributes.Add("readonly", "readonly");
+                txtVAT.Attributes.Add("readonly", "readonly");
+                txtDisc.Attributes.Add("readonly", "readonly");
+                txtDiscType.Attributes.Add("readonly", "readonly");
+                txtNetAmount.Attributes.Add("readonly", "readonly");
+
+
+
+
+
+                uid =(Session["User_Name"].ToString());
 				txtMessage.Text =(Session["Message"].ToString());
 				txtVatRate.Value  = (Session["VAT_Rate"].ToString());  
 				lblEntryBy.Text = uid;

@@ -105,13 +105,14 @@ namespace EPetro.LoginHome
 			Session.Clear();
 			if(!IsPostBack)
 			{
-				// Subhan: The 4 lines commented to increase the performance of a project on a windows xp and 2000 professional OS.  
-				//Response.Buffer=false;
-				//Response.CacheControl="no-cache";
-				//Response.Expires=System.DateTime.Now.Minute-1;
-				//Cache["view"]=true;
-				//Subhan
-				PetrolPumpClass obj=new PetrolPumpClass();
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                // Subhan: The 4 lines commented to increase the performance of a project on a windows xp and 2000 professional OS.  
+                //Response.Buffer=false;
+                //Response.CacheControl="no-cache";
+                //Response.Expires=System.DateTime.Now.Minute-1;
+                //Cache["view"]=true;
+                //Subhan
+                PetrolPumpClass obj=new PetrolPumpClass();
 				SqlDataReader SqlDtr;
 				string sql;
 				// Fetch the roles and fills the User Type combo.
