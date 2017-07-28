@@ -377,7 +377,7 @@
 												</TR>
 												<TR>
 													<TD>Invoice Date <STRONG>:</STRONG> &nbsp;</TD>
-													<TD><asp:TextBox id="lblInvoiceDate" BorderStyle=None runat="server" Width=65 CssClass=fontstyle ReadOnly=True></asp:TextBox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.lblInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+													<TD><asp:TextBox id="lblInvoiceDate" BorderStyle="Groove" runat="server" Width=65 CssClass=fontstyle ReadOnly=True></asp:TextBox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.lblInvoiceDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 															border="0"></A></TD>
 												</TR>
 											</TABLE>

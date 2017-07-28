@@ -560,7 +560,7 @@
 														AutoPostBack="True" Height="22px">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist><br>
-													<asp:label id="lblInvoiceNo" runat="server" Width="107px" BorderStyle="Groove"></asp:label><asp:button id="btnEdit" runat="server" Width="25px" ForeColor="White" ToolTip="Click For Edit"
+													<asp:label id="lblInvoiceNo" runat="server" Width="107px" BorderStyle="none" ForeColor="Blue"></asp:label><asp:button id="btnEdit" runat="server" Width="25px" ForeColor="White" ToolTip="Click For Edit"
 														Text="..." CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
 											</TR>
 											<TR>
