@@ -65,7 +65,9 @@ namespace EPetro
 				uid=(Session["User_Name"].ToString());
 				if(! IsPostBack)
 				{
-					PenOption.Visible=false;
+                    txtDateFrom.Attributes.Add("readonly", "readonly");
+                    txtDateTo.Attributes.Add("readonly", "readonly");
+                    PenOption.Visible=false;
 					getVehicleNo();
 					#region Check Privileges
 					int i;

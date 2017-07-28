@@ -67,8 +67,10 @@ namespace EPetro.Module.Reports
 			}
 			if(!Page.IsPostBack )
 			{
-				#region Check Privileges
-				int i;
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                Textbox1.Attributes.Add("readonly", "readonly");
+                #region Check Privileges
+                int i;
 				string View_flag="0", Add_Flag="0", Edit_Flag="0", Del_Flag="0";
 				string Module="6";
 				string SubModule="9";

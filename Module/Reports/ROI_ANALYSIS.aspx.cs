@@ -761,8 +761,12 @@ namespace EPetro
 			{
 				if(!IsPostBack)
 				{
-					#region Check Privileges
-					int i;
+                    txtarea4NilSalesDryout.Attributes.Add("readonly", "readonly");
+                    txtSalesPerformanceDate.Attributes.Add("readonly", "readonly");
+                    txtDate.Attributes.Add("readonly", "readonly");
+                    txtroiid.Attributes.Add("readonly", "readonly");
+                    #region Check Privileges
+                    int i;
 					string View_flag="0", Add_Flag="0", Edit_Flag="0", Del_Flag="0";
 					string Module="6";
 					string SubModule="27";

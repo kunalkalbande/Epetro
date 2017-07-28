@@ -64,7 +64,8 @@ namespace EPetro.Module.Reports
 			}
 			if(!Page.IsPostBack )
 			{
-				txtDateFrom.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
+                txtDateFrom.Attributes.Add("readonly", "readonly");
+                txtDateFrom.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
 				#region Check Privileges
 				int i;
 				string View_flag="0", Add_Flag="0", Edit_Flag="0", Del_Flag="0";

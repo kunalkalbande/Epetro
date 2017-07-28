@@ -27,7 +27,7 @@
 					<TH style="HEIGHT: 4px" align="center">
 						<font color="#006400">Daily Tank Dip Stock Reading&nbsp;Report</font>
 						<HR>
-						<asp:textbox id="txtDateFrom" runat="server" ReadOnly="True" Width="110px" BorderStyle="Groove"
+						<asp:textbox id="txtDateFrom" runat="server"  Width="110px" BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A>
 						<asp:button id="Button1" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"

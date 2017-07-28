@@ -37,7 +37,7 @@
 							runat="server">
 							<tr>
 								<td colSpan="3" height="20">&nbsp; ROI ID&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:textbox id="txtroiid" runat="server" BorderStyle="Groove" Width="64px" ReadOnly="True" CssClass="FontStyle"></asp:textbox></td>
+									<asp:textbox id="txtroiid" runat="server" BorderStyle="Groove" Width="64px"  CssClass="FontStyle"></asp:textbox></td>
 								<td colSpan="5" height="20"><asp:dropdownlist id="DropDownList1" runat="server" Width="112px" AutoPostBack="True" Enabled="False"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -110,7 +110,7 @@
 										type="text" maxLength="50" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="2" height="19">&nbsp; Date of previous visit</td>
 								<td colSpan="2" height="19">&nbsp;
-									<asp:textbox id="txtDate" runat="server" BorderStyle="Groove" Width="80px" ReadOnly="True" CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+									<asp:textbox id="txtDate" runat="server" BorderStyle="Groove" Width="80px"  CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 							</tr>
 							<tr>
@@ -118,7 +118,7 @@
 									<P>&nbsp;&nbsp; SALES&nbsp;&nbsp; PERFORMANCE</P>
 								</td>
 								<td align="center" colSpan="3" height="19">&nbsp; Month(MM_YY) <input onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtSalesPerformanceDate"
-										style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove" readOnly type="text"
+										style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"  type="text"
 										size="20" runat="server" class="FontStyle"><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtSalesPerformanceDate);return false;"><IMG class="PopcalTrigger" id="Img40" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0" runat="server"></A></td>
 								<td align="center" colSpan="3" height="19">&nbsp; Cumulative upto &nbsp;<input id="txtCummulativeuptoDate" style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
@@ -373,7 +373,7 @@
 										style="WIDTH: 80px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 										type="text" size="20" runat="server" class="FontStyle"></td>
 								<td colSpan="3" height="19" rowSpan="2"><TEXTAREA id="txtarea4NilSalesDryout" style="WIDTH: 176px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 38px; BORDER-BOTTOM-STYLE: groove"
-										name="Textarea1" rows="2" readOnly cols="30" runat="server" class="FontStyle"></TEXTAREA></td>
+										name="Textarea1" rows="2"  cols="30" runat="server" class="FontStyle"></TEXTAREA></td>
 							</tr>
 							<tr>
 								<td colSpan="2" height="19">&nbsp; Days Of Dry Outs,if&nbsp;&nbsp; any

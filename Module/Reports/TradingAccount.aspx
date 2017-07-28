@@ -34,11 +34,11 @@
 				<tr>
 					<td vAlign="top" align="center">Date From&nbsp;
 						<asp:requiredfieldvalidator id="rfvDateFrom" runat="server" ControlToValidate="txtDateFrom" ErrorMessage="Please Select From Date From the Calender">*</asp:requiredfieldvalidator>&nbsp;
-						<asp:textbox id="txtDateFrom" runat="server" Width="110px" ReadOnly="True" CssClass="FontStyle"
+						<asp:textbox id="txtDateFrom" runat="server" Width="110px" CssClass="FontStyle"
 							BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A> Date To&nbsp;
 						<asp:requiredfieldvalidator id="rfvDateTo" runat="server" ControlToValidate="txtDateTo" ErrorMessage="Please Select To Date From the Calender">*</asp:requiredfieldvalidator>&nbsp;
-						<asp:textbox id="txtDateTo" runat="server" Width="110px" ReadOnly="True" CssClass="FontStyle"
+						<asp:textbox id="txtDateTo" runat="server" Width="110px" CssClass="FontStyle"
 							BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A></td>
 				<TR>

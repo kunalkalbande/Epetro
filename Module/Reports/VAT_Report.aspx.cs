@@ -69,8 +69,10 @@ namespace EPetro.Module.Reports
 			{
 				uid=(Session["User_Name"].ToString());
 				if(! IsPostBack)
-				{
-					txtDateFrom.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
+                {
+                    txtDateFrom.Attributes.Add("readonly", "readonly");
+                    txtDateTo.Attributes.Add("readonly", "readonly");
+                    txtDateFrom.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
 					txtDateTo.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year; 
 					
 					#region Check Privileges
