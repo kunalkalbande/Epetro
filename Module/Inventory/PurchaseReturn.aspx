@@ -861,37 +861,37 @@ function calcTax(txtQty,txtTempQty)
 													<TD align="center"><FONT color="#006400">Select</FONT></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName1" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName1" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName1" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack1" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack1" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack1" runat="server"></TD>
 													<TD align="center"><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty1" onblur="calc(this,document.Form1.txtRate1,document.Form1.tmpQty1)"
-															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
-													<TD><asp:textbox id="txtRate1" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"
+															runat="server" size="22" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
+													<TD><asp:textbox id="txtRate1" runat="server" size="22" Width="52px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
-													<TD><asp:textbox id="txtAmount1" runat="server" Width="79px" BorderStyle="Groove" ReadOnly="True"
+													<TD><asp:textbox id="txtAmount1" runat="server" size="22" Width="79px" BorderStyle="Groove" ReadOnly="True"
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
 													<TD align="center"><INPUT id="Check1" onclick="select1(document.Form1.Check1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtRate1,document.Form1.txtAmount1,document.Form1.tmpQty1)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName2" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName2" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName2" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack2" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack2" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack2" runat="server"></TD>
 													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty2" onblur="calc(this,document.Form1.txtRate2,document.Form1.tmpQty2)"
-															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
-													<TD><asp:textbox id="txtRate2" runat="server" Width="52px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"
+															runat="server" size="22" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
+													<TD><asp:textbox id="txtRate2" runat="server" size="22" Width="52px" BorderStyle="Groove" ReadOnly="True" CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
-													<TD><asp:textbox id="txtAmount2" runat="server" Width="79px" BorderStyle="Groove" ReadOnly="True"
+													<TD><asp:textbox id="txtAmount2" runat="server" size="22" Width="79px" BorderStyle="Groove" ReadOnly="True"
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
 													<TD align="center"><INPUT id="Check2" onclick="select1(document.Form1.Check2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtRate2,document.Form1.txtAmount2,document.Form1.tmpQty2)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName3" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName3" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName3" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack3" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack3" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack3" runat="server"></TD>
 													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty3" onblur="calc(this,document.Form1.txtRate3,document.Form1.tmpQty3)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
@@ -903,9 +903,9 @@ function calcTax(txtQty,txtTempQty)
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName4" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName4" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName4" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack4" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack4" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack4" runat="server"></TD>
 													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty4" onblur="calc(this,document.Form1.txtRate4,document.Form1.tmpQty4)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
@@ -917,10 +917,10 @@ function calcTax(txtQty,txtTempQty)
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName5" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName5" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName5" runat="server">
 													</TD>
-													<TD><INPUT class="FontStyle" id="txtPack5" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack5" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack5" runat="server"></TD>
 													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty5" onblur="calc(this,document.Form1.txtRate5,document.Form1.tmpQty5)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
@@ -932,9 +932,9 @@ function calcTax(txtQty,txtTempQty)
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName6" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName6" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName6" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack6" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack6" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack6" runat="server"></TD>
 													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty6" onblur="calc(this,document.Form1.txtRate6,document.Form1.tmpQty6)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
@@ -946,9 +946,9 @@ function calcTax(txtQty,txtTempQty)
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName7" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName7" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName7" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack7" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack7" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack7" runat="server"></TD>
 													<TD><asp:textbox id="txtQty7" onblur="calc(this,document.Form1.txtRate7,document.Form1.tmpQty7)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
@@ -960,9 +960,9 @@ function calcTax(txtQty,txtTempQty)
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
-													<TD><INPUT class="FontStyle" id="txtProdName8" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtProdName8" style="WIDTH: 168px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtProdName8" runat="server"></TD>
-													<TD><INPUT class="FontStyle" id="txtPack8" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; HEIGHT: 22px; BORDER-BOTTOM-STYLE: groove"
+													<TD><INPUT class="FontStyle" id="txtPack8" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled readOnly type="text" size="22" name="txtPack8" runat="server"></TD>
 													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty8" onblur="calc(this,document.Form1.txtRate8,document.Form1.tmpQty8)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>

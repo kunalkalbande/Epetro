@@ -28,7 +28,7 @@
 					<TH align="center">
 						<font color="#006400">Meter Reading&nbsp;Report</font><HR>
 						<asp:textbox id="txtDateTo" runat="server" Width="110px" ReadOnly="True" BorderStyle="Groove"
-							CssClass="FontStyle"></asp:textbox><A onClick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+							CssClass="FontStyle"></asp:textbox><A onClick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A>
 						<asp:Button id="btnView" runat="server" Text="View  " Width="70px" Height="26px" BackColor="ForestGreen"
 							BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;

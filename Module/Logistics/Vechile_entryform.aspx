@@ -127,7 +127,7 @@
 										Width="70px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
 								<TD>&nbsp;Date
 									<asp:textbox id="txtEngineOilDate" runat="server" Width="80px" ReadOnly="True" CssClass="FontStyle"
-										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txtEngineOilDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtEngineOilDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD vAlign="top">&nbsp;K.M&nbsp;<asp:textbox id="txtEngineKM" onkeypress="return GetOnlyNumbers(this, event, false,true);" runat="server"
 										Width="100px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox>
@@ -139,7 +139,7 @@
 										runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
 								<TD>&nbsp;Date
 									<asp:textbox id="txtgeardt" runat="server" Width="80px" ReadOnly="True" CssClass="FontStyle"
-										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txtgeardt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtgeardt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD vAlign="top">&nbsp;K.M&nbsp;<asp:textbox id="txtgearkm" runat="server" onkeypress="return GetOnlyNumbers(this, event, false,true);"
 										Width="100px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox>
@@ -151,7 +151,7 @@
 										runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
 								<TD>&nbsp;Date
 									<asp:textbox id="txtbreakdt" runat="server" Width="80px" ReadOnly="True" CssClass="FontStyle"
-										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txtbreakdt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtbreakdt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD>&nbsp;K.M&nbsp;<asp:textbox id="txtbreakkm" runat="server" onkeypress="return GetOnlyNumbers(this, event, false,true);"
 										Width="100px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox>
@@ -163,7 +163,7 @@
 										runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
 								<TD vAlign="top">&nbsp;Date
 									<asp:textbox id="txtcoolentdt" runat="server" Width="80px" ReadOnly="True" CssClass="FontStyle"
-										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txtcoolentdt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtcoolentdt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD vAlign="top">&nbsp;K.M&nbsp;<asp:textbox id="txtcoolentkm" onkeypress="return GetOnlyNumbers(this, event, false,true);" runat="server"
 										Width="100px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
@@ -174,7 +174,7 @@
 										runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
 								<TD>&nbsp;Date
 									<asp:textbox id="txtgreasedt" runat="server" Width="80px" ReadOnly="True" CssClass="FontStyle"
-										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txtgreasedt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtgreasedt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD>&nbsp;K.M&nbsp;<asp:textbox id="txtgreasekm" runat="server" onkeypress="return GetOnlyNumbers(this, event, false,true);"
 										Width="100px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
@@ -185,7 +185,7 @@
 										runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>
 								<TD>&nbsp;Date
 									<asp:textbox id="txttransmissiondt" runat="server" Width="80px" ReadOnly="True" CssClass="FontStyle"
-										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vechile_entryform.txttransmissiondt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txttransmissiondt);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 								<TD>&nbsp;K.M&nbsp;<asp:textbox id="txttransmissionkm" runat="server" onkeypress="return GetOnlyNumbers(this, event, false,true);"
 										Width="100px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="12"></asp:textbox></TD>

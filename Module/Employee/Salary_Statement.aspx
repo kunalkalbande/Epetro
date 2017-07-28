@@ -42,7 +42,7 @@
 									<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropMonth" ValueToCompare="Select"
 										Operator="NotEqual" ErrorMessage="Please Select the Salary Month">*</asp:comparevalidator><asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropYear" ValueToCompare="Not Define"
 										Operator="NotEqual" ErrorMessage="Please Select Year">*</asp:comparevalidator>&nbsp;&nbsp;</TD>
-								<TD><asp:dropdownlist id="DropMonth" runat="server" Height="31px" Width="116px" CssClass="FontStyle">
+								<TD><asp:dropdownlist id="DropMonth" runat="server" Width="116px" CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 										<asp:ListItem Value="January">January</asp:ListItem>
 										<asp:ListItem Value="February">February</asp:ListItem>

@@ -30,9 +30,9 @@
 				</TR>
 				<tr height="20">
 					<td align="center">Date From&nbsp;<asp:textbox id="txtDateFrom" runat="server" Width="80px" CssClass="FontStyle" BorderStyle="Groove"
-							ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+							ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A> &nbsp;&nbsp;Date To&nbsp;&nbsp;<asp:textbox id="txtDateTo" runat="server" Width="80px" CssClass="FontStyle" BorderStyle="Groove"
-							ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.Textbox1);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+							ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A> &nbsp;&nbsp; Product Name&nbsp;&nbsp;<asp:dropdownlist id="DropProdName" Width="200" CssClass="FontStyle" Runat="server"></asp:dropdownlist>
 					</td>
 				</tr>

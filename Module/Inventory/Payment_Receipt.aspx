@@ -281,7 +281,7 @@ function chkSelect1(t)
 												<TD>Date</TD>
 												<TD height="10">
 													<asp:textbox id="txtDate" runat="server" Width="70px" CssClass="FontStyle" BorderStyle="Groove"
-														></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+														></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 															border="0" runat="server"></A></TD>
 											</TR>
 										</asp:panel></TABLE>

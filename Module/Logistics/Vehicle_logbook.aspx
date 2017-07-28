@@ -116,7 +116,7 @@
 								<td>&nbsp;Bilty 
 									Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<asp:textbox id="txtBiltyDate" Width="80px" CssClass="FontStyle" BorderStyle="Groove" ReadOnly="True"
-										Runat="server"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Vehicle_logbook.txtBiltyDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										Runat="server"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtBiltyDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
 							</tr>
 							<TR>

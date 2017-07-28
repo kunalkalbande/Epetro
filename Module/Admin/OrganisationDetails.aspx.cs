@@ -139,7 +139,9 @@ namespace EPetro.Module.Admin
 			{
 				CreateLogFiles.ErrorLog("Form:OrganisationDetails.aspx,Class:InventoryClass.cs ,Method:page_load"+ ex.Message+"  EXCEPTION " +"  "  +uid);
 			}
-		}
+            txtDateFrom.Text = Request.Form["txtDateFrom"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["txtDateFrom"].ToString().Trim();
+            txtDateTo.Text = Request.Form["txtDateTo"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["txtDateTo"].ToString().Trim();
+        }
 
 		/// <summary>
 		/// If the Dealer name is not present in combo box then add the dealer in combo box.	
@@ -375,7 +377,7 @@ namespace EPetro.Module.Admin
 				}
 				if(LblCompanyID.Visible==true)
 				{
-					if(LblCompanyID.Text=="1002")
+					if(LblCompanyID.Text=="")
 					{
 						MessageBox.Show("Organisation Details Already Stored ");
 						return;

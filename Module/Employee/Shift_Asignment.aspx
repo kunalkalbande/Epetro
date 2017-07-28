@@ -38,7 +38,7 @@
 									<asp:dropdownlist id="DropShiftID" runat="server" Width="150px" Height="20px" AutoPostBack="True" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist><asp:comparevalidator id="cvShiftName" runat="server" ValueToCompare="Select" Operator="NotEqual" ControlToValidate="DropShiftID"
-										ErrorMessage="Please select the shift name">*</asp:comparevalidator><asp:textbox id="txtShiftTime" runat="server" Width="126px" BorderStyle="Groove" Enabled="False"
+										ErrorMessage="Please select the shift name">*</asp:comparevalidator><asp:textbox id="txtShiftTime" runat="server" Height="21px" Width="126px" BorderStyle="Groove" Enabled="False"
 										CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>

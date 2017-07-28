@@ -36,13 +36,13 @@
 					<tr>
 						<td align="center">Date From&nbsp;&nbsp;
 							<asp:textbox id="txtDateFrom" runat="server" Width="110px" CssClass="FontStyle" BorderStyle="Groove"
-								ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+								ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>
 							<asp:requiredfieldvalidator id="rfvDateFrom" runat="server" ErrorMessage="Please Select From Date From the Calender"
 								ControlToValidate="txtDateFrom">*</asp:requiredfieldvalidator>Date 
 							To&nbsp;&nbsp;
 							<asp:textbox id="Textbox1" runat="server" Width="110px" CssClass="FontStyle" BorderStyle="Groove"
-								ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.Textbox1);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+								ReadOnly="True"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.Textbox1);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>
 							<asp:requiredfieldvalidator id="rfvDateTo" runat="server" ErrorMessage="Please Select To Date From the Calender"
 								ControlToValidate="Textbox1">*</asp:requiredfieldvalidator><asp:checkbox id="chkDel" Text="Delete Record" Runat="server"></asp:checkbox>&nbsp;&nbsp;<asp:button id="btnShow" runat="server" Width="70px" Text="View" ForeColor="White" BorderColor="DarkSeaGreen"
