@@ -75,8 +75,8 @@
 							<TR>
 								<TD>&nbsp;Address&nbsp;<font color="red">*</font>
 									<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill the Address"
-										ControlToValidate="txtAddress">*</asp:RequiredFieldValidator></TD>
-								<TD colSpan="3"><asp:textbox id="TxtAddress" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
+										ControlToValidate="TxtAddress">*</asp:RequiredFieldValidator></TD>
+								<TD colSpan="3"><asp:textbox CausesValidation="true" id="TxtAddress" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="50"></asp:textbox></TD>
 							</TR>
 							<TR>
@@ -93,7 +93,7 @@
 								<TD>&nbsp;City&nbsp;<FONT color="#ff0000">*</FONT>
 									<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
 										ValueToCompare="Select" Operator="NotEqual">*</asp:comparevalidator></TD>
-								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.Form1.DropState,document.Form1.DropCountry);"
+								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.all.DropState,document.Form1.DropCountry);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
@@ -196,7 +196,7 @@
 							</TR>
 							<TR>
 								<TD align="right" colSpan="4">&nbsp;
-									<asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile" ForeColor="White"
+									<asp:button  OnClick="btnUpdate_Click1" id="btnUpdate" runat="server" Width="95px" Text="Save Profile" ForeColor="White"
 										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
 							</TR>
 						</TABLE>

@@ -19,10 +19,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
-using EPetro.Sysitem.Classes ;
+using EPetro.Sysitem.Classes;
 using DBOperations;
 using RMG;
 using System.IO;
+using System.Text;
 
 namespace EPetro.Module.Admin
 {
@@ -272,7 +273,7 @@ namespace EPetro.Module.Admin
 			this.Button1.Click += new System.EventHandler(this.Button1_Click);
 			this.DropDealerShip.SelectedIndexChanged += new System.EventHandler(this.DropDealerShip_SelectedIndexChanged);
 			this.DropCity.SelectedIndexChanged += new System.EventHandler(this.DropCity_SelectedIndexChanged);
-			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+			//this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			this.Load += new System.EventHandler(this.Page_Load);
 
 		}
@@ -808,5 +809,87 @@ namespace EPetro.Module.Admin
 				CreateLogFiles.ErrorLog("Form:OrganisationDetails.aspx,Class:InventoryClass.cs ,Method:Drop_SelectedIndexChanged(). EXCEPTION: "+ex.Message+".   userid "+uid);
 			}*/
 		}
-	}
+
+        protected void btnUpdate_Click1(object sender, EventArgs e)
+        {
+            try
+            {
+                CreateLogFiles.ErrorLog("Form:OrganisationDetails.aspx,Class:InventoryClass.cs ,Method:btnupdate_click" + "  " + uid);
+                StringBuilder erroMessage = new StringBuilder();
+
+                if (txtDealerName.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Fill the Dealer Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropDealerShip.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select the Dealership Name");
+                    erroMessage.Append("\n");
+                    //MessageBox.Show("Please select the Dealership");
+                 //   return;
+                }
+                if(TxtAddress.Text==string.Empty)
+                {
+                    erroMessage.Append("- Please Fill the Address");
+                    erroMessage.Append("\n");
+                }
+                if (DropCity.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please Select City");
+                    erroMessage.Append("\n");
+                }
+                if (TxtTinno.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Fill the TinNo");
+                    erroMessage.Append("\n");
+                }
+                if (txtFleetCard.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter Fleet Card Name");
+                    erroMessage.Append("\n");
+                }
+                if (txtCreditCard.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter Credit Card Name");                 
+                }
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+                //	Response.Write("1:"+Hidden1.Value  +";hh;"+Hidden2.Value+"<br>");   
+                ///	Response.Write("1:"+txtDateFrom.Text+";;"+txtDateTo.Text);   
+                if (!checkValidity())
+                {
+                    return;
+                }
+                if (LblCompanyID.Visible == true)
+                {
+                    if (LblCompanyID.Text == "")
+                    {
+                        MessageBox.Show("Organisation Details Already Stored ");
+                        return;
+                    }
+                    saveimage();
+                    nextid();
+                }
+                else if (Drop.Visible == true)
+                {
+                    Label1.Visible = true;
+                    saveimage1();
+                    Label1.Visible = true;
+                    Drop.Visible = false;
+                    Button1.Visible = true;
+                    LblCompanyID.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                CreateLogFiles.ErrorLog("Form:OrganisationDetails.aspx,Class:InventoryClass.cs ,Method:btnupdate_click" + ex.Message + "  EXCEPTION" + "  " + uid);
+                TextBox1.Text = "j";
+            }
+        }
+    }
 }
