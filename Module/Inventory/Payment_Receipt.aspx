@@ -194,7 +194,7 @@ function chkSelect1(t)
 					<td></td>
 					<td colSpan="2">Received 
 						Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:textbox id="txtReceivedDate" Width="80" Runat="server" CssClass="fontstyle" BorderStyle="Groove"
-							></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtReceivedDate);return false;"><IMG class="PopcalTrigger" id="Img2" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+							></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtReceivedDate);return false;"><IMG class="PopcalTrigger" id="Img2" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0" runat="server"></A></td>
 				</tr>
 				<tr>

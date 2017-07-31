@@ -240,7 +240,7 @@
 							</tr>
 							<TR>
 								<TD style="HEIGHT: 8px" align="center" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Add" BorderColor="ForestGreen" BackColor="ForestGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" BorderColor="ForestGreen" BackColor="ForestGreen"
+										ForeColor="White" OnClick="btnSave_Click"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" BorderColor="ForestGreen" BackColor="ForestGreen"
 										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 									&nbsp;<asp:button id="btnDelete" runat="server" Width="71px" Text="Delete" CausesValidation="False"
 										BorderColor="ForestGreen" BackColor="ForestGreen" ForeColor="White"></asp:button></TD>

@@ -67,7 +67,7 @@
 										<asp:textbox id="txtCheque" runat="server" Width="87px" CssClass="FontStyle" MaxLength="15" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp; 
 										Date
 										<asp:textbox id="txtDate" runat="server" Width="112px" CssClass="FontStyle" BorderStyle="Groove"
-											></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+											></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" id="Img1" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 												border="0" runat="server"></A></TD>
 								</TR>
 							</asp:panel><asp:panel id="PanAmount" runat="server">
@@ -86,7 +86,7 @@
 										accessKey="txtNarArea" name="TEXTAREA1" wrap="hard" cols="17" runat="server"></TEXTAREA></TD>
 							</TR>
 							<TR>
-								<TD align="center" colSpan="4"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" BackColor="ForestGreen" BorderColor="ForestGreen"
+								<TD align="center" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" BackColor="ForestGreen" BorderColor="ForestGreen"
 										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
 									<asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" BackColor="ForestGreen" BorderColor="ForestGreen"
 										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
