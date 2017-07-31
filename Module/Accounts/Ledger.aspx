@@ -24,76 +24,76 @@
 		       {
 		         var typeindex = t.selectedIndex
                  var typetext  = t.options[typeindex].text
-                 document.Form1.TxtSub.value = "";
+                 document.all.TxtSub.value = "";
                 
                  var mainarr = new Array();
                  var secarr  = new Array();
                  var n =0;
-                 var hidarr  = document.Form1.txtValue.value;
+                 var hidarr = document.all.txtValue.value;
                  mainarr = hidarr.split("#");
-                 document.Form1.DropGroup.length = 1;
+                 document.all.DropGroup.length = 1;
                  if(typetext == "Other")
                  {
                 // alert("Other")
-                 document.Form1.TxtSub.disabled = false;
+                     document.all.TxtSub.disabled = false;
                   //for(var i=0;i < mainarr.length;i++)
                  //{
-                 hidarr  = document.Form1.txtGrp.value;
+                     hidarr = document.all.txtGrp.value;
                  secarr = hidarr.split("~");
                  // alert(secarr[1])
                  for(var j=0;j<secarr.length-1;j++)
                  {
-                 document.Form1.DropGroup.add(new Option) 
+                     document.all.DropGroup.add(new Option)
                  if(secarr[j]  != "")
                  {
-                 document.Form1.DropGroup.options[n+1].text=secarr[j];                  
+                     document.all.DropGroup.options[n + 1].text = secarr[j];
                  n = n+1;
                  }
                  }
                
                  //}
                   //document.Form1.DropGroup.selectedIndex = 1;
-                  document.Form1.DropGroup.add(new Option)  
-                  document.Form1.DropGroup.options[n+1].text="Other";
+                 document.all.DropGroup.add(new Option)
+                 document.all.DropGroup.options[n + 1].text = "Other";
                  
                  }
                  else
                  {
                  //alert("else");
                  
-                  document.Form1.TxtSub.disabled = true;
+                     document.all.TxtSub.disabled = true;
                  for(var i=0;i < mainarr.length;i++)
                  {
                  secarr = mainarr[i].split("~");
                  if(typetext == secarr[0])
                     {
-                     document.Form1.DropGroup.add(new Option)  
-                     document.Form1.DropGroup.options[n+1].text=secarr[1];
+                     document.all.DropGroup.add(new Option)
+                     document.all.DropGroup.options[n + 1].text = secarr[1];
                      n = n + 1;                   
                      if(secarr[2] == "Assets")
                      {
-                     document.Form1.RadioAsset.checked = true;
+                         document.all.RadioAsset.checked = true;
                      }
                      else if(secarr[2] == "Liabilities")
                      {
-                     document.Form1.RadioLiab.checked = true;
+                         document.all.RadioLiab.checked = true;
                      }
                      else if(secarr[2] == "Expenses")
                      {
-                     document.Form1.RadioExp.checked = true;
+                         document.all.RadioExp.checked = true;
                      }
                      else
                      {
-                     document.Form1.RadioIncome.checked = true;
+                         document.all.RadioIncome.checked = true;
                      }
                             
                                        
                     } 
                  
                  }
-                   document.Form1.DropGroup.selectedIndex = 1;
-                   document.Form1.DropGroup.add(new Option)  
-                   document.Form1.DropGroup.options[n+1].text="Other";
+                 document.all.DropGroup.selectedIndex = 1;
+                 document.all.DropGroup.add(new Option)
+                 document.all.DropGroup.options[n + 1].text = "Other";
                     
                    setNature(t);
                  
@@ -110,20 +110,20 @@
                 var typetext  = t.options[typeindex].text
                 var mainarr = new Array();
                  var secarr  = new Array();
-                 var hidarr  = document.Form1.txtValue.value;
+                 var hidarr = document.all.txtValue.value;
                  mainarr = hidarr.split("#");               
-                var typeindex = document.Form1.DropGroup.selectedIndex
-                 var typetext1  = document.Form1.DropGroup.options[typeindex].text
-                 document.Form1.txtTempGrp.value = typetext1;
+                 var typeindex = document.all.DropGroup.selectedIndex
+                 var typetext1 = document.all.DropGroup.options[typeindex].text
+                 document.all.txtTempGrp.value = typetext1;
                  if(typetext1  == "Other")
                  {
-                  document.Form1.TxtGroup.disabled = false;
-                  document.Form1.RadioAsset.checked = true;
+                     document.all.TxtGroup.disabled = false;
+                     document.all.RadioAsset.checked = true;
                  }
                  else
                  {
-                 document.Form1.TxtGroup.disabled = true;
-                 document.Form1.TxtGroup.value = "";
+                     document.all.TxtGroup.disabled = true;
+                     document.all.TxtGroup.value = "";
                  for(var i=0;i < mainarr.length;i++)
                  {
                  secarr = mainarr[i].split("~");
@@ -131,19 +131,19 @@
                     {
                      if(secarr[2] == "Assets")
                      {
-                     document.Form1.RadioAsset.checked = true;
+                         document.all.RadioAsset.checked = true;
                      }
                      else if(secarr[2] == "Liabilities")
                      {
-                     document.Form1.RadioLiab.checked = true;
+                         document.all.RadioLiab.checked = true;
                      }
                      else if(secarr[2] == "Expenses")
                      {
-                     document.Form1.RadioExp.checked = true;
+                         document.all.RadioExp.checked = true;
                      }
                      else
                      {
-                     document.Form1.RadioIncome.checked = true;
+                         document.all.RadioIncome.checked = true;
                      }
                             
                                        
@@ -197,7 +197,7 @@
 							<TR>
 								<TD style="WIDTH: 98px; HEIGHT: 9px" width="98">Group Name <FONT color="#ff0000">*</FONT>
 								</TD>
-								<TD style="HEIGHT: 9px"><asp:dropdownlist id="DropGroup" runat="server" Width="170px" onchange="return setNature(document.Form1.DropSub);"
+								<TD style="HEIGHT: 9px"><asp:dropdownlist id="DropGroup" runat="server" Width="170px" onchange="return setNature(document.all.DropSub);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist><FONT color="#0000ff">(if another, Specify)</FONT>&nbsp;

@@ -16,24 +16,24 @@
 			<script language="javascript">
 		function Check()
 		{
-			if(document.Form1.DropUser.value=="Select")
+			if(document.all.DropUser.value=="Select")
 			{
-				document.Form1.TxtUserName.disabled=true
-				document.Form1.TxtPassword.disabled=true
+			    document.all.TxtUserName.disabled = true
+			    document.all.TxtPassword.disabled = true
 			}
 		}
 		
 		function Enable()
 		{
-			if(document.Form1.DropUser.value=="Select")
+			if(document.all.DropUser.value=="Select")
 			{
-				document.Form1.TxtUserName.disabled=true
-				document.Form1.TxtPassword.disabled=true
+				document.all.TxtUserName.disabled=true
+				document.all.TxtPassword.disabled = true
 			}
 			else
 			{
-				document.Form1.TxtUserName.disabled=false
-				document.Form1.TxtPassword.disabled=false
+			    document.all.TxtUserName.disabled = false
+			    document.all.TxtPassword.disabled = false
 			}		
 		}
 			</script>

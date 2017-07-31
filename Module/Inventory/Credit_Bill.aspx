@@ -74,10 +74,10 @@
 					<TR vAlign="top" height="15">
 						<TD></TD>
 						<TD align="center">&nbsp;&nbsp;From&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:textbox id="txtDateFrom" runat="server" BorderStyle="Groove"  Width="80px"
-								CssClass="FontStyle"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+								CssClass="FontStyle"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>&nbsp;&nbsp;To&nbsp;&nbsp;
 							<asp:textbox id="txtDateTO" runat="server" BorderStyle="Groove"  Width="80px"
-								CssClass="FontStyle"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateTO);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+								CssClass="FontStyle"></asp:textbox>&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTO);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>&nbsp;&nbsp;Sales Type&nbsp;&nbsp;<asp:dropdownlist id="DropSalesType" runat="server" Width="130px" CssClass="FontStyle">
 								<asp:ListItem Value="All">All</asp:ListItem>
 								<asp:ListItem Value="Credit Card Sale">Credit Card Sale</asp:ListItem>
