@@ -135,7 +135,7 @@
 							<TR>
 								<TD align="right" colSpan="4">
 									<asp:button id="btnUpdate" runat="server" Width="70px" Text="Save" BackColor="ForestGreen" BorderColor="ForestGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+										ForeColor="White"  ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 							</TR>
 						</TABLE>
 						<asp:ValidationSummary id="ValidationSummary1" runat="server" Height="35px" ShowMessageBox="True" ShowSummary="False"></asp:ValidationSummary></td>

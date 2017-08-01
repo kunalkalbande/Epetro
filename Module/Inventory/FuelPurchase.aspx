@@ -1050,14 +1050,14 @@
 	}
 	function checkDelRec()
 	{
-		if(document.Form1.btnEdit == null)
+		if(document.all.btnEdit == null)
 		{
-			if(document.Form1.DropInvoiceNo.value!="Select")
+		    if (document.all.DropInvoiceNo.value != "Select")
 			{
 				if(confirm("Do You Want To Delete The Product"))
-					document.Form1.tempInvoiceInfo.value="Yes";
+				    document.all.tempInvoiceInfo.value = "Yes";
 				else
-					document.Form1.tempInvoiceInfo.value="No";
+				    document.all.tempInvoiceInfo.value = "No";
 			}
 			else
 			{
@@ -1070,8 +1070,8 @@
 			alert("Please Click The Edit button");
 			return;
 		}
-		if(document.Form1.tempInvoiceInfo.value=="Yes")
-			document.Form1.submit();
+		if (document.all.tempInvoiceInfo.value == "Yes")
+		    document.all.submit();
 	}
 	</script>
 

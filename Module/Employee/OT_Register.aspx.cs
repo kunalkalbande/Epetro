@@ -21,6 +21,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using EPetro.Sysitem.Classes;
 using RMG;
+using System.Text;
 
 namespace EPetro.Module.Employee
 {
@@ -216,88 +217,124 @@ namespace EPetro.Module.Employee
 			return true;
 		}
 
-		/// <summary>
-		/// This method is used to insert and update the record with the help of stored procedures.
-		/// </summary>
-		private void btnUpdate_Click(object sender, System.EventArgs e)
-		{  
-			EmployeeClass obj1=new EmployeeClass();
-			EmployeeClass obj2=new EmployeeClass();
-			try
-			{
-				string  id="";
-				string sql="";
-				SqlDataReader SqlDtr;
-				DateTime dt;
-				string shiftfrom="";
-				string shiftto="";
-				obj1.Emp_ID=DropEmpID.SelectedItem.Value.Substring(0,DropEmpID.SelectedItem.Value.LastIndexOf(":")) ; 
-				id=obj1.Emp_ID;
-				obj1.OT_Date=ToMMddYYYY(txtDate.Text).ToShortDateString();
-				string  OtFrom = DropHour1.SelectedItem.Value.ToString()+":"+ DropMinute1.SelectedItem.Value.ToString()+":"+00;
-				dt=Convert.ToDateTime(OtFrom);
-				string str1=dt.ToString("t");
-				obj1.OT_From=str1;
-				string OtTo=DropHour2.SelectedItem.Value.ToString()+":"+DropMinute2.SelectedItem.Value.ToString();   
-				obj1.OT_To=OtTo.ToString();
-				sql="select  count (status)  from attandance_register where att_date='"+ToMMddYYYY(txtDate.Text).ToShortDateString()+"' and Emp_ID="+id+" and status =1";
-				SqlDtr =obj1.GetRecordSet(sql);
-				if(SqlDtr.Read())
-				{
-					int status= SqlDtr.GetInt32(0);
-					SqlDtr.Close();
-					if(status==1)
-					{
-						SqlDataReader SqlDtr1;
-						string  sql1="SELECT Time_from,Time_To FROM SHIFT where shift_id= any(select shift_id from shift_Assignment where emp_id="+id+")" ;
-						SqlDtr1 =obj2.GetRecordSet(sql1);
-						if(SqlDtr1.HasRows)
-						{
-							while(SqlDtr1.Read())
-							{					
-								shiftfrom=SqlDtr1.GetValue(0).ToString();
-								shiftto=SqlDtr1.GetValue(1).ToString();			
-							}
-							string [] strarr = new string[2];
-							strarr=shiftfrom.Split (new char[]{':'},shiftfrom.Length);
-							int shiftHrF  = Int32.Parse(strarr[0]);
-							int shiftMinF = Int32.Parse(strarr[1]);					
-							strarr=shiftto.Split (new char[]{':'},shiftto.Length);
-							int shiftHrTo  = Int32.Parse(strarr[0]);
-							int shiftMinTo = Int32.Parse(strarr[1]);		
-							strarr=OtFrom.Split (new char[]{':'},OtFrom.Length);
-							int hourFrom   = Int32.Parse(strarr[0]);
-							int minuteFrom = Int32.Parse(strarr[1]);					
-							strarr=OtTo.Split (new char[]{':'},OtTo.Length);
-							int hourTo   = Int32.Parse(strarr[0]);
-							int minuteTo = Int32.Parse(strarr[1]);		
-							if(!isOverTimeExclusive(shiftHrF, shiftMinF,shiftHrTo,shiftMinTo,hourFrom,minuteFrom,hourTo,minuteTo))
-							{
-								MessageBox.Show("Overtime Cannot Be Assigned During The Shift Timing");
-								return;
-							}
-						}
-						obj1.InsertOverTimeRegister();
-						MessageBox.Show("Overtime Assigned");
-					}
-					else
-					{
-						MessageBox.Show("Cannot Assign Overtime For An Absent Employee");
-					}
-				}
-				CreateLogFiles.ErrorLog("Form:OT_Register.aspx,Method:btnUpdate_Click"+ "EMPLOYEE ID IS"+ obj1.Emp_ID +"  OT date from "+obj1.OT_From  +"  upto the OT "+obj1.OT_To+ "  ondate "+obj1.OT_Date    + " is saved  "+" userid "+uid);
-				Clear(); 
-			}
-			catch(Exception ex)
-			{
-				CreateLogFiles.ErrorLog("Form:OT_Register.aspx,Method:btnUpdate_Click"+ "EMPLOYEE ID IS" +"  OT date from "+obj1.OT_From  +"  upto the OT "+obj1.OT_To+ "  ondate "+obj1.OT_Date    + " is saved  "+"  EXCEPTION  "+ex.Message  +"  userid "+uid);
-			}
-		}
-		
-		/// <summary>
-		/// This Method to clear the form.
-		/// </summary>
-		public void Clear()
+        /// <summary>
+        /// This method is used to insert and update the record with the help of stored procedures.
+        /// </summary>
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            EmployeeClass obj1 = new EmployeeClass();
+            EmployeeClass obj2 = new EmployeeClass();
+            StringBuilder erroMessage = new StringBuilder();
+            try
+            {               
+                if (DropEmpID.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Employee ID");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropHour1.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Time From");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropMinute1.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Time From");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropHour2.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Time To");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropMinute2.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Time To");
+                    erroMessage.Append("\n");
+                }
+
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+                string id = "";
+                string sql = "";
+                SqlDataReader SqlDtr;
+                DateTime dt;
+                string shiftfrom = "";
+                string shiftto = "";
+                obj1.Emp_ID = DropEmpID.SelectedItem.Value.Substring(0, DropEmpID.SelectedItem.Value.LastIndexOf(":"));
+                id = obj1.Emp_ID;
+                obj1.OT_Date = ToMMddYYYY(txtDate.Text).ToShortDateString();
+                string OtFrom = DropHour1.SelectedItem.Value.ToString() + ":" + DropMinute1.SelectedItem.Value.ToString() + ":" + 00;
+                dt = Convert.ToDateTime(OtFrom);
+                string str1 = dt.ToString("t");
+                obj1.OT_From = str1;
+                string OtTo = DropHour2.SelectedItem.Value.ToString() + ":" + DropMinute2.SelectedItem.Value.ToString();
+                obj1.OT_To = OtTo.ToString();
+                sql = "select  count (status)  from attandance_register where att_date='" + ToMMddYYYY(txtDate.Text).ToShortDateString() + "' and Emp_ID=" + id + " and status =1";
+                SqlDtr = obj1.GetRecordSet(sql);
+                if (SqlDtr.Read())
+                {
+                    int status = SqlDtr.GetInt32(0);
+                    SqlDtr.Close();
+                    if (status == 1)
+                    {
+                        SqlDataReader SqlDtr1;
+                        string sql1 = "SELECT Time_from,Time_To FROM SHIFT where shift_id= any(select shift_id from shift_Assignment where emp_id=" + id + ")";
+                        SqlDtr1 = obj2.GetRecordSet(sql1);
+                        if (SqlDtr1.HasRows)
+                        {
+                            while (SqlDtr1.Read())
+                            {
+                                shiftfrom = SqlDtr1.GetValue(0).ToString();
+                                shiftto = SqlDtr1.GetValue(1).ToString();
+                            }
+                            string[] strarr = new string[2];
+                            strarr = shiftfrom.Split(new char[] { ':' }, shiftfrom.Length);
+                            int shiftHrF = Int32.Parse(strarr[0]);
+                            int shiftMinF = Int32.Parse(strarr[1]);
+                            strarr = shiftto.Split(new char[] { ':' }, shiftto.Length);
+                            int shiftHrTo = Int32.Parse(strarr[0]);
+                            int shiftMinTo = Int32.Parse(strarr[1]);
+                            strarr = OtFrom.Split(new char[] { ':' }, OtFrom.Length);
+                            int hourFrom = Int32.Parse(strarr[0]);
+                            int minuteFrom = Int32.Parse(strarr[1]);
+                            strarr = OtTo.Split(new char[] { ':' }, OtTo.Length);
+                            int hourTo = Int32.Parse(strarr[0]);
+                            int minuteTo = Int32.Parse(strarr[1]);
+                            if (!isOverTimeExclusive(shiftHrF, shiftMinF, shiftHrTo, shiftMinTo, hourFrom, minuteFrom, hourTo, minuteTo))
+                            {
+                                MessageBox.Show("Overtime Cannot Be Assigned During The Shift Timing");
+                                return;
+                            }
+                        }
+                        obj1.InsertOverTimeRegister();
+                        MessageBox.Show("Overtime Assigned");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cannot Assign Overtime For An Absent Employee");
+                    }
+                }
+                CreateLogFiles.ErrorLog("Form:OT_Register.aspx,Method:btnUpdate_Click" + "EMPLOYEE ID IS" + obj1.Emp_ID + "  OT date from " + obj1.OT_From + "  upto the OT " + obj1.OT_To + "  ondate " + obj1.OT_Date + " is saved  " + " userid " + uid);
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                CreateLogFiles.ErrorLog("Form:OT_Register.aspx,Method:btnUpdate_Click" + "EMPLOYEE ID IS" + "  OT date from " + obj1.OT_From + "  upto the OT " + obj1.OT_To + "  ondate " + obj1.OT_Date + " is saved  " + "  EXCEPTION  " + ex.Message + "  userid " + uid);
+            }
+        }
+
+        /// <summary>
+        /// This Method to clear the form.
+        /// </summary>
+        public void Clear()
 		{
 			DropEmpID.SelectedIndex=0;
 			//txtDate.Text="";
@@ -305,6 +342,6 @@ namespace EPetro.Module.Employee
 			DropHour2.SelectedIndex=0;
 			DropMinute1.SelectedIndex=0;
 			DropMinute2.SelectedIndex=0;
-		}
-	}
+		}        
+    }
 }

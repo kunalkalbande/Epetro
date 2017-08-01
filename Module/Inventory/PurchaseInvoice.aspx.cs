@@ -621,179 +621,223 @@ namespace EPetro.Module.Inventory
 			}
 		}
 
-		/// <summary>
-		/// This method insert and update to the purchase_master and purchase_details
-		/// </summary>
-		private void btnSave_Click(object sender, System.EventArgs e)
-		{
-			InventoryClass  obj=new InventoryClass ();
-			try
-			{
-				// if lable is visible then save otherwise update the invoice.
-				if(lblInvoiceNo.Visible==true)
-				{
-					obj.Invoice_No = lblInvoiceNo.Text ;
-					int count = 0;
-					// This part of code is use to solve the double click problem, Its checks the purchase Invoice no. and display the popup, that it is saved.
-					dbobj.ExecuteScalar("Select count(Invoice_No) from Purchase_Master where Invoice_No = "+lblInvoiceNo.Text.Trim(),ref count);
-					if(count > 0)
-					{
-						MessageBox.Show("Purchase Invoice Saved");
-						GetProducts();
-						FatchInvoiceNo();
-						Clear();
-						clear1(); 
-						GetNextInvoiceNo();
-						lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
-						return ;
-					}
-					else
-					{
-						//obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2MMDDYYYY (lblInvoiceDate.Text.ToString() )) ;
-						obj.Invoice_Date=DateTime.Now;
-						obj.Mode_of_Payment =DropModeType.SelectedItem.Value ;
-						obj.Vendor_Name=DropVendorID.SelectedItem.Value ;
-						obj.City=lblPlace.Value .ToString();
-						obj.Vehicle_No=txtVehicleNo.Text ;
-						obj.Vndr_Invoice_No =txtVInnvoiceNo.Text ;
-						obj.Vndr_Invoice_Date=GenUtil.str2MMDDYYYY(txtVInvoiceDate.Text.ToString()) ;
-						obj.Grand_Total =txtGrandTotal.Text ;
-						if(txtDisc.Text=="")
-							obj.Discount ="0.0";
-						else
-							obj.Discount =txtDisc.Text;
-						obj.Discount_Type=DropDiscType.SelectedItem.Value ;
-						obj.Net_Amount =txtNetAmount.Text ;
-						obj.Promo_Scheme=txtPromoScheme.Text;
-						obj.Remerk =txtRemark.Text;
-						obj.Entry_By =lblEntryBy.Text ;
-						obj.Entry_Time =DateTime.Parse(lblEntryTime .Text);			
-						if(txtCashDisc.Text.Trim() =="")
-							obj.Cash_Discount  ="0.0";
-						else
-							obj.Cash_Discount  = txtCashDisc.Text.Trim() ;
-						obj.Cash_Disc_Type =DropCashDiscType.SelectedItem.Value ;
-						obj.VAT_Amount = txtVAT.Text.Trim();   
-						obj.InsertPurchaseMaster();		
-	
-						HtmlInputHidden[]  ProdName={txtProdName1, txtProdName2, txtProdName3, txtProdName4, txtProdName5, txtProdName6, txtProdName7, txtProdName8}; 
-						HtmlInputHidden[]  PackType={txtPack1, txtPack2, txtPack3, txtPack4, txtPack5, txtPack6, txtPack7, txtPack8}; 
-						TextBox[]  Qty={txtQty1, txtQty2, txtQty3, txtQty4, txtQty5, txtQty6, txtQty7, txtQty8}; 
-						TextBox[]  Rate={txtRate1, txtRate2, txtRate3, txtRate4, txtRate5, txtRate6, txtRate7, txtRate8}; 
-						TextBox[]  Amount={txtAmount1, txtAmount2, txtAmount3, txtAmount4, txtAmount5, txtAmount6, txtAmount7, txtAmount8};
-						for(int j=0;j<ProdName.Length ;j++)
-						{
-							if(Rate[j].Text==""||Rate[j].Text=="0")
-								continue;
-							Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString ());
-						}
-		
-						MessageBox.Show("Purchase Invoice Saved");
-						CreateLogFiles.ErrorLog("Form:OtherlPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs"+" Fuel Purchase Invoise for  Invoice No."+obj.Invoice_No+" ,"+"for Vender Name  "+obj.Vendor_Name+  "on Date "+obj.Vendor_Name+" and NetAmount  "+obj.Net_Amount+"  is Saved "+" userid "+uid);
-						GetProducts();
-						FatchInvoiceNo();
-						reportmaking();
-						//print();
-						Clear();
-						clear1(); 
-						GetNextInvoiceNo();
-						lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
-					}
-					//CreateLogFiles.ErrorLog("Form:PurchaceInvice.aspx,Method:btnSave_Click. Purchase Invoice Saved,  User_ID: "+uid);
-				} 
-				else
-				{
-					string strChck = "";
-					strChck = DropInvoiceNo.SelectedItem.Value.ToString();
-					if(strChck.Equals("Select"))
-					{
-						MessageBox.Show("Please Select Invoice No");
-					}
-					else
-					{
-						string temp = "";
-						obj.Invoice_No = DropInvoiceNo.SelectedItem.Value ;
-						obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString() )) ;
-						obj.Mode_of_Payment =DropModeType.SelectedItem.Value ;
-						obj.Vendor_Name=DropVendorID.SelectedItem.Value ;
-						obj.City=lblPlace.Value .ToString();
-						obj.Vehicle_No=txtVehicleNo.Text ;
-						obj.Vndr_Invoice_No=txtVInnvoiceNo.Text ;
-						obj.Vndr_Invoice_Date=GenUtil.str2MMDDYYYY(txtVInvoiceDate.Text.ToString())  ;
-						obj.Grand_Total =txtGrandTotal.Text ;
-						if(txtDisc.Text=="")
-							obj.Discount ="0.0";
-						else
-							obj.Discount =txtDisc.Text;
-						obj.Discount_Type=DropDiscType.SelectedItem.Value ;
-						obj.Net_Amount =txtNetAmount.Text ;
-						obj.Promo_Scheme=txtPromoScheme.Text;
-						obj.Remerk=txtRemark.Text;
-						obj.Entry_By =lblEntryBy.Text ;
-						obj.Entry_Time =DateTime.Parse(lblEntryTime.Text);	
-						if(txtCashDisc.Text.Trim() =="")
-							obj.Cash_Discount  ="0.0";
-						else
-							obj.Cash_Discount  = txtCashDisc.Text.Trim() ;
-						obj.Cash_Disc_Type =DropCashDiscType.SelectedItem.Value ;
-						obj.VAT_Amount = txtVAT.Text.Trim();   
-						UpdateProductQty();
-						int VendorID=0;
-						dbobj.ExecuteScalar("Select Supp_ID from  Supplier where Supp_Name='"+DropVendorID.SelectedItem.Text+"'",ref VendorID);
-						if(Vendor_ID!=VendorID.ToString())
-						{
-							int xx=0;
-							dbobj.Insert_or_Update("delete from Purchase_Master where Invoice_No='"+DropInvoiceNo.SelectedItem.Text+"'",ref xx);
-							dbobj.Insert_or_Update("delete from Accountsledgertable where Particulars='Purchase Invoice ("+DropInvoiceNo.SelectedItem.Text+")'",ref xx);
-							dbobj.Insert_or_Update("delete from Vendorledgertable where Particular='Purchase Invoice ("+DropInvoiceNo.SelectedItem.Text+")'",ref xx);
-							obj.InsertPurchaseMaster();
-						}
-						else
-							obj.updateMasterPurchase();
-						customerUpdate();
-						
-						//CreateLogFiles.ErrorLog("Form:OtherlPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs"+" Fuel Purchase Invoise for  Invoice No."+obj.Invoice_No+" ,"+"for Vender Name  "+obj.Vendor_Name+  "on Date "+obj.Vendor_Name+" and NetAmount  "+obj.Net_Amount+"  is Saved "+" userid "+uid);
-						HtmlInputHidden[]  ProdName={txtProdName1, txtProdName2, txtProdName3, txtProdName4, txtProdName5, txtProdName6, txtProdName7, txtProdName8}; 
-						HtmlInputHidden[]  PackType={txtPack1, txtPack2, txtPack3, txtPack4, txtPack5, txtPack6, txtPack7, txtPack8}; 
-						TextBox[]  Qty={txtQty1, txtQty2, txtQty3, txtQty4, txtQty5, txtQty6, txtQty7, txtQty8}; 
-						TextBox[]  Rate={txtRate1, txtRate2, txtRate3, txtRate4, txtRate5, txtRate6, txtRate7, txtRate8}; 
-						TextBox[]  Amount={txtAmount1, txtAmount2, txtAmount3, txtAmount4, txtAmount5, txtAmount6, txtAmount7, txtAmount8};
-						TextBox[]  Quantity = {txtTempQty1,txtTempQty2,txtTempQty3,txtTempQty4,txtTempQty5,txtTempQty6,txtTempQty7,txtTempQty8 };
-						for(int j=0;j<ProdName.Length ;j++)
-						{
-							if(Rate[j].Text==""||Rate[j].Text=="0")
-								continue;
-							//temp = System.Convert.ToString(System.Convert.ToDouble(Qty[j].Text)-System.Convert.ToDouble(Quantity[j].Text)); 
-							temp = Qty[j].Text; 
-							Save1(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
-						}
-						reportmaking();
-						SeqStockMaster();
-						//print();
-		
-						MessageBox.Show("Purchase Invoice Updated");
-						CreateLogFiles.ErrorLog("Form:OtherlPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs"+" Fuel Purchase Invoise for  Invoice No."+obj.Invoice_No+" ,"+"for Vender Name  "+obj.Vendor_Name+  "on Date "+obj.Vendor_Name+" and NetAmount  "+obj.Net_Amount+"  is Updated. "+" userid "+uid);
-						DropInvoiceNo.SelectedIndex=0;           
-						DropInvoiceNo.Visible=false;
-						lblInvoiceNo.Visible=true; 
-						Clear();
-						clear1(); 
-						lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
-						//CreateLogFiles.ErrorLog("Form:PurchaceInvice.aspx,Method:btnSave_Click. Purchase Invoice Updated,  User_ID: "+uid);
-					}
-				}
-				checkPrevileges();
-			}
-			catch(Exception ex)
-			{
-				CreateLogFiles.ErrorLog("Form:OtherPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs"+" Fuel Purchase Invoise for  Invoice No."+obj.Invoice_No+" ,"+"for Vender Name  "+obj.Vendor_Name+  "on Date "+obj.Vendor_Name+" and NetAmount  "+obj.Net_Amount+"  EXCEPTION   "+ex.Message+"  userid "+uid);
-			}
-		}
+        /// <summary>
+        /// This method insert and update to the purchase_master and purchase_details
+        /// </summary>
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            InventoryClass obj = new InventoryClass();
+            try
+            {
+                StringBuilder erroMessage = new StringBuilder();
 
-		/// <summary>
-		/// This method clear the form.
-		/// </summary>
-		public void clear1()
+                if (DropVendorID.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select the Vendor Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtVehicleNo.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter the Vehicle No");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtVInnvoiceNo.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter the Vendor Invoice No");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropType1.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select the Product Type");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropProd1.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select the Product Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtQty1.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter the Qty");
+                    erroMessage.Append("\n");
+                }
+
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+
+                // if lable is visible then save otherwise update the invoice.
+                if (lblInvoiceNo.Visible == true)
+                {
+                    obj.Invoice_No = lblInvoiceNo.Text;
+                    int count = 0;
+                    // This part of code is use to solve the double click problem, Its checks the purchase Invoice no. and display the popup, that it is saved.
+                    dbobj.ExecuteScalar("Select count(Invoice_No) from Purchase_Master where Invoice_No = " + lblInvoiceNo.Text.Trim(), ref count);
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Purchase Invoice Saved");
+                        GetProducts();
+                        FatchInvoiceNo();
+                        Clear();
+                        clear1();
+                        GetNextInvoiceNo();
+                        lblInvoiceDate.Text = GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());
+                        return;
+                    }
+                    else
+                    {
+                        //obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2MMDDYYYY (lblInvoiceDate.Text.ToString() )) ;
+                        obj.Invoice_Date = DateTime.Now;
+                        obj.Mode_of_Payment = DropModeType.SelectedItem.Value;
+                        obj.Vendor_Name = DropVendorID.SelectedItem.Value;
+                        obj.City = lblPlace.Value.ToString();
+                        obj.Vehicle_No = txtVehicleNo.Text;
+                        obj.Vndr_Invoice_No = txtVInnvoiceNo.Text;
+                        obj.Vndr_Invoice_Date = GenUtil.str2MMDDYYYY(txtVInvoiceDate.Text.ToString());
+                        obj.Grand_Total = txtGrandTotal.Text;
+                        if (txtDisc.Text == "")
+                            obj.Discount = "0.0";
+                        else
+                            obj.Discount = txtDisc.Text;
+                        obj.Discount_Type = DropDiscType.SelectedItem.Value;
+                        obj.Net_Amount = txtNetAmount.Text;
+                        obj.Promo_Scheme = txtPromoScheme.Text;
+                        obj.Remerk = txtRemark.Text;
+                        obj.Entry_By = lblEntryBy.Text;
+                        obj.Entry_Time = DateTime.Parse(lblEntryTime.Text);
+                        if (txtCashDisc.Text.Trim() == "")
+                            obj.Cash_Discount = "0.0";
+                        else
+                            obj.Cash_Discount = txtCashDisc.Text.Trim();
+                        obj.Cash_Disc_Type = DropCashDiscType.SelectedItem.Value;
+                        obj.VAT_Amount = txtVAT.Text.Trim();
+                        obj.InsertPurchaseMaster();
+
+                        HtmlInputHidden[] ProdName = { txtProdName1, txtProdName2, txtProdName3, txtProdName4, txtProdName5, txtProdName6, txtProdName7, txtProdName8 };
+                        HtmlInputHidden[] PackType = { txtPack1, txtPack2, txtPack3, txtPack4, txtPack5, txtPack6, txtPack7, txtPack8 };
+                        TextBox[] Qty = { txtQty1, txtQty2, txtQty3, txtQty4, txtQty5, txtQty6, txtQty7, txtQty8 };
+                        TextBox[] Rate = { txtRate1, txtRate2, txtRate3, txtRate4, txtRate5, txtRate6, txtRate7, txtRate8 };
+                        TextBox[] Amount = { txtAmount1, txtAmount2, txtAmount3, txtAmount4, txtAmount5, txtAmount6, txtAmount7, txtAmount8 };
+                        for (int j = 0; j < ProdName.Length; j++)
+                        {
+                            if (Rate[j].Text == "" || Rate[j].Text == "0")
+                                continue;
+                            Save(ProdName[j].Value, PackType[j].Value, Qty[j].Text.ToString(), Rate[j].Text.ToString(), Amount[j].Text.ToString());
+                        }
+
+                        MessageBox.Show("Purchase Invoice Saved");
+                        CreateLogFiles.ErrorLog("Form:OtherlPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs" + " Fuel Purchase Invoise for  Invoice No." + obj.Invoice_No + " ," + "for Vender Name  " + obj.Vendor_Name + "on Date " + obj.Vendor_Name + " and NetAmount  " + obj.Net_Amount + "  is Saved " + " userid " + uid);
+                        GetProducts();
+                        FatchInvoiceNo();
+                        reportmaking();
+                        //print();
+                        Clear();
+                        clear1();
+                        GetNextInvoiceNo();
+                        lblInvoiceDate.Text = GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());
+                    }
+                    //CreateLogFiles.ErrorLog("Form:PurchaceInvice.aspx,Method:btnSave_Click. Purchase Invoice Saved,  User_ID: "+uid);
+                }
+                else
+                {
+                    string strChck = "";
+                    strChck = DropInvoiceNo.SelectedItem.Value.ToString();
+                    if (strChck.Equals("Select"))
+                    {
+                        MessageBox.Show("Please Select Invoice No");
+                    }
+                    else
+                    {
+                        string temp = "";
+                        obj.Invoice_No = DropInvoiceNo.SelectedItem.Value;
+                        obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
+                        obj.Mode_of_Payment = DropModeType.SelectedItem.Value;
+                        obj.Vendor_Name = DropVendorID.SelectedItem.Value;
+                        obj.City = lblPlace.Value.ToString();
+                        obj.Vehicle_No = txtVehicleNo.Text;
+                        obj.Vndr_Invoice_No = txtVInnvoiceNo.Text;
+                        obj.Vndr_Invoice_Date = GenUtil.str2MMDDYYYY(txtVInvoiceDate.Text.ToString());
+                        obj.Grand_Total = txtGrandTotal.Text;
+                        if (txtDisc.Text == "")
+                            obj.Discount = "0.0";
+                        else
+                            obj.Discount = txtDisc.Text;
+                        obj.Discount_Type = DropDiscType.SelectedItem.Value;
+                        obj.Net_Amount = txtNetAmount.Text;
+                        obj.Promo_Scheme = txtPromoScheme.Text;
+                        obj.Remerk = txtRemark.Text;
+                        obj.Entry_By = lblEntryBy.Text;
+                        obj.Entry_Time = DateTime.Parse(lblEntryTime.Text);
+                        if (txtCashDisc.Text.Trim() == "")
+                            obj.Cash_Discount = "0.0";
+                        else
+                            obj.Cash_Discount = txtCashDisc.Text.Trim();
+                        obj.Cash_Disc_Type = DropCashDiscType.SelectedItem.Value;
+                        obj.VAT_Amount = txtVAT.Text.Trim();
+                        UpdateProductQty();
+                        int VendorID = 0;
+                        dbobj.ExecuteScalar("Select Supp_ID from  Supplier where Supp_Name='" + DropVendorID.SelectedItem.Text + "'", ref VendorID);
+                        if (Vendor_ID != VendorID.ToString())
+                        {
+                            int xx = 0;
+                            dbobj.Insert_or_Update("delete from Purchase_Master where Invoice_No='" + DropInvoiceNo.SelectedItem.Text + "'", ref xx);
+                            dbobj.Insert_or_Update("delete from Accountsledgertable where Particulars='Purchase Invoice (" + DropInvoiceNo.SelectedItem.Text + ")'", ref xx);
+                            dbobj.Insert_or_Update("delete from Vendorledgertable where Particular='Purchase Invoice (" + DropInvoiceNo.SelectedItem.Text + ")'", ref xx);
+                            obj.InsertPurchaseMaster();
+                        }
+                        else
+                            obj.updateMasterPurchase();
+                        customerUpdate();
+
+                        //CreateLogFiles.ErrorLog("Form:OtherlPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs"+" Fuel Purchase Invoise for  Invoice No."+obj.Invoice_No+" ,"+"for Vender Name  "+obj.Vendor_Name+  "on Date "+obj.Vendor_Name+" and NetAmount  "+obj.Net_Amount+"  is Saved "+" userid "+uid);
+                        HtmlInputHidden[] ProdName = { txtProdName1, txtProdName2, txtProdName3, txtProdName4, txtProdName5, txtProdName6, txtProdName7, txtProdName8 };
+                        HtmlInputHidden[] PackType = { txtPack1, txtPack2, txtPack3, txtPack4, txtPack5, txtPack6, txtPack7, txtPack8 };
+                        TextBox[] Qty = { txtQty1, txtQty2, txtQty3, txtQty4, txtQty5, txtQty6, txtQty7, txtQty8 };
+                        TextBox[] Rate = { txtRate1, txtRate2, txtRate3, txtRate4, txtRate5, txtRate6, txtRate7, txtRate8 };
+                        TextBox[] Amount = { txtAmount1, txtAmount2, txtAmount3, txtAmount4, txtAmount5, txtAmount6, txtAmount7, txtAmount8 };
+                        TextBox[] Quantity = { txtTempQty1, txtTempQty2, txtTempQty3, txtTempQty4, txtTempQty5, txtTempQty6, txtTempQty7, txtTempQty8 };
+                        for (int j = 0; j < ProdName.Length; j++)
+                        {
+                            if (Rate[j].Text == "" || Rate[j].Text == "0")
+                                continue;
+                            //temp = System.Convert.ToString(System.Convert.ToDouble(Qty[j].Text)-System.Convert.ToDouble(Quantity[j].Text)); 
+                            temp = Qty[j].Text;
+                            Save1(ProdName[j].Value, PackType[j].Value, Qty[j].Text.ToString(), Rate[j].Text.ToString(), Amount[j].Text.ToString(), temp, GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
+                        }
+                        reportmaking();
+                        SeqStockMaster();
+                        //print();
+
+                        MessageBox.Show("Purchase Invoice Updated");
+                        CreateLogFiles.ErrorLog("Form:OtherlPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs" + " Fuel Purchase Invoise for  Invoice No." + obj.Invoice_No + " ," + "for Vender Name  " + obj.Vendor_Name + "on Date " + obj.Vendor_Name + " and NetAmount  " + obj.Net_Amount + "  is Updated. " + " userid " + uid);
+                        DropInvoiceNo.SelectedIndex = 0;
+                        DropInvoiceNo.Visible = false;
+                        lblInvoiceNo.Visible = true;
+                        Clear();
+                        clear1();
+                        lblInvoiceDate.Text = GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());
+                        //CreateLogFiles.ErrorLog("Form:PurchaceInvice.aspx,Method:btnSave_Click. Purchase Invoice Updated,  User_ID: "+uid);
+                    }
+                }
+                checkPrevileges();
+            }
+            catch (Exception ex)
+            {
+                CreateLogFiles.ErrorLog("Form:OtherPerchase.aspx,Method:btnSaved_Click,Class:PartiesClass.cs" + " Fuel Purchase Invoise for  Invoice No." + obj.Invoice_No + " ," + "for Vender Name  " + obj.Vendor_Name + "on Date " + obj.Vendor_Name + " and NetAmount  " + obj.Net_Amount + "  EXCEPTION   " + ex.Message + "  userid " + uid);
+            }
+        }
+
+        /// <summary>
+        /// This method clear the form.
+        /// </summary>
+        public void clear1()
 		{
 			DropDownList[] ProdType={DropType1, DropType2, DropType3, DropType4, DropType5, DropType6, DropType7, DropType8};
 			DropDownList[] ProdName={DropProd1, DropProd2, DropProd3, DropProd4, DropProd5, DropProd6, DropProd7, DropProd8};
@@ -1661,12 +1705,12 @@ namespace EPetro.Module.Inventory
 					rdr.Close();
 				}
 			}
-		}
+		}        
 
-		/// <summary>
-		/// This method is used to update the customer balance after update the invoice no in edit time.
-		/// </summary>
-		public void customerUpdate()
+        /// <summary>
+        /// This method is used to update the customer balance after update the invoice no in edit time.
+        /// </summary>
+        public void customerUpdate()
 		{
 			SqlDataReader rdr=null;
 			SqlCommand cmd;
