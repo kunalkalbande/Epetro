@@ -173,8 +173,33 @@ namespace EPetro.Module.Admin
 		/// </summary>
 		private void btnUpdate_Click(object sender, System.EventArgs e)
 		{
-
-			EmployeeClass obj=new EmployeeClass();
+            StringBuilder errorMessage = new StringBuilder();
+            if (txtLoginName.Text == string.Empty)
+            {
+                errorMessage.Append("- Please Fill the Login Name");
+                errorMessage.Append("\n");
+            }
+            if (txtPassword.Text == string.Empty)
+            {
+                errorMessage.Append("- Please Fill the Password");
+                errorMessage.Append("\n");
+            }
+            if (txtFName.Text == string.Empty)
+            {
+                errorMessage.Append("- Please Fill the First Name");
+                errorMessage.Append("\n");
+            }
+            if (DropRole.SelectedIndex == 0)
+            {
+                errorMessage.Append("- Please Select the Role");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+            EmployeeClass obj=new EmployeeClass();
 			int x=0;
 			try
 			{

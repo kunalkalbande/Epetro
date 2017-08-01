@@ -213,7 +213,28 @@ namespace EPetro.Module.Accounts
 		{
 			try
 			{
-				string Ledger_Name = "";
+                StringBuilder errorMessage=new StringBuilder();
+                if (DropLedgerName.SelectedIndex == 0)
+                {
+                    errorMessage.Append("Please Select Ledger Name");
+                    errorMessage.Append("\n");
+                }
+                if (DropBy.SelectedIndex == 0)
+                {
+                    errorMessage.Append("Please Select By Whom");
+                    errorMessage.Append("\n");
+                }
+                if (txtAmount.Text==string.Empty)
+                {
+                    errorMessage.Append("Please Enter Amount");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+                string Ledger_Name = "";
 				string By_Name = "";
 				string Bank_name = "";
 				string Cheque_No = "";

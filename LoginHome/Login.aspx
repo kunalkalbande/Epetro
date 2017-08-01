@@ -145,7 +145,7 @@
 					<TD colSpan="2"></TD>
 					<TD width="214" height="44" colSpan="2" background="../HeaderFooter/images/Login-Page_38.gif">&nbsp;&nbsp;&nbsp;
 						<asp:textbox id="TxtUserName" runat="server" Width="140px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
-						<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtUserName" ErrorMessage="Please Enter Login Name">*</asp:requiredfieldvalidator></TD>
+						<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtUserName"  ErrorMessage="Please Enter Login Name">*</asp:requiredfieldvalidator></TD>
 					<TD width="1" height="44"></TD>
 				</TR>
 				<TR>
@@ -160,7 +160,7 @@
 					<TD width="215" height="46" colSpan="3" background="../HeaderFooter/images/Login-Page_42.gif">&nbsp;&nbsp;&nbsp;
 						<asp:textbox id="TxtPassword" runat="server" Width="140px" TextMode="Password" BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox>
-						<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="TxtPassword" ErrorMessage="Please Enter Password ">*</asp:requiredfieldvalidator></TD>
+						<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="TxtPassword"  ErrorMessage="Please Enter Password ">*</asp:requiredfieldvalidator></TD>
 					<TD width="1" height="46"></TD>
 				</TR>
 				<TR>

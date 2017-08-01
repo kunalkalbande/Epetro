@@ -1693,7 +1693,33 @@ namespace EPetro.Module.Inventory
 			InventoryClass  obj=new InventoryClass();
 			try
 			{
-				if(DropProd1.SelectedIndex!=0)
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropVendorID.SelectedIndex==0)
+                {
+                    errorMessage.Append("- Please Select Vender Name");
+                    errorMessage.Append("\n");
+                }
+                if (txtVehicleNo.Text == string.Empty)
+                {
+                    errorMessage.Append("- Please Enter Vehicle no.");
+                    errorMessage.Append("\n");
+                }
+                if (txtVInvoiceNo.Text == string.Empty)
+                {
+                    errorMessage.Append("- Please Enter Invoice no.");
+                    errorMessage.Append("\n");
+                }
+                if (txtVInvoiceDate.Text == string.Empty)
+                {
+                    errorMessage.Append("- Please Enter Invoice Date");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+                if (DropProd1.SelectedIndex!=0)
 				{
 					if(txtQty1.Text=="")
 					{

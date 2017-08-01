@@ -210,7 +210,7 @@ namespace EPetro.LoginHome
 				}
 				else
 				{
-					RMG.MessageBox.Show("Invalid User Login Name or Password");			
+					//RMG.MessageBox.Show("Invalid User Login Name or Password");			
 					return;
 				}
 				SqlDtr.Close();

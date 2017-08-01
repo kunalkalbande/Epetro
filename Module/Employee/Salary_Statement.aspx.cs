@@ -131,7 +131,18 @@ namespace EPetro.Module.Employee
 		{
 			try
 			{
-				strOrderBy = "Emp_Name ASC";
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropMonth.SelectedIndex==0)
+                {
+                    errorMessage.Append("- Please Select Salary Month");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+                strOrderBy = "Emp_Name ASC";
 				Session["Column"] = "Emp_Name";
 				Session["Order"] = "ASC";
 				BindTheData();
@@ -958,7 +969,18 @@ namespace EPetro.Module.Employee
 		{
 			try
 			{
-				if(GridMachineReport.Visible==true)
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropMonth.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please Select Salary Month");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+                if (GridMachineReport.Visible==true)
 				{
 					ConvertToExcel();
 					MessageBox.Show("Successfully Convert File into Excel Format");
