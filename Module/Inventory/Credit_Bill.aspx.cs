@@ -942,14 +942,15 @@ namespace EPetro.Module.Inventory
 		public void Save()
 		{
 			try
-			{
-				// The follwing code saves the credit bill as well as print it.
+			{				
 				if(DropCustID.SelectedIndex == 0)
 				{
-					MessageBox.Show("Please Select the Customer Name"); 
+					MessageBox.Show("- Please Select Firm Name"); 
 					return;
 				}
-				string	sql="";
+
+                // The follwing code saves the credit bill as well as print it.
+                string sql ="";
 				/*******************
 				if(DropSalesType.SelectedIndex==0)
 					//sql="select sm.invoice_no, case when slip_no=0 then challanno else slip_no end as slip_no, invoice_date, vehicle_no, prod_Name+ ' ' +Pack_Type Prod_Name,qty, rate, amount,Cust_ID from sales_master sm, sales_details sd, products p where sm.invoice_date between '"+ ToMMddYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ ToMMddYYYY(txtDateTO.Text) + "') and sm.cust_id in ( select cust_id from customer where cust_name=substring('"+ DropCustID.SelectedItem.Value +"',1,charindex(':','"+ DropCustID.SelectedItem.Value +"')-1)  and city=substring('"+ DropCustID.SelectedItem.Value +"',charindex(':','"+ DropCustID.SelectedItem.Value +"')+1,len('"+ DropCustID.SelectedItem.Value +"'))) and sm.invoice_no = sd.invoice_no and sd.prod_id = p.prod_id";
@@ -1090,7 +1091,12 @@ namespace EPetro.Module.Inventory
 		/// </summary>
 		private void btnPrint_Click(object sender, System.EventArgs e)
 		{
-			reportmaking1();
+            if (DropCustID.SelectedIndex == 0)
+            {
+                MessageBox.Show("- Please Select Firm Name");
+                return;
+            }
+            reportmaking1();
 			Print();
 			printBtn.Enabled=true;
 			lblBillNo.Visible=true;

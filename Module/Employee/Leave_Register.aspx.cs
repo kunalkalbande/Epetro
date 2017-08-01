@@ -12,15 +12,16 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient ;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
-using EPetro.Sysitem.Classes ;
+using EPetro.Sysitem.Classes;
 using RMG;
+using System.Text;
 
 namespace EPetro.Module.Employee
 {
@@ -159,10 +160,29 @@ namespace EPetro.Module.Employee
 		private void btnApply_Click(object sender, System.EventArgs e)
 		{
 			EmployeeClass obj=new EmployeeClass();
-			try
+            StringBuilder erroMessage = new StringBuilder();
+            try
 			{
-				#region Check Validation
-				if(DateTime.Compare(ToMMddYYYY(txtDateFrom.Text),ToMMddYYYY(txtDateTO.Text))>0)
+                if (DropEmpName.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Employee ID");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtReason.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Specify the Reason of Leave");
+                    erroMessage.Append("\n");
+                }
+
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+
+                #region Check Validation
+                if (DateTime.Compare(ToMMddYYYY(txtDateFrom.Text),ToMMddYYYY(txtDateTO.Text))>0)
 				{
 					MessageBox.Show("Date From Should Be Less Than Date To");
 					return;
