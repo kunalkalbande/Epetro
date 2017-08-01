@@ -475,7 +475,7 @@ namespace EPetro.Module.Reports
 				string Prod_ID=ID;
 				int month=DropMonth.SelectedIndex;
 				/**02**/
-				int year = DropYear.SelectedIndex;
+				int year = 2017;
 				//**int Days_in_Months=DateTime.DaysInMonth(DateTime.Now.Year,month);
 				int Days_in_Months=DateTime.DaysInMonth(year,month);
 				/**02**/
@@ -508,7 +508,7 @@ namespace EPetro.Module.Reports
 				for(int i=0;i<tData.GetLength(0);i++)
 				{
 					//**string eDate=(i+1)+"/"+month.ToString()+"/"+DateTime.Now.Year.ToString(); 
-					string eDate=(i+1)+"/"+month.ToString()+"/"+DropYear.SelectedItem.Text.Trim().ToString(); 
+					string eDate=(i+1)+"/"+month.ToString()+"/"+DropYear.SelectedValue.ToString(); 
 					tData[i,0]=eDate;
 
 					#region Fetch Tank Dip and Water Dip
