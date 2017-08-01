@@ -143,9 +143,9 @@
 					</TD>
 					<TD width="1" background="../HeaderFooter/images/Login-Page_36.gif" height="44"></TD>
 					<TD colSpan="2"></TD>
-					<TD width="214" height="44" colSpan="2" background="../HeaderFooter/images/Login-Page_38.gif">&nbsp;&nbsp;&nbsp;
+					<TD width="214" height="44" colSpan="2"  background="../HeaderFooter/images/Login-Page_38.gif">&nbsp;&nbsp;&nbsp;
 						<asp:textbox id="TxtUserName" runat="server" Width="140px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
-						<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtUserName"  ErrorMessage="Please Enter Login Name">*</asp:requiredfieldvalidator></TD>
+						<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtUserName"   ErrorMessage="Please Enter Login Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 					<TD width="1" height="44"></TD>
 				</TR>
 				<TR>
@@ -160,7 +160,7 @@
 					<TD width="215" height="46" colSpan="3" background="../HeaderFooter/images/Login-Page_42.gif">&nbsp;&nbsp;&nbsp;
 						<asp:textbox id="TxtPassword" runat="server" Width="140px" TextMode="Password" BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox>
-						<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="TxtPassword"  ErrorMessage="Please Enter Password ">*</asp:requiredfieldvalidator></TD>
+						<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="TxtPassword"  ErrorMessage="Please Enter Password "><font color="red">*</font></asp:requiredfieldvalidator></TD>
 					<TD width="1" height="46"></TD>
 				</TR>
 				<TR>
@@ -215,9 +215,9 @@
 					<TD width="328" height="9" colSpan="7" background="../HeaderFooter/images/Login-Page_48.gif"></TD>
 					<TD width="1" height="8"></TD>
 				</TR>
-				<TR>
+				<TR >
 					<TD colSpan="3" rowSpan="2"></TD>
-					<TD colSpan="10" rowSpan="2"><asp:validationsummary id="ValidationSummary1" runat="server"></asp:validationsummary></TD>
+					<TD colSpan="10" rowSpan="2" style="color:red;" ><asp:validationsummary id="ValidationSummary1"  runat="server"></asp:validationsummary></TD>
 					<TD width="1" height="16"></TD>
 				</TR>
 				<TR>

@@ -184,5 +184,8 @@ OL OL LI	{
 
 OL OL OL LI	{	
 	list-style-type:	lower-roman;
-	}	
+	}
 
+.Validation_Sum {
+    color:red !important;
+}
