@@ -41,22 +41,22 @@
 							<TR>
 								<TD>Employee ID / Name&nbsp;<FONT color="#ff0000">*</FONT>
 									<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropEmpID" Operator="NotEqual"
-										ValueToCompare="Select" ErrorMessage="Please Select Employee ID">*</asp:comparevalidator><FONT color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
+										ValueToCompare="Select" ErrorMessage="Please Select Employee ID"><font color="red">*</font></asp:comparevalidator><FONT color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
 								<TD colSpan="3"><asp:dropdownlist id="DropEmpID" runat="server" Width="240px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
 							</TR>
 							<TR>
 								<TD>Date&nbsp;<FONT color="#ff0000">*</FONT>
-									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtDate" ErrorMessage="Please Select Overtime Date">*</asp:requiredfieldvalidator><FONT color="red"></FONT></TD>
+									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtDate" ErrorMessage="Please Select Overtime Date"><font color="red">*</font></asp:requiredfieldvalidator><FONT color="red"></FONT></TD>
 								<TD colSpan="3"><asp:textbox id="txtDate" runat="server" Width="136px"  CssClass="FontStyle" BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></TD>
 							</TR>
 							<TR>
 								<TD>Time From&nbsp; <FONT color="#ff0000">*</FONT>
 									<asp:comparevalidator id="CompareValidator3" runat="server" ControlToValidate="DropHour1" Operator="NotEqual"
-										ValueToCompare="HH" ErrorMessage="Please Select Time From">*</asp:comparevalidator><asp:comparevalidator id="CompareValidator4" runat="server" ControlToValidate="DropMinute1" Operator="NotEqual"
-										ValueToCompare="MM" ErrorMessage="Please Select Time From">*</asp:comparevalidator></TD>
+										ValueToCompare="HH" ErrorMessage="Please Select Time From"><font color="red">*</font></asp:comparevalidator><asp:comparevalidator id="CompareValidator4" runat="server" ControlToValidate="DropMinute1" Operator="NotEqual"
+										ValueToCompare="MM" ErrorMessage="Please Select Time From"></asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropHour1" runat="server" Width="44px" Height="24px" CssClass="FontStyle">
 										<asp:ListItem Value="HH" Selected="True">HH</asp:ListItem>
 										<asp:ListItem Value="00">00</asp:ListItem>
@@ -90,11 +90,11 @@
 										<asp:ListItem Value="30">30</asp:ListItem>
 										<asp:ListItem Value="45">45</asp:ListItem>
 									</asp:dropdownlist></TD>
-								<TD>&nbsp;&nbsp;To&nbsp;
+								<TD>&nbsp;&nbsp;To&nbsp;<font color="red">*</font>
 									<asp:CompareValidator id="CompareValidator8" runat="server" ControlToValidate="DropHour2" Operator="NotEqual"
-										ValueToCompare="HH" ErrorMessage="Please Select Time To">*</asp:CompareValidator>
+										ValueToCompare="HH" ErrorMessage="Please Select Time To"><font color="red">*</font></asp:CompareValidator>
 									<asp:CompareValidator id="CompareValidator2" runat="server" ControlToValidate="DropMinute2" Operator="NotEqual"
-										ValueToCompare="MM" ErrorMessage="Please Select Time To">*</asp:CompareValidator></TD>
+										ValueToCompare="MM" ErrorMessage="Please Select Time To"></asp:CompareValidator></TD>
 								<TD>
 									<asp:dropdownlist id="DropHour2" runat="server" Width="45px" Height="23px" CssClass="FontStyle">
 										<asp:ListItem Value="HH" Selected="True">HH</asp:ListItem>

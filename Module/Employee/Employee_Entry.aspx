@@ -70,8 +70,8 @@
 								<TD>Last Name</TD>
 							</TR>
 							<TR>
-								<TD style="WIDTH: 164px">Name&nbsp; <FONT color="#ff0000">*</FONT>
-									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="Please Fill Employee Name">*</asp:requiredfieldvalidator></TD>
+								<TD style="WIDTH: 164px">Name<font color="red">*</font>&nbsp; 
+									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="Please Fill Employee Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD style="WIDTH: 142px"><asp:textbox onkeypress="return GetOnlyChars(this, event);" id="txtFName" runat="server" Width="130px"
 										BorderStyle="Groove" MaxLength="30" CssClass="FontStyle"></asp:textbox></TD>
 								<TD style="WIDTH: 145px"><asp:textbox onkeypress="return GetOnlyChars(this, event);" id="txtMName" runat="server" Width="130px"
@@ -86,9 +86,9 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD style="WIDTH: 164px">City&nbsp; <FONT color="#ff0000">*</FONT>
+								<TD style="WIDTH: 164px">City<font color="red">*</font>&nbsp; 
 									<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
-										ValueToCompare="Select" Operator="NotEqual">*</asp:comparevalidator></TD>
+										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.Form1.DropState,document.Form1.DropCountry);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -127,9 +127,9 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD style="WIDTH: 164px">Designation <FONT color="#ff0000">*</FONT>
+								<TD style="WIDTH: 164px">Designation<font color="red">*</font> 
 									<asp:comparevalidator id="CompareValidator5" runat="server" ControlToValidate="DropDesig" ErrorMessage="Please Select Designation"
-										ValueToCompare="Select" Operator="NotEqual">*</asp:comparevalidator></TD>
+										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD style="WIDTH: 281px" colSpan="2"><asp:dropdownlist id="DropDesig" runat="server" Width="165px" AutoPostBack="True" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="Accountant">Accountant</asp:ListItem>
@@ -179,8 +179,8 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Salary&nbsp; <FONT color="#ff0000">*</FONT>
-									<asp:requiredfieldvalidator id="RequiredFieldValidator6" runat="server" ControlToValidate="txtSalary" ErrorMessage="Please Fill Salary of Employee">*</asp:requiredfieldvalidator></TD>
+								<TD>Salary<font color="red">*</font>&nbsp; 
+									<asp:requiredfieldvalidator id="RequiredFieldValidator6" runat="server" ControlToValidate="txtSalary" ErrorMessage="Please Fill Salary of Employee"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD style="WIDTH: 142px"><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,false);" id="txtSalary" runat="server"
 										Width="130px" BorderStyle="Groove" MaxLength="10" CssClass="FontStyle"></asp:textbox></TD>
 								<TD style="WIDTH: 145px">OT Compensation<FONT color="#ff0000"> &nbsp;&nbsp;Rs./ Hour </FONT>

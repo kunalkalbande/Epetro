@@ -43,9 +43,9 @@
 										ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button></TD>
 							</TR>
 							<TR>
-								<TD>Role Name
+								<TD>Role Name<font color="red">*</font>
 									<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill the Role Name"
-										ControlToValidate="txtRoleName">*</asp:RequiredFieldValidator></TD>
+										ControlToValidate="txtRoleName"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 								<TD><asp:textbox id="txtRoleName" runat="server" Width="300px" BorderStyle="Groove" onkeypress="return GetOnlyChars(this, event);"
 										MaxLength="49" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>

@@ -61,8 +61,8 @@
 							</TR>
 							<TR>
 								<TD>Machine ID&nbsp;
-									<asp:RequiredFieldValidator ID="rfv1" Runat="server" ErrorMessage="Please Select The Machine ID" ControlToValidate="DropMachineID"
-										InitialValue="Select">*</asp:RequiredFieldValidator></TD>
+									<asp:RequiredFieldValidator ID="rfv1" Runat="server"  ControlToValidate="DropMachineID"
+										InitialValue="Select"></asp:RequiredFieldValidator></TD>
 								<TD><asp:label id="lblMachineID" runat="server" ForeColor="Purple" Width="80px"></asp:label><asp:DropDownList ID="dropMachineID" Runat="server" Width="150px" AutoPostBack="True">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:DropDownList><asp:button id="btnEdit" runat="server" Width="24px" ForeColor="White" BorderColor="ForestGreen"
@@ -77,7 +77,7 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Machine Type <FONT color="#ff0000">*</FONT></TD>
+								<TD>Machine Type <font color="red">*</font> </TD>
 								<TD colspan="3"><asp:dropdownlist id="DropMachineType" runat="server" Width="300px" onChange="check(this);" CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 										<asp:ListItem Value="Avery">Avery</asp:ListItem>
@@ -88,7 +88,7 @@
 										<asp:ListItem Value="Tokhiam">Tokheim</asp:ListItem>
 									</asp:dropdownlist>
 									<asp:CompareValidator id="CompareValidator2" runat="server" ErrorMessage="Please Select The Machine Type"
-										ControlToValidate="DropMachineType" ValueToCompare="Select" Operator="NotEqual">*</asp:CompareValidator></TD>
+										ControlToValidate="DropMachineType" ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></TD>
 							</TR>
 							<tr>
 								<TD style="WIDTH: 100px; HEIGHT: 18px"><FONT color="#0000ff">(if another, Specify)</FONT></TD>

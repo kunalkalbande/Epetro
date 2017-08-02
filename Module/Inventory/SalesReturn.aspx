@@ -453,9 +453,9 @@ var TempQty = new Array(document.Form1.tmpQty1,document.Form1.tmpQty2,document.F
 												<TR>
 													<TD style="WIDTH: 120px" align="center"><FONT color="#990066">Name</FONT></TD>
 													<TD style="WIDTH: 2px" align="center"><FONT color="#990066">&nbsp;&nbsp;&nbsp;&nbsp;Package</FONT></TD>
-													<TD align="center"><FONT color="#990066">Qty
+													<TD align="center"><FONT color="#990066">Qty<font color="red">*</font>
 															<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ErrorMessage="Please Fill Quentity"
-																ControlToValidate="txtQty1">*</asp:requiredfieldvalidator></FONT></TD>
+																ControlToValidate="txtQty1"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
 													<TD align="center"><FONT color="#990066">Rate</FONT></TD>
 													<TD align="center"><FONT color="#990066">Amount</FONT></TD>
 													<TD align="center"><FONT color="#990066">Select</FONT></TD>

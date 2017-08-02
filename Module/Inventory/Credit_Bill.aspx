@@ -92,11 +92,11 @@
 					</TR>
 					<TR vAlign="top" height="15">
 						<TD align="center"></TD>
-						<TD align="center">M/s <FONT color="#ff0000">*</FONT>&nbsp;<FONT color="red">&nbsp;&nbsp;&nbsp;</FONT>&nbsp;&nbsp;<asp:dropdownlist id="DropCustID" runat="server" Width="220px" AutoPostBack="True" CssClass="FontStyle">
+						<TD align="center">M/s &nbsp;<FONT color="red">&nbsp;&nbsp;&nbsp;</FONT>&nbsp;&nbsp;<asp:dropdownlist id="DropCustID" runat="server" Width="220px" AutoPostBack="True" CssClass="FontStyle">
 								<asp:ListItem Value="Select">Select</asp:ListItem>
-							</asp:dropdownlist>&nbsp;
+							</asp:dropdownlist>&nbsp;<font color="red">*</font>
 							<asp:comparevalidator id="CompareValidator7" runat="server" ErrorMessage="Please Select Firm Name" ValueToCompare="Select"
-								ControlToValidate="DropCustID" Operator="NotEqual">*</asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								ControlToValidate="DropCustID" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<asp:button id="btnView" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
 								BorderColor="DarkSeaGreen" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="printBtn" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
 								BorderColor="DarkSeaGreen" Text="Save"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnPrint" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
