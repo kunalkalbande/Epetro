@@ -19,6 +19,11 @@
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<!--<script language="javascript" id="Validations" src="Validations.js"></script>-->
 		<LINK href="../../Sysitem/Styles.css" type="text/css" rel="stylesheet">
+	    <style type="text/css">
+            .auto-style1 {
+                height: 7px;
+            }
+        </style>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
@@ -42,6 +47,11 @@
 									<asp:label id="lblUserID" Runat="server" ForeColor="Blue" Width="100px"></asp:label>
 									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" CausesValidation="False"
 										ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button></TD>
+							</TR>
+							<TR>
+								<TD class="auto-style1"></TD>
+								<TD colSpan="3" class="auto-style1">
+									</TD>
 							</TR>
 							<TR>
 								<TD>Login Name&nbsp;
@@ -91,6 +101,10 @@
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
 								<TD></TD>
+							</TR>
+							<TR>
+								<TD align="right" colSpan="4">
+									&nbsp;</TD>
 							</TR>
 							<TR>
 								<TD align="right" colSpan="4">

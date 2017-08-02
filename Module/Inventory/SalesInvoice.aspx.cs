@@ -844,11 +844,55 @@ namespace EPetro.Module.Inventory
 		/// </summary>
 		private void btnSave_Click(object sender, System.EventArgs e)
 		{
-			InventoryClass obj=new InventoryClass(); 
-			SqlDataReader  SqlDtr=null;
+			InventoryClass obj=new InventoryClass();
+            StringBuilder erroMessage = new StringBuilder();
+            SqlDataReader  SqlDtr=null;
 			string sql;
-			//***************
-			if(DropSalesType.SelectedItem.Text.Equals("Credit Card Sale"))
+            //***************
+
+            if (txtSlipNo.Text == string.Empty)
+            {
+                erroMessage.Append("- Please Enter Slip No.");
+                erroMessage.Append("\n");
+            }
+
+            if (DropUnderSalesMan.SelectedIndex == 0)
+            {
+                erroMessage.Append("- Please select Sales Man");
+                erroMessage.Append("\n");
+            }
+
+            if (DropCustName.SelectedIndex == 0)
+            {
+                erroMessage.Append("- Please select Customer Name");
+                erroMessage.Append("\n");
+            }
+
+            if (txtVehicleNo.Text == string.Empty)
+            {
+                erroMessage.Append("- Please Enter Vehicle No");
+                erroMessage.Append("\n");
+            }            
+
+            if (DropType1.SelectedIndex == 0)
+            {
+                erroMessage.Append("- Please select atleast one Product Type");
+                erroMessage.Append("\n");
+            }           
+
+            if (txtQty1.Text == string.Empty)
+            {
+                erroMessage.Append("- Please Fill Quantity");
+                erroMessage.Append("\n");
+            }
+
+            if (erroMessage.Length > 0)
+            {
+                MessageBox.Show(erroMessage.ToString());
+                return;
+            }
+
+            if (DropSalesType.SelectedItem.Text.Equals("Credit Card Sale"))
 			{
 				dbobj.SelectQuery("select * from Organisation",ref SqlDtr);
 				if(SqlDtr.Read())
