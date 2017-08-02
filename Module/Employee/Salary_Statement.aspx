@@ -38,10 +38,10 @@
 					<td align="center">
 						<TABLE>
 							<TR>
-								<TD align="center"><asp:label id="Label1" runat="server"> Salary Month</asp:label>&nbsp;&nbsp;&nbsp;&nbsp;
+								<TD align="center"><asp:label id="Label1" runat="server"> Salary Month<font color="red">*</font></asp:label>&nbsp;&nbsp;&nbsp;&nbsp;
 									<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropMonth" ValueToCompare="Select"
-										Operator="NotEqual" ErrorMessage="Please Select the Salary Month">*</asp:comparevalidator><asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropYear" ValueToCompare="Not Define"
-										Operator="NotEqual" ErrorMessage="Please Select Year">*</asp:comparevalidator>&nbsp;&nbsp;</TD>
+										Operator="NotEqual" ErrorMessage="Please Select the Salary Month"><font color="red">*</font></asp:comparevalidator><asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropYear" ValueToCompare="Not Define"
+										Operator="NotEqual" ErrorMessage="Please Select Year"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;</TD>
 								<TD><asp:dropdownlist id="DropMonth" runat="server" Width="116px" CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 										<asp:ListItem Value="January">January</asp:ListItem>

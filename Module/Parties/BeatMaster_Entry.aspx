@@ -50,7 +50,7 @@
 							</TR>
 							<TR>
 								<TD>City&nbsp; <FONT color="#ff0000">*</FONT>
-									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill City" ControlToValidate="txtCity">*</asp:requiredfieldvalidator></TD>
+									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill City" ControlToValidate="txtCity"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox onkeypress="return GetOnlyChars(this, event);" id="txtCity" runat="server" Width="160px"
 										BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
 							</TR>

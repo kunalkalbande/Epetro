@@ -56,7 +56,7 @@
 								<TD>Time From&nbsp; <FONT color="#ff0000">*</FONT>
 									<asp:comparevalidator id="CompareValidator3" runat="server" ControlToValidate="DropHour1" Operator="NotEqual"
 										ValueToCompare="HH" ErrorMessage="Please Select Time From"><font color="red">*</font></asp:comparevalidator><asp:comparevalidator id="CompareValidator4" runat="server" ControlToValidate="DropMinute1" Operator="NotEqual"
-										ValueToCompare="MM" ErrorMessage="Please Select Time From"></asp:comparevalidator></TD>
+										ValueToCompare="MM" ErrorMessage="Please Select Time From">&nbsp;</asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropHour1" runat="server" Width="44px" Height="24px" CssClass="FontStyle">
 										<asp:ListItem Value="HH" Selected="True">HH</asp:ListItem>
 										<asp:ListItem Value="00">00</asp:ListItem>
@@ -94,7 +94,7 @@
 									<asp:CompareValidator id="CompareValidator8" runat="server" ControlToValidate="DropHour2" Operator="NotEqual"
 										ValueToCompare="HH" ErrorMessage="Please Select Time To"><font color="red">*</font></asp:CompareValidator>
 									<asp:CompareValidator id="CompareValidator2" runat="server" ControlToValidate="DropMinute2" Operator="NotEqual"
-										ValueToCompare="MM" ErrorMessage="Please Select Time To"></asp:CompareValidator></TD>
+										ValueToCompare="MM" ErrorMessage="Please Select Time To">&nbsp;</asp:CompareValidator></TD>
 								<TD>
 									<asp:dropdownlist id="DropHour2" runat="server" Width="45px" Height="23px" CssClass="FontStyle">
 										<asp:ListItem Value="HH" Selected="True">HH</asp:ListItem>

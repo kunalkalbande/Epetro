@@ -53,9 +53,9 @@
 								<TD colspan="3">
 									<asp:dropdownlist id="DropCustomerName" runat="server" Width="234px" CssClass="FontStyle" AutoPostBack="True">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist>&nbsp;
+									</asp:dropdownlist><font color="red">*</font>&nbsp;
 									<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Customer Name"
-										ControlToValidate="DropCustomerName" Operator="NotEqual" ValueToCompare="Select">*</asp:CompareValidator></TD>
+										ControlToValidate="DropCustomerName" Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:CompareValidator></TD>
 							</TR>
 							<TR>
 								<TD>Vehicle No. 1&nbsp;</TD>

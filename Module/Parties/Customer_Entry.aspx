@@ -53,7 +53,7 @@
 							</TR>
 							<TR>
 								<TD>Name&nbsp; <FONT color="#ff0000">*</FONT>
-									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="Please Fill Customer name">*</asp:requiredfieldvalidator></TD>
+									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="Please Fill Customer name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox id="txtFName" runat="server" Width="130px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="30"></asp:textbox></TD>
 								<TD><asp:textbox id="txtMName" runat="server" Width="130px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="10"></asp:textbox></TD>
 								<TD><asp:textbox id="txtLName" runat="server" Width="130px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="9"></asp:textbox></TD>
@@ -61,7 +61,7 @@
 							<TR>
 								<TD>Type&nbsp;&nbsp; <FONT color="#ff0000">*</FONT> <FONT color="red">
 										<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropType" ErrorMessage="Please Select Customer Type"
-											ValueToCompare="Select" Operator="NotEqual">*</asp:comparevalidator></FONT></TD>
+											ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></FONT></TD>
 								<TD><asp:dropdownlist id="DropType" runat="server" Width="130px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="Contractor">Contractor</asp:ListItem>
@@ -79,7 +79,7 @@
 							<TR>
 								<TD style="HEIGHT: 2px">City&nbsp;&nbsp; <FONT color="#ff0000">*</FONT>
 									<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
-										ValueToCompare="Select" Operator="NotEqual">*</asp:comparevalidator></TD>
+										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD style="HEIGHT: 2px"><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.Form1.DropState,document.Form1.DropCountry);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
