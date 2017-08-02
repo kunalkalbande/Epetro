@@ -22,6 +22,7 @@ using System.Data.SqlClient;
 using EPetro.Sysitem.Classes;
 using DBOperations;
 using RMG;
+using System.Text;
 
 namespace EPetro.Module.PetrolPump
 {
@@ -154,10 +155,35 @@ namespace EPetro.Module.PetrolPump
 		/// </summary>
 		private void btnSave_Click(object sender, System.EventArgs e)
 		{
-			PetrolPumpClass obj=new PetrolPumpClass(); 
-			try
+			PetrolPumpClass obj=new PetrolPumpClass();
+            StringBuilder erroMessage = new StringBuilder();
+            try
 			{
-				if(!checkAcc_Period())
+                if (DropProdName.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Product Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtProdAbbr.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter Short Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtCapacity.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Fill Capacity");
+                    erroMessage.Append("\n");
+                }
+
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+
+                if (!checkAcc_Period())
 				{
 					RMG.MessageBox.Show("Please enter the Accounts Period from Organization Details");
 					return;
@@ -377,9 +403,34 @@ namespace EPetro.Module.PetrolPump
 		/// </summary>
 		private void btnDelete_Click(object sender, System.EventArgs e)
 		{
-			try
-			{
-				Button1.Visible=false;
+            StringBuilder erroMessage = new StringBuilder();
+            try
+            {
+                if (DropProdName.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Product Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtProdAbbr.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter Short Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (txtCapacity.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Fill Capacity");
+                    erroMessage.Append("\n");
+                }
+
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+
+                Button1.Visible=false;
 				btnEdit.Visible=true;		
 				if(DropTankID.SelectedIndex==0)
 				{

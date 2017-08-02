@@ -2,6 +2,7 @@
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+
 <HTML>
   <HEAD>
 		<title>ePetro: Vendor Entry</title> <!--
@@ -174,7 +175,7 @@
 							<TR>
 								<TD colSpan="4" align="right" style="WIDTH: 474px">
 									<asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button>
+										BackColor="ForestGreen" BorderColor="ForestGreen" ></asp:button>
 								</TD>
 							</TR>
 						</TABLE>

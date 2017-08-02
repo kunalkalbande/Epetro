@@ -429,11 +429,11 @@ if(document.Form1.txtAmount1.value != "")
 									<TD>&nbsp;&nbsp;&nbsp;Voucher ID <FONT color="#ff0000">*</FONT>
 										<asp:comparevalidator id="Comparevalidator6" runat="server" ErrorMessage="Please Select Voucher ID " ControlToValidate="DropDownID"
 											Operator="NotEqual" ValueToCompare="Select" ForeColor="White">*</asp:comparevalidator>&nbsp;&nbsp;</TD>
-									<TD vAlign="top" align="left">
+									<TD vAlign="top" align="left" Width="125">
 										<P align="left" valign="top"><asp:dropdownlist id="DropDownID" runat="server" Width="69px" CssClass="FontStyle" AutoPostBack="True">
 												<asp:ListItem Value="Select">Select</asp:ListItem>
 											</asp:dropdownlist><INPUT id="txtVouchID" style="WIDTH: 69px; HEIGHT: 22px" disabled type="text" size="6"
-												name="txtVouchID" runat="server"><asp:button id="btnEdit1" runat="server" ForeColor="White" ToolTip="click here for Edit" CausesValidation="False"
+												name="txtVouchID" runat="server">&nbsp; <asp:button id="btnEdit1" runat="server" ForeColor="White" ToolTip="click here for Edit" CausesValidation="False"
 												Text="..." BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button><INPUT id="txtID" style="WIDTH: 9px; HEIGHT: 22px" type="hidden" size="1" name="txtID"
 												runat="server"></P>
 									</TD>
@@ -577,6 +577,9 @@ if(document.Form1.txtAmount1.value != "")
 							</b>&nbsp; <TEXTAREA class="FontStyle" id="txtNarration" style="WIDTH: 344px; HEIGHT: 23px" rows="1"
 								cols="40" runat="server">							</TEXTAREA> </FONT>
 					</TD>
+				</tr>
+				<tr>
+					<TD align="center" colSpan="7">&nbsp;</TD>
 				</tr>
 				<tr>
 					<TD align="center" colSpan="7"><asp:button id="btnAdd" runat="server" Width="70px" ForeColor="White" Text="Save" BackColor="ForestGreen"

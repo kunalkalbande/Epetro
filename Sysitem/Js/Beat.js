@@ -8,7 +8,7 @@ function getBeatInfo(t,state,country)
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
   //alert(typetext)
-  var hidtext  = document.Form1.txtbeatname.value
+  var hidtext  = document.all.txtbeatname.value
  // alert(hidtext)
   mainarr = hidtext.split("#")
   var cityarr = new Array()

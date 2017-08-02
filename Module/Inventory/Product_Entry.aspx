@@ -149,14 +149,14 @@
 	}
 	function checkDelRec()
 	{
-		if(document.f1.btnEdit == null)
+		if(document.all.btnEdit == null)
 		{
-			if(document.f1.dropProdID.value!="Select")
+		    if (document.all.dropProdID.value != "Select")
 			{
 				if(confirm("Do You Want To Delete The Product"))
-					document.f1.tempDelinfo.value="Yes";
+				    document.all.tempDelinfo.value = "Yes";
 				else
-					document.f1.tempDelinfo.value="No";
+				    document.all.tempDelinfo.value = "No";
 			}
 			else
 			{
@@ -169,8 +169,8 @@
 			alert("Please Click The Edit button");
 			return;
 		}
-		if(document.f1.tempDelinfo.value=="Yes")
-			document.f1.submit();
+		if (document.all.tempDelinfo.value == "Yes")
+		    document.all.submit();
 	}
 		</script>
 		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
