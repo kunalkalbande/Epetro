@@ -1475,11 +1475,11 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
             color=#990066>Vendor Information</FONT></U> 
             <TABLE cellSpacing=0 cellPadding=0>
               <TR>
-                <TD>Vendor&nbsp;Name&nbsp;&nbsp; <asp:comparevalidator id=CompareValidator1 runat="server" Operator="NotEqual" ControlToValidate="DropVendorID" ValueToCompare="Select" ErrorMessage="Please Select Vendor Name">*</asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <TD>Vendor&nbsp;Name&nbsp;&nbsp; <asp:comparevalidator id=CompareValidator1 runat="server" Operator="NotEqual" ControlToValidate="DropVendorID" ValueToCompare="Select" ErrorMessage="Please Select Vendor Name"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                 </TD>
-                <TD><asp:dropdownlist id=DropVendorID runat="server" Width="168px" CssClass="FontStyle" onChange="getCity(this,document.Form1.lblPlace,document.Form1.lblTinNo);">
-<asp:ListItem Value="Select">Select</asp:ListItem>
-												</asp:dropdownlist></TD></TR>
+                <TD><asp:dropdownlist id=DropVendorID runat="server" Width="168px" CssClass="FontStyle" onChange="getCity(this,document.Form1.lblPlace,document.Form1.lblTinNo);"><asp:ListItem Value="Select">Select</asp:ListItem></asp:dropdownlist></TD>
+
+              </TR>
               <TR>
                 <TD>Place</TD>
                 <TD><INPUT class=FontStyle id=lblPlace 
@@ -1487,13 +1487,13 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                    type=text size=22 name=lblPlace 
                   runat="server"></TD></TR>
               <TR>
-                <TD>Vehicle No <asp:requiredfieldvalidator id=RequiredFieldValidator1 runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Fill Vehicle No.">*</asp:requiredfieldvalidator></TD>
+                <TD>Vehicle No <asp:requiredfieldvalidator id=RequiredFieldValidator1 runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Fill Vehicle No."><font color="red">*</font></asp:requiredfieldvalidator></TD>
                 <TD><asp:textbox id=txtVehicleNo runat="server" Width="166px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" MaxLength="15"></asp:textbox></TD></TR>
               <TR>
-                <TD>Invoice No <asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtVInvoiceNo" ErrorMessage="Please Fill Vendor Invoice No.">*</asp:requiredfieldvalidator><asp:regularexpressionvalidator id=RegularExpressionValidator1 runat="server" ControlToValidate="txtVInvoiceNo" ErrorMessage="Numeric only" ValidationExpression="\d+">*</asp:regularexpressionvalidator></TD>
+                <TD>Invoice No <asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtVInvoiceNo" ErrorMessage="Please Fill Vendor Invoice No."><font color="red">*</font></asp:requiredfieldvalidator><asp:regularexpressionvalidator id=RegularExpressionValidator1 runat="server" ControlToValidate="txtVInvoiceNo" ErrorMessage="Numeric only" ValidationExpression="\d+">*</asp:regularexpressionvalidator></TD>
                 <TD><asp:textbox id=txtVInvoiceNo runat="server" Width="166px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" onkeypress="return GetOnlyNumbers(this, event, false,false);" MaxLength="9"></asp:textbox></TD></TR>
               <TR>
-                <TD>Invoice Date <asp:requiredfieldvalidator id=RequiredFieldValidator3 runat="server" ControlToValidate="txtVInvoiceDate" ErrorMessage="Please Fill Vendor Invoice Date">*</asp:requiredfieldvalidator></TD>
+                <TD>Invoice Date <asp:requiredfieldvalidator id=RequiredFieldValidator3 runat="server" ControlToValidate="txtVInvoiceDate" ErrorMessage="Please Fill Vendor Invoice Date"><font color="red">*</font></asp:requiredfieldvalidator></TD>
                 <TD><asp:textbox id=txtVInvoiceDate runat="server" Width="110px" CssClass="FontStyle" Height="21px" BorderStyle="Groove" ></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtVInvoiceDate);return false;" href="javascript:void(0)" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD></TR></TABLE></TD></TR>
         <TR>
           <TD vAlign=top align=center colSpan=2>
@@ -1686,7 +1686,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
           <TD style="WIDTH: 251px"><asp:label id=lblEntryBy runat="server"></asp:label></TD>
           <TD align=right colSpan=2></TD></TR>
         <TR>
-          <TD>Entry Time</TD>
+          <TD>Entry Date &amp; Time</TD>
           <TD style="WIDTH: 251px">
             <P><asp:label id=lblETime runat="server">lblEntryTime</asp:label></P></TD>
           <TD align=right colSpan=2><asp:button id=btnSave runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Save"></asp:button>&nbsp;<asp:button id=btnPrint runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:button>&nbsp;<asp:button onmouseup=checkDelRec() id=btnDelete runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Delete"></asp:button></TD></TR></TABLE></TD><asp:validationsummary id=ValidationSummary1 runat="server" Height="12px" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TR><INPUT 

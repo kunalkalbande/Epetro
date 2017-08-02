@@ -1654,7 +1654,7 @@ payment against Bill details given on account of your supply.
 				object op = null;
 				f= 2;
 				//MakingReport(f);
-				MakingReport(f);
+				//MakingReport(f);
 				//print();
 				//call procedure to insert the record into payment_Receipt and voucher_transaction tables.
 				

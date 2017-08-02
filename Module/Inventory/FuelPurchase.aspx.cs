@@ -400,8 +400,9 @@ namespace EPetro.Module.Inventory
 					//txtGrandTotal.Attributes.Add("onclick","javascript:GetGrandTotal()");
 					lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());
 					lblEntryTime.Text=DateTime.Now.ToString();
-					lblETime.Text=DateTime.Now.ToString();
-					TotalDisc.Text="";
+					//lblETime.Text=DateTime.Now.ToString();
+                    lblETime.Text= DateTime.Now.ToString("dd'/'MM'/'yyyy hh:mm:ss tt");
+                    TotalDisc.Text="";
 					lblEntryBy.Text =Session["User_Name"].ToString();
 					DropDownList[] Product={DropProd1, DropProd2, DropProd3, DropProd4};
 					InventoryClass obj=new InventoryClass ();

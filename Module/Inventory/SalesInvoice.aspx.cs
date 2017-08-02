@@ -298,8 +298,9 @@ namespace EPetro.Module.Inventory
                     checkPrevileges();
 					txtChallanDate.Text=DateTime.Now.Day+"/"+DateTime.Now.Month+"/"+DateTime.Now.Year;
 					lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
-					lblEntryTime.Text=DateTime.Now.ToString ();
-					lblEntryBy.Text =Session["User_Name"].ToString();
+					//lblEntryTime.Text=DateTime.Now.ToString();
+                    lblEntryTime.Text= DateTime.Now.ToString("dd'/'MM'/'yyyy hh:mm:ss tt");
+                    lblEntryBy.Text =Session["User_Name"].ToString();
 					DropDownList[] ProductType={DropType1, DropType2, DropType3, DropType4, DropType5, DropType6, DropType7, DropType8 };
 					InventoryClass  obj=new InventoryClass ();
 					SqlDataReader SqlDtr;
