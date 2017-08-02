@@ -49,8 +49,8 @@ function Check(t)
 	}
 	function Progressbar()
 	{
-		document.Form1.lblPro.style.visibility="visible"
-		document.Form1.lblPro.style.font.bold=true
+		document.all.lblPro.style.visibility="visible"
+		document.all.lblPro.style.font.bold=true
 	}
 		</script>
 	</HEAD>

@@ -258,14 +258,14 @@
 	
 	function checkDelRec()
 	{
-		if(document.Form1.btnEdit == null)
+		if(document.all.btnEdit == null)
 		{
-			if(document.Form1.dropInvoiceNo.value!="Select")
+		    if (document.all.dropInvoiceNo.value != "Select")
 			{
 				if(confirm("Do You Want To Delete The Product"))
-					document.Form1.tempInfo.value="Yes";
+				    document.all.tempInfo.value = "Yes";
 				else
-					document.Form1.tempInfo.value="No";
+				    document.all.tempInfo.value = "No";
 			}
 			else
 			{
@@ -278,8 +278,8 @@
 			alert("Please Click The Edit button");
 			return;
 		}
-		if(document.Form1.tempInfo.value=="Yes")
-			document.Form1.submit();
+		if (document.all.tempInfo.value == "Yes")
+		    document.all.submit();
 	}
 	
 	function CalcQty(amt,qty,stock,rate,tempqty,type,pack)

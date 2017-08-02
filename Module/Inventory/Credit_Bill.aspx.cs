@@ -1067,7 +1067,12 @@ namespace EPetro.Module.Inventory
 		{
 			try
 			{
-				if(GridCreditBill.Visible==true)
+                if (DropCustID.SelectedIndex == 0)
+                {
+                    MessageBox.Show("- Please Select Firm Name");
+                    return;
+                }
+                if (GridCreditBill.Visible==true)
 				{
 					ConvertToExcel();
 					MessageBox.Show("Successfully Convert File into Excel Format");
@@ -1174,7 +1179,7 @@ namespace EPetro.Module.Inventory
 		{
 			try
 			{
-				/*
+                /*
 				PetrolPumpClass obj1=new PetrolPumpClass();
 				TextBox1.Text=DropCustID.SelectedValue.ToString(); 
 				if(DropCustID.SelectedIndex ==0)
@@ -1219,7 +1224,12 @@ namespace EPetro.Module.Inventory
 				}
 				SqlDtr.Close(); 
 				*/
-				displayReport();
+                if (DropCustID.SelectedIndex == 0)
+                {
+                    MessageBox.Show("- Please Select Firm Name");
+                    return;
+                }
+                displayReport();
 			}
 			catch(Exception ex)
 			{
