@@ -22,14 +22,14 @@
 		if(index == 0)
 		{
 		//alert("if")
-		document.f1.txtCategory.disabled = false;
+		document.all.txtCategory.disabled = false;
 		return false;
 		}
 		else
 		{
 		//alert("else")
-		document.f1.txtCategory.disabled = true;
-		document.f1.txtCategory.value = "";
+		document.all.txtCategory.disabled = true;
+		document.all.txtCategory.value = "";
 		return false;
 		}
 		
@@ -43,14 +43,14 @@
 		if(value == "Other")
 		{
 		//alert("if")
-		document.f1.txtunit.disabled = false;
+		    document.all.txtunit.disabled = false;
 		return false;
 		}
 		else
 		{
 		//alert("else")
-		document.f1.txtunit.disabled = true;
-		document.f1.txtunit.value = "";
+		    document.all.txtunit.disabled = true;
+		    document.all.txtunit.value = "";
 		
 		return false;
 		}
@@ -64,56 +64,56 @@
 		if(index == 0)
 		{
 	//	alert("if")
-		document.f1.txtPack1.disabled = false;
-		document.f1.txtPack2.disabled = false;
-		document.f1.DropUnit.selectedIndex = 0;
-		document.f1.DropUnit.disabled = false;
-		document.f1.txtOp_Stock.disabled = false;
-		document.f1.txtBox.disabled = true;
-		document.f1.DropUnit.disabled = false;
-		document.f1.txtOp_Stock.value = "";
-		document.f1.txtBox.value = "";
-		document.f1.txtTotalQty.value ="";
-		document.f1.DropPackUnit.selectedIndex =0;
+		    document.all.txtPack1.disabled = false;
+		    document.all.txtPack2.disabled = false;
+		    document.all.DropUnit.selectedIndex = 0;
+		    document.all.DropUnit.disabled = false;
+		    document.all.txtOp_Stock.disabled = false;
+		    document.all.txtBox.disabled = true;
+		    document.all.DropUnit.disabled = false;
+		    document.all.txtOp_Stock.value = "";
+		    document.all.txtBox.value = "";
+		    document.all.txtTotalQty.value = "";
+		    document.all.DropPackUnit.selectedIndex = 0;
 		
 		
 		return false;
 		}
 		else if(index == 1)
 		{
-		document.f1.txtPack1.disabled = true;
-		document.f1.txtPack2.disabled = true;
-		document.f1.txtPack1.value = "";
-		document.f1.txtPack2.value = "";
-		document.f1.txtOp_Stock.disabled = true;
-		document.f1.txtBox.value = "";
-		document.f1.txtBox.disabled = false;
-		document.f1.txtOp_Stock.value = "";
-		document.f1.txtTotalQty.value = "0";
-		document.f1.txtunit.value = "";
-		document.f1.txtunit.disabled = true;
-		document.f1.DropUnit.selectedIndex = 4;
-		document.f1.DropUnit.disabled = true;
-		document.f1.DropUnit.disabled = true;	
-		document.f1.DropPackUnit.selectedIndex = 2;
+		    document.all.txtPack1.disabled = true;
+		    document.all.txtPack2.disabled = true;
+		    document.all.txtPack1.value = "";
+		    document.all.txtPack2.value = "";
+		    document.all.txtOp_Stock.disabled = true;
+		    document.all.txtBox.value = "";
+		    document.all.txtBox.disabled = false;
+		    document.all.txtOp_Stock.value = "";
+		    document.all.txtTotalQty.value = "0";
+		    document.all.txtunit.value = "";
+		    document.all.txtunit.disabled = true;
+		    document.all.DropUnit.selectedIndex = 4;
+		    document.all.DropUnit.disabled = true;
+		    document.all.DropUnit.disabled = true;
+		    document.all.DropPackUnit.selectedIndex = 2;
 		
 		}
 		else
 		{
 	//	alert("else")
-		document.f1.txtPack1.disabled = true;
-		document.f1.txtPack2.disabled = true;
-		document.f1.txtPack1.value = "";
-		document.f1.txtPack2.value = "";
-		document.f1.DropUnit.selectedIndex = 0;
-		document.f1.DropUnit.disabled = false;
-		document.f1.txtOp_Stock.disabled = false;
-		document.f1.txtBox.disabled = true;
-		document.f1.DropUnit.disabled = false;
-		document.f1.txtOp_Stock.value = "";
-		document.f1.txtBox.value = "";
-		document.f1.txtTotalQty.value ="";
-		document.f1.DropPackUnit.selectedIndex =0;
+		    document.all.txtPack1.disabled = true;
+		    document.all.txtPack2.disabled = true;
+		    document.all.txtPack1.value = "";
+		    document.all.txtPack2.value = "";
+		    document.all.DropUnit.selectedIndex = 0;
+		    document.all.DropUnit.disabled = false;
+		    document.all.txtOp_Stock.disabled = false;
+		    document.all.txtBox.disabled = true;
+		    document.all.DropUnit.disabled = false;
+		    document.all.txtOp_Stock.value = "";
+		    document.all.txtBox.value = "";
+		    document.all.txtTotalQty.value = "";
+		    document.all.DropPackUnit.selectedIndex = 0;
 		CalcTotalQty1(t);
 		return false;
 		}
@@ -122,7 +122,7 @@
 		
 	function CalcTotalQty()
 	{
-		var f=document.f1;
+		var f=document.all;
 		f.txtTotalQty.value=f.txtPack1.value*f.txtPack2.value;
 	}
 	function CalcTotalQty1(t)
@@ -139,19 +139,19 @@
 		q1=Qty[0];
 		if(Qty[1] != "")
 		q2=Qty[1];		  	
-		document.f1.txtTotalQty.value= q1*q2;
+		document.all.txtTotalQty.value= q1*q2;
 		}
 	}
 	function CalcQty()
 	{
-		var f=document.f1;
+		var f=document.all;
 		f.txtBox.value=f.txtTotalQty.value*f.txtOp_Stock.value;
 	}
 	function checkDelRec()
 	{
-		if(document.all.btnEdit == null)
+	    if (document.all.btnEdit == null)
 		{
-		    if (document.all.dropProdID.value != "Select")
+	        if (document.all.dropProdID.value != "Select")
 			{
 				if(confirm("Do You Want To Delete The Product"))
 				    document.all.tempDelinfo.value = "Yes";
@@ -169,8 +169,8 @@
 			alert("Please Click The Edit button");
 			return;
 		}
-		if (document.all.tempDelinfo.value == "Yes")
-		    document.all.submit();
+	    if (document.all.tempDelinfo.value == "Yes")
+	        document.all.submit();
 	}
 		</script>
 		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
