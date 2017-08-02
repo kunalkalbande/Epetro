@@ -251,10 +251,13 @@ namespace EPetro.Module.Accounts
 				Bank_name = txtBankname.Text.Trim();
 				Cheque_No = txtCheque.Text.Trim();
 				Date = txtDate.Text.Trim();
-				Date = GenUtil.str2MMDDYYYY(Date);
-				Amount = txtAmount.Text.Trim();
+				Date = GenUtil.str2DDMMYYYY(Date);
+                DateTime dtDate = System.Convert.ToDateTime(Date);
+
+                Amount = txtAmount.Text.Trim();
 				narration = txtNarrartion.Value.Trim();
-				Invoice_Date = DateTime.Now.ToString();
+                DateTime Entry_Date = System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(Request.Form["txtDate"].ToString()) + " " + DateTime.Now.TimeOfDay.ToString());
+                Invoice_Date = DateTime.Now.ToString();
 				SqlDataReader SqlDtr = null;
 				string strNew = DropLedgerName.SelectedItem.Text;
 				string[] arrstrNew = strNew.Split(new char[] {';'},strNew.Length);
@@ -287,14 +290,14 @@ namespace EPetro.Module.Accounts
 
 				int c= 0;
 				
-				dbobj.Insert_or_Update("insert into payment_transaction values("+Vouch_ID+",'Payment',"+Ledger_ID+","+Amount+","+By_ID+","+Amount+",'"+Bank_name+"','"+Cheque_No+"','"+Date+"','"+narration+"','"+uid+"',getDate())",ref c);
+				dbobj.Insert_or_Update("insert into payment_transaction values("+Vouch_ID+",'Payment',"+Ledger_ID+","+Amount+","+By_ID+","+Amount+",'"+Bank_name+"','"+Cheque_No+ "',CONVERT(datetime,'" + dtDate + "', 103),'"+narration+"','"+uid+"',CONVERT(datetime, '" + Entry_Date + "', 103))",ref c);
 				object obj = null;
 				//dbobj.ExecProc(DBOperations.OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",Ledger_ID,"@Particulars","Payment ("+Vouch_ID+")","@Debit_Amount",Amount,"@Credit_Amount","0.0","@type","Dr"); 
 				//dbobj.ExecProc(DBOperations.OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",By_ID,"@Particulars","Payment ("+Vouch_ID+")","@Debit_Amount","0.0","@Credit_Amount",Amount,"@type","Cr"); 
-				dbobj.ExecProc(DBOperations.OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",Ledger_ID,"@Particulars","Payment ("+Vouch_ID+")","@Debit_Amount",Amount,"@Credit_Amount","0.0","@type","Dr","@Invoice_Date",Invoice_Date); 
-				dbobj.ExecProc(DBOperations.OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",By_ID,"@Particulars","Payment ("+Vouch_ID+")","@Debit_Amount","0.0","@Credit_Amount",Amount,"@type","Cr","@Invoice_Date",Invoice_Date); 
-				dbobj.ExecProc(DBOperations.OprType.Insert,"ProCustomerLedgerEntry",ref obj,"@Voucher_ID",Vouch_ID,"@Ledger_ID",Ledger_ID,"@Amount" ,Amount,"@Type","Dr.","@Invoice_Date",Invoice_Date);
-				dbobj.ExecProc(DBOperations.OprType.Insert,"ProCustomerLedgerEntry",ref obj,"@Voucher_ID",Vouch_ID,"@Ledger_ID",By_ID,"@Amount" ,Amount,"@Type","Cr.","@Invoice_Date",Invoice_Date);
+				dbobj.ExecProc(DBOperations.OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",Ledger_ID,"@Particulars","Payment ("+Vouch_ID+")","@Debit_Amount",Amount,"@Credit_Amount","0.0","@type","Dr","@Invoice_Date", System.Convert.ToDateTime(Invoice_Date)); 
+				dbobj.ExecProc(DBOperations.OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",By_ID,"@Particulars","Payment ("+Vouch_ID+")","@Debit_Amount","0.0","@Credit_Amount",Amount,"@type","Cr","@Invoice_Date", System.Convert.ToDateTime(Invoice_Date)); 
+				dbobj.ExecProc(DBOperations.OprType.Insert,"ProCustomerLedgerEntry",ref obj,"@Voucher_ID",Vouch_ID,"@Ledger_ID",Ledger_ID,"@Amount" ,Amount,"@Type","Dr.","@Invoice_Date", System.Convert.ToDateTime(Invoice_Date));
+				dbobj.ExecProc(DBOperations.OprType.Insert,"ProCustomerLedgerEntry",ref obj,"@Voucher_ID",Vouch_ID,"@Ledger_ID",By_ID,"@Amount" ,Amount,"@Type","Cr.","@Invoice_Date", System.Convert.ToDateTime(Invoice_Date));
 				CustomerInsertUpdate(Ledger_ID,By_ID);
 				if(c != 0)
 				{
