@@ -617,7 +617,7 @@
 													<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropCustName" ErrorMessage="Please Select Customer Name"
 														Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator></TD>
 												<TD style="HEIGHT: 16px"><asp:dropdownlist id="DropCustName" runat="server" Width="172px" CssClass="FontStyle" AutoPostBack="True"
-														onChange="getcustomerinfo(this,document.Form1.lblPlace,document.Form1.lblDueDate,document.Form1.lblCurrBalance,document.Form1.lblCreditLimit,document.Form1.DropVehicleNo);">
+														onChange="getcustomerinfo(this,document.all.lblPlace,document.all.lblDueDate,document.all.lblCurrBalance,document.all.lblCreditLimit,document.all.DropVehicleNo);">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist></TD>
 											</TR>

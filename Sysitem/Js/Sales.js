@@ -224,7 +224,7 @@ var ptype = prodtype.options[index1].text
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
  
-   var hidtext  = document.Form1.txtcustinfo.value
+   var hidtext  = document.all.txtcustinfo.value
  // alert(document.Form1.txtcustinfo.value)
   mainarr = hidtext.split("#")
  
