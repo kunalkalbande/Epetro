@@ -22,6 +22,7 @@ using System.Data.SqlClient;
 using EPetro.Sysitem.Classes;
 using RMG;
 using DBOperations;
+using System.Text;
 
 namespace EPetro.Module.PetrolPump
 {
@@ -276,10 +277,27 @@ namespace EPetro.Module.PetrolPump
 		/// </summary>
 		private void btnSave_Click(object sender, System.EventArgs e)
 		{  
-			PetrolPumpClass obj=new PetrolPumpClass(); 
+            StringBuilder errorMessage=new StringBuilder();
+            if (DropMachineID.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Machine Name");
+                errorMessage.Append("\n");
+            }
+            if (DropTankID.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Tank Name");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+
+            PetrolPumpClass obj=new PetrolPumpClass(); 
 			try
 			{
-				btnEdit.Enabled=true;			
+            	btnEdit.Enabled=true;			
 				if(lblNozzleID.Text=="") 
 				{
 					RMG.MessageBox.Show("Please Enter Nozzle ID");

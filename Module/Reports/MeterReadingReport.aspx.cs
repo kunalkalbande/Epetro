@@ -170,9 +170,10 @@ namespace EPetro.Module.Reports
 		public DateTime ToMMddYYYY(string str)
 		{
 			int dd,mm,yy;
-			string [] strarr = new string[3];			
-			strarr=str.Split(new char[]{'/'},str.Length);
-			dd=Int32.Parse(strarr[0]);
+			string [] strarr = new string[3];
+            //strarr=str.Split(new char[]{'/'},str.Length);
+            strarr = str.IndexOf("/") > 0 ? str.Split(new char[] { '/' }, str.Length) : str.Split(new char[] { '-' }, str.Length);
+            dd =Int32.Parse(strarr[0]);
 			mm=Int32.Parse(strarr[1]);
 			yy=Int32.Parse(strarr[2]);
 			DateTime dt=new DateTime(yy,mm,dd);			
@@ -224,7 +225,7 @@ namespace EPetro.Module.Reports
 		public void BindTheData()
 		{
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
-			string sqlstr="select entry_date,nozzle_name,machine_name+' : '+machine_type machine,prod_name,reading from daily_meter_reading d,nozzle n,machine m,tank t where d.nozzle_id = n.nozzle_id and   n.machine_id = m.machine_id and   n.tank_id = t.tank_id and Entry_Date='"+ToMMddYYYY(txtDateTo.Text).ToShortDateString()  +"'";
+			string sqlstr="select entry_date,nozzle_name,machine_name+' : '+machine_type machine,prod_name,reading from daily_meter_reading d,nozzle n,machine m,tank t where d.nozzle_id = n.nozzle_id and   n.machine_id = m.machine_id and   n.tank_id = t.tank_id and Entry_Date='"+GenUtil.str2MMDDYYYY(txtDateTo.Text) +"'";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds, "daily_meter_reading");
@@ -306,7 +307,7 @@ namespace EPetro.Module.Reports
 			string sql="";
 			string info = "";
 			//string strDate="";
-			sql="select entry_date,nozzle_name,machine_name+' '+machine_type machine,prod_name,reading from daily_meter_reading d,nozzle n,machine m,tank t where d.nozzle_id = n.nozzle_id and   n.machine_id = m.machine_id and   n.tank_id = t.tank_id and Entry_Date='"+ToMMddYYYY(txtDateTo.Text).ToShortDateString()+"' order by "+Cache["strOrderBy"]+"";
+			sql="select entry_date,nozzle_name,machine_name+' '+machine_type machine,prod_name,reading from daily_meter_reading d,nozzle n,machine m,tank t where d.nozzle_id = n.nozzle_id and   n.machine_id = m.machine_id and   n.tank_id = t.tank_id and Entry_Date='"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strOrderBy"]+"";
 			dbobj.SelectQuery(sql,ref rdr);
 			
 			sw.Write((char)27);//added by vishnu
@@ -383,7 +384,7 @@ namespace EPetro.Module.Reports
 			string path = home_drive+@"\ePetro_ExcelFile\MeterReadingReport.xls";
 			StreamWriter sw = new StreamWriter(path);
 			SqlDataReader rdr=null;
-			sql="select entry_date,nozzle_name,machine_name+' '+machine_type machine,prod_name,reading from daily_meter_reading d,nozzle n,machine m,tank t where d.nozzle_id = n.nozzle_id and   n.machine_id = m.machine_id and   n.tank_id = t.tank_id and Entry_Date='"+ToMMddYYYY(txtDateTo.Text).ToShortDateString()+"' order by "+Cache["strOrderBy"]+"";
+			sql="select entry_date,nozzle_name,machine_name+' '+machine_type machine,prod_name,reading from daily_meter_reading d,nozzle n,machine m,tank t where d.nozzle_id = n.nozzle_id and   n.machine_id = m.machine_id and   n.tank_id = t.tank_id and Entry_Date='"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strOrderBy"]+"";
 			dbobj.SelectQuery(sql,ref rdr);
 			sw.WriteLine("Date\t"+txtDateTo.Text);
 			sw.WriteLine("Machine Name\tNozzle Name\tProduct Name\tReading");
