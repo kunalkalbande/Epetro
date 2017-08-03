@@ -221,7 +221,7 @@ namespace EPetro
 			}
 			
 
-			if(System.DateTime.Compare(ToMMddYYYY(txtDateFrom.Text.Trim()),ToMMddYYYY(txtDateTo.Text.Trim())) > 0)
+			if(System.DateTime.Compare(ToMMddYYYY(txtDateFrom.Text.Trim()), ToMMddYYYY(txtDateTo.Text.Trim())) > 0)
 			{
 				MessageBox.Show("Date From Should be less than Date To");
 				return false;
@@ -261,7 +261,7 @@ namespace EPetro
 				Session["Order"] = "ASC";
 				BindTheData();
 				//				SqlDataReader SqlDtr = null;
-				//				dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"'",ref SqlDtr);
+				//				dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"'",ref SqlDtr);
 				//				grdLog.DataSource = SqlDtr;
 				//				grdLog.DataBind();
 				//				if(grdLog.Items.Count==0)
@@ -290,9 +290,9 @@ namespace EPetro
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
 			string sqlstr="";
 			if(DropOption.SelectedIndex==1)
-				sqlstr="Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"'";
+				sqlstr="Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"'";
 			else
-				sqlstr="Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"'";
+				sqlstr="Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"'";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds, "VDLB");
@@ -463,9 +463,9 @@ namespace EPetro
 				string info1 =" {0,6:f} {1,-23:S} {2,-14:f} {3,-10:f} {4,8:f} {5,-15:f} {6,6:f} {7,8:f} {8,8:f} {9,6:f} {10,7:f}";
 				string route = "";
 				if(DropOption.SelectedIndex==1)
-					dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
+					dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
 				else
-					dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
+					dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
 				if(SqlDtr.HasRows)
 				{
 					while(SqlDtr.Read())
@@ -560,9 +560,9 @@ namespace EPetro
 				sw.WriteLine("Fuel\tVehicle Route\tEngine Oil Used\tgear Oil Used\tGrease Used\tBrake Oil Used\tCoolent Used\tTrans. Oil Used\tToll Tax\tPolice\tFood\tMisc.\tOpening Meter Reading\tClosing Meter Reading\tKM. Move\tMileage");
 			string route = "";
 			if(DropOption.SelectedIndex==1)
-				dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
+				dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
 			else
-				dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
+				dbobj.SelectQuery("Select *,(Meter_reading_Cur - Meter_Reading_Pre) as KM,((Meter_reading_Cur - Meter_Reading_Pre)/Fuel_Used_Qty) as Mileage from VDLB where vehicle_no = right('"+Dropvehicleno.SelectedItem.Text.Trim()+"',4) and cast(floor(cast(DOE as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text.Trim())+"' and  cast(floor(cast(DOE as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text.Trim())+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr);
 			if(SqlDtr.HasRows)
 			{
 				while(SqlDtr.Read())
