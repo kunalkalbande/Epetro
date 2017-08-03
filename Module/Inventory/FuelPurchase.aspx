@@ -39,232 +39,232 @@
 	
 	function calc1()
 	{
-		if(document.Form1.txtQty2.value!="")
+		if(document.all.txtQty2.value!="")
 	    {
-			if(document.Form1.DropProd2.selectedIndex > 0) 
+			if(document.all.DropProd2.selectedIndex > 0) 
 			{   
 			    var unitArr = new Array();
-				var temp = document.Form1.txtUnit5.value;
+				var temp = document.all.txtUnit5.value;
 			    unitArr = temp.split("#");
 	    	    
 				//var init_cost=(document.Form1.txtQty2.value)*(document.Form1.txtRate2.value);
-				var init_cost=(document.Form1.txtQty2.value)*(document.Form1.tempRate2.value);
-				var reduc=document.Form1.txtReduction5.value;
+				var init_cost=(document.all.txtQty2.value)*(document.all.tempRate2.value);
+				var reduc=document.all.txtReduction5.value;
 				if(unitArr[0] == "KL")
 				{
-					reduc=eval(reduc)*(document.Form1.txtQty2.value)
+					reduc=eval(reduc)*(document.all.txtQty2.value)
 				}
 				else
 				{
 					reduc=init_cost*eval(reduc)/100;  // % or KL
 				}
-				document.Form1.txtReduction2.value = reduc
-				makeRound(document.Form1.txtReduction2);
+				document.all.txtReduction2.value = reduc
+				makeRound(document.all.txtReduction2);
 		
-				var etax=document.Form1.txtEntryTax5.value;
+				var etax=document.all.txtEntryTax5.value;
 				if(unitArr[1] == "%")
 				{
 					etax=init_cost*eval(etax)/100;  // % or KL
 				}
 				else
 				{
-					etax=eval(etax)*(document.Form1.txtQty2.value)
+					etax=eval(etax)*(document.all.txtQty2.value)
 		
 				}	
-				document.Form1.txtEntryTax2.value = etax;
-				makeRound(document.Form1.txtEntryTax2);
+				document.all.txtEntryTax2.value = etax;
+				makeRound(document.all.txtEntryTax2);
 				
-				var rpocg=document.Form1.txtRPGCharge5.value;
+				var rpocg=document.all.txtRPGCharge5.value;
 				if(unitArr[2] == "KL")
 				{
-					rpocg=(rpocg)*(document.Form1.txtQty2.value); // % or KL
+					rpocg=(rpocg)*(document.all.txtQty2.value); // % or KL
 				}
 				else
 				{
 					rpocg=init_cost*(rpocg)/100;		
 				}
-				document.Form1.txtRPGCharge2.value = rpocg;
-				makeRound(document.Form1.txtRPGCharge2);
+				document.all.txtRPGCharge2.value = rpocg;
+				makeRound(document.all.txtRPGCharge2);
 			
-				var rposcg=(document.Form1.txtRPGSurcharge5.value);
+				var rposcg=(document.all.txtRPGSurcharge5.value);
 				if(unitArr[3] == "KL")
 				{
-					rposcg=(rposcg)*(document.Form1.txtQty2.value); // % or KL
+					rposcg=(rposcg)*(document.all.txtQty2.value); // % or KL
 				}
 				else
 				{
 					rposcg=init_cost*(rposcg)/100;		
 				}
-				document.Form1.txtRPGSurcharge2.value = rposcg;
-				makeRound(document.Form1.txtRPGSurcharge2);
+				document.all.txtRPGSurcharge2.value = rposcg;
+				makeRound(document.all.txtRPGSurcharge2);
 		
-				var ltchg=document.Form1.txtLTC5.value;
+				var ltchg=document.all.txtLTC5.value;
 				if(unitArr[4] == "KL")
 				{
-					ltchg=(ltchg)*(document.Form1.txtQty2.value); // % or KL
+					ltchg=(ltchg)*(document.all.txtQty2.value); // % or KL
 				}
 				else
 				{
 					ltchg=init_cost*(ltchg)/100;		
 				}
-				document.Form1.txtLTC2.value = ltchg;
-				makeRound(document.Form1.txtLTC2);
+				document.all.txtLTC2.value = ltchg;
+				makeRound(document.all.txtLTC2);
 		
-				var Olv=document.Form1.txtOther5.value;
+				var Olv=document.all.txtOther5.value;
 				if(unitArr[6] == "KL")
 				{
-					Olv=(Olv)*(document.Form1.txtQty2.value); // % or KL
+					Olv=(Olv)*(document.all.txtQty2.value); // % or KL
 				}
 				else
 				{
 					Olv=init_cost*eval(Olv)/100;		
 				}
-				document.Form1.txtOther2.value = Olv;
-				makeRound(document.Form1.txtOther2);
+				document.all.txtOther2.value = Olv;
+				makeRound(document.all.txtOther2);
 		
-				var tcchg=document.Form1.txtTransportCharge5.value;
+				var tcchg=document.all.txtTransportCharge5.value;
 				if(unitArr[5] == "KL")
 				{
-					tcchg=(document.Form1.txtQty2.value)*(tcchg);  // To be verified later
+					tcchg=(document.all.txtQty2.value)*(tcchg);  // To be verified later
 				}
 				else
 				{
 					tcchg=init_cost * eval(tcchg)/100;
 				}
-				document.Form1.txtTransportCharge2.value = tcchg;
-				makeRound(document.Form1.txtTransportCharge2);
+				document.all.txtTransportCharge2.value = tcchg;
+				makeRound(document.all.txtTransportCharge2);
 		
-				var lst=document.Form1.txtLST5.value;// % or KL
+				var lst=document.all.txtLST5.value;// % or KL
 				if(unitArr[7] == "%")
 				{
 					lst=(init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg)*(lst)/100;
 				}
 				else
 				{
-					lst = lst * (document.Form1.txtQty2.value);
+					lst = lst * (document.all.txtQty2.value);
 				}
-				document.Form1.txtLST2.value = lst;
-				makeRound(document.Form1.txtLST2);
+				document.all.txtLST2.value = lst;
+				makeRound(document.all.txtLST2);
 		
-				var lstschg=document.Form1.txtLSTSurcharge5.value;
+				var lstschg=document.all.txtLSTSurcharge5.value;
 				if(unitArr[8] == "%")
 				{
 					lstschg=lst*(lstschg)/100; // % or KL
 				}
 				else
 				{
-					lstschg = eval(lstschg)*(document.Form1.txtQty2.value);
+					lstschg = eval(lstschg)*(document.all.txtQty2.value);
 				}
-				document.Form1.txtLSTSurcharge2.value = lstschg;
-				makeRound(document.Form1.txtLSTSurcharge2);
+				document.all.txtLSTSurcharge2.value = lstschg;
+				makeRound(document.all.txtLSTSurcharge2);
 		
-				var lfrecov=document.Form1.txtLFR5.value;
+				var lfrecov=document.all.txtLFR5.value;
 				if(unitArr[9] == "KL")
 				{
-					lfrecov=(document.Form1.txtQty2.value)*(lfrecov);  // % or KL
+					lfrecov=(document.all.txtQty2.value)*(lfrecov);  // % or KL
 				}
 				else
 				{
 					lfrecov= init_cost*eval(lfrecov)/100;
 				}
-				document.Form1.txtLFR2.value = lfrecov;
-				makeRound(document.Form1.txtLFR2);
+				document.all.txtLFR2.value = lfrecov;
+				makeRound(document.all.txtLFR2);
 		
-				var Do=document.Form1.txtDO5.value;
+				var Do=document.all.txtDO5.value;
 				if(unitArr[10] == "KL")
 				{
-					Do=(document.Form1.txtQty2.value)*(Do);
+					Do=(document.all.txtQty2.value)*(Do);
 				}
 				else
 				{
 					Do = init_cost*eval(Do)/100;
 				}
-				document.Form1.txtDO2.value = Do;
-				makeRound(document.Form1.txtDO2);
+				document.all.txtDO2.value = Do;
+				makeRound(document.all.txtDO2);
 		
 				var tot=init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg+lst+lstschg+lfrecov+Do+Olv;
 		
-				document.Form1.txtAmount2.value=tot;
-				makeRound(document.Form1.txtAmount2);
+				document.all.txtAmount2.value=tot;
+				makeRound(document.all.txtAmount2);
 		
-				document.Form1.TextBox12.value=init_cost;
-				document.Form1.txtRate2.value=init_cost;
-				makeRound(document.Form1.txtRate2)
-				document.Form1.TextBox13.value=reduc;
-				document.Form1.TextBox1.value=etax;
-				document.Form1.TextBox2.value=rpocg;
-				document.Form1.TextBox3.value=rposcg;
-				document.Form1.TextBox4.value=ltchg;
-				document.Form1.TextBox5.value=tcchg;
-				document.Form1.TextBox6.value=Olv;
-				document.Form1.TextBox7.value=lst;
-				document.Form1.TextBox8.value=lstschg;
-				document.Form1.TextBox9.value=lfrecov;
-				document.Form1.TextBox10.value=Do;
-				document.Form1.TextBox11.value=tot;
+				document.all.TextBox12.value=init_cost;
+				document.all.txtRate2.value=init_cost;
+				makeRound(document.all.txtRate2)
+				document.all.TextBox13.value=reduc;
+				document.all.TextBox1.value=etax;
+				document.all.TextBox2.value=rpocg;
+				document.all.TextBox3.value=rposcg;
+				document.all.TextBox4.value=ltchg;
+				document.all.TextBox5.value=tcchg;
+				document.all.TextBox6.value=Olv;
+				document.all.TextBox7.value=lst;
+				document.all.TextBox8.value=lstschg;
+				document.all.TextBox9.value=lfrecov;
+				document.all.TextBox10.value=Do;
+				document.all.TextBox11.value=tot;
 				GetGrandTotal();
 				GetNetAmount();
 			}
 			else
 			{
-				document.Form1.txtReduction2.value = "";
-				document.Form1.txtEntryTax2.value = "";
-				document.Form1.txtRPGCharge2.value = "";
-				document.Form1.txtRPGSurcharge2.value = "";
-				document.Form1.txtLTC2.value = "";
-				document.Form1.txtOther2.value = "";
-				document.Form1.txtTransportCharge2.value = "";
-				document.Form1.txtLST2.value = "";
-				document.Form1.txtLSTSurcharge2.value = "";
-				document.Form1.txtLFR2.value = "";
-				document.Form1.txtDO2.value = "";
-				document.Form1.txtAmount2.value="";
-				document.Form1.TextBox12.value="";
-				document.Form1.txtRate2.value="";
-				document.Form1.TextBox13.value="";
-				document.Form1.TextBox1.value="";
-				document.Form1.TextBox2.value="";
-				document.Form1.TextBox3.value="";
-				document.Form1.TextBox4.value="";
-				document.Form1.TextBox5.value="";
-				document.Form1.TextBox6.value="";
-				document.Form1.TextBox7.value="";
-				document.Form1.TextBox8.value="";
-				document.Form1.TextBox9.value="";
-				document.Form1.TextBox10.value="";
-				document.Form1.TextBox11.value="";
+				document.all.txtReduction2.value = "";
+				document.all.txtEntryTax2.value = "";
+				document.all.txtRPGCharge2.value = "";
+				document.all.txtRPGSurcharge2.value = "";
+				document.all.txtLTC2.value = "";
+				document.all.txtOther2.value = "";
+				document.all.txtTransportCharge2.value = "";
+				document.all.txtLST2.value = "";
+				document.all.txtLSTSurcharge2.value = "";
+				document.all.txtLFR2.value = "";
+				document.all.txtDO2.value = "";
+				document.all.txtAmount2.value="";
+				document.all.TextBox12.value="";
+				document.all.txtRate2.value="";
+				document.all.TextBox13.value="";
+				document.all.TextBox1.value="";
+				document.all.TextBox2.value="";
+				document.all.TextBox3.value="";
+				document.all.TextBox4.value="";
+				document.all.TextBox5.value="";
+				document.all.TextBox6.value="";
+				document.all.TextBox7.value="";
+				document.all.TextBox8.value="";
+				document.all.TextBox9.value="";
+				document.all.TextBox10.value="";
+				document.all.TextBox11.value="";
 				GetGrandTotal();
 				GetNetAmount();
 			}
 		}
 		else
 		{
-			document.Form1.txtReduction2.value = "";
-			document.Form1.txtEntryTax2.value = "";
-			document.Form1.txtRPGCharge2.value = "";
-			document.Form1.txtRPGSurcharge2.value = "";
-			document.Form1.txtLTC2.value = "";
-			document.Form1.txtOther2.value = "";
-			document.Form1.txtTransportCharge2.value = "";
-			document.Form1.txtLST2.value = "";
-			document.Form1.txtLSTSurcharge2.value = "";
-			document.Form1.txtLFR2.value = "";
-			document.Form1.txtDO2.value = "";
-			document.Form1.txtAmount2.value="";
-			document.Form1.TextBox12.value="";
-			document.Form1.txtRate2.value="";
-			document.Form1.TextBox13.value="";
-			document.Form1.TextBox1.value="";
-			document.Form1.TextBox2.value="";
-			document.Form1.TextBox3.value="";
-			document.Form1.TextBox4.value="";
-			document.Form1.TextBox5.value="";
-			document.Form1.TextBox6.value="";
-			document.Form1.TextBox7.value="";
-			document.Form1.TextBox8.value="";
-			document.Form1.TextBox9.value="";
-			document.Form1.TextBox10.value="";
-			document.Form1.TextBox11.value="";
+			document.all.txtReduction2.value = "";
+			document.all.txtEntryTax2.value = "";
+			document.all.txtRPGCharge2.value = "";
+			document.all.txtRPGSurcharge2.value = "";
+			document.all.txtLTC2.value = "";
+			document.all.txtOther2.value = "";
+			document.all.txtTransportCharge2.value = "";
+			document.all.txtLST2.value = "";
+			document.all.txtLSTSurcharge2.value = "";
+			document.all.txtLFR2.value = "";
+			document.all.txtDO2.value = "";
+			document.all.txtAmount2.value="";
+			document.all.TextBox12.value="";
+			document.all.txtRate2.value="";
+			document.all.TextBox13.value="";
+			document.all.TextBox1.value="";
+			document.all.TextBox2.value="";
+			document.all.TextBox3.value="";
+			document.all.TextBox4.value="";
+			document.all.TextBox5.value="";
+			document.all.TextBox6.value="";
+			document.all.TextBox7.value="";
+			document.all.TextBox8.value="";
+			document.all.TextBox9.value="";
+			document.all.TextBox10.value="";
+			document.all.TextBox11.value="";
 			GetGrandTotal();
 			GetNetAmount();
 		}
@@ -272,229 +272,229 @@
 	
 	function calc2()
 	{
-		if(document.Form1.txtQty3.value!="")
+		if(document.all.txtQty3.value!="")
 	    {
-			if(document.Form1.DropProd3.selectedIndex > 0) 
+			if(document.all.DropProd3.selectedIndex > 0) 
 			{
 				var unitArr = new Array();
-				var temp = document.Form1.txtUnit6.value;
+				var temp = document.all.txtUnit6.value;
 			    unitArr = temp.split("#");
 	
 				//var init_cost=(document.Form1.txtQty3.value)*(document.Form1.txtRate3.value);
-				var init_cost=(document.Form1.txtQty3.value)*(document.Form1.tempRate3.value);
-				var reduc=document.Form1.txtReduction6.value;
+				var init_cost=(document.all.txtQty3.value)*(document.all.tempRate3.value);
+				var reduc=document.all.txtReduction6.value;
 				if(unitArr[0] == "KL")
 				{
-					reduc=eval(reduc)*(document.Form1.txtQty3.value)
+					reduc=eval(reduc)*(document.all.txtQty3.value)
 				}
 				else
 				{
 					reduc=init_cost*eval(reduc)/100;  // % or KL
 				}
-				document.Form1.txtReduction3.value = reduc
-				makeRound(document.Form1.txtReduction3);
+				document.all.txtReduction3.value = reduc
+				makeRound(document.all.txtReduction3);
 		
-				var etax=document.Form1.txtEntryTax6.value;
+				var etax=document.all.txtEntryTax6.value;
 				if(unitArr[1] == "%")
 				{
 					etax=init_cost*eval(etax)/100;  // % or KL
 				}
 				else
 				{
-					etax=eval(etax)*(document.Form1.txtQty3.value)
+					etax=eval(etax)*(document.all.txtQty3.value)
 				}	
-				document.Form1.txtEntryTax3.value = etax;
-				makeRound(document.Form1.txtEntryTax3);
+				document.all.txtEntryTax3.value = etax;
+				makeRound(document.all.txtEntryTax3);
 		
-				var rpocg=document.Form1.txtRPGCharge6.value;
+				var rpocg=document.all.txtRPGCharge6.value;
 				if(unitArr[2] == "KL")
 				{
-					rpocg=(rpocg)*(document.Form1.txtQty3.value); // % or KL
+					rpocg=(rpocg)*(document.all.txtQty3.value); // % or KL
 				}
 				else
 				{
 					rpocg=init_cost*(rpocg)/100;		
 				}
-				document.Form1.txtRPGCharge3.value = rpocg
-				makeRound(document.Form1.txtRPGCharge3);
+				document.all.txtRPGCharge3.value = rpocg
+				makeRound(document.all.txtRPGCharge3);
 	
-				var rposcg=(document.Form1.txtRPGSurcharge6.value);
+				var rposcg=(document.all.txtRPGSurcharge6.value);
 				if(unitArr[3] == "KL")
 				{
-					rposcg=(rposcg)*(document.Form1.txtQty3.value); // % or KL
+					rposcg=(rposcg)*(document.all.txtQty3.value); // % or KL
 				}
 				else
 				{
 					rposcg=init_cost*(rposcg)/100;		
 				}
-				document.Form1.txtRPGSurcharge3.value = rposcg;
-				makeRound(document.Form1.txtRPGSurcharge3);
+				document.all.txtRPGSurcharge3.value = rposcg;
+				makeRound(document.all.txtRPGSurcharge3);
 		
-				var ltchg=document.Form1.txtLTC6.value;
+				var ltchg=document.all.txtLTC6.value;
 				if(unitArr[4] == "KL")
 				{
-					ltchg=(ltchg)*(document.Form1.txtQty3.value); // % or KL
+					ltchg=(ltchg)*(document.all.txtQty3.value); // % or KL
 				}
 				else
 				{
 					ltchg=init_cost*(ltchg)/100;		
 				}
-				document.Form1.txtLTC3.value = ltchg;
-				makeRound(document.Form1.txtLTC3);
+				document.all.txtLTC3.value = ltchg;
+				makeRound(document.all.txtLTC3);
 		
-				var Olv=document.Form1.txtOther6.value;
+				var Olv=document.all.txtOther6.value;
 				if(unitArr[6] == "KL")
 				{
-					Olv=(Olv)*(document.Form1.txtQty3.value); // % or KL
+					Olv=(Olv)*(document.all.txtQty3.value); // % or KL
 				}
 				else
 				{
 					Olv=init_cost*eval(Olv)/100;		
 				}
-				document.Form1.txtOther3.value = Olv;
-				makeRound( document.Form1.txtOther3);
+				document.all.txtOther3.value = Olv;
+				makeRound( document.all.txtOther3);
 		
-				var tcchg=document.Form1.txtTransportCharge6.value;
+				var tcchg=document.all.txtTransportCharge6.value;
 				if(unitArr[5] == "KL")
 				{
-					tcchg=(document.Form1.txtQty3.value)*(tcchg);  // To be verified later
+					tcchg=(document.all.txtQty3.value)*(tcchg);  // To be verified later
 				}
 				else
 				{
 					tcchg=init_cost * eval(tcchg)/100;
 				}
-				document.Form1.txtTransportCharge3.value = tcchg;
-				makeRound(document.Form1.txtTransportCharge3);
+				document.all.txtTransportCharge3.value = tcchg;
+				makeRound(document.all.txtTransportCharge3);
 		
-				var lst=document.Form1.txtLST6.value;// % or KL
+				var lst=document.all.txtLST6.value;// % or KL
 				if(unitArr[7] == "%")
 				{
 					lst=(init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg)*(lst)/100;
 				}
 				else
 				{
-					lst = lst * (document.Form1.txtQty3.value);
+					lst = lst * (document.all.txtQty3.value);
 				}
-				document.Form1.txtLST3.value = lst;
-				makeRound(document.Form1.txtLST3);
+				document.all.txtLST3.value = lst;
+				makeRound(document.all.txtLST3);
 		
-				var lstschg=document.Form1.txtLSTSurcharge6.value;
+				var lstschg=document.all.txtLSTSurcharge6.value;
 				if(unitArr[8] == "%")
 				{
 					lstschg=lst*(lstschg)/100; // % or KL
 				}
 				else
 				{
-					lstschg = eval(lstschg)*(document.Form1.txtQty3.value);
+					lstschg = eval(lstschg)*(document.all.txtQty3.value);
 				}
-				document.Form1.txtLSTSurcharge3.value = lstschg;
-				makeRound(document.Form1.txtLSTSurcharge3);
+				document.all.txtLSTSurcharge3.value = lstschg;
+				makeRound(document.all.txtLSTSurcharge3);
 		
-				var lfrecov=document.Form1.txtLFR6.value;
+				var lfrecov=document.all.txtLFR6.value;
 				if(unitArr[9] == "KL")
 				{
-					lfrecov=(document.Form1.txtQty3.value)*(lfrecov);  // % or KL
+					lfrecov=(document.all.txtQty3.value)*(lfrecov);  // % or KL
 				}
 				else
 				{
 					lfrecov= init_cost*eval(lfrecov)/100;
 				}
-				document.Form1.txtLFR3.value = lfrecov;
-				makeRound(document.Form1.txtLFR3);
+				document.all.txtLFR3.value = lfrecov;
+				makeRound(document.all.txtLFR3);
 		
-				var Do=document.Form1.txtDO6.value;
+				var Do=document.all.txtDO6.value;
 				if(unitArr[10] == "KL")
 				{
-					Do=(document.Form1.txtQty3.value)*(Do);
+					Do=(document.all.txtQty3.value)*(Do);
 				}
 				else
 				{
 					Do = init_cost*eval(Do)/100;
 				}
-				document.Form1.txtDO3.value = Do;
-				makeRound(document.Form1.txtDO3);
+				document.all.txtDO3.value = Do;
+				makeRound(document.all.txtDO3);
 		
 				var tot=init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg+lst+lstschg+lfrecov+Do+Olv;
-				document.Form1.txtAmount3.value=tot;
-				makeRound(document.Form1.txtAmount3);
-				document.Form1.TextBox14.value=init_cost;
-				document.Form1.txtRate3.value=init_cost;
-				makeRound(document.Form1.txtRate3)
-				document.Form1.TextBox45.value=reduc;
-				document.Form1.TextBox16.value=etax;
-				document.Form1.TextBox17.value=rpocg;
-				document.Form1.TextBox18.value=rposcg;
-				document.Form1.TextBox19.value=ltchg;
-				document.Form1.TextBox20.value=tcchg;
-				document.Form1.TextBox21.value=Olv;
-				document.Form1.TextBox22.value=lst;
-				document.Form1.TextBox23.value=lstschg;
-				document.Form1.TextBox24.value=lfrecov;
-				document.Form1.TextBox25.value=Do;
-				document.Form1.TextBox26.value=tot;
+				document.all.txtAmount3.value=tot;
+				makeRound(document.all.txtAmount3);
+				document.all.TextBox14.value=init_cost;
+				document.all.txtRate3.value=init_cost;
+				makeRound(document.all.txtRate3)
+				document.all.TextBox45.value=reduc;
+				document.all.TextBox16.value=etax;
+				document.all.TextBox17.value=rpocg;
+				document.all.TextBox18.value=rposcg;
+				document.all.TextBox19.value=ltchg;
+				document.all.TextBox20.value=tcchg;
+				document.all.TextBox21.value=Olv;
+				document.all.TextBox22.value=lst;
+				document.all.TextBox23.value=lstschg;
+				document.all.TextBox24.value=lfrecov;
+				document.all.TextBox25.value=Do;
+				document.all.TextBox26.value=tot;
 				GetGrandTotal();
 				GetNetAmount();
 			}
 			else
 			{
-				document.Form1.txtReduction3.value = "";
-				document.Form1.txtEntryTax3.value = "";
-				document.Form1.txtRPGCharge3.value = "";
-				document.Form1.txtRPGSurcharge3.value = "";
-				document.Form1.txtLTC3.value = "";
-				document.Form1.txtOther3.value = "";
-				document.Form1.txtTransportCharge3.value = "";
-				document.Form1.txtLST3.value = "";
-				document.Form1.txtLSTSurcharge3.value = "";
-				document.Form1.txtLFR3.value = "";
-				document.Form1.txtDO3.value = "";
-				document.Form1.txtAmount3.value="";
-				document.Form1.TextBox14.value="";
-				document.Form1.txtRate3.value="";
-				document.Form1.TextBox45.value="";
-				document.Form1.TextBox16.value="";
-				document.Form1.TextBox17.value="";
-				document.Form1.TextBox18.value="";
-				document.Form1.TextBox19.value="";
-				document.Form1.TextBox20.value="";
-				document.Form1.TextBox21.value="";
-				document.Form1.TextBox22.value="";
-				document.Form1.TextBox23.value="";
-				document.Form1.TextBox24.value="";
-				document.Form1.TextBox25.value="";
-				document.Form1.TextBox26.value="";
+				document.all.txtReduction3.value = "";
+				document.all.txtEntryTax3.value = "";
+				document.all.txtRPGCharge3.value = "";
+				document.all.txtRPGSurcharge3.value = "";
+				document.all.txtLTC3.value = "";
+				document.all.txtOther3.value = "";
+				document.all.txtTransportCharge3.value = "";
+				document.all.txtLST3.value = "";
+				document.all.txtLSTSurcharge3.value = "";
+				document.all.txtLFR3.value = "";
+				document.all.txtDO3.value = "";
+				document.all.txtAmount3.value="";
+				document.all.TextBox14.value="";
+				document.all.txtRate3.value="";
+				document.all.TextBox45.value="";
+				document.all.TextBox16.value="";
+				document.all.TextBox17.value="";
+				document.all.TextBox18.value="";
+				document.all.TextBox19.value="";
+				document.all.TextBox20.value="";
+				document.all.TextBox21.value="";
+				document.all.TextBox22.value="";
+				document.all.TextBox23.value="";
+				document.all.TextBox24.value="";
+				document.all.TextBox25.value="";
+				document.all.TextBox26.value="";
 				GetGrandTotal();
 				GetNetAmount();
 			}
 		}
 		else
 		{
-			document.Form1.txtReduction3.value = "";
-			document.Form1.txtEntryTax3.value = "";
-			document.Form1.txtRPGCharge3.value = "";
-			document.Form1.txtRPGSurcharge3.value = "";
-			document.Form1.txtLTC3.value = "";
-			document.Form1.txtOther3.value = "";
-			document.Form1.txtTransportCharge3.value = "";
-			document.Form1.txtLST3.value = "";
-			document.Form1.txtLSTSurcharge3.value = "";
-			document.Form1.txtLFR3.value = "";
-			document.Form1.txtDO3.value = "";
-			document.Form1.txtAmount3.value="";
-			document.Form1.TextBox14.value="";
-			document.Form1.txtRate3.value="";
-			document.Form1.TextBox45.value="";
-			document.Form1.TextBox16.value="";
-			document.Form1.TextBox17.value="";
-			document.Form1.TextBox18.value="";
-			document.Form1.TextBox19.value="";
-			document.Form1.TextBox20.value="";
-			document.Form1.TextBox21.value="";
-			document.Form1.TextBox22.value="";
-			document.Form1.TextBox23.value="";
-			document.Form1.TextBox24.value="";
-			document.Form1.TextBox25.value="";
-			document.Form1.TextBox26.value="";
+			document.all.txtReduction3.value = "";
+			document.all.txtEntryTax3.value = "";
+			document.all.txtRPGCharge3.value = "";
+			document.all.txtRPGSurcharge3.value = "";
+			document.all.txtLTC3.value = "";
+			document.all.txtOther3.value = "";
+			document.all.txtTransportCharge3.value = "";
+			document.all.txtLST3.value = "";
+			document.all.txtLSTSurcharge3.value = "";
+			document.all.txtLFR3.value = "";
+			document.all.txtDO3.value = "";
+			document.all.txtAmount3.value="";
+			document.all.TextBox14.value="";
+			document.all.txtRate3.value="";
+			document.all.TextBox45.value="";
+			document.all.TextBox16.value="";
+			document.all.TextBox17.value="";
+			document.all.TextBox18.value="";
+			document.all.TextBox19.value="";
+			document.all.TextBox20.value="";
+			document.all.TextBox21.value="";
+			document.all.TextBox22.value="";
+			document.all.TextBox23.value="";
+			document.all.TextBox24.value="";
+			document.all.TextBox25.value="";
+			document.all.TextBox26.value="";
 			GetGrandTotal();
 			GetNetAmount();
 		}
@@ -504,231 +504,231 @@
 	
 	function calc3()
 	{
-		if(document.Form1.txtQty4.value!="")
+		if(document.all.txtQty4.value!="")
 	    {
-			if(document.Form1.DropProd4.selectedIndex > 0) 
+			if(document.all.DropProd4.selectedIndex > 0) 
 			{
 				var unitArr = new Array();
-				var temp = document.Form1.txtUnit7.value;
+				var temp = document.all.txtUnit7.value;
 			    unitArr = temp.split("#");
 	    	    
-				//var init_cost=(document.Form1.txtQty4.value)*(document.Form1.txtRate4.value);
-				var init_cost=(document.Form1.txtQty4.value)*(document.Form1.tempRate4.value);
-				var reduc=document.Form1.txtReduction7.value;
+				//var init_cost=(document.all.txtQty4.value)*(document.all.txtRate4.value);
+				var init_cost=(document.all.txtQty4.value)*(document.all.tempRate4.value);
+				var reduc=document.all.txtReduction7.value;
 				if(unitArr[0] == "KL")
 				{
-					reduc=eval(reduc)*(document.Form1.txtQty4.value)
+					reduc=eval(reduc)*(document.all.txtQty4.value)
 				}
 				else
 				{
 					reduc=init_cost*eval(reduc)/100;  // % or KL
 				}
-				document.Form1.txtReduction4.value = reduc
-				makeRound(document.Form1.txtReduction4);
+				document.all.txtReduction4.value = reduc
+				makeRound(document.all.txtReduction4);
 		
-				var etax=document.Form1.txtEntryTax7.value;
+				var etax=document.all.txtEntryTax7.value;
 				if(unitArr[1] == "%")
 				{
 					etax=init_cost*eval(etax)/100;  // % or KL
 				}
 				else
 				{
-					etax=eval(etax)*(document.Form1.txtQty4.value)
+					etax=eval(etax)*(document.all.txtQty4.value)
 				}	
-				document.Form1.txtEntryTax4.value = etax;
-				makeRound(document.Form1.txtEntryTax4);
+				document.all.txtEntryTax4.value = etax;
+				makeRound(document.all.txtEntryTax4);
 		
-				var rpocg=document.Form1.txtRPGCharge7.value;
+				var rpocg=document.all.txtRPGCharge7.value;
 				if(unitArr[2] == "KL")
 				{
-					rpocg=(rpocg)*(document.Form1.txtQty4.value); // % or KL
+					rpocg=(rpocg)*(document.all.txtQty4.value); // % or KL
 				}
 				else
 				{
 					rpocg=init_cost*(rpocg)/100;		
 				}
-				document.Form1.txtRPGCharge4.value = rpocg
-				makeRound(document.Form1.txtRPGCharge4);
+				document.all.txtRPGCharge4.value = rpocg
+				makeRound(document.all.txtRPGCharge4);
 	
-				var rposcg=(document.Form1.txtRPGSurcharge7.value);
+				var rposcg=(document.all.txtRPGSurcharge7.value);
 				if(unitArr[3] == "KL")
 				{
-					rposcg=(rposcg)*(document.Form1.txtQty4.value); // % or KL
+					rposcg=(rposcg)*(document.all.txtQty4.value); // % or KL
 				}
 				else
 				{
 					rposcg=init_cost*(rposcg)/100;		
 				}
-				document.Form1.txtRPGSurcharge4.value = rposcg;
-				makeRound(document.Form1.txtRPGSurcharge4);
+				document.all.txtRPGSurcharge4.value = rposcg;
+				makeRound(document.all.txtRPGSurcharge4);
 		
-				var ltchg=document.Form1.txtLTC7.value;
+				var ltchg=document.all.txtLTC7.value;
 				if(unitArr[4] == "KL")
 				{
-					ltchg=(ltchg)*(document.Form1.txtQty4.value); // % or KL
+					ltchg=(ltchg)*(document.all.txtQty4.value); // % or KL
 				}
 				else
 				{
 					ltchg=init_cost*(ltchg)/100;		
 				}
-				document.Form1.txtLTC4.value = ltchg;
-				makeRound(document.Form1.txtLTC4);
+				document.all.txtLTC4.value = ltchg;
+				makeRound(document.all.txtLTC4);
 		
-				var Olv=document.Form1.txtOther7.value;
+				var Olv=document.all.txtOther7.value;
 				if(unitArr[6] == "KL")
 				{
-					Olv=(Olv)*(document.Form1.txtQty4.value); // % or KL
+					Olv=(Olv)*(document.all.txtQty4.value); // % or KL
 				}
 				else
 				{
 					Olv=init_cost*eval(Olv)/100;		
 				}
-				document.Form1.txtOther4.value = Olv;
-				makeRound(document.Form1.txtOther4);
+				document.all.txtOther4.value = Olv;
+				makeRound(document.all.txtOther4);
 		
-				var tcchg=document.Form1.txtTransportCharge7.value;
+				var tcchg=document.all.txtTransportCharge7.value;
 				if(unitArr[5] == "KL")
 				{
-					tcchg=(document.Form1.txtQty4.value)*(tcchg);  // To be verified later
+					tcchg=(document.all.txtQty4.value)*(tcchg);  // To be verified later
 				}
 				else
 				{
 					tcchg=init_cost * eval(tcchg)/100;
 				}
-				document.Form1.txtTransportCharge4.value = tcchg;
-				makeRound(document.Form1.txtTransportCharge4);
+				document.all.txtTransportCharge4.value = tcchg;
+				makeRound(document.all.txtTransportCharge4);
 		
-				var lst=document.Form1.txtLST7.value;// % or KL
+				var lst=document.all.txtLST7.value;// % or KL
 				if(unitArr[7] == "%")
 				{
 					lst=(init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg)*(lst)/100;
 				}
 				else
 				{
-					lst = lst * (document.Form1.txtQty4.value);
+					lst = lst * (document.all.txtQty4.value);
 				}
-				document.Form1.txtLST4.value = lst;
-				makeRound(document.Form1.txtLST4);
+				document.all.txtLST4.value = lst;
+				makeRound(document.all.txtLST4);
 		
-				var lstschg=document.Form1.txtLSTSurcharge7.value;
+				var lstschg=document.all.txtLSTSurcharge7.value;
 				if(unitArr[8] == "%")
 				{
 					lstschg=lst*(lstschg)/100; // % or KL
 				}
 				else
 				{
-					lstschg = eval(lstschg)*(document.Form1.txtQty4.value);
+					lstschg = eval(lstschg)*(document.all.txtQty4.value);
 				}
-				document.Form1.txtLSTSurcharge4.value = lstschg;
-				makeRound(document.Form1.txtLSTSurcharge4);
+				document.all.txtLSTSurcharge4.value = lstschg;
+				makeRound(document.all.txtLSTSurcharge4);
 		
-				var lfrecov=document.Form1.txtLFR7.value;
+				var lfrecov=document.all.txtLFR7.value;
 				if(unitArr[9] == "KL")
 				{
-					lfrecov=(document.Form1.txtQty4.value)*(lfrecov);  // % or KL
+					lfrecov=(document.all.txtQty4.value)*(lfrecov);  // % or KL
 				}
 				else
 				{
 					lfrecov= init_cost*eval(lfrecov)/100;
 				}
-				document.Form1.txtLFR4.value = lfrecov;
-				makeRound(document.Form1.txtLFR4);
+				document.all.txtLFR4.value = lfrecov;
+				makeRound(document.all.txtLFR4);
 		
-				var Do=document.Form1.txtDO7.value;
+				var Do=document.all.txtDO7.value;
 				if(unitArr[10] == "KL")
 				{
-					Do=(document.Form1.txtQty4.value)*(Do);
+					Do=(document.all.txtQty4.value)*(Do);
 				}
 				else
 				{
 					Do = init_cost*eval(Do)/100;
 				}
-				document.Form1.txtDO4.value = Do;
-				makeRound(document.Form1.txtDO4);
+				document.all.txtDO4.value = Do;
+				makeRound(document.all.txtDO4);
 		
 				var tot=init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg+lst+lstschg+lfrecov+Do+Olv;
 		
-				document.Form1.txtAmount4.value=tot;
-				makeRound(document.Form1.txtAmount4);
-				document.Form1.TextBox27.value=init_cost;
-				document.Form1.txtRate4.value=init_cost;
-				makeRound(document.Form1.txtRate4)
+				document.all.txtAmount4.value=tot;
+				makeRound(document.all.txtAmount4);
+				document.all.TextBox27.value=init_cost;
+				document.all.txtRate4.value=init_cost;
+				makeRound(document.all.txtRate4)
 				init_cost=0
-				document.Form1.TextBox28.value=reduc;
-				document.Form1.TextBox29.value=etax;
-				document.Form1.TextBox30.value=rpocg;
-				document.Form1.TextBox31.value=rposcg;
-				document.Form1.TextBox32.value=ltchg;
-				document.Form1.TextBox33.value=tcchg;
-				document.Form1.TextBox34.value=Olv;
-				document.Form1.TextBox35.value=lst;
-				document.Form1.TextBox43.value=lfrecov;
-				document.Form1.TextBox46.value=lstschg;
-				document.Form1.TextBox47.value=Do;
-				document.Form1.TextBox39.value=tot;
+				document.all.TextBox28.value=reduc;
+				document.all.TextBox29.value=etax;
+				document.all.TextBox30.value=rpocg;
+				document.all.TextBox31.value=rposcg;
+				document.all.TextBox32.value=ltchg;
+				document.all.TextBox33.value=tcchg;
+				document.all.TextBox34.value=Olv;
+				document.all.TextBox35.value=lst;
+				document.all.TextBox43.value=lfrecov;
+				document.all.TextBox46.value=lstschg;
+				document.all.TextBox47.value=Do;
+				document.all.TextBox39.value=tot;
 				GetGrandTotal();
 				GetNetAmount();
 			}
 			else
 			{
-				document.Form1.txtReduction4.value = "";
-				document.Form1.txtEntryTax4.value = "";
-				document.Form1.txtRPGCharge4.value = "";
-				document.Form1.txtRPGSurcharge4.value = "";
-				document.Form1.txtLTC4.value = "";
-				document.Form1.txtOther4.value = "";
-				document.Form1.txtTransportCharge4.value = "";
-				document.Form1.txtLST4.value = "";
-				document.Form1.txtLSTSurcharge4.value = "";
-				document.Form1.txtLFR4.value = "";
-				document.Form1.txtDO4.value = "";
-				document.Form1.txtAmount4.value="";
-				document.Form1.TextBox27.value="";
-				document.Form1.txtRate4.value="";
-				document.Form1.TextBox28.value="";
-				document.Form1.TextBox29.value="";
-				document.Form1.TextBox30.value="";
-				document.Form1.TextBox31.value="";
-				document.Form1.TextBox32.value="";
-				document.Form1.TextBox33.value="";
-				document.Form1.TextBox34.value="";
-				document.Form1.TextBox35.value="";
-				document.Form1.TextBox43.value="";
-				document.Form1.TextBox46.value="";
-				document.Form1.TextBox47.value="";
-				document.Form1.TextBox39.value="";
+				document.all.txtReduction4.value = "";
+				document.all.txtEntryTax4.value = "";
+				document.all.txtRPGCharge4.value = "";
+				document.all.txtRPGSurcharge4.value = "";
+				document.all.txtLTC4.value = "";
+				document.all.txtOther4.value = "";
+				document.all.txtTransportCharge4.value = "";
+				document.all.txtLST4.value = "";
+				document.all.txtLSTSurcharge4.value = "";
+				document.all.txtLFR4.value = "";
+				document.all.txtDO4.value = "";
+				document.all.txtAmount4.value="";
+				document.all.TextBox27.value="";
+				document.all.txtRate4.value="";
+				document.all.TextBox28.value="";
+				document.all.TextBox29.value="";
+				document.all.TextBox30.value="";
+				document.all.TextBox31.value="";
+				document.all.TextBox32.value="";
+				document.all.TextBox33.value="";
+				document.all.TextBox34.value="";
+				document.all.TextBox35.value="";
+				document.all.TextBox43.value="";
+				document.all.TextBox46.value="";
+				document.all.TextBox47.value="";
+				document.all.TextBox39.value="";
 				GetGrandTotal();
 				GetNetAmount();
 			}
 		}
 		else
 		{
-			document.Form1.txtReduction4.value = "";
-			document.Form1.txtEntryTax4.value = "";
-			document.Form1.txtRPGCharge4.value = "";
-			document.Form1.txtRPGSurcharge4.value = "";
-			document.Form1.txtLTC4.value = "";
-			document.Form1.txtOther4.value = "";
-			document.Form1.txtTransportCharge4.value = "";
-			document.Form1.txtLST4.value = "";
-			document.Form1.txtLSTSurcharge4.value = "";
-			document.Form1.txtLFR4.value = "";
-			document.Form1.txtDO4.value = "";
-			document.Form1.txtAmount4.value="";
-			document.Form1.TextBox27.value="";
-			document.Form1.txtRate4.value="";
-			document.Form1.TextBox28.value="";
-			document.Form1.TextBox29.value="";
-			document.Form1.TextBox30.value="";
-			document.Form1.TextBox31.value="";
-			document.Form1.TextBox32.value="";
-			document.Form1.TextBox33.value="";
-			document.Form1.TextBox34.value="";
-			document.Form1.TextBox35.value="";
-			document.Form1.TextBox43.value="";
-			document.Form1.TextBox46.value="";
-			document.Form1.TextBox47.value="";
-			document.Form1.TextBox39.value="";
+			document.all.txtReduction4.value = "";
+			document.all.txtEntryTax4.value = "";
+			document.all.txtRPGCharge4.value = "";
+			document.all.txtRPGSurcharge4.value = "";
+			document.all.txtLTC4.value = "";
+			document.all.txtOther4.value = "";
+			document.all.txtTransportCharge4.value = "";
+			document.all.txtLST4.value = "";
+			document.all.txtLSTSurcharge4.value = "";
+			document.all.txtLFR4.value = "";
+			document.all.txtDO4.value = "";
+			document.all.txtAmount4.value="";
+			document.all.TextBox27.value="";
+			document.all.txtRate4.value="";
+			document.all.TextBox28.value="";
+			document.all.TextBox29.value="";
+			document.all.TextBox30.value="";
+			document.all.TextBox31.value="";
+			document.all.TextBox32.value="";
+			document.all.TextBox33.value="";
+			document.all.TextBox34.value="";
+			document.all.TextBox35.value="";
+			document.all.TextBox43.value="";
+			document.all.TextBox46.value="";
+			document.all.TextBox47.value="";
+			document.all.TextBox39.value="";
 			GetGrandTotal();
 			GetNetAmount();
 		}
@@ -736,32 +736,32 @@
 	
 	function calc()
 	{
-	    if(document.Form1.txtQty1.value!="")
+	    if(document.all.txtQty1.value!="")
 	    {
-			if(document.Form1.DropProd1.selectedIndex > 0) 
+			if(document.all.DropProd1.selectedIndex > 0) 
 			{
 				var unitArr = new Array();
-				var temp = document.Form1.txtUnit.value;
+				var temp = document.all.txtUnit.value;
 			    unitArr = temp.split("#");
-				//var init_cost=(document.Form1.txtQty1.value)*(document.Form1.txtRate1.value);
+				//var init_cost=(document.all.txtQty1.value)*(document.all.txtRate1.value);
 				var init_cost=0;
-				//alert(document.Form1.tempRate1.value)
-				if(document.Form1.txtQty1.value!="")
-					init_cost=(document.Form1.txtQty1.value)*(document.Form1.tempRate1.value);
+				//alert(document.all.tempRate1.value)
+				if(document.all.txtQty1.value!="")
+					init_cost=(document.all.txtQty1.value)*(document.all.tempRate1.value);
 				else
-					init_cost=document.Form1.tempRate1.value;
-				var reduc=document.Form1.txtReduction.value;
+					init_cost=document.all.tempRate1.value;
+				var reduc=document.all.txtReduction.value;
 				if(unitArr[0] == "KL")
 				{
-					reduc=eval(reduc)*(document.Form1.txtQty1.value)
+					reduc=eval(reduc)*(document.all.txtQty1.value)
 				}
 				else
 				{
 					reduc=init_cost*eval(reduc)/100;  // % or KL
 				}
-				document.Form1.txtReduction1.value = reduc
-				makeRound(document.Form1.txtReduction1);
-				var etax=document.Form1.txtEntryTax.value;
+				document.all.txtReduction1.value = reduc
+				makeRound(document.all.txtReduction1);
+				var etax=document.all.txtEntryTax.value;
 	
 				if(unitArr[1] == "%")
 				{
@@ -769,203 +769,203 @@
 				}
 				else
 				{
-					etax=eval(etax)*(document.Form1.txtQty1.value)
+					etax=eval(etax)*(document.all.txtQty1.value)
 				}	
 	
-				document.Form1.txtEntryTax1.value = etax;
-				makeRound(document.Form1.txtEntryTax1);
+				document.all.txtEntryTax1.value = etax;
+				makeRound(document.all.txtEntryTax1);
 		
-				var rpocg=document.Form1.txtRPGCharge.value;
+				var rpocg=document.all.txtRPGCharge.value;
 				if(unitArr[2] == "KL")
 				{
-					rpocg=(rpocg)*(document.Form1.txtQty1.value); // % or KL
+					rpocg=(rpocg)*(document.all.txtQty1.value); // % or KL
 				}
 				else
 				{
 					rpocg=init_cost*(rpocg)/100;		
 				}
-				document.Form1.txtRPGCharge1.value = rpocg
-				makeRound(document.Form1.txtRPGCharge1);
+				document.all.txtRPGCharge1.value = rpocg
+				makeRound(document.all.txtRPGCharge1);
 			
-				var rposcg=(document.Form1.txtRPGSurcharge.value);
+				var rposcg=(document.all.txtRPGSurcharge.value);
 				if(unitArr[3] == "KL")
 				{
-					rposcg=(rposcg)*(document.Form1.txtQty1.value); // % or KL
+					rposcg=(rposcg)*(document.all.txtQty1.value); // % or KL
 				}
 				else
 				{
 					rposcg=init_cost*(rposcg)/100;		
 				}
-				document.Form1.txtRPGSurcharge1.value = rposcg;
-				makeRound(document.Form1.txtRPGSurcharge1);
+				document.all.txtRPGSurcharge1.value = rposcg;
+				makeRound(document.all.txtRPGSurcharge1);
 		
-				var ltchg=document.Form1.txtLTC.value;
+				var ltchg=document.all.txtLTC.value;
 				if(unitArr[4] == "KL")
 				{
-					ltchg=(ltchg)*(document.Form1.txtQty1.value); // % or KL
+					ltchg=(ltchg)*(document.all.txtQty1.value); // % or KL
 				}
 				else
 				{
 					ltchg=init_cost*(ltchg)/100;		
 				}
-				document.Form1.txtLTC1.value = ltchg;
-				makeRound(document.Form1.txtLTC1);
+				document.all.txtLTC1.value = ltchg;
+				makeRound(document.all.txtLTC1);
 		
-				var Olv=document.Form1.txtOther.value;
+				var Olv=document.all.txtOther.value;
 				if(unitArr[6] == "KL")
 				{
-					Olv=(Olv)*(document.Form1.txtQty1.value); // % or KL
+					Olv=(Olv)*(document.all.txtQty1.value); // % or KL
 				}
 				else
 				{
 					Olv=init_cost*eval(Olv)/100;		
 				}
-				 document.Form1.txtOther1.value = Olv;
-				 makeRound(document.Form1.txtOther1);
+				 document.all.txtOther1.value = Olv;
+				 makeRound(document.all.txtOther1);
 		
-				var tcchg=document.Form1.txtTransportCharge.value;
+				var tcchg=document.all.txtTransportCharge.value;
 				if(unitArr[5] == "KL")
 				{
-					tcchg=(document.Form1.txtQty1.value)*(tcchg);  // To be verified later
+					tcchg=(document.all.txtQty1.value)*(tcchg);  // To be verified later
 				}
 				else
 				{
 					tcchg=init_cost * eval(tcchg)/100;
 				}
-				document.Form1.txtTransportCharge1.value = tcchg;
-				makeRound(document.Form1.txtTransportCharge1);
+				document.all.txtTransportCharge1.value = tcchg;
+				makeRound(document.all.txtTransportCharge1);
 		
-				var lst=document.Form1.txtLST.value;// % or KL
+				var lst=document.all.txtLST.value;// % or KL
 				if(unitArr[7] == "%")
 				{
 					lst=(init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg)*(lst)/100;
 				}
 				else
 				{
-					lst = lst * (document.Form1.txtQty1.value);
+					lst = lst * (document.all.txtQty1.value);
 				}
-				document.Form1.txtLST1.value = lst;
-				makeRound(document.Form1.txtLST1);
+				document.all.txtLST1.value = lst;
+				makeRound(document.all.txtLST1);
 				
-				var lstschg=document.Form1.txtLSTSurcharge.value;
+				var lstschg=document.all.txtLSTSurcharge.value;
 				if(unitArr[8] == "%")
 				{
 					lstschg=lst*(lstschg)/100; // % or KL
 				}
 				else
 				{
-					lstschg = eval(lstschg)*(document.Form1.txtQty1.value);
+					lstschg = eval(lstschg)*(document.all.txtQty1.value);
 				}
-				document.Form1.txtLSTSurcharge1.value = lstschg;
-				makeRound(document.Form1.txtLSTSurcharge1);
+				document.all.txtLSTSurcharge1.value = lstschg;
+				makeRound(document.all.txtLSTSurcharge1);
 		
-				var lfrecov=document.Form1.txtLFR.value;
+				var lfrecov=document.all.txtLFR.value;
 				if(unitArr[9] == "KL")
 				{
-					lfrecov=(document.Form1.txtQty1.value)*(lfrecov);  // % or KL
+					lfrecov=(document.all.txtQty1.value)*(lfrecov);  // % or KL
 				}	
 				else
 				{
 					lfrecov= init_cost*eval(lfrecov)/100;
 				}
-				document.Form1.txtLFR1.value = lfrecov;
-				makeRound(document.Form1.txtLFR1);
+				document.all.txtLFR1.value = lfrecov;
+				makeRound(document.all.txtLFR1);
 		
-				var Do=document.Form1.txtDO.value;
+				var Do=document.all.txtDO.value;
 				if(unitArr[10] == "KL")
 				{
-					Do=(document.Form1.txtQty1.value)*(Do);
+					Do=(document.all.txtQty1.value)*(Do);
 				}
 				else
 				{
 					Do = init_cost*eval(Do)/100;
 				}
-				document.Form1.txtDO1.value = Do;
-				makeRound(document.Form1.txtDO1);
+				document.all.txtDO1.value = Do;
+				makeRound(document.all.txtDO1);
 		
 				var tot=init_cost-reduc+etax+rpocg+rposcg+ltchg+tcchg+lst+lstschg+lfrecov+Do+Olv;
 		
-				document.Form1.txtAmount1.value=tot;
-				makeRound(document.Form1.txtAmount1);
+				document.all.txtAmount1.value=tot;
+				makeRound(document.all.txtAmount1);
 				
-				document.Form1.Duptext1.value=init_cost;
-				document.Form1.txtRate1.value=init_cost;
-				makeRound(document.Form1.txtRate1)
-				document.Form1.Duptext2.value=reduc;
-				document.Form1.TextBox40.value=etax;
-				document.Form1.Duptext4.value=rpocg;
-				document.Form1.Duptext5.value=rposcg;
-				document.Form1.Duptext6.value=ltchg;
-				document.Form1.Duptext7.value=Olv;
-				document.Form1.Duptext8.value=tcchg;
-				document.Form1.Duptext9.value=lst;
-				document.Form1.Duptext10.value=lstschg;
-				document.Form1.Duptext11.value=lfrecov;
-				document.Form1.TextBox38.value=Do;
-				document.Form1.Duptext13.value=tot;
+				document.all.Duptext1.value=init_cost;
+				document.all.txtRate1.value=init_cost;
+				makeRound(document.all.txtRate1)
+				document.all.Duptext2.value=reduc;
+				document.all.TextBox40.value=etax;
+				document.all.Duptext4.value=rpocg;
+				document.all.Duptext5.value=rposcg;
+				document.all.Duptext6.value=ltchg;
+				document.all.Duptext7.value=Olv;
+				document.all.Duptext8.value=tcchg;
+				document.all.Duptext9.value=lst;
+				document.all.Duptext10.value=lstschg;
+				document.all.Duptext11.value=lfrecov;
+				document.all.TextBox38.value=Do;
+				document.all.Duptext13.value=tot;
 				GetGrandTotal();
 				GetNetAmount();
 			}
 			else
 			{
-				document.Form1.txtReduction1.value = "";
-				document.Form1.txtEntryTax1.value = "";
-				document.Form1.txtRPGCharge1.value = "";
-				document.Form1.txtRPGSurcharge1.value = "";
-				document.Form1.txtLTC1.value = "";
-				document.Form1.txtOther1.value = "";
-				document.Form1.txtTransportCharge1.value = "";
-				document.Form1.txtLST1.value = "";
-				document.Form1.txtLSTSurcharge1.value = "";
-				document.Form1.txtLFR1.value = "";
-				document.Form1.txtDO1.value = "";
-				document.Form1.txtAmount1.value="";
-				document.Form1.Duptext1.value="";
-				document.Form1.txtRate1.value="";
-				document.Form1.Duptext2.value="";
-				document.Form1.TextBox40.value="";
-				document.Form1.Duptext4.value="";
-				document.Form1.Duptext5.value="";
-				document.Form1.Duptext6.value="";
-				document.Form1.Duptext7.value="";
-				document.Form1.Duptext8.value="";
-				document.Form1.Duptext9.value="";
-				document.Form1.Duptext10.value="";
-				document.Form1.Duptext11.value="";
-				document.Form1.TextBox38.value="";
-				document.Form1.Duptext13.value="";
+				document.all.txtReduction1.value = "";
+				document.all.txtEntryTax1.value = "";
+				document.all.txtRPGCharge1.value = "";
+				document.all.txtRPGSurcharge1.value = "";
+				document.all.txtLTC1.value = "";
+				document.all.txtOther1.value = "";
+				document.all.txtTransportCharge1.value = "";
+				document.all.txtLST1.value = "";
+				document.all.txtLSTSurcharge1.value = "";
+				document.all.txtLFR1.value = "";
+				document.all.txtDO1.value = "";
+				document.all.txtAmount1.value="";
+				document.all.Duptext1.value="";
+				document.all.txtRate1.value="";
+				document.all.Duptext2.value="";
+				document.all.TextBox40.value="";
+				document.all.Duptext4.value="";
+				document.all.Duptext5.value="";
+				document.all.Duptext6.value="";
+				document.all.Duptext7.value="";
+				document.all.Duptext8.value="";
+				document.all.Duptext9.value="";
+				document.all.Duptext10.value="";
+				document.all.Duptext11.value="";
+				document.all.TextBox38.value="";
+				document.all.Duptext13.value="";
 				GetGrandTotal();
 				GetNetAmount();
 			}
 		}
 		else
 		{
-			document.Form1.txtReduction1.value = "";
-			document.Form1.txtEntryTax1.value = "";
-			document.Form1.txtRPGCharge1.value = "";
-			document.Form1.txtRPGSurcharge1.value = "";
-			document.Form1.txtLTC1.value = "";
-			document.Form1.txtOther1.value = "";
-			document.Form1.txtTransportCharge1.value = "";
-			document.Form1.txtLST1.value = "";
-			document.Form1.txtLSTSurcharge1.value = "";
-			document.Form1.txtLFR1.value = "";
-			document.Form1.txtDO1.value = "";
-			document.Form1.txtAmount1.value="";
-			document.Form1.Duptext1.value="";
-			document.Form1.txtRate1.value="";
-			document.Form1.Duptext2.value="";
-			document.Form1.TextBox40.value="";
-			document.Form1.Duptext4.value="";
-			document.Form1.Duptext5.value="";
-			document.Form1.Duptext6.value="";
-			document.Form1.Duptext7.value="";
-			document.Form1.Duptext8.value="";
-			document.Form1.Duptext9.value="";
-			document.Form1.Duptext10.value="";
-			document.Form1.Duptext11.value="";
-			document.Form1.TextBox38.value="";
-			document.Form1.Duptext13.value="";
+			document.all.txtReduction1.value = "";
+			document.all.txtEntryTax1.value = "";
+			document.all.txtRPGCharge1.value = "";
+			document.all.txtRPGSurcharge1.value = "";
+			document.all.txtLTC1.value = "";
+			document.all.txtOther1.value = "";
+			document.all.txtTransportCharge1.value = "";
+			document.all.txtLST1.value = "";
+			document.all.txtLSTSurcharge1.value = "";
+			document.all.txtLFR1.value = "";
+			document.all.txtDO1.value = "";
+			document.all.txtAmount1.value="";
+			document.all.Duptext1.value="";
+			document.all.txtRate1.value="";
+			document.all.Duptext2.value="";
+			document.all.TextBox40.value="";
+			document.all.Duptext4.value="";
+			document.all.Duptext5.value="";
+			document.all.Duptext6.value="";
+			document.all.Duptext7.value="";
+			document.all.Duptext8.value="";
+			document.all.Duptext9.value="";
+			document.all.Duptext10.value="";
+			document.all.Duptext11.value="";
+			document.all.TextBox38.value="";
+			document.all.Duptext13.value="";
 			GetGrandTotal();
 			GetNetAmount();
 		}
@@ -978,61 +978,61 @@
 	function GetGrandTotal()
 	{
 	 var GTotal=0
-	 if(document.Form1.txtAmount1.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount1.value)
-	 if(document.Form1.txtAmount2.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount2.value)
-	 if(document.Form1.txtAmount3.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount3.value)
-	 if(document.Form1.txtAmount4.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount4.value)
-	 document.Form1.txtGrandTotal.value= GTotal
-	 makeRound(document.Form1.txtGrandTotal);
+	 if(document.all.txtAmount1.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount1.value)
+	 if(document.all.txtAmount2.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount2.value)
+	 if(document.all.txtAmount3.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount3.value)
+	 if(document.all.txtAmount4.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount4.value)
+	 document.all.txtGrandTotal.value= GTotal
+	 makeRound(document.all.txtGrandTotal);
 	}	
 	
 	function GetNetAmount()
 	{
-	document.Form1.TotalDisc.value=""	
-	 var Disc=document.Form1.txtDisc.value
+	document.all.TotalDisc.value=""	
+	 var Disc=document.all.txtDisc.value
 	 if(Disc=="")
 		Disc=0
 	 var NetAmount
-		if(document.Form1.DropDiscType.value=="Per")
-			Disc=document.Form1.txtGrandTotal.value*Disc/100 
+		if(document.all.DropDiscType.value=="Per")
+			Disc=document.all.txtGrandTotal.value*Disc/100 
 		//********
 		var t1,t2,t3,t4
-		if(document.Form1.DropDiscType.value=="KL")
+		if(document.all.DropDiscType.value=="KL")
 		{
-			if(document.Form1.txtQty1.value=="")
+			if(document.all.txtQty1.value=="")
 				t1 = 0
 			else
-				t1 = document.Form1.txtQty1.value
-			if(document.Form1.txtQty2.value=="")
+				t1 = document.all.txtQty1.value
+			if(document.all.txtQty2.value=="")
 				t2 = 0
 			else
-				t2 = document.Form1.txtQty2.value
-			if(document.Form1.txtQty3.value=="")
+				t2 = document.all.txtQty2.value
+			if(document.all.txtQty3.value=="")
 				t3 = 0
 			else
-				t3 = document.Form1.txtQty3.value
-			if(document.Form1.txtQty4.value=="")
+				t3 = document.all.txtQty3.value
+			if(document.all.txtQty4.value=="")
 				t4 = 0
 			else
-				t4 = document.Form1.txtQty4.value
+				t4 = document.all.txtQty4.value
 			var Net=eval(t1)+eval(t2)+eval(t3)+eval(t4)
 			Disc = Disc * Net
 		}
-		document.Form1.TotalDisc.value=Disc
+		document.all.TotalDisc.value=Disc
 		//********
 		//*********Start add Mahesh - Roundoff net amount - 1.10.007
 		//document.Form1.txtNetAmount.value=eval(document.Form1.txtGrandTotal.value) - eval(Disc)
-		var NetAmount=eval(document.Form1.txtGrandTotal.value) - eval(Disc)
+		var NetAmount=eval(document.all.txtGrandTotal.value) - eval(Disc)
 		NetAmount = Math.round(NetAmount)
-		document.Form1.txtNetAmount.value=NetAmount;
+		document.all.txtNetAmount.value=NetAmount;
 		//****end
-		if(document.Form1.txtNetAmount.value==0)
-			document.Form1.txtNetAmount.value==""
-		makeRound(document.Form1.txtNetAmount);
+		if(document.all.txtNetAmount.value==0)
+			document.all.txtNetAmount.value==""
+		makeRound(document.all.txtNetAmount);
 			//document.Form1.TotalDisc.value=document.Form1.txtNetAmount.value;
 	}
 	//Check the value of density becouse 771 to 789 data in dbase not available.
@@ -1477,7 +1477,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
               <TR>
                 <TD>Vendor&nbsp;Name&nbsp;&nbsp; <asp:comparevalidator id=CompareValidator1 runat="server" Operator="NotEqual" ControlToValidate="DropVendorID" ValueToCompare="Select" ErrorMessage="Please Select Vendor Name"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                 </TD>
-                <TD><asp:dropdownlist id=DropVendorID runat="server" Width="168px" CssClass="FontStyle" onChange="getCity(this,document.Form1.lblPlace,document.Form1.lblTinNo);"><asp:ListItem Value="Select">Select</asp:ListItem></asp:dropdownlist></TD>
+                <TD><asp:dropdownlist id=DropVendorID runat="server" Width="168px" CssClass="FontStyle" onChange="getCity(this,document.all.lblPlace,document.all.lblTinNo);"><asp:ListItem Value="Select">Select</asp:ListItem></asp:dropdownlist></TD>
 
               </TR>
               <TR>
@@ -1506,16 +1506,16 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD align=center><asp:label id=lblComp4 runat="server" Width="100px">Comp. IV</asp:label></TD></TR>
               <TR>
                 <TD style="HEIGHT: 21px">Product Name </TD>
-                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd1 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.Form1.txtRate1,document.Form1.txtReduction,document.Form1.txtEntryTax,document.Form1.txtRPGCharge,document.Form1.txtRPGSurcharge,document.Form1.txtLTC,document.Form1.txtTransportCharge,document.Form1.txtOther,document.Form1.txtLST,document.Form1.txtLSTSurcharge,document.Form1.txtLFR,document.Form1.txtDO,document.Form1.txtUnit,document.Form1.tempRate1);" Font-Names="Arial">
+                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd1 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.all.txtRate1,document.all.txtReduction,document.all.txtEntryTax,document.all.txtRPGCharge,document.all.txtRPGSurcharge,document.all.txtLTC,document.all.txtTransportCharge,document.all.txtOther,document.all.txtLST,document.all.txtLSTSurcharge,document.all.txtLFR,document.all.txtDO,document.all.txtUnit,document.all.tempRate1);" Font-Names="Arial">
 <asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd2 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.Form1.txtRate2,document.Form1.txtReduction5,document.Form1.txtEntryTax5,document.Form1.txtRPGCharge5,document.Form1.txtRPGSurcharge5,document.Form1.txtLTC5,document.Form1.txtTransportCharge5,document.Form1.txtOther5,document.Form1.txtLST5,document.Form1.txtLSTSurcharge5,document.Form1.txtLFR5,document.Form1.txtDO5,document.Form1.txtUnit5,document.Form1.tempRate2);" Font-Names="Arial">
+                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd2 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.all.txtRate2,document.all.txtReduction5,document.all.txtEntryTax5,document.all.txtRPGCharge5,document.all.txtRPGSurcharge5,document.all.txtLTC5,document.all.txtTransportCharge5,document.all.txtOther5,document.all.txtLST5,document.all.txtLSTSurcharge5,document.all.txtLFR5,document.all.txtDO5,document.all.txtUnit5,document.all.tempRate2);" Font-Names="Arial">
 <asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd3 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.Form1.txtRate3,document.Form1.txtReduction6,document.Form1.txtEntryTax6,document.Form1.txtRPGCharge6,document.Form1.txtRPGSurcharge6,document.Form1.txtLTC6,document.Form1.txtTransportCharge6,document.Form1.txtOther6,document.Form1.txtLST6,document.Form1.txtLSTSurcharge6,document.Form1.txtLFR6,document.Form1.txtDO6,document.Form1.txtUnit6,document.Form1.tempRate3);" Font-Names="Arial">
+                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd3 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.all.txtRate3,document.all.txtReduction6,document.all.txtEntryTax6,document.all.txtRPGCharge6,document.all.txtRPGSurcharge6,document.all.txtLTC6,document.all.txtTransportCharge6,document.all.txtOther6,document.all.txtLST6,document.all.txtLSTSurcharge6,document.all.txtLFR6,document.all.txtDO6,document.all.txtUnit6,document.all.tempRate3);" Font-Names="Arial">
 <asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
-                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd4 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.Form1.txtRate4,document.Form1.txtReduction7,document.Form1.txtEntryTax7,document.Form1.txtRPGCharge7,document.Form1.txtRPGSurcharge7,document.Form1.txtLTC7,document.Form1.txtTransportCharge7,document.Form1.txtOther7,document.Form1.txtLST7,document.Form1.txtLSTSurcharge7,document.Form1.txtLFR7,document.Form1.txtDO7,document.Form1.txtUnit7,document.Form1.tempRate4);" Font-Names="Arial">
+                <TD style="HEIGHT: 21px" align=right><asp:dropdownlist id=DropProd4 runat="server" Width="85px" CssClass="FontStyle" onChange="getTaxRate(this,document.all.txtRate4,document.all.txtReduction7,document.all.txtEntryTax7,document.all.txtRPGCharge7,document.all.txtRPGSurcharge7,document.all.txtLTC7,document.all.txtTransportCharge7,document.all.txtOther7,document.all.txtLST7,document.all.txtLSTSurcharge7,document.all.txtLFR7,document.all.txtDO7,document.all.txtUnit7,document.all.tempRate4);" Font-Names="Arial">
 <asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD></TR>
               <TR>
@@ -1552,10 +1552,10 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD align=right><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id=txtConDensity4 runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD>Density in Invoice(Conv.)</TD>
-                <TD align=right><asp:textbox id=txtDenConv1 onblur=calc_diff(document.Form1.txtDensityVariation1,document.Form1.txtDenConv1,document.Form1.txtConDensity1) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDenConv2 onblur=calc_diff(document.Form1.txtDensityVariation2,document.Form1.txtDenConv2,document.Form1.txtConDensity2) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDenConv3 onblur=calc_diff(document.Form1.txtDensityVariation3,document.Form1.txtDenConv3,document.Form1.txtConDensity3) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD>
-                <TD align=right><asp:textbox id=txtDenConv4 onblur=calc_diff(document.Form1.txtDensityVariation4,document.Form1.txtDenConv4,document.Form1.txtConDensity4) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD></TR>
+                <TD align=right><asp:textbox id=txtDenConv1 onblur=calc_diff(document.all.txtDensityVariation1,document.all.txtDenConv1,document.all.txtConDensity1) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDenConv2 onblur=calc_diff(document.all.txtDensityVariation2,document.all.txtDenConv2,document.all.txtConDensity2) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDenConv3 onblur=calc_diff(document.all.txtDensityVariation3,document.all.txtDenConv3,document.all.txtConDensity3) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD>
+                <TD align=right><asp:textbox id=txtDenConv4 onblur=calc_diff(document.all.txtDensityVariation4,document.all.txtDenConv4,document.all.txtConDensity4) runat="server" Width="85px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="8"></asp:textbox></TD></TR>
               <TR>
                 <TD id=TD1 style="HEIGHT: 22px">Density 
                   Variation</TD>

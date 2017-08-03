@@ -6,8 +6,9 @@ function getTaxRate(t,rate,reduction,entrytax,rpgcharge,rpgsurcharge,ltc,transpo
 	var mainarr = new Array()
 	var typeindex = t.selectedIndex
 	var typetext  = t.options[typeindex].text
-	// alert(countrytext)
-	var hidtext  = document.Form1.FuelText.value
+    // alert(countrytext)
+
+	var hidtext  = document.all.FuelText.value
 	mainarr = hidtext.split("#")
 	//alert(cscarr)
 	var taxarr = new Array()
@@ -65,8 +66,8 @@ function getCity(t,city)
   var mainarr = new Array()
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
-  //alert(typetext)
-  var hidtext  = document.Form1.TxtVen.value
+    //alert(typetext)  
+  var hidtext  = document.all.TxtVen.value
   
  
   mainarr = hidtext.split("#")
@@ -100,8 +101,8 @@ function getCity(t,city)
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
   // alert(countrytext)
-  var hidtext  = document.Form1.TxtVen.value
-  var hidtext1 = document.Form1.lblVehicleNo.value
+  var hidtext  = document.all.TxtVen.value
+  var hidtext1 = document.all.lblVehicleNo.value
  // alert("1 : "+hidtext)
   mainarr = hidtext.split("#")
   vehiclearr = hidtext1.split("#");

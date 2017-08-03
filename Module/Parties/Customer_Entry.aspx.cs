@@ -22,6 +22,7 @@ using System.Data.SqlClient;
 using EPetro.Sysitem.Classes;
 using DBOperations;
 using RMG;
+using System.Text;
 
 namespace EPetro.Module.Parties
 {
@@ -236,7 +237,36 @@ namespace EPetro.Module.Parties
 			PartiesClass obj=new PartiesClass();
 			try
 			{
-				if(!checkAcc_Period())
+                StringBuilder erroMessage = new StringBuilder();
+
+                if (txtFName.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Fill Customer Name");
+                    erroMessage.Append("\n");
+                }
+
+                if (DropType.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Customer Type");
+                    erroMessage.Append("\n");
+                    //MessageBox.Show("Please select the Dealership");
+                    //   return;
+                }
+
+                if (DropCity.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select City");
+                    erroMessage.Append("\n");
+                    //MessageBox.Show("Please select the Dealership");
+                    //   return;
+                }
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    return;
+                }
+
+                if (!checkAcc_Period())
 				{
 					MessageBox.Show("Please enter the Accounts Period from Organization Details");
 					return;
