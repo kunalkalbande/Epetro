@@ -202,8 +202,12 @@ namespace EPetro.Module.Reports
 			{
 				GridReport.DataSource = dv;
 				GridReport.DataBind();
-				GridReport.Visible=true;
-			}
+				GridReport.Visible=true;       
+                        
+                GridReport.Columns[4].ItemStyle.Width = 75;
+                GridReport.Columns[12].ItemStyle.Width = 70;
+                
+            }
 			else
 			{
 				MessageBox.Show("Data not available");
