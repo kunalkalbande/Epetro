@@ -54,7 +54,7 @@ namespace EPetro.Module.Reports
 			try
 			{
 				uid=(Session["User_Name"].ToString());
-				
+                
 				if(! IsPostBack)
 				{
 					//DgridBankRecon.Visible=false;
@@ -136,11 +136,12 @@ namespace EPetro.Module.Reports
 		/// </summary>
 		private void btnView_Click(object sender, System.EventArgs e)
 		{
-			//			strOrderBy = "Cust_Name ASC";
-			//			Session["Column"] = "Cust_Name";
-			//			Session["Order"] = "ASC";
-			//			BindTheData();
-		}
+            //			strOrderBy = "Cust_Name ASC";
+            //			Session["Column"] = "Cust_Name";
+            //			Session["Order"] = "ASC";
+            //			BindTheData();
+            
+        }
 
 		/// <summary>
 		/// This method is used to bind the datagrid and display the information by given order and display the data grid.
@@ -480,10 +481,26 @@ namespace EPetro.Module.Reports
 			}
 		}
 
-		/// <summary>
-		/// This Method is used to write into the excel report file to print.
-		/// </summary>
-		public void ConvertToExcel()
+        protected void btnShow_Click(object sender, EventArgs e)
+        {
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropBank.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Bank Name");
+                errorMessage.Append("\n");
+
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+        }
+
+        /// <summary>
+        /// This Method is used to write into the excel report file to print.
+        /// </summary>
+        public void ConvertToExcel()
 		{
 			InventoryClass obj=new InventoryClass();
 			string sql="";

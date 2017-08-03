@@ -242,8 +242,9 @@ namespace EPetro.Module.Reports
 		{
 			int dd,mm,yy;
 			string [] strarr = new string[3];			
-			strarr=str.Split(new char[]{'/'},str.Length);
-			dd=Int32.Parse(strarr[0]);
+			//strarr=str.Split(new char[]{'/'},str.Length);
+            strarr = str.IndexOf("/") > 0 ? str.Split(new char[] { '/' }, str.Length) : str.Split(new char[] { '-' }, str.Length);
+            dd=Int32.Parse(strarr[0]);
 			mm=Int32.Parse(strarr[1]);
 			yy=Int32.Parse(strarr[2]);
 			DateTime dt=new DateTime(yy,mm,dd);			
@@ -583,7 +584,7 @@ namespace EPetro.Module.Reports
 					}
 					SqlDtr.Close();
 					Flag=0;
-					sql="Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ToMMddYYYY(txtDateFrom.Text)+"' order by Entry_Date desc"; 
+					sql="Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' order by Entry_Date desc"; 
 				}
 				else if(drop_value=="Sales A/C")
 				{
@@ -684,7 +685,7 @@ namespace EPetro.Module.Reports
 				//string  sql1="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by Entry_Date"; 
 				if(Flag == 0)
 				{
-					string  sql1="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"'";
+					string  sql1="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text) + "'";
 					SqlDataAdapter da1=new SqlDataAdapter(sql1,sqlcon1);
 					//CustomerGrid.DataSource = SqlDtr;
 					//	CustomerGrid.DataBind();

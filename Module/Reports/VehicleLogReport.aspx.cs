@@ -240,6 +240,16 @@ namespace EPetro
 		{
 			try
 			{
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropOption.SelectedIndex == 0)
+                {
+                    errorMessage.Append("Please Select Option");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
 				/*Hide By Mahesh 24.08.007 4:47PM
 				if(!checkValidity()) 
 				{

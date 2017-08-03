@@ -347,8 +347,9 @@ namespace EPetro.Module.Inventory
 		{
 			int dd,mm,yy;
 			string [] strarr = new string[3];
-			strarr=str.Split(new char[]{'/'},str.Length);
-			dd=Int32.Parse(strarr[0]);
+			//strarr=str.Split(new char[]{'/'},str.Length);
+            strarr = str.IndexOf("/") > 0 ? str.Split(new char[] { '/' }, str.Length) : str.Split(new char[] { '-' }, str.Length);
+            dd =Int32.Parse(strarr[0]);
 			mm=Int32.Parse(strarr[1]);
 			yy=Int32.Parse(strarr[2]);
 			DateTime dt=new DateTime(yy,mm,dd);
@@ -398,7 +399,7 @@ namespace EPetro.Module.Inventory
 		public void BindTheData()
 		{
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
-			string sqlstr="select p.Prod_Name + ' ' + p.Pack_Type AS Prod_Name, p.Pack_Type, sum(cast(sd.qty as float)) as Sales, sum(cast(sd.qty as float)*cast(sd.Rate as float)) as Amount from Products p, Sales_Master sm, Sales_Details sd where p.Prod_ID = sd.Prod_ID and sm.Invoice_No=sd.Invoice_No and cast(floor(cast(sm.Invoice_Date as float)) as datetime)>= '"+System.Convert.ToDateTime(ToMMddYYYY(txtDateFrom.Text)).ToShortDateString()+"' and  cast(floor(cast(sm.Invoice_Date as float)) as datetime)<='"+System.Convert.ToDateTime(ToMMddYYYY(txtDateTo.Text)).ToShortDateString()+"' group by p.Prod_Name, p.Pack_Type";
+			string sqlstr="select p.Prod_Name + ' ' + p.Pack_Type AS Prod_Name, p.Pack_Type, sum(cast(sd.qty as float)) as Sales, sum(cast(sd.qty as float)*cast(sd.Rate as float)) as Amount from Products p, Sales_Master sm, Sales_Details sd where p.Prod_ID = sd.Prod_ID and sm.Invoice_No=sd.Invoice_No and cast(floor(cast(sm.Invoice_Date as float)) as datetime)>= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and  cast(floor(cast(sm.Invoice_Date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' group by p.Prod_Name, p.Pack_Type";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds, "Products");

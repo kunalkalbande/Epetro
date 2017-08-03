@@ -133,9 +133,10 @@ namespace EPetro.Module.Reports
 		public DateTime ToMMddYYYY(string str)
 		{
 			int dd,mm,yy;
-			string [] strarr = new string[3];			
-			strarr=str.Split(new char[]{'/'},str.Length);
-			dd=Int32.Parse(strarr[0]);
+			string [] strarr = new string[3];
+            //strarr=str.Split(new char[]{'/'},str.Length);
+            strarr = str.IndexOf("/") > 0 ? str.Split(new char[] { '/' }, str.Length) : str.Split(new char[] { '-' }, str.Length);
+            dd =Int32.Parse(strarr[0]);
 			mm=Int32.Parse(strarr[1]);
 			yy=Int32.Parse(strarr[2]);
 			DateTime dt=new DateTime(yy,mm,dd);			
@@ -210,7 +211,7 @@ namespace EPetro.Module.Reports
 			{
 				//sqlstr="(select * from vw_SaleBook where cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"') union (select * from vw_CashBilling where cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"')";
 				int f=0;
-				sqlstr="(select * from vw_SaleBook s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"' and (";
+				sqlstr="(select * from vw_SaleBook s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"' and (";
 				if(chkCreditSale.Checked)
 				{
 					sqlstr+="s.Sales_Type='Credit Card Sale'";
@@ -248,9 +249,9 @@ namespace EPetro.Module.Reports
 				{
 					if(f==0)
 						//sqlstr="(select * from vw_CashBilling s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"') union (select * from CashBilling where custname='Deleted' and cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"')";
-						sqlstr="select * from vw_CashBilling s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
+						sqlstr="select * from vw_CashBilling s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) + "'";
 					else
-						sqlstr+=" union (select * from vw_CashBilling s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"')";
+						sqlstr+=" union (select * from vw_CashBilling s,sales_master sm where sm.invoice_no=s.invoice_no and cast(floor(cast(s.invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(s.invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) + "')";
 				}
 			}
 			else
