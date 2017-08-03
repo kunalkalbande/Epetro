@@ -216,39 +216,47 @@ namespace EPetro.Module.Parties
 			PartiesClass  obj = new PartiesClass ();
 			try 
 			{
-				SqlDataReader SqlDtr; 
-				string sql;
-				int flag=0;
-				sql="select City  from Beat_Master where City='"+ txtCity.Text  +"'";
-				SqlDtr=obj.GetRecordSet(sql);
-				if(SqlDtr.Read())
-				{
-					flag=1;		
-				}
-				else if(DropBeatNo.Visible==false)
-				{
-					obj.City =StringUtil.FirstCharUpper(txtCity.Text.ToString().Trim());  
-					obj.State= StringUtil.FirstCharUpper(txtState.Text.ToString().Trim());
-					obj.Country=StringUtil.FirstCharUpper(txtCountry.Text.ToString().Trim()); 
-					obj.Beat_No = lblBeatNo.Text;
-					obj.InsertBeatMaster();	
-					CreateLogFiles.ErrorLog("Form:BeatMasterEntery.aspx,Method: btnSave_Click"+"  Beatno  "+obj.Beat_No +" city  "+obj.City    +"   state  "+ obj.State   +" Country"+obj.Country+ " IS SAVED  "+" userid  "+ uid);
-					FillID();
-					lblBeatNo.Visible=true;
-					DropBeatNo.Visible=false;
-					MessageBox.Show("Beat details Saved");
-					Clear();
-				}
-				else if (DropBeatNo.Visible==true && DropBeatNo.SelectedIndex==0 )
-				{
-					MessageBox.Show("Please select the Beat Number to Edit");
-				}
-				if(flag==1)
-				{
-					RMG.MessageBox.Show("City already Exits");				
-					SqlDtr.Close();
-				}
-				checkPrevileges();
+                if (txtCity.Text == string.Empty)
+                {
+                    MessageBox.Show("Please Fill City");
+                }
+                else
+                {
+                    SqlDataReader SqlDtr;
+                    string sql;
+                    int flag = 0;
+                    sql = "select City  from Beat_Master where City='" + txtCity.Text + "'";
+                    SqlDtr = obj.GetRecordSet(sql);
+
+                    if (SqlDtr.Read())
+                    {
+                        flag = 1;
+                    }
+                    else if (DropBeatNo.Visible == false)
+                    {
+                        obj.City = StringUtil.FirstCharUpper(txtCity.Text.ToString().Trim());
+                        obj.State = StringUtil.FirstCharUpper(txtState.Text.ToString().Trim());
+                        obj.Country = StringUtil.FirstCharUpper(txtCountry.Text.ToString().Trim());
+                        obj.Beat_No = lblBeatNo.Text;
+                        obj.InsertBeatMaster();
+                        CreateLogFiles.ErrorLog("Form:BeatMasterEntery.aspx,Method: btnSave_Click" + "  Beatno  " + obj.Beat_No + " city  " + obj.City + "   state  " + obj.State + " Country" + obj.Country + " IS SAVED  " + " userid  " + uid);
+                        FillID();
+                        lblBeatNo.Visible = true;
+                        DropBeatNo.Visible = false;
+                        MessageBox.Show("Beat details Saved");
+                        Clear();
+                    }
+                    else if (DropBeatNo.Visible == true && DropBeatNo.SelectedIndex == 0)
+                    {
+                        MessageBox.Show("Please select the Beat Number to Edit");
+                    }
+                    if (flag == 1)
+                    {
+                        RMG.MessageBox.Show("City already Exits");
+                        SqlDtr.Close();
+                    }
+                    checkPrevileges();
+                }
 			}
 			catch(Exception ex)
 			{
