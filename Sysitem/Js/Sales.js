@@ -22,7 +22,7 @@
 	return;
   }
   // alert(countrytext)
-  var hidarr  = document.Form1.temptext.value
+  var hidarr  = document.all.temptext.value
   mainarr = hidarr.split(",")
   //alert(cscarr)
   var prodarr = new Array()
@@ -112,7 +112,7 @@ var ptype = prodtype.options[index1].text
 	var parr = new Array()
 	var k=0
 	var packarray = new Array()
-	var hiddenarr  = document.Form1.temptext.value
+	var hiddenarr  = document.all.temptext.value
 	mainarr = hiddenarr.split(",")
 	for(var i=0;i<(mainarr.length-1);i++)
 	{
@@ -161,7 +161,7 @@ var ptype = prodtype.options[index1].text
   var packtext  = t.options[packindex].text
   packname.value=packtext
   // alert(countrytext)
-  var hidarr  = document.Form1.temptext.value
+  var hidarr  = document.all.temptext.value
   mainarr = hidarr.split(",")
   //alert(cscarr)
   var prodarr = new Array()
@@ -223,7 +223,7 @@ var ptype = prodtype.options[index1].text
   var mainarr = new Array()
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
- 
+  
    var hidtext  = document.all.txtcustinfo.value
  // alert(document.Form1.txtcustinfo.value)
   mainarr = hidtext.split("#")
