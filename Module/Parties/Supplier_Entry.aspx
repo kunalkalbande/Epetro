@@ -92,7 +92,7 @@
 									City&nbsp;&nbsp; <FONT color="#ff0000">*</FONT>
 									<asp:CompareValidator id="CompareValidator2" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
 										ValueToCompare="Select" Operator="NotEqual">*</asp:CompareValidator></TD>
-								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.Form1.DropState,document.Form1.DropCountry);"
+								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.all.DropState,document.all.DropCountry);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
