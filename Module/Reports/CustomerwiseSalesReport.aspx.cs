@@ -131,9 +131,9 @@ namespace EPetro.Module.Reports
 		public DateTime ToMMddYYYY(string str)
 		{
 			int dd,mm,yy;
-			string [] strarr = new string[3];			
-			strarr=str.Split(new char[]{'/'},str.Length);
-			dd=Int32.Parse(strarr[0]);
+			string [] strarr = new string[3];
+            strarr = str.IndexOf("/") > 0 ? str.Split(new char[] { '/' }, str.Length) : str.Split(new char[] { '-' }, str.Length);
+            dd =Int32.Parse(strarr[0]);
 			mm=Int32.Parse(strarr[1]);
 			yy=Int32.Parse(strarr[2]);
 			DateTime dt=new DateTime(yy,mm,dd);			
@@ -231,7 +231,7 @@ namespace EPetro.Module.Reports
 		{
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
 			string sql="";
-			sql="select c.*,s.* from vw_CustWiseSales c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(c.invoice_date as float)) as datetime) <='"+ ToMMddYYYY(Textbox1.Text).ToShortDateString() +"'";
+			sql="select c.*,s.* from vw_CustWiseSales c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(c.invoice_date as float)) as datetime) <='"+ GenUtil.str2MMDDYYYY(Textbox1.Text)  +"'";
 			if(DropCategory.SelectedIndex!=0)
 				sql=sql+ " and Prod_Type='"+ DropCategory.SelectedItem.Value +"'"; 
 			if(DropType.SelectedIndex!=0)
@@ -317,8 +317,8 @@ namespace EPetro.Module.Reports
 			string strDate = "";
 			string info ="";
 			
-			//sql="select * from vw_CustWiseSales where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime) <='"+ ToMMddYYYY(Textbox1.Text).ToShortDateString() +"'";
-			sql="select c.*,s.* from vw_CustWiseSales c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(c.invoice_date as float)) as datetime) <='"+ ToMMddYYYY(Textbox1.Text).ToShortDateString() +"'";
+			//sql="select * from vw_CustWiseSales where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <='"+ ToMMddYYYY(Textbox1.Text).ToShortDateString() +"'";
+			sql="select c.*,s.* from vw_CustWiseSales c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(c.invoice_date as float)) as datetime) <='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
 				
 			if(DropCategory.SelectedIndex!=0)
 				sql=sql+ " and Prod_Type='"+ DropCategory.SelectedItem.Value +"'"; 
@@ -416,8 +416,8 @@ namespace EPetro.Module.Reports
 			string path = home_drive+@"\ePetro_ExcelFile\CustomerWiseSalesReport.xls";
 			StreamWriter sw = new StreamWriter(path);
 			SqlDataReader rdr=null;
-			//sql="select * from vw_CustWiseSales where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime) <='"+ ToMMddYYYY(Textbox1.Text).ToShortDateString() +"'";
-			sql="select c.*,s.* from vw_CustWiseSales c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(c.invoice_date as float)) as datetime) <='"+ ToMMddYYYY(Textbox1.Text).ToShortDateString() +"'";
+			//sql="select * from vw_CustWiseSales where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
+			sql="select c.*,s.* from vw_CustWiseSales c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(c.invoice_date as float)) as datetime) <='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
 			if(DropCategory.SelectedIndex!=0)
 				sql=sql+ " and Prod_Type='"+ DropCategory.SelectedItem.Value +"'"; 
 			if(DropType.SelectedIndex!=0)
