@@ -169,7 +169,7 @@ namespace EPetro.Module.Reports
 					SqlDataReader SqlDtr;
 					string sql;
 					#region Bind DataGrid
-					sql="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ ToMMddYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ ToMMddYYYY(Textbox1.Text) +"')";
+					sql="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"')";
 					SqlDtr =obj.GetRecordSet(sql);
 					GridReport.DataSource=SqlDtr;
 					GridReport.DataBind();*/
@@ -204,7 +204,7 @@ namespace EPetro.Module.Reports
 		public void BindTheData()
 		{
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
-			string sqlstr="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ ToMMddYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ ToMMddYYYY(Textbox1.Text) +"')";
+			string sqlstr="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"')";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds, "custout");
@@ -276,7 +276,7 @@ namespace EPetro.Module.Reports
 			string path = home_drive+@"\Inetpub\wwwroot\EPetro\Sysitem\EpetroPrintServices\ReportView\CustomerWiseSlipReport.txt";
 			StreamWriter sw = new StreamWriter(path);
 
-			sql="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ ToMMddYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ ToMMddYYYY(Textbox1.Text) +"') order by "+Cache["strOrderBy"]+"";
+			sql="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"') order by "+Cache["strOrderBy"]+"";
 						
 			dbobj.SelectQuery(sql,ref rdr);
 			/*
@@ -356,7 +356,7 @@ namespace EPetro.Module.Reports
 			StreamWriter sw = new StreamWriter(path);
 			SqlDataReader rdr=null;
 			double Total = 0;
-			sql="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ ToMMddYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ ToMMddYYYY(Textbox1.Text) +"') order by "+Cache["strOrderBy"]+"";
+			sql="select distinct m.invoice_no, m.invoice_date, m.vehicle_no,m.net_amount,m.slip_no,c.cust_name from sales_master m,Slip s, Customer c where m.cust_id=c.cust_id and c.cust_id=s.cust_id and s.cust_id=m.cust_id and m.slip_no!=0 and m.Invoice_Date  between '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and dateadd(day,1,'"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"') order by "+Cache["strOrderBy"]+"";
 			dbobj.SelectQuery(sql,ref rdr);
 			sw.WriteLine("From Date\t"+txtDateFrom.Text);
 			sw.WriteLine("To Date\t"+Textbox1.Text);

@@ -128,7 +128,7 @@ namespace EPetro.Module.Reports
 		{
 			try
 			{
-				if(DateTime.Compare(ToMMddYYYY(txtDateFrom.Text),ToMMddYYYY(Textbox1.Text))>0)
+				if(DateTime.Compare(ToMMddYYYY(txtDateFrom.Text), ToMMddYYYY(Textbox1.Text))>0)
 				{
 					MessageBox.Show("Date From Should be less than Date To");
 					GridReport.Visible=false;
@@ -154,7 +154,7 @@ namespace EPetro.Module.Reports
 		public void BindTheData()
 		{
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
-			string sqlstr="select lr.Emp_ID,e.Emp_Name,lr.Date_From,lr.Date_To,lr.Reason,lr.isSanction from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
+			string sqlstr="select lr.Emp_ID,e.Emp_Name,lr.Date_From,lr.Date_To,lr.Reason,lr.isSanction from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds, "Leave_Register");
@@ -317,8 +317,8 @@ namespace EPetro.Module.Reports
 			string sql="";
 			string info = "";
 			//string strDate = "";
-			//sql="select lr.Emp_ID r1,e.Emp_Name r2,lr.Date_From r3,lr.Date_To r4,lr.Reason r5,lr.isSanction r6 from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
-			sql="select lr.Emp_ID,e.Emp_Name,lr.Date_From,lr.Date_To,lr.Reason,lr.isSanction from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
+			//sql="select lr.Emp_ID r1,e.Emp_Name r2,lr.Date_From r3,lr.Date_To r4,lr.Reason r5,lr.isSanction r6 from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
+			sql="select lr.Emp_ID,e.Emp_Name,lr.Date_From,lr.Date_To,lr.Reason,lr.isSanction from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
 			sql=sql+" order by "+Cache["strOrderBy"];
 			dbobj.SelectQuery(sql,ref rdr);
 			// Condensed
@@ -382,7 +382,7 @@ namespace EPetro.Module.Reports
 			string path = home_drive+@"\ePetro_ExcelFile\LeaveReport.xls";
 			StreamWriter sw = new StreamWriter(path);
 			SqlDataReader rdr=null;
-			sql="select lr.Emp_ID,e.Emp_Name,lr.Date_From,lr.Date_To,lr.Reason,lr.isSanction from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
+			sql="select lr.Emp_ID,e.Emp_Name,lr.Date_From,lr.Date_To,lr.Reason,lr.isSanction from Employee e,Leave_Register lr where e.Emp_ID=lr.Emp_ID and cast(floor(cast(lr.Date_From as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(lr.Date_To as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
 			sql=sql+" order by "+Cache["strOrderBy"];
 			dbobj.SelectQuery(sql,ref rdr);
 			sw.WriteLine("From Date\t"+txtDateFrom.Text);
