@@ -156,7 +156,7 @@ namespace EPetro.Module.Reports
 					Session["Column"] = "Invoice_No";
 					Session["Order"] = "ASC";
 					BindTheData();
-					//				sql="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ ToMMddYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ ToMMddYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ ToMMddYYYY(Textbox1.Text)+"')";		
+					//				sql="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"')";		
 					//
 					//				SqlDtr =obj.GetRecordSet(sql);
 					//				GridReport.DataSource=SqlDtr;
@@ -189,7 +189,7 @@ namespace EPetro.Module.Reports
 		public void BindTheData()
 		{
 			SqlConnection SqlCon =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
-			string sqlstr="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ ToMMddYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ ToMMddYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ ToMMddYYYY(Textbox1.Text)+"')";
+			string sqlstr="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"')";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds, "vw_PurchaseBook1");
@@ -261,7 +261,7 @@ namespace EPetro.Module.Reports
 			SqlDataReader SqlDtr;
 			string sql;
 			//int count1=0;
-			sql="(select count(Invoice_No) from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ ToMMddYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ ToMMddYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ ToMMddYYYY(Textbox1.Text)+"')";		
+			sql="(select count(Invoice_No) from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"')";		
 
 			SqlDtr =obj.GetRecordSet(sql);
 			/*
@@ -366,7 +366,7 @@ namespace EPetro.Module.Reports
 				string strDueDate = "";
 				string promo = "";
 							
-				sql="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ ToMMddYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ ToMMddYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ ToMMddYYYY(Textbox1.Text)+"')";		
+				sql="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"')";		
 						
 				dbobj.SelectQuery(sql,ref rdr);
 				sw.Write((char)27);//added by vishnu
@@ -488,7 +488,7 @@ namespace EPetro.Module.Reports
 			string strDate    = "";
 			string strDueDate = "";
 			string promo = "";
-			sql="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ ToMMddYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ ToMMddYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ ToMMddYYYY(txtDateFrom.Text).ToShortDateString() +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ ToMMddYYYY(Textbox1.Text)+"')";		
+			sql="(select * from vw_PurchaseBook1 where cast(floor(cast(invoice_date as float)) as datetime) >=  '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"') union (select * from vw_PurchaseBook2 where cast(floor(cast(invoice_date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) +"' and cast(floor(cast(invoice_date as float)) as datetime)<= '"+ GenUtil.str2MMDDYYYY(Textbox1.Text)+"')";		
 			dbobj.SelectQuery(sql,ref rdr);
 			sw.WriteLine("From Date\t"+txtDateFrom.Text);
 			sw.WriteLine("To Date\t"+Textbox1.Text);
