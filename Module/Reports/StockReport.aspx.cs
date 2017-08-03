@@ -156,7 +156,7 @@ namespace EPetro.Module.Inventory
 
 				object op= null;
 				//call the procedure and create the temp table. stk.
-				dbobj.ExecProc(OprType.Insert,"sp_stock",ref op,"@fromdate",System.Convert.ToDateTime(ToMMddYYYY(txtDateTo.Text)).ToShortDateString());
+				dbobj.ExecProc(OprType.Insert,"sp_stock",ref op,"@fromdate",GenUtil.str2MMDDYYYY(txtDateTo.Text));
 	
 				if(txtDateTo.Text==System.DateTime.Now.ToShortDateString())
 				{
@@ -381,7 +381,7 @@ namespace EPetro.Module.Inventory
 			string info="",info1="";
 
 			object op= null;
-			dbobj.ExecProc(OprType.Insert,"sp_stock",ref op,"@fromdate",System.Convert.ToDateTime(ToMMddYYYY(txtDateTo.Text)).ToShortDateString());
+			dbobj.ExecProc(OprType.Insert,"sp_stock",ref op,"@fromdate",GenUtil.str2MMDDYYYY(txtDateTo.Text));
 			//			if(txtDateTo.Text==System.DateTime.Now.ToShortDateString())
 			//			{
 			//				if(drpstore.SelectedIndex>0)
@@ -715,7 +715,7 @@ namespace EPetro.Module.Inventory
 			StreamWriter sw = new StreamWriter(path);
 			SqlDataReader rdr=null;
 			object op= null;
-			dbobj.ExecProc(OprType.Insert,"sp_stock",ref op,"@fromdate",System.Convert.ToDateTime(ToMMddYYYY(txtDateTo.Text)).ToShortDateString());
+			dbobj.ExecProc(OprType.Insert,"sp_stock",ref op,"@fromdate",GenUtil.str2MMDDYYYY(txtDateTo.Text));
 			//			if(txtDateTo.Text==System.DateTime.Now.ToShortDateString())
 			//			{
 			//				if(drpstore.SelectedIndex>0)

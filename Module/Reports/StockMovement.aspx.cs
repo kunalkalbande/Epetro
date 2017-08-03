@@ -320,7 +320,7 @@ namespace EPetro.Module.Inventory
 			// Calls the sp_stockmovement for each product and create one stkmv temp. table.
 			dbobj.SelectQuery(sql,ref rdr);
 			while(rdr.Read())
-				dbobj.ExecProc(OprType.Insert,"sp_stockmovement",ref op,"@id",Int32.Parse(rdr["productid"].ToString()),"@fromdate",getdate(txtDateFrom.Text,true).Date.ToShortDateString(),"@todate",getdate(txtDateTo.Text,true).Date.ToShortDateString());
+				dbobj.ExecProc(OprType.Insert,"sp_stockmovement",ref op,"@id",Int32.Parse(rdr["productid"].ToString()),"@fromdate",GenUtil.str2MMDDYYYY(txtDateFrom.Text),"@todate", GenUtil.str2MMDDYYYY(txtDateTo.Text));
 			rdr.Close();
 			if(drpstore.SelectedIndex>0)
 			{
@@ -592,7 +592,7 @@ namespace EPetro.Module.Inventory
 				dbobj.SelectQuery(sql,ref rdr);
 				object op=null;
 				while(rdr.Read())
-					dbobj.ExecProc(OprType.Insert,"sp_stockmovement",ref op,"@id",Int32.Parse(rdr["productid"].ToString()),"@fromdate",getdate(txtDateFrom.Text,true).Date.ToShortDateString(),"@todate",getdate(txtDateTo.Text,true).Date.ToShortDateString());
+					dbobj.ExecProc(OprType.Insert,"sp_stockmovement",ref op,"@id",Int32.Parse(rdr["productid"].ToString()),"@fromdate",GenUtil.str2MMDDYYYY(txtDateFrom.Text),"@todate",GenUtil.str2MMDDYYYY(txtDateTo.Text));
 				rdr.Close();
 				if(drpstore.SelectedIndex>0)
 				{
@@ -787,7 +787,7 @@ namespace EPetro.Module.Inventory
 			dbobj.SelectQuery(sql,ref rdr);
 			object op=null;
 			while(rdr.Read())
-				dbobj.ExecProc(OprType.Insert,"sp_stockmovement",ref op,"@id",Int32.Parse(rdr["productid"].ToString()),"@fromdate",getdate(txtDateFrom.Text,true).Date.ToShortDateString(),"@todate",getdate(txtDateTo.Text,true).Date.ToShortDateString());
+				dbobj.ExecProc(OprType.Insert,"sp_stockmovement",ref op,"@id",Int32.Parse(rdr["productid"].ToString()),"@fromdate", GenUtil.str2MMDDYYYY(txtDateFrom.Text),"@todate", GenUtil.str2MMDDYYYY(txtDateTo.Text));
 			rdr.Close();
 			if(drpstore.SelectedIndex>0)
 			{

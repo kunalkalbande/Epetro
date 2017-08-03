@@ -489,7 +489,7 @@ namespace EPetro.Module.Reports
 					{
 						sw.WriteLine(info,GenUtil.TrimLength(SqlDtr.GetValue(0).ToString(),22),
 							SqlDtr.GetValue(1).ToString(),
-							GenUtil.str2MMDDYYYY(trimDate(SqlDtr.GetValue(2).ToString())),
+							GenUtil.str2DDMMYYYY(trimDate(SqlDtr.GetValue(2).ToString())),
 							GenUtil.strNumericFormat(checkValue1(SqlDtr.GetValue(3).ToString())),
 							GenUtil.strNumericFormat(checkValue1(SqlDtr.GetValue(4).ToString())),
 							GenUtil.strNumericFormat(checkValue1(SqlDtr.GetValue(5).ToString())),
@@ -583,7 +583,7 @@ namespace EPetro.Module.Reports
 				{
 					sw.WriteLine(SqlDtr.GetValue(0).ToString()+"\t"+
 						SqlDtr.GetValue(1).ToString()+"\t"+
-						GenUtil.str2MMDDYYYY(trimDate(SqlDtr.GetValue(2).ToString()))+"\t"+
+						GenUtil.str2DDMMYYYY(trimDate(SqlDtr.GetValue(2).ToString()))+"\t"+
 						GenUtil.strNumericFormat(checkValue1(SqlDtr.GetValue(3).ToString()))+"\t"+
 						GenUtil.strNumericFormat(checkValue1(SqlDtr.GetValue(4).ToString()))+"\t"+
 						GenUtil.strNumericFormat(checkValue1(SqlDtr.GetValue(5).ToString()))+"\t"+
