@@ -255,8 +255,8 @@ namespace EPetro.Module.Accounts
                 DateTime dtDate = System.Convert.ToDateTime(Date);
 
                 Amount = txtAmount.Text.Trim();
-				narration = txtNarrartion.Value.Trim();
-                DateTime Entry_Date = System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(Request.Form["txtDate"].ToString()) + " " + DateTime.Now.TimeOfDay.ToString());
+				narration = txtNarrartion.Value.Trim();                
+                DateTime Entry_Date = System.Convert.ToDateTime(System.DateTime.Now.ToShortDateString());
                 Invoice_Date = DateTime.Now.ToString();
 				SqlDataReader SqlDtr = null;
 				string strNew = DropLedgerName.SelectedItem.Text;
@@ -626,10 +626,12 @@ namespace EPetro.Module.Accounts
 				Bank_name1 = txtBankname.Text.Trim();
 				Cheque_No1 = txtCheque.Text.Trim();
 				Date1 = txtDate.Text.Trim();
-				Date1 = GenUtil.str2MMDDYYYY(Date1);
+                Date1 = GenUtil.str2DDMMYYYY(Date1);
+                DateTime dtDate = System.Convert.ToDateTime(Date1);                
 				Amount1 = txtAmount.Text.Trim();
 				narration1 = txtNarrartion.Value.Trim();
-				SqlDataReader SqlDtr = null;
+                DateTime Entry_Date = System.Convert.ToDateTime(System.DateTime.Now.ToShortDateString());
+                SqlDataReader SqlDtr = null;
 				Curr_Date=DateTime.Now.ToString();
 				//***********************
 				string strOld = DropLedgerName1.SelectedItem.Text;
@@ -682,7 +684,7 @@ namespace EPetro.Module.Accounts
 
 				if(arrstrOld[0].ToString().Equals(DropLedgerName.SelectedItem.Text))
 				{
-					dbobj.Insert_or_Update("Update Payment_transaction set Ledger_ID_Dr = "+Ledger_ID1+",Amount1 = "+Amount1+",Ledger_ID_Cr = "+By_ID1+",Amount2 = "+Amount1+",Bank_Name='"+Bank_name1+"',Cheque_No='"+Cheque_No1+"',Cheque_date = '"+Date1+"',Narration ='"+narration1+"',Entered_By = '"+uid+"',Entry_Date = '"+Entry_Date+"' where Voucher_ID = "+strArr[1].Trim() ,ref c);
+					dbobj.Insert_or_Update("Update Payment_transaction set Ledger_ID_Dr = "+Ledger_ID1+",Amount1 = "+Amount1+",Ledger_ID_Cr = "+By_ID1+",Amount2 = "+Amount1+",Bank_Name='"+Bank_name1+"',Cheque_No='"+Cheque_No1+"',Cheque_date = CONVERT(datetime,'" + Date1 + "', 103),Narration ='"+narration1+"',Entered_By = '"+uid+ "',Entry_Date = CONVERT(datetime, '" + Entry_Date + "', 103) where Voucher_ID = " + strArr[1].Trim() ,ref c);
 					object obj = null;
 					if(CheckCashMode.Equals(DropBy.SelectedItem.Text))
 					{
