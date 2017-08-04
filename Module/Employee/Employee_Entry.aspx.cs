@@ -12,15 +12,16 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
-using System.Data .SqlClient ;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
-using EPetro.Sysitem.Classes ;
+using EPetro.Sysitem.Classes;
 using RMG;
+using System.Text;
 
 namespace EPetro.Module.Employee
 {
@@ -246,8 +247,35 @@ namespace EPetro.Module.Employee
 		/// This method is used to Insert the all values in the database with the help of stored procedure.
 		/// </summary>
 		private void btnUpdate_Click(object sender, System.EventArgs e)
-		{       
-			EmployeeClass obj=new EmployeeClass();
+		{
+            StringBuilder errorMessage = new StringBuilder();
+            if (txtFName.Text == string.Empty)
+            {
+                errorMessage.Append("- Please Fill Employee Name");
+                errorMessage.Append("\n");
+            }
+            if (DropCity.SelectedIndex == 0)
+            {
+                errorMessage.Append("- Please Select City");
+                errorMessage.Append("\n");
+            }
+            if (DropDesig.SelectedIndex == 0)
+            {
+                errorMessage.Append("- Please Select Designation");
+                errorMessage.Append("\n");
+            }
+            if (txtSalary.Text == string.Empty)
+            {
+                errorMessage.Append("- Please Fill Salary of Employee");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+
+            EmployeeClass obj=new EmployeeClass();
 			string str2="";
 			try
 			{

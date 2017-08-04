@@ -27,11 +27,11 @@ function chkall_onclick()
 	var i;
 	if(document.all.item('chkall').checked)
 	{   
-	    for(var j=0;j<document.Form1.length;j++)
+	    for(var j=0;j<document.forms[0].length;j++)
 	    {
-         if(document.Form1.elements[j].type=="text")
+         if(document.forms[0].elements[j].type=="text")
          {
-           document.Form1.elements[j].disabled = false
+           document.forms[0].elements[j].disabled = false
          }	    
 	    }
 		for(i=1;i<=11;i++)
@@ -42,12 +42,12 @@ function chkall_onclick()
 	}
 	else
 	{
-	     for(var j=0;j<document.Form1.length;j++)
+	     for(var j=0;j<document.forms[0].length;j++)
 	    {
-         if(document.Form1.elements[j].type=="text")
+         if(document.forms[0].elements[j].type=="text")
          {
-           document.Form1.elements[j].disabled = true
-           document.Form1.elements[j].value = ""
+           document.forms[0].elements[j].disabled = true
+           document.forms[0].elements[j].value = ""
          }	    
 	    }
 		for(i=1;i<=11;i++)
@@ -75,13 +75,13 @@ function chk1_onclick(t,t1,t2)
     { 
       t1.disabled = false
       
-      for(var j=0;j<document.Form1.length;j++)
+      for(var j=0;j<document.forms[0].length;j++)
 	   {
-        if(document.Form1.elements[j].type=="checkbox" && document.Form1.elements[j].checked==true)
+        if(document.forms[0].elements[j].type=="checkbox" && document.forms[0].elements[j].checked==true)
         {
          i++;
          if(i==12)
-           document.Form1.chkall.checked = true; 
+           document.forms[0].chkall.checked = true; 
         
         }	
        }   
@@ -93,7 +93,7 @@ function chk1_onclick(t,t1,t2)
 	 t.checked = false
 	 t1.disabled = true
 	 t1.value=""
-	 document.Form1.chkall.checked = false; 
+	 document.forms[0].chkall.checked = false; 
 	}
 	
 }
@@ -143,7 +143,7 @@ document.all.item('chkall').checked=false
 		</script>
 	</HEAD>
 	<body language="javascript" MS_POSITIONING="GridLayout">
-		<form id="Form1" method="post" runat="server">
+		<form id="Form1" method="post" runat="server" name="Form1">
 			<uc1:header id="Header1" runat="server"></uc1:header>
 			<asp:TextBox id="TextBox1" style="Z-INDEX: 101; LEFT: 152px; POSITION: absolute; TOP: 16px" runat="server"
 				Width="8px" Visible="False"></asp:TextBox>
@@ -176,7 +176,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk1" onClick="return chk1_onclick(this,document.Form1.txtrdc,document.Form1.unit_rdc)"
+											<TD align="center"><INPUT language="javascript" id="chk1" onClick="return chk1_onclick(this,document.forms[0].txtrdc,document.forms[0].unit_rdc)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -188,7 +188,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL">KL</asp:ListItem>
 													<asp:ListItem Value="%" Selected="True">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD id="chket" align="center"><INPUT language="javascript" id="chk2" onClick="return chk1_onclick(this,document.Form1.txtetax,document.Form1.unit_etax)"
+											<TD id="chket" align="center"><INPUT language="javascript" id="chk2" onClick="return chk1_onclick(this,document.forms[0].txtetax,document.forms[0].unit_etax)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -201,7 +201,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk3" onClick="return chk1_onclick(this,document.Form1.txtrpg_chg,document.Form1.unit_rpgchg)"
+											<TD align="center"><INPUT language="javascript" id="chk3" onClick="return chk1_onclick(this,document.forms[0].txtrpg_chg,document.forms[0].unit_rpgchg)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -214,7 +214,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk4" onClick="return chk1_onclick(this,document.Form1.txt_rpgschg,document.Form1.unit_rpgschg)"
+											<TD align="center"><INPUT language="javascript" id="chk4" onClick="return chk1_onclick(this,document.forms[0].txt_rpgschg,document.forms[0].unit_rpgschg)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -226,7 +226,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk5" onClick="return chk1_onclick(this,document.Form1.txt_ltchg,document.Form1.unit_ltchg)"
+											<TD align="center"><INPUT language="javascript" id="chk5" onClick="return chk1_onclick(this,document.forms[0].txt_ltchg,document.forms[0].unit_ltchg)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -238,7 +238,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk6" onClick="return chk1_onclick(this,document.Form1.txt_tchg,document.Form1.unit_tchg)"
+											<TD align="center"><INPUT language="javascript" id="chk6" onClick="return chk1_onclick(this,document.forms[0].txt_tchg,document.forms[0].unit_tchg)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -250,7 +250,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk7" onClick="return chk1_onclick(this,document.Form1.txt_olvy,document.Form1.unit_olv)"
+											<TD align="center"><INPUT language="javascript" id="chk7" onClick="return chk1_onclick(this,document.forms[0].txt_olvy,document.forms[0].unit_olv)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -263,7 +263,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL">KL</asp:ListItem>
 													<asp:ListItem Value="%" Selected="True">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk8" onClick="return chk1_onclick(this,document.Form1.txt_lst,document.Form1.unit_lst)"
+											<TD align="center"><INPUT language="javascript" id="chk8" onClick="return chk1_onclick(this,document.forms[0].txt_lst,document.forms[0].unit_lst)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -276,7 +276,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL">KL</asp:ListItem>
 													<asp:ListItem Value="%" Selected="True">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk9" onClick="return chk1_onclick(this,document.Form1.txt_lstschg,document.Form1.unit_lstschg)"
+											<TD align="center"><INPUT language="javascript" id="chk9" onClick="return chk1_onclick(this,document.forms[0].txt_lstschg,document.forms[0].unit_lstschg)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -289,7 +289,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center" style="HEIGHT: 1px"><INPUT language="javascript" id="chk10" onClick="return chk1_onclick(this,document.Form1.txt_lfrecov,document.Form1.unit_lfrecov)"
+											<TD align="center" style="HEIGHT: 1px"><INPUT language="javascript" id="chk10" onClick="return chk1_onclick(this,document.forms[0].txt_lfrecov,document.forms[0].unit_lfrecov)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
@@ -301,7 +301,7 @@ document.all.item('chkall').checked=false
 													<asp:ListItem Value="KL" Selected="True">KL</asp:ListItem>
 													<asp:ListItem Value="%">%</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD align="center"><INPUT language="javascript" id="chk11" onClick="return chk1_onclick(this,document.Form1.txt_dochg,document.Form1.unit_dochg)"
+											<TD align="center"><INPUT language="javascript" id="chk11" onClick="return chk1_onclick(this,document.forms[0].txt_dochg,document.forms[0].unit_dochg)"
 													type="checkbox" CHECKED runat="server"></TD>
 										</TR>
 										<TR>
