@@ -32,22 +32,22 @@ function getAcountName(t,t1)
 	{
 		if(typetext == "Contra")
 		{
-			temp = document.Form1.txtTempContra.value;
+			temp = document.all.txtTempContra.value;
 			fillCombo(t,temp,t1);
 		}
 		else if(typetext == "Credit Note")
 		{
-			temp = document.Form1.txTempCredit.value;
+			temp = document.all.txTempCredit.value;
 			fillCombo(t,temp,t1);
 		}
 		else if(typetext == "Debit Note")
 		{
-			temp = document.Form1.txtTempDebit.value;
+			temp = document.all.txtTempDebit.value;
 			fillCombo(t,temp,t1);
 		}
 		else
 		{
-			temp = document.Form1.txtTempJournal.value;
+			temp = document.all.txtTempJournal.value;
 			fillCombo(t,temp,t1);
 		}
 	}
@@ -55,22 +55,22 @@ function getAcountName(t,t1)
 	{
 		if(typetext == "Contra")
 		{
-			temp = document.Form1.txtTempContra.value;
+			temp = document.all.txtTempContra.value;
 			fillCombo1(temp);
 		}
 		else if(typetext == "Credit Note")
 		{
-			temp = document.Form1.txTempCredit.value;
+			temp = document.all.txTempCredit.value;
 			fillCombo1(temp);
 		}
 		else if(typetext == "Debit Note")
 		{
-			temp = document.Form1.txtTempDebit.value;
+			temp = document.all.txtTempDebit.value;
 			fillCombo1(temp);
 		}
 		else
 		{
-			temp = document.Form1.txtTempJournal.value;
+			temp = document.all.txtTempJournal.value;
 			fillCombo1(temp);
 		}
 	} 
@@ -78,36 +78,36 @@ function getAcountName(t,t1)
 
 function fillCombo1(temp)
 {
-	if(document.Form1.DropVoucherName.value=="Contra")
+	if(document.all.DropVoucherName.value=="Contra")
 	{
 		alert("Can Not Update The Entry In Contra Voucher Type");
-		document.Form1.DropVoucherName.selectedIndex=0;
+		document.all.DropVoucherName.selectedIndex=0;
 		return;
 	}
 	var mainarr = new Array();
 	mainarr = temp.split("~");
-	alert("Genrate New ID "+document.Form1.DropVoucherName.value+" "+mainarr[0]+" At The Place Of "+document.Form1.DropDownID.value);
-	document.Form1.txtID.value = mainarr[0];
+	alert("Genrate New ID "+document.all.DropVoucherName.value+" "+mainarr[0]+" At The Place Of "+document.all.DropDownID.value);
+	document.all.txtID.value = mainarr[0];
 }
 
 function fillCombo(t,temp,t1)
 {
-	document.Form1.dropAccName1.length = 1;
-	document.Form1.dropAccName2.length = 1;
-	document.Form1.dropAccName3.length = 1;
-	document.Form1.dropAccName4.length = 1;
-	document.Form1.dropAccName5.length = 1;
-	document.Form1.dropAccName6.length = 1;
-	document.Form1.dropAccName7.length = 1;
-	document.Form1.dropAccName8.length = 1;
-	document.Form1.txtAccName1.value = "Select"; 
-	document.Form1.txtAccName2.value = "Select";
-	document.Form1.txtAccName3.value = "Select";
-	document.Form1.txtAccName4.value = "Select";
-	document.Form1.txtAccName5.value = "Select";
-	document.Form1.txtAccName6.value = "Select";
-	document.Form1.txtAccName7.value = "Select";
-	document.Form1.txtAccName8.value = "Select";
+	document.all.dropAccName1.length = 1;
+	document.all.dropAccName2.length = 1;
+	document.all.dropAccName3.length = 1;
+	document.all.dropAccName4.length = 1;
+	document.all.dropAccName5.length = 1;
+	document.all.dropAccName6.length = 1;
+	document.all.dropAccName7.length = 1;
+	document.all.dropAccName8.length = 1;
+	document.all.txtAccName1.value = "Select"; 
+	document.all.txtAccName2.value = "Select";
+	document.all.txtAccName3.value = "Select";
+	document.all.txtAccName4.value = "Select";
+	document.all.txtAccName5.value = "Select";
+	document.all.txtAccName6.value = "Select";
+	document.all.txtAccName7.value = "Select";
+	document.all.txtAccName8.value = "Select";
 	var mainarr = new Array();
 	mainarr = temp.split("~");
 	var n=0;
@@ -115,27 +115,27 @@ function fillCombo(t,temp,t1)
 		t1.value = mainarr[0];
 	//else
 	//	alert("Genrate New ID "+t.value+" "+mainarr[0]+" At The Place Of "+document.Form1.DropDownID.value);
-	document.Form1.txtID.value = mainarr[0];
+	document.all.txtID.value = mainarr[0];
 	for(var i=1;i<mainarr.length-1;i++)
 	{
-		document.Form1.dropAccName1.add(new Option) 
-		document.Form1.dropAccName2.add(new Option) 
-		document.Form1.dropAccName3.add(new Option) 
-		document.Form1.dropAccName4.add(new Option) 
-		document.Form1.dropAccName5.add(new Option) 
-		document.Form1.dropAccName6.add(new Option) 
-		document.Form1.dropAccName7.add(new Option)
-		document.Form1.dropAccName8.add(new Option) 
+		document.all.dropAccName1.add(new Option) 
+		document.all.dropAccName2.add(new Option) 
+		document.all.dropAccName3.add(new Option) 
+		document.all.dropAccName4.add(new Option) 
+		document.all.dropAccName5.add(new Option) 
+		document.all.dropAccName6.add(new Option) 
+		document.all.dropAccName7.add(new Option)
+		document.all.dropAccName8.add(new Option) 
 		if(mainarr[i]  != "")
 		{
-			document.Form1.dropAccName1.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName2.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName3.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName4.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName5.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName6.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName7.options[n+1].text=mainarr[i]; 
-			document.Form1.dropAccName8.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName1.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName2.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName3.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName4.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName5.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName6.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName7.options[n+1].text=mainarr[i]; 
+			document.all.dropAccName8.options[n+1].text=mainarr[i]; 
 			n = n + 1;
 		}
 	}
@@ -208,7 +208,7 @@ function changeType(t)
 var index = t.selectedIndex;
 var temp = t.name;
 var arr = new Array();
-var drop = new Array(document.Form1.dropType_1,document.Form1.dropType_2,document.Form1.dropType_3,document.Form1.dropType_4,document.Form1.dropType_5,document.Form1.dropType_6,document.Form1.dropType_7,document.Form1.dropType_8);
+var drop = new Array(document.all.dropType_1,document.all.dropType_2,document.all.dropType_3,document.all.dropType_4,document.all.dropType_5,document.all.dropType_6,document.all.dropType_7,document.all.dropType_8);
 arr = temp.split("_");
 
 if(eval(arr[1]) <= 4)
@@ -249,103 +249,103 @@ var LCrTotal = 0;
 var RDrTotal = 0;
 var RCrTotal = 0;
 
-if(document.Form1.txtAmount1.value != "")
+if(document.all.txtAmount1.value != "")
   {
-  document.Form1.txtAmount5.value = document.Form1.txtAmount1.value;
-     var index = document.Form1.dropType_1.selectedIndex;
-     var typetext = document.Form1.dropType_1.options[index].text;
+  document.all.txtAmount5.value = document.all.txtAmount1.value;
+     var index = document.all.dropType_1.selectedIndex;
+     var typetext = document.all.dropType_1.options[index].text;
      if(typetext == "Dr")
-        LDrTotal = LDrTotal+ eval(document.Form1.txtAmount1.value);
+        LDrTotal = LDrTotal+ eval(document.all.txtAmount1.value);
      else
-        LCrTotal = LCrTotal+ eval(document.Form1.txtAmount1.value);
+        LCrTotal = LCrTotal+ eval(document.all.txtAmount1.value);
         
   }
-  if(document.Form1.txtAmount2.value != "")
+  if(document.all.txtAmount2.value != "")
   {
-  document.Form1.txtAmount6.value = document.Form1.txtAmount2.value;
-     var index2 = document.Form1.dropType_2.selectedIndex;
-     var typetext2 = document.Form1.dropType_2.options[index2].text;
+  document.all.txtAmount6.value = document.all.txtAmount2.value;
+     var index2 = document.all.dropType_2.selectedIndex;
+     var typetext2 = document.all.dropType_2.options[index2].text;
      if(typetext2 == "Dr")
-        LDrTotal = LDrTotal+ eval(document.Form1.txtAmount2.value);
+        LDrTotal = LDrTotal+ eval(document.all.txtAmount2.value);
      else
-        LCrTotal = LCrTotal+ eval(document.Form1.txtAmount2.value);
+        LCrTotal = LCrTotal+ eval(document.all.txtAmount2.value);
         
   }
-  if(document.Form1.txtAmount3.value != "")
+  if(document.all.txtAmount3.value != "")
   {
-  document.Form1.txtAmount7.value = document.Form1.txtAmount3.value;
-     var index3 = document.Form1.dropType_3.selectedIndex;
-     var typetext3 = document.Form1.dropType_3.options[index3].text;
+  document.all.txtAmount7.value = document.all.txtAmount3.value;
+     var index3 = document.all.dropType_3.selectedIndex;
+     var typetext3 = document.all.dropType_3.options[index3].text;
      if(typetext3 == "Dr")
-        LDrTotal = LDrTotal+ eval(document.Form1.txtAmount3.value);
+        LDrTotal = LDrTotal+ eval(document.all.txtAmount3.value);
      else
-        LCrTotal = LCrTotal+ eval(document.Form1.txtAmount3.value);
+        LCrTotal = LCrTotal+ eval(document.all.txtAmount3.value);
         
   }
-  if(document.Form1.txtAmount4.value != "")
+  if(document.all.txtAmount4.value != "")
   {
-  document.Form1.txtAmount8.value = document.Form1.txtAmount4.value;
-     var index4 = document.Form1.dropType_4.selectedIndex;
-     var typetext4 = document.Form1.dropType_4.options[index4].text;
+  document.all.txtAmount8.value = document.all.txtAmount4.value;
+     var index4 = document.all.dropType_4.selectedIndex;
+     var typetext4 = document.all.dropType_4.options[index4].text;
      if(typetext4 == "Dr")
-        LDrTotal = LDrTotal+ eval(document.Form1.txtAmount4.value);
+        LDrTotal = LDrTotal+ eval(document.all.txtAmount4.value);
      else
-        LCrTotal = LCrTotal+ eval(document.Form1.txtAmount4.value);
+        LCrTotal = LCrTotal+ eval(document.all.txtAmount4.value);
         
   }
-  if(document.Form1.txtAmount5.value != "")
+  if(document.all.txtAmount5.value != "")
   {
-  document.Form1.txtAmount1.value = document.Form1.txtAmount5.value;
-     var index5 = document.Form1.dropType_5.selectedIndex;
-     var typetext5 = document.Form1.dropType_5.options[index5].text;
+  document.all.txtAmount1.value = document.all.txtAmount5.value;
+     var index5 = document.all.dropType_5.selectedIndex;
+     var typetext5 = document.all.dropType_5.options[index5].text;
      if(typetext5 == "Dr")
-        RDrTotal = RDrTotal+ eval(document.Form1.txtAmount5.value);
+        RDrTotal = RDrTotal+ eval(document.all.txtAmount5.value);
      else
-        RCrTotal = RCrTotal+ eval(document.Form1.txtAmount5.value);
+        RCrTotal = RCrTotal+ eval(document.all.txtAmount5.value);
         
   }
-  if(document.Form1.txtAmount6.value != "")
+  if(document.all.txtAmount6.value != "")
   {
-  document.Form1.txtAmount2.value = document.Form1.txtAmount6.value;
-     var index6 = document.Form1.dropType_6.selectedIndex;
-     var typetext6 = document.Form1.dropType_6.options[index6].text;
+  document.all.txtAmount2.value = document.all.txtAmount6.value;
+     var index6 = document.all.dropType_6.selectedIndex;
+     var typetext6 = document.all.dropType_6.options[index6].text;
      if(typetext6 == "Dr")
-        RDrTotal = RDrTotal+ eval(document.Form1.txtAmount6.value);
+        RDrTotal = RDrTotal+ eval(document.all.txtAmount6.value);
      else
-        RCrTotal = RCrTotal+ eval(document.Form1.txtAmount6.value);
+        RCrTotal = RCrTotal+ eval(document.all.txtAmount6.value);
         
   }
-  if(document.Form1.txtAmount7.value != "")
+  if(document.all.txtAmount7.value != "")
   {
-  document.Form1.txtAmount3.value = document.Form1.txtAmount7.value;
-     var index7 = document.Form1.dropType_7.selectedIndex;
-     var typetext7 = document.Form1.dropType_7.options[index7].text;
+  document.all.txtAmount3.value = document.all.txtAmount7.value;
+     var index7 = document.all.dropType_7.selectedIndex;
+     var typetext7 = document.all.dropType_7.options[index7].text;
      if(typetext7 == "Dr")
-        RDrTotal = RDrTotal+ eval(document.Form1.txtAmount7.value);
+        RDrTotal = RDrTotal+ eval(document.all.txtAmount7.value);
      else
-        RCrTotal = RCrTotal+ eval(document.Form1.txtAmount7.value);
+        RCrTotal = RCrTotal+ eval(document.all.txtAmount7.value);
         
   }
-  if(document.Form1.txtAmount8.value != "")
+  if(document.all.txtAmount8.value != "")
   {
-  document.Form1.txtAmount4.value = document.Form1.txtAmount8.value;
-     var index8 = document.Form1.dropType_8.selectedIndex;
-     var typetext8 = document.Form1.dropType_8.options[index8].text;
+  document.all.txtAmount4.value = document.all.txtAmount8.value;
+     var index8 = document.all.dropType_8.selectedIndex;
+     var typetext8 = document.all.dropType_8.options[index8].text;
      if(typetext8 == "Dr")
-        RDrTotal = RDrTotal+ eval(document.Form1.txtAmount8.value);
+        RDrTotal = RDrTotal+ eval(document.all.txtAmount8.value);
      else
-        RCrTotal = RCrTotal+ eval(document.Form1.txtAmount8.value);
+        RCrTotal = RCrTotal+ eval(document.all.txtAmount8.value);
         
   }
   
-  document.Form1.txtLCr.value = LCrTotal;
-   makeRound( document.Form1.txtLCr);
-  document.Form1.txtLDr.value = LDrTotal;
-   makeRound( document.Form1.txtLDr);
-  document.Form1.txtRCr.value = RCrTotal;
-   makeRound( document.Form1.txtRCr);
-  document.Form1.txtRDr.value = RDrTotal;
-   makeRound( document.Form1.txtRDr);
+  document.all.txtLCr.value = LCrTotal;
+   makeRound( document.all.txtLCr);
+  document.all.txtLDr.value = LDrTotal;
+   makeRound( document.all.txtLDr);
+  document.all.txtRCr.value = RCrTotal;
+   makeRound( document.all.txtRCr);
+  document.all.txtRDr.value = RDrTotal;
+   makeRound( document.all.txtRDr);
   
 }
 	function makeRound(t)
@@ -370,21 +370,21 @@ if(document.Form1.txtAmount1.value != "")
 	  var typetext = t.options[index].text;
 	  //alert(t.name);
 	  if(t.name == "dropAccName1")
-	     document.Form1.txtAccName1.value = typetext;
+	     document.all.txtAccName1.value = typetext;
 	  if(t.name == "dropAccName2")
-	     document.Form1.txtAccName2.value = typetext;
+	     document.all.txtAccName2.value = typetext;
 	  if(t.name == "dropAccName3")
-	     document.Form1.txtAccName3.value = typetext;
+	     document.all.txtAccName3.value = typetext;
 	  if(t.name == "dropAccName4")
-		document.Form1.txtAccName4.value = typetext;
+		document.all.txtAccName4.value = typetext;
 	  if(t.name == "dropAccName5")
-		document.Form1.txtAccName5.value = typetext;
+		document.all.txtAccName5.value = typetext;
 	  if(t.name == "dropAccName6")
-		document.Form1.txtAccName6.value = typetext;
+		document.all.txtAccName6.value = typetext;
 	  if(t.name == "dropAccName7")
-		document.Form1.txtAccName7.value = typetext;
+		document.all.txtAccName7.value = typetext;
 	  if(t.name == "dropAccName8")
-		document.Form1.txtAccName8.value = typetext;     
+		document.all.txtAccName8.value = typetext;     
 	       
 	   
 	}
@@ -418,7 +418,7 @@ if(document.Form1.txtAmount1.value != "")
 								<TR>
 									<TD style="WIDTH: 90px" align="left">Voucher Type<FONT color="#ff0000">*</FONT><asp:comparevalidator id="Comparevalidator5" runat="server" ErrorMessage="Please Select Voucher type"
 											ControlToValidate="DropVoucherName" Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator><FONT color="red"></FONT></TD>
-									<TD><asp:dropdownlist id="DropVoucherName" runat="server" Width="130px" onChange="return getAcountName(this,document.Form1.txtVouchID);"
+									<TD><asp:dropdownlist id="DropVoucherName" runat="server" Width="130px" onChange="return getAcountName(this,document.all.txtVouchID);"
 											CssClass="FontStyle">
 											<asp:ListItem Value="Select">Select</asp:ListItem>
 											<asp:ListItem Value="Contra">Contra</asp:ListItem>
