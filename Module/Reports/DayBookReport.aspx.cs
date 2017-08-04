@@ -145,7 +145,7 @@ namespace EPetro.Module.Reports
 			msg="";
 			if(chkReceipt.Checked==true || chkPayment.Checked==true || chkContra.Checked==true || chkJournel.Checked==true || chkCN.Checked==true || chkDN.Checked==true || chkCS.Checked==true || chkCCS.Checked==true || chkFCS.Checked==true || chkSWS.Checked==true || chkFuelPer.Checked==true || chkOtherPer.Checked==true)
 			{
-				sql="select * from AccountsLedgerTable alt,Ledger_Master lm where lm.ledger_id!=1093 and cast(floor(cast(Entry_Date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(Entry_Date as float)) as datetime)<='"+ ToMMddYYYY(txtDateTo.Text) +"' and (";
+				sql="select * from AccountsLedgerTable alt,Ledger_Master lm where lm.ledger_id!=1093 and cast(floor(cast(Entry_Date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(Entry_Date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) +"' and (";
 				if(chkReceipt.Checked)
 				{
 					if(Flag==0)
