@@ -551,7 +551,18 @@ namespace EPetro.Module.Employee
 		{
 			try
 			{
-				CreateLogFiles.ErrorLog("Form:Salary_statement.aspx,Method:btnprint_Click   "+ uid);
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropMonth.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please Select Salary Month");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+                CreateLogFiles.ErrorLog("Form:Salary_statement.aspx,Method:btnprint_Click   "+ uid);
 				GetData();
 				Print();
 			}

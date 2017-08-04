@@ -138,7 +138,12 @@ namespace EPetro.Module.Admin
 		/// </summary>
 		private void btnUpdate_Click(object sender, System.EventArgs e)
 		{
-			EmployeeClass obj=new EmployeeClass();
+            if (txtRoleName.Text == string.Empty)
+            {               
+                MessageBox.Show("- Please Fill Role Name");
+                return;
+            }
+            EmployeeClass obj=new EmployeeClass();
 			obj.Role_Name=txtRoleName.Text.ToString();
 			obj.Description =txtDesc.Text.ToString();
 			try
