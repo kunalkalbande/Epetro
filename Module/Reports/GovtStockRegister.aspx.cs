@@ -459,6 +459,17 @@ namespace EPetro.Module.Reports
 		/// </summary>
 		private void btnView_Click(object sender, System.EventArgs e)
 		{
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropProduct.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Product Name");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
 			try
 			{
 				if(DropMonth.SelectedIndex==0)

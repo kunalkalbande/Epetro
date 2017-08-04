@@ -278,7 +278,7 @@ namespace EPetro.Module.Reports
 				tData[i,0]=eDate;
 
 				#region Fetch Density, Tempreture and Converted Density
-				sql="select Entry_Date,Density,Temprature,Converted_Density from daily_tank_reading where Tank_ID='"+ Tank_ID +"' and cast(floor(cast(Entry_Date as float)) as datetime)='"+ToMMddYYYY(eDate).ToShortDateString()+"'";
+				sql="select Entry_Date,Density,Temprature,Converted_Density from daily_tank_reading where Tank_ID='"+ Tank_ID +"' and cast(floor(cast(Entry_Date as float)) as datetime)='"+GenUtil.str2MMDDYYYY(eDate)+"'";
 				SqlDtr=obj.GetRecordSet(sql); 
 				while(SqlDtr.Read())
 				{
@@ -303,7 +303,7 @@ namespace EPetro.Module.Reports
 				string strQty="";
 				double dQty=0;
 				#region Fetch Data from Purchase
-				sql="select pm.*,fps.* from Purchase_Master pm, Fuel_Purchase_Details fps where pm.Invoice_No=fps.Invoice_No and Prod_ID='"+Prod_ID+"' and cast(floor(cast(Invoice_Date as float)) as datetime)>='"+ToMMddYYYY(eDate).ToShortDateString()+"' and cast(floor(cast(Invoice_Date as float)) as datetime)<='"+ToMMddYYYY(eDate).ToShortDateString()+"' order by pm.Invoice_No";
+				sql="select pm.*,fps.* from Purchase_Master pm, Fuel_Purchase_Details fps where pm.Invoice_No=fps.Invoice_No and Prod_ID='"+Prod_ID+"' and cast(floor(cast(Invoice_Date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(eDate) +"' and cast(floor(cast(Invoice_Date as float)) as datetime)<='"+GenUtil.str2MMDDYYYY(eDate)+"' order by pm.Invoice_No";
 				SqlDtr=obj.GetRecordSet(sql); 
 				while(SqlDtr.Read())
 				{
@@ -864,6 +864,22 @@ namespace EPetro.Module.Reports
 		/// </summary>
 		private void btnView_Click(object sender, System.EventArgs e)
 		{
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropProduct.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Product Name");
+                errorMessage.Append("\n");
+            }
+            if (DropTank.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Tank ID");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
 			try
 			{
 				if(DropMonth.SelectedIndex==0)

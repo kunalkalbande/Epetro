@@ -55,8 +55,8 @@
 							</TR>
 							<TR>
 								<TD>Login Name&nbsp;
-									<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill the Login Name"
-										ControlToValidate="txtLoginName">*</asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:RequiredFieldValidator id="RequiredFieldValidator1" display="Dynamic" runat="server" ErrorMessage="Please Fill the Login Name"
+										ControlToValidate="txtLoginName"><font color="red">*</font></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								</TD>
 								<TD>
 									<asp:textbox id="txtLoginName" runat="server" Width="130px" BorderStyle="Groove" MaxLength="49"
@@ -65,14 +65,14 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Password
-									<asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Fill the Password"
-										ControlToValidate="txtPassword">*</asp:RequiredFieldValidator>
+								<TD>Password                                    
+									<asp:RequiredFieldValidator id="RequiredFieldValidator2" display="Dynamic" runat="server" ErrorMessage="Please Fill the Password"
+										ControlToValidate="txtPassword"><font color="red">*</font></asp:RequiredFieldValidator>
 									<asp:RegularExpressionValidator id="RegularExpressionValidator1" runat="server" ControlToValidate="txtPassword"
-										ErrorMessage="Password length Minimum 5 Maximum 30 characters allowed" ValidationExpression="\w{5,30}">*</asp:RegularExpressionValidator></TD>
+										ErrorMessage="Password length Minimum 5 Maximum 30 characters allowed" ValidationExpression="\w{5,30}"><font color="red">*</font></asp:RegularExpressionValidator></TD>
 								<TD>
 									<asp:textbox id="txtPassword" runat="server" TextMode="Password" Width="130px" BorderStyle="Groove"
-										MaxLength="20" CssClass="FontStyle"></asp:textbox></TD>
+										MaxLength="30" CssClass="FontStyle"></asp:textbox></TD>
 								<TD></TD>
 								<TD></TD>
 							</TR>
@@ -87,8 +87,8 @@
 							</TR>
 							<TR>
 								<TD>Name
-									<asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server" ErrorMessage="Please Fill the User Name"
-										ControlToValidate="txtFName">*</asp:RequiredFieldValidator></TD>
+									<asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server" Display="Dynamic" ErrorMessage="Please Fill the User Name"
+										ControlToValidate="txtFName"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 								<TD><asp:textbox id="txtFName" runat="server" Width="130px" BorderStyle="Groove" MaxLength="30" CssClass="FontStyle"></asp:textbox></TD>
 								<TD><asp:textbox id="txtMName" runat="server" Width="59px" BorderStyle="Groove" MaxLength="10" CssClass="FontStyle"></asp:textbox></TD>
 								<TD><asp:textbox id="txtLName" runat="server" Width="130px" BorderStyle="Groove" MaxLength="10" CssClass="FontStyle"></asp:textbox></TD>
@@ -96,7 +96,7 @@
 							<TR>
 								<TD>Role&nbsp;
 									<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select the Role Name"
-										ControlToValidate="DropRole" Operator="NotEqual" ValueToCompare="Select">*</asp:CompareValidator></TD>
+										ControlToValidate="DropRole" Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD colspan="2"><asp:dropdownlist id="DropRole" runat="server" Width="192px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>

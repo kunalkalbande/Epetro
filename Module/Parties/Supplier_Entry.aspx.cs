@@ -243,41 +243,37 @@ namespace EPetro.Module.Parties
 		/// </summary>
 		private void btnUpdate_Click(object sender, System.EventArgs e)
 		{
-			PartiesClass obj=new PartiesClass();
+           
+            StringBuilder erroMessage = new StringBuilder();
+            if (txtFName.Text == string.Empty)
+            {
+                erroMessage.Append("- Please Enter Name");
+                erroMessage.Append("\n");
+            }
+            if (DropType.SelectedIndex == 0)
+            {
+                erroMessage.Append("- Please select the Type");
+                erroMessage.Append("\n");
+            }
+            if (DropCity.SelectedIndex == 0)
+            {
+                erroMessage.Append("- Please select the City");
+                erroMessage.Append("\n");
+            }
+            if (txtTinNo.Text == string.Empty)
+            {
+                erroMessage.Append("- Please Enter the Tin No");
+                erroMessage.Append("\n");
+            }
+            if (erroMessage.Length > 0)
+            {
+                MessageBox.Show(erroMessage.ToString());
+                return;
+            }
+
+            PartiesClass obj=new PartiesClass();
 			try
 			{
-                StringBuilder erroMessage = new StringBuilder();                
-
-                if (txtFName.Text == string.Empty)
-                {
-                    erroMessage.Append("- Please Enter Name");
-                    erroMessage.Append("\n");
-                }
-
-                if (DropType.SelectedIndex == 0)
-                {
-                    erroMessage.Append("- Please select the Type");
-                    erroMessage.Append("\n");
-                }
-
-                if (DropCity.SelectedIndex == 0)
-                {
-                    erroMessage.Append("- Please select the City");
-                    erroMessage.Append("\n");
-                }
-
-                if (txtTinNo.Text == string.Empty)
-                {
-                    erroMessage.Append("- Please Enter the Tin No");
-                    erroMessage.Append("\n");
-                }                
-
-                if (erroMessage.Length > 0)
-                {
-                    MessageBox.Show(erroMessage.ToString());
-                    return;
-                }
-
                 if (!checkAcc_Period())
 				{
 					MessageBox.Show("Please enter the Accounts Period from Organization Details");

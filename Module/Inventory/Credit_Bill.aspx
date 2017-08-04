@@ -33,11 +33,11 @@
 								<tr vAlign="top">
 									<td vAlign="top"><asp:image id="imgSample" runat="server" Width="48px" Height="51px"></asp:image></td>
 									<td vAlign="top" align="center"><asp:label id="txtname1" runat="server" Width="472px" Height="8px" Font-Size="X-Small" Font-Bold="True"
-											ForeColor="DarkGreen" Visible="false"></asp:label><br>
-										<asp:label id="txtdet1" runat="server" Visible="false" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"></asp:label><br>
-										<asp:label id="txtadd1" runat="server" Visible="false" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"></asp:label><br>
-										<asp:label id="txtci11" Width="224px" Visible="false" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"
-											Runat="server"></asp:label><br>
+											ForeColor="DarkGreen" Visible="true">Shree ParamSukh Filling Station</asp:label><br>
+										<asp:label id="txtdet1" runat="server" Visible="true" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen">INDIAN OIL CORPORATION LTD.</asp:label><br>
+										<asp:label id="txtadd1" runat="server" Visible="true" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen">Near Unda Khad Gram Mundla, Baroda Dist. Sheopur</asp:label><br>
+										<asp:label id="txtci11" Width="224px" Visible="true" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen"
+											Runat="server">Baroda</asp:label><br>
 										<!--<P>-->
 										<!--	<table style="WIDTH: 487px; HEIGHT: 90px" border=0>
               <TBODY>

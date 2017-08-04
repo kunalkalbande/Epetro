@@ -140,6 +140,17 @@ namespace EPetro.Module.Reports
 		/// </summary>
 		private void Button1_Click(object sender, System.EventArgs e)
 		{
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropCustName.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Customer Name");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
 			InventoryClass obj = new InventoryClass();
 			SqlDataReader rdr;
 			for(int k=0;k<arr1.Length;k++)

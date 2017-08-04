@@ -41,11 +41,11 @@
 							<tr>
 								<td align="right" width="10%">From Date</td>
 								<td align="center" width="20%"><asp:textbox id="txtDateFrom" runat="server" Width="80px"  BorderStyle="Groove"
-										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
 								<td align="center" width="10%">To Date</td>
 								<td width="20%"><asp:textbox id="txtDateTo" runat="server" Width="80px"  BorderStyle="Groove"
-										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
+										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
 								<td align="center" colSpan="2" width="40%"><asp:button id="btnView" Width="65" Text="View" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
 										ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="btnSave" Width="65" Text="Save" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
@@ -115,7 +115,7 @@
 										<%=GenUtil.strNumericFormat(rdr["Balance"].ToString())%>
 										&nbsp;<%=rdr["Bal_Type"].ToString()%></font></td>
 								<%}else%>
-								<td colSpan="4">0</td>
+								<td colSpan="4"></td>
 								<%}SqlDtr.Close();%>
 							</tr>
 							<tr>
@@ -661,7 +661,7 @@
 											<td vAlign="middle"><b><%=GenUtil.strNumericFormat(TotalSell.ToString())%></b></td>
 											<td vAlign="middle"><b><%=GenUtil.strNumericFormat(TotalRS.ToString())	%></b></td>
 											<td colSpan="2"></td>
-											<td vAlign="middle"><b><%if(TotalPRS!=0)%><%=GenUtil.strNumericFormat(TotalPRS.ToString())%></b></td>
+											<td vAlign="middle"><b><%--<%if(TotalPRS!=0)%><%=GenUtil.strNumericFormat(TotalPRS.ToString())%>--%></b></td>
 										</tr>
 									</table>
 								</td>

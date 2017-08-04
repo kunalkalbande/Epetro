@@ -199,12 +199,22 @@ namespace EPetro.Module.Admin
                 MessageBox.Show(errorMessage.ToString());
                 return;
             }
+            //string passwordLength;
+            
             EmployeeClass obj=new EmployeeClass();
 			int x=0;
 			try
 			{
-				#region check the username is exist or not?
-				dbobj.ExecuteScalar("select count(*) from user_master where loginname='"+txtLoginName.Text.Trim()+"'",ref x);
+                int passwordLength = txtPassword.Text.Length;
+                if (passwordLength < 5)
+                {
+                    txtPassword.Text = string.Empty;
+                    MessageBox.Show("Password length Minimum 5 Maximum 30 characters allowed");
+                    return;
+                }
+                
+                #region check the username is exist or not?
+                dbobj.ExecuteScalar("select count(*) from user_master where loginname='"+txtLoginName.Text.Trim()+"'",ref x);
 				if(x>0)
 				{
 					if(dropUserID.Visible)
