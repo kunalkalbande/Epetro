@@ -29,14 +29,14 @@
 		if(value == "Other")
 		{
 		//alert("if")
-		document.Form1.txtMachineName.disabled = false;
+		document.all.txtMachineName.disabled = false;
 		return false;
 		}
 		else
 		{
 		//alert("else")
-		document.Form1.txtMachineName.disabled = true;
-		document.Form1.txtMachineName.value = "";
+		document.all.txtMachineName.disabled = true;
+		document.all.txtMachineName.value = "";
 		
 		return false;
 		}
