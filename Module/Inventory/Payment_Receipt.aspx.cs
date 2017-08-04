@@ -1083,375 +1083,392 @@ payment against Bill details given on account of your supply.
 		/// </summary>
 		private void btnSave_Click(object sender, System.EventArgs e)
 		{
-			//			try
-			//			{
-			//				InventoryClass  obj=new InventoryClass();
-			//				SqlDataReader SqlDtr=null;
-			//				double rec_amount;
-			//				double Amount=0;
-			//				double balance;
-			//				string Receipt="Save";
-			//				string Acc_Type = "";
-			//				string _CustName;
-			//				string _City;
-			//				string Cust_ID;
-			//				int f = 0;
-			//				_CustName=DropCustName.SelectedItem.Value;
-			//				_City=txtCity.Text; 
-			//				checkAccount(); 
-			//				if(DropMode.SelectedItem.Text.Equals("Cash"))
-			//				{
-			//					Acc_Type = "Cash in hand";
-			//					if(f1 == 0)
-			//					{
-			//						MessageBox.Show("Cash Account not created");
-			//						return;
-			//					}
-			//				}
-			//				else
-			//				{
-			//					Acc_Type = "Bank";
-			//					if(f2 == 0)
-			//					{
-			//						MessageBox.Show("Bank Account not created");
-			//						return;
-			//					}
-			//				}
-			//
-			//				if(f1 == 0 && f2==0)
-			//				{
-			//					MessageBox.Show("Cash and Bank Accounts are not created");
-			//					return;
-			//				}
-			//				//*********************************************
-			//				if(PanReceiptNo.Visible==true)
-			//				{
-			//					Receipt="Update";
-			//					/**Mahesh
-			//					double TempAmt=double.Parse(Cache["RecAmt"].ToString());
-			//					double ActAmt=double.Parse(txtRecAmount.Text);
-			//					//if(ActAmt > TempAmt)
-			//						Amount=ActAmt-TempAmt;
-			//					Mahesh**/
-			//					Amount=double.Parse(txtRecAmount.Text);
-			//					//*******Maheshend
-			//					//else if(Actamt < TempAmt)
-			//					//	Amount=TempAmt-ActAmt;
-			//					//else if(ActAmt == TempAmt)
-			//					//	Amount=0;
-			//				}
-			//				string	sql="select Cust_ID from Customer where Cust_Name='"+ _CustName+"' and City = '"+_City+"'";  
-			//				SqlDtr = obj.GetRecordSet(sql);
-			//				if(SqlDtr.Read())
-			//					Cust_ID =SqlDtr.GetValue(0).ToString();
-			//				else
-			//					Cust_ID = "0";
-			//				SqlDtr.Close ();
-			//				rec_amount=System.Convert.ToDouble(txtRecAmount.Text);
-			//				obj.BankName=txtBankName.Text.Trim().ToString();
-			//				obj.ChequeNo=txtChequeno.Text.Trim().ToString();
-			//				obj.Mode=DropMode.SelectedItem.Text;
-			//				obj.ChequeDate=GenUtil.str2MMDDYYYY(txtDate.Text.Trim().ToString());
-			//				obj.Receipt=Receipt;
-			//				obj.Cust_ID=Cust_ID;
-			//				obj.Narration=txtNar.Text;
-			//				
-			//				//obj.AccType=Acc_Type;
-			//				//*********************************************
-			//				// Check Amount payment from Ledger Account or from Customer.
-			//				dbobj.SelectQuery("select Ledger_ID  from Cust_Ledger where Party_Name  = '"+_CustName+"' and Ledger_Id != ''",ref SqlDtr); 
-			//				if(SqlDtr.HasRows)
-			//				{
-			//					string Ledger_ID = "";
-			//					rec_amount = 0;
-			//					if(SqlDtr.Read())
-			//					{
-			//						Ledger_ID = SqlDtr["Ledger_ID"].ToString();
-			//					}
-			//					rec_amount=System.Convert.ToDouble(txtRecAmount.Text);
-			//					object op = null;
-			//					f= 2;
-			//					MakingReport(f);
-			//					SqlDtr=obj.GetRecordSet("select Bill_No,Amount from LedgDetails where cust_id = '"+Cust_ID+"' and Amount > 0");
-			//					//print();
-			//					//call procedure to insert the record into payment_Receipt and voucher_transaction tables.
-			//					if(PanReceiptNo.Visible==true)
-			//					{
-			//						int x =0;
-			//						dbobj.Insert_or_Update("delete from Payment_Receipt where Receipt_No='"+DropReceiptNo.SelectedItem.Text+"'",ref x);
-			//						dbobj.Insert_or_Update("delete from AccountsLedgerTable where Particulars='Receipt ("+DropReceiptNo.SelectedItem.Text+")'",ref x);
-			//						dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",Amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@Receipt_No",DropReceiptNo.SelectedItem.Text);
-			//						//dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",Amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@RecDate",RecDate);
-			//					}
-			//					else
-			//						dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",rec_amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@Receipt_No",0);
-			//						//dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",rec_amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@RecDate",DateTime.Now.ToString());
-			//					if(PanReceiptNo.Visible==true)
-			//						MessageBox.Show("Payment Receipt Updated");
-			//					else
-			//						MessageBox.Show("Payment Receipt Saved");
-			//					Clear();
-			//				}
-			//				else
-			//				{
-			//					f = 1 ;
-			//					MakingReport(f);
-			//					
-			//					//rec_amount=System.Convert.ToDouble(txtRecAmount.Text);
-			//					//obj.BankName=txtBankName.Text.Trim().ToString();
-			//					//obj.ChequeNo=txtChequeno.Text.Trim().ToString();
-			//					//obj.Mode=DropMode.SelectedItem.Text;
-			//					//obj.ChequeDate=GenUtil.str2MMDDYYYY(txtDate.Text.Trim().ToString());
-			//					//obj.Receipt=Receipt;
-			//					//obj.Cust_ID=Cust_ID;
-			//					//obj.Narration=txtNar.Text;
-			//					SqlDtr=obj.GetRecordSet("select Bill_No,Amount from LedgDetails where cust_id = '"+Cust_ID+"' and Amount > 0");//GetInvoiceBalance(DropCustName.SelectedItem.Value,txtCity.Text);
-			//					if(SqlDtr.HasRows)
-			//					{
-			//						while(SqlDtr.Read())
-			//						{
-			//							if (SqlDtr.GetValue(1).ToString().Equals(""))
-			//							{
-			//								balance=00.00;
-			//							}
-			//							else
-			//								balance=System.Convert.ToDouble(SqlDtr.GetValue(1).ToString());
-			//							if(PanReceiptNo.Visible==true)
-			//							{
-			//								if(balance>=Amount)
-			//								{
-			//									obj.Received_No =DropReceiptNo.SelectedItem.Text;
-			//									obj.Invoice_No= SqlDtr.GetValue(0).ToString();
-			//									obj.Received_Amount=txtRecAmount.Text.ToString(); 
-			//									obj.Actual_Amount = balance.ToString();
-			//									obj.InsertPaymentReceived();
-			//									int q=0;
-			//									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+(balance - Amount)+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
-			//									break;
-			//								}
-			//								else
-			//								{
-			//									obj.Received_No=DropReceiptNo.SelectedItem.Text;;
-			//									obj.Invoice_No=SqlDtr.GetValue(0).ToString();
-			//									obj.Received_Amount=balance.ToString();
-			//									obj.Actual_Amount = balance.ToString() ;
-			//									obj.InsertPaymentReceived();
-			//									rec_amount = Amount-balance; 
-			//									int q=0;
-			//									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+0+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
-			//					
-			//								}
-			//							}
-			//							else
-			//							{
-			//								if(balance>=rec_amount)
-			//								{
-			//									obj.Received_No ="";
-			//									obj.Invoice_No= SqlDtr.GetValue(0).ToString();
-			//									obj.Received_Amount=rec_amount.ToString(); 
-			//									obj.Actual_Amount = balance.ToString();
-			//									obj.InsertPaymentReceived();
-			//									int q=0;
-			//									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+(balance - rec_amount)+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
-			//									break;
-			//								}
-			//								else
-			//								{
-			//									obj.Received_No="";
-			//									obj.Invoice_No=SqlDtr.GetValue(0).ToString();
-			//									obj.Received_Amount=balance.ToString();
-			//									obj.Actual_Amount = balance.ToString() ;
-			//									obj.InsertPaymentReceived();
-			//									rec_amount = rec_amount-balance; 
-			//									int q=0;
-			//									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+0+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
-			//					
-			//								}
-			//							}
-			//						}
-			//					}
-			//					else
-			//					{
-			//						if(PanReceiptNo.Visible==true)
-			//						{
-			//							obj.Received_No=DropReceiptNo.SelectedItem.Text;
-			//							obj.Invoice_No="";
-			//							obj.Received_Amount=txtRecAmount.Text;
-			//							obj.Actual_Amount = txtRecAmount.Text;
-			//							obj.InsertPaymentReceived();
-			//						}
-			//						else
-			//						{
-			//							obj.Received_No="";
-			//							obj.Invoice_No="";
-			//							obj.Received_Amount=txtRecAmount.Text;
-			//							obj.Actual_Amount = txtRecAmount.Text;
-			//							obj.InsertPaymentReceived();
-			//						}
-			//					}
-			//					SqlDtr.Close();
-			//					obj.Customer_Name=DropCustName.SelectedItem.Value;
-			//					obj.Place=txtCity.Text.ToString();			
-			//					if(PanReceiptNo.Visible==true)
-			//						obj.Cr_Plus=Amount.ToString();
-			//					else
-			//						obj.Cr_Plus=txtRecAmount.Text.ToString();
-			//					obj.Dr_Plus="0";
-			//					obj.UpdateCustomerBalance();
-			//					object op=null;
-			//					//Call the procedure to enter the Payment details into customerLedgerTable.
-			//					//if(Amount < 0)
-			//					//{
-			//					//	string str=Amount.ToString();
-			//					//	string[] str1=str.Split(new char[] {'-'},str.Length);
-			//					//	Amount=double.Parse(str1[1]);
-			//					//}
-			//					if(PanReceiptNo.Visible==true)
-			//						//dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", Amount,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",int.Parse(DropReceiptNo.SelectedItem.Text),"@RecDate",RecDate);
-			//						dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", Amount,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",int.Parse(DropReceiptNo.SelectedItem.Text));
-			//					else
-			//						//dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", float.Parse(txtRecAmount.Text),"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No","","@RecDate",DateTime.Now.ToString());
-			//						dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", float.Parse(txtRecAmount.Text),"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No","");
-			//					//***********************
-			//					if(PanReceiptNo.Visible==true)
-			//					{
-			//						SqlDataReader rdr=null;
-			//						SqlCommand cmd;
-			//						SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["EPetro"]);
-			//						string str="select * from AccountsLedgerTable where Ledger_ID=(select Ledger_ID from Ledger_Master where Ledger_Name='"+DropCustName.SelectedItem.Text+"') order by entry_date";
-			//						//string str="select * from AccountsLedgerTable where Ledger_ID=(select Ledger_ID from Ledger_Master where sub_grp_id=118) order by entry_date";
-			//						rdr=obj.GetRecordSet(str);
-			//						double Bal=0;
-			//						string BalType="";
-			//						int i=0;
-			//						while(rdr.Read())
-			//						{
-			//							if(i==0)
-			//							{
-			//								BalType=rdr["Bal_Type"].ToString();
-			//								i++;
-			//							}
-			//							if(double.Parse(rdr["Credit_Amount"].ToString())!=0)
-			//							{
-			//								if(BalType=="Cr")
-			//								{
-			//									Bal+=double.Parse(rdr["Credit_Amount"].ToString());
-			//									BalType="Cr";
-			//								}
-			//								else
-			//								{
-			//									Bal-=double.Parse(rdr["Credit_Amount"].ToString());
-			//									if(Bal<0)
-			//									{
-			//										Bal=double.Parse(Bal.ToString().Substring(1));
-			//										BalType="Cr";
-			//									}
-			//									else
-			//										BalType="Dr";
-			//								}
-			//							}
-			//							else if(double.Parse(rdr["Debit_Amount"].ToString())!=0)
-			//							{
-			//								if(BalType=="Dr")
-			//									Bal+=double.Parse(rdr["Debit_Amount"].ToString());
-			//								else
-			//								{
-			//									Bal-=double.Parse(rdr["Debit_Amount"].ToString());
-			//									if(Bal<0)
-			//									{
-			//										Bal=double.Parse(Bal.ToString().Substring(1));
-			//										BalType="Dr";
-			//									}
-			//									else
-			//										BalType="Cr";
-			//								}
-			//							}
-			//							Con.Open();
-			//							cmd = new SqlCommand("update AccountsLedgerTable set Balance='"+Bal.ToString()+"',Bal_Type='"+BalType+"' where Ledger_ID='"+rdr["Ledger_ID"].ToString()+"' and Particulars='"+rdr["Particulars"].ToString()+"' ",Con);
-			//							cmd.ExecuteNonQuery();
-			//							cmd.Dispose();
-			//							Con.Close();
-			//							
-			//						}
-			//						rdr.Close();
-			//						//SeqCashAccount();
-			//						//****************
-			//						string str1="select * from CustomerLedgerTable where CustID=(select Cust_ID from Customer where Cust_Name='"+DropCustName.SelectedItem.Text+"') order by entrydate";
-			//						rdr=obj.GetRecordSet(str1);
-			//						Bal=0;
-			//						i=0;
-			//						BalType="";
-			//						while(rdr.Read())
-			//						{
-			//							if(i==0)
-			//							{
-			//								BalType=rdr["BalanceType"].ToString();
-			//								i++;
-			//							}
-			//							if(double.Parse(rdr["CreditAmount"].ToString())!=0)
-			//							{
-			//								if(BalType=="Cr.")
-			//								{
-			//									Bal+=double.Parse(rdr["CreditAmount"].ToString());
-			//									BalType="Cr.";
-			//								}
-			//								else
-			//								{
-			//									Bal-=double.Parse(rdr["CreditAmount"].ToString());
-			//									if(Bal<0)
-			//									{
-			//										Bal=double.Parse(Bal.ToString().Substring(1));
-			//										BalType="Cr.";
-			//									}
-			//									else
-			//										BalType="Dr.";
-			//								}
-			//							}
-			//							else if(double.Parse(rdr["DebitAmount"].ToString())!=0)
-			//							{
-			//								if(BalType=="Dr.")
-			//									Bal+=double.Parse(rdr["DebitAmount"].ToString());
-			//								else
-			//								{
-			//									Bal-=double.Parse(rdr["DebitAmount"].ToString());
-			//									if(Bal<0)
-			//									{
-			//										Bal=double.Parse(Bal.ToString().Substring(1));
-			//										BalType="Dr.";
-			//									}
-			//									else
-			//										BalType="Cr.";
-			//								}
-			//							}
-			//							Con.Open();
-			//							cmd = new SqlCommand("update CustomerLedgerTable set Balance='"+Bal.ToString()+"',BalanceType='"+BalType+"' where CustID='"+rdr["CustID"].ToString()+"' and Particular='"+rdr["Particular"].ToString()+"'",Con);
-			//							cmd.ExecuteNonQuery();
-			//							cmd.Dispose();
-			//							Con.Close();
-			//						}
-			//						rdr.Close();
-			//					}
-			//					//***********************
-			//					//print();
-			//					if(PanReceiptNo.Visible==true)
-			//						MessageBox.Show("Payment Receipt Updated");
-			//					else
-			//						MessageBox.Show("Payment Receipt Save");
-			//					Clear();
-			//					CreateLogFiles.ErrorLog("Form:Payment_Receipt.aspx,Class:InventoryClass.cs,Method:btnSaved_Clicked  Payment receipt saved. User_ID: " +uid);
-			//					GridDuePayment.DataSource = null;
-			//					GridDuePayment.DataBind(); 
-			//				}
-			//				checkPrevileges();
-			//				PanBankInfo.Visible=false;
-			//				PanReceiptNo.Visible=false;
-			//				btnSave.Text="Save";
-			//			}
-			//			catch(Exception ex)
-			//			{
-			//				CreateLogFiles.ErrorLog("Form:Payment_Receipt.aspx,Class:InventoryClass.cs,Method:btnSaved_Clicked "+"   EXCEPTION " +ex.Message +" "+ ex.StackTrace   +uid);
-			//			}
-			try
+            //			try
+            //			{
+            //				InventoryClass  obj=new InventoryClass();
+            //				SqlDataReader SqlDtr=null;
+            //				double rec_amount;
+            //				double Amount=0;
+            //				double balance;
+            //				string Receipt="Save";
+            //				string Acc_Type = "";
+            //				string _CustName;
+            //				string _City;
+            //				string Cust_ID;
+            //				int f = 0;
+            //				_CustName=DropCustName.SelectedItem.Value;
+            //				_City=txtCity.Text; 
+            //				checkAccount(); 
+            //				if(DropMode.SelectedItem.Text.Equals("Cash"))
+            //				{
+            //					Acc_Type = "Cash in hand";
+            //					if(f1 == 0)
+            //					{
+            //						MessageBox.Show("Cash Account not created");
+            //						return;
+            //					}
+            //				}
+            //				else
+            //				{
+            //					Acc_Type = "Bank";
+            //					if(f2 == 0)
+            //					{
+            //						MessageBox.Show("Bank Account not created");
+            //						return;
+            //					}
+            //				}
+            //
+            //				if(f1 == 0 && f2==0)
+            //				{
+            //					MessageBox.Show("Cash and Bank Accounts are not created");
+            //					return;
+            //				}
+            //				//*********************************************
+            //				if(PanReceiptNo.Visible==true)
+            //				{
+            //					Receipt="Update";
+            //					/**Mahesh
+            //					double TempAmt=double.Parse(Cache["RecAmt"].ToString());
+            //					double ActAmt=double.Parse(txtRecAmount.Text);
+            //					//if(ActAmt > TempAmt)
+            //						Amount=ActAmt-TempAmt;
+            //					Mahesh**/
+            //					Amount=double.Parse(txtRecAmount.Text);
+            //					//*******Maheshend
+            //					//else if(Actamt < TempAmt)
+            //					//	Amount=TempAmt-ActAmt;
+            //					//else if(ActAmt == TempAmt)
+            //					//	Amount=0;
+            //				}
+            //				string	sql="select Cust_ID from Customer where Cust_Name='"+ _CustName+"' and City = '"+_City+"'";  
+            //				SqlDtr = obj.GetRecordSet(sql);
+            //				if(SqlDtr.Read())
+            //					Cust_ID =SqlDtr.GetValue(0).ToString();
+            //				else
+            //					Cust_ID = "0";
+            //				SqlDtr.Close ();
+            //				rec_amount=System.Convert.ToDouble(txtRecAmount.Text);
+            //				obj.BankName=txtBankName.Text.Trim().ToString();
+            //				obj.ChequeNo=txtChequeno.Text.Trim().ToString();
+            //				obj.Mode=DropMode.SelectedItem.Text;
+            //				obj.ChequeDate=GenUtil.str2MMDDYYYY(txtDate.Text.Trim().ToString());
+            //				obj.Receipt=Receipt;
+            //				obj.Cust_ID=Cust_ID;
+            //				obj.Narration=txtNar.Text;
+            //				
+            //				//obj.AccType=Acc_Type;
+            //				//*********************************************
+            //				// Check Amount payment from Ledger Account or from Customer.
+            //				dbobj.SelectQuery("select Ledger_ID  from Cust_Ledger where Party_Name  = '"+_CustName+"' and Ledger_Id != ''",ref SqlDtr); 
+            //				if(SqlDtr.HasRows)
+            //				{
+            //					string Ledger_ID = "";
+            //					rec_amount = 0;
+            //					if(SqlDtr.Read())
+            //					{
+            //						Ledger_ID = SqlDtr["Ledger_ID"].ToString();
+            //					}
+            //					rec_amount=System.Convert.ToDouble(txtRecAmount.Text);
+            //					object op = null;
+            //					f= 2;
+            //					MakingReport(f);
+            //					SqlDtr=obj.GetRecordSet("select Bill_No,Amount from LedgDetails where cust_id = '"+Cust_ID+"' and Amount > 0");
+            //					//print();
+            //					//call procedure to insert the record into payment_Receipt and voucher_transaction tables.
+            //					if(PanReceiptNo.Visible==true)
+            //					{
+            //						int x =0;
+            //						dbobj.Insert_or_Update("delete from Payment_Receipt where Receipt_No='"+DropReceiptNo.SelectedItem.Text+"'",ref x);
+            //						dbobj.Insert_or_Update("delete from AccountsLedgerTable where Particulars='Receipt ("+DropReceiptNo.SelectedItem.Text+")'",ref x);
+            //						dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",Amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@Receipt_No",DropReceiptNo.SelectedItem.Text);
+            //						//dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",Amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@RecDate",RecDate);
+            //					}
+            //					else
+            //						dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",rec_amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@Receipt_No",0);
+            //						//dbobj.ExecProc(OprType.Insert,"InsertPayment",ref op,"@Ledger_ID",Ledger_ID,"@amount",rec_amount,"@Acc_Type",Acc_Type,"@BankName",txtBankName.Text,"@ChNo",txtChequeno.Text,"@Chdate",GenUtil.str2MMDDYYYY(txtDate.Text),"@Mode",DropMode.SelectedItem.Text,"@CustID",Cust_ID,"@Narration",txtNar.Text,"@RecDate",DateTime.Now.ToString());
+            //					if(PanReceiptNo.Visible==true)
+            //						MessageBox.Show("Payment Receipt Updated");
+            //					else
+            //						MessageBox.Show("Payment Receipt Saved");
+            //					Clear();
+            //				}
+            //				else
+            //				{
+            //					f = 1 ;
+            //					MakingReport(f);
+            //					
+            //					//rec_amount=System.Convert.ToDouble(txtRecAmount.Text);
+            //					//obj.BankName=txtBankName.Text.Trim().ToString();
+            //					//obj.ChequeNo=txtChequeno.Text.Trim().ToString();
+            //					//obj.Mode=DropMode.SelectedItem.Text;
+            //					//obj.ChequeDate=GenUtil.str2MMDDYYYY(txtDate.Text.Trim().ToString());
+            //					//obj.Receipt=Receipt;
+            //					//obj.Cust_ID=Cust_ID;
+            //					//obj.Narration=txtNar.Text;
+            //					SqlDtr=obj.GetRecordSet("select Bill_No,Amount from LedgDetails where cust_id = '"+Cust_ID+"' and Amount > 0");//GetInvoiceBalance(DropCustName.SelectedItem.Value,txtCity.Text);
+            //					if(SqlDtr.HasRows)
+            //					{
+            //						while(SqlDtr.Read())
+            //						{
+            //							if (SqlDtr.GetValue(1).ToString().Equals(""))
+            //							{
+            //								balance=00.00;
+            //							}
+            //							else
+            //								balance=System.Convert.ToDouble(SqlDtr.GetValue(1).ToString());
+            //							if(PanReceiptNo.Visible==true)
+            //							{
+            //								if(balance>=Amount)
+            //								{
+            //									obj.Received_No =DropReceiptNo.SelectedItem.Text;
+            //									obj.Invoice_No= SqlDtr.GetValue(0).ToString();
+            //									obj.Received_Amount=txtRecAmount.Text.ToString(); 
+            //									obj.Actual_Amount = balance.ToString();
+            //									obj.InsertPaymentReceived();
+            //									int q=0;
+            //									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+(balance - Amount)+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
+            //									break;
+            //								}
+            //								else
+            //								{
+            //									obj.Received_No=DropReceiptNo.SelectedItem.Text;;
+            //									obj.Invoice_No=SqlDtr.GetValue(0).ToString();
+            //									obj.Received_Amount=balance.ToString();
+            //									obj.Actual_Amount = balance.ToString() ;
+            //									obj.InsertPaymentReceived();
+            //									rec_amount = Amount-balance; 
+            //									int q=0;
+            //									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+0+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
+            //					
+            //								}
+            //							}
+            //							else
+            //							{
+            //								if(balance>=rec_amount)
+            //								{
+            //									obj.Received_No ="";
+            //									obj.Invoice_No= SqlDtr.GetValue(0).ToString();
+            //									obj.Received_Amount=rec_amount.ToString(); 
+            //									obj.Actual_Amount = balance.ToString();
+            //									obj.InsertPaymentReceived();
+            //									int q=0;
+            //									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+(balance - rec_amount)+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
+            //									break;
+            //								}
+            //								else
+            //								{
+            //									obj.Received_No="";
+            //									obj.Invoice_No=SqlDtr.GetValue(0).ToString();
+            //									obj.Received_Amount=balance.ToString();
+            //									obj.Actual_Amount = balance.ToString() ;
+            //									obj.InsertPaymentReceived();
+            //									rec_amount = rec_amount-balance; 
+            //									int q=0;
+            //									dbobj.Insert_or_Update("Update LedgDetails set Amount = "+0+" where Bill_No = '"+SqlDtr.GetValue(0).ToString()+"' and Cust_ID='"+Cust_ID+"'",ref q);
+            //					
+            //								}
+            //							}
+            //						}
+            //					}
+            //					else
+            //					{
+            //						if(PanReceiptNo.Visible==true)
+            //						{
+            //							obj.Received_No=DropReceiptNo.SelectedItem.Text;
+            //							obj.Invoice_No="";
+            //							obj.Received_Amount=txtRecAmount.Text;
+            //							obj.Actual_Amount = txtRecAmount.Text;
+            //							obj.InsertPaymentReceived();
+            //						}
+            //						else
+            //						{
+            //							obj.Received_No="";
+            //							obj.Invoice_No="";
+            //							obj.Received_Amount=txtRecAmount.Text;
+            //							obj.Actual_Amount = txtRecAmount.Text;
+            //							obj.InsertPaymentReceived();
+            //						}
+            //					}
+            //					SqlDtr.Close();
+            //					obj.Customer_Name=DropCustName.SelectedItem.Value;
+            //					obj.Place=txtCity.Text.ToString();			
+            //					if(PanReceiptNo.Visible==true)
+            //						obj.Cr_Plus=Amount.ToString();
+            //					else
+            //						obj.Cr_Plus=txtRecAmount.Text.ToString();
+            //					obj.Dr_Plus="0";
+            //					obj.UpdateCustomerBalance();
+            //					object op=null;
+            //					//Call the procedure to enter the Payment details into customerLedgerTable.
+            //					//if(Amount < 0)
+            //					//{
+            //					//	string str=Amount.ToString();
+            //					//	string[] str1=str.Split(new char[] {'-'},str.Length);
+            //					//	Amount=double.Parse(str1[1]);
+            //					//}
+            //					if(PanReceiptNo.Visible==true)
+            //						//dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", Amount,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",int.Parse(DropReceiptNo.SelectedItem.Text),"@RecDate",RecDate);
+            //						dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", Amount,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",int.Parse(DropReceiptNo.SelectedItem.Text));
+            //					else
+            //						//dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", float.Parse(txtRecAmount.Text),"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No","","@RecDate",DateTime.Now.ToString());
+            //						dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", float.Parse(txtRecAmount.Text),"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No","");
+            //					//***********************
+            //					if(PanReceiptNo.Visible==true)
+            //					{
+            //						SqlDataReader rdr=null;
+            //						SqlCommand cmd;
+            //						SqlConnection Con = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["EPetro"]);
+            //						string str="select * from AccountsLedgerTable where Ledger_ID=(select Ledger_ID from Ledger_Master where Ledger_Name='"+DropCustName.SelectedItem.Text+"') order by entry_date";
+            //						//string str="select * from AccountsLedgerTable where Ledger_ID=(select Ledger_ID from Ledger_Master where sub_grp_id=118) order by entry_date";
+            //						rdr=obj.GetRecordSet(str);
+            //						double Bal=0;
+            //						string BalType="";
+            //						int i=0;
+            //						while(rdr.Read())
+            //						{
+            //							if(i==0)
+            //							{
+            //								BalType=rdr["Bal_Type"].ToString();
+            //								i++;
+            //							}
+            //							if(double.Parse(rdr["Credit_Amount"].ToString())!=0)
+            //							{
+            //								if(BalType=="Cr")
+            //								{
+            //									Bal+=double.Parse(rdr["Credit_Amount"].ToString());
+            //									BalType="Cr";
+            //								}
+            //								else
+            //								{
+            //									Bal-=double.Parse(rdr["Credit_Amount"].ToString());
+            //									if(Bal<0)
+            //									{
+            //										Bal=double.Parse(Bal.ToString().Substring(1));
+            //										BalType="Cr";
+            //									}
+            //									else
+            //										BalType="Dr";
+            //								}
+            //							}
+            //							else if(double.Parse(rdr["Debit_Amount"].ToString())!=0)
+            //							{
+            //								if(BalType=="Dr")
+            //									Bal+=double.Parse(rdr["Debit_Amount"].ToString());
+            //								else
+            //								{
+            //									Bal-=double.Parse(rdr["Debit_Amount"].ToString());
+            //									if(Bal<0)
+            //									{
+            //										Bal=double.Parse(Bal.ToString().Substring(1));
+            //										BalType="Dr";
+            //									}
+            //									else
+            //										BalType="Cr";
+            //								}
+            //							}
+            //							Con.Open();
+            //							cmd = new SqlCommand("update AccountsLedgerTable set Balance='"+Bal.ToString()+"',Bal_Type='"+BalType+"' where Ledger_ID='"+rdr["Ledger_ID"].ToString()+"' and Particulars='"+rdr["Particulars"].ToString()+"' ",Con);
+            //							cmd.ExecuteNonQuery();
+            //							cmd.Dispose();
+            //							Con.Close();
+            //							
+            //						}
+            //						rdr.Close();
+            //						//SeqCashAccount();
+            //						//****************
+            //						string str1="select * from CustomerLedgerTable where CustID=(select Cust_ID from Customer where Cust_Name='"+DropCustName.SelectedItem.Text+"') order by entrydate";
+            //						rdr=obj.GetRecordSet(str1);
+            //						Bal=0;
+            //						i=0;
+            //						BalType="";
+            //						while(rdr.Read())
+            //						{
+            //							if(i==0)
+            //							{
+            //								BalType=rdr["BalanceType"].ToString();
+            //								i++;
+            //							}
+            //							if(double.Parse(rdr["CreditAmount"].ToString())!=0)
+            //							{
+            //								if(BalType=="Cr.")
+            //								{
+            //									Bal+=double.Parse(rdr["CreditAmount"].ToString());
+            //									BalType="Cr.";
+            //								}
+            //								else
+            //								{
+            //									Bal-=double.Parse(rdr["CreditAmount"].ToString());
+            //									if(Bal<0)
+            //									{
+            //										Bal=double.Parse(Bal.ToString().Substring(1));
+            //										BalType="Cr.";
+            //									}
+            //									else
+            //										BalType="Dr.";
+            //								}
+            //							}
+            //							else if(double.Parse(rdr["DebitAmount"].ToString())!=0)
+            //							{
+            //								if(BalType=="Dr.")
+            //									Bal+=double.Parse(rdr["DebitAmount"].ToString());
+            //								else
+            //								{
+            //									Bal-=double.Parse(rdr["DebitAmount"].ToString());
+            //									if(Bal<0)
+            //									{
+            //										Bal=double.Parse(Bal.ToString().Substring(1));
+            //										BalType="Dr.";
+            //									}
+            //									else
+            //										BalType="Cr.";
+            //								}
+            //							}
+            //							Con.Open();
+            //							cmd = new SqlCommand("update CustomerLedgerTable set Balance='"+Bal.ToString()+"',BalanceType='"+BalType+"' where CustID='"+rdr["CustID"].ToString()+"' and Particular='"+rdr["Particular"].ToString()+"'",Con);
+            //							cmd.ExecuteNonQuery();
+            //							cmd.Dispose();
+            //							Con.Close();
+            //						}
+            //						rdr.Close();
+            //					}
+            //					//***********************
+            //					//print();
+            //					if(PanReceiptNo.Visible==true)
+            //						MessageBox.Show("Payment Receipt Updated");
+            //					else
+            //						MessageBox.Show("Payment Receipt Save");
+            //					Clear();
+            //					CreateLogFiles.ErrorLog("Form:Payment_Receipt.aspx,Class:InventoryClass.cs,Method:btnSaved_Clicked  Payment receipt saved. User_ID: " +uid);
+            //					GridDuePayment.DataSource = null;
+            //					GridDuePayment.DataBind(); 
+            //				}
+            //				checkPrevileges();
+            //				PanBankInfo.Visible=false;
+            //				PanReceiptNo.Visible=false;
+            //				btnSave.Text="Save";
+            //			}
+            //			catch(Exception ex)
+            //			{
+            //				CreateLogFiles.ErrorLog("Form:Payment_Receipt.aspx,Class:InventoryClass.cs,Method:btnSaved_Clicked "+"   EXCEPTION " +ex.Message +" "+ ex.StackTrace   +uid);
+            //			}
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropCustName.SelectedIndex == 0)
+            {
+                errorMessage.Append("- Please Select Party Name");
+                errorMessage.Append("\n");
+            }
+            if (txtRecAmount.Text == string.Empty)
+            {
+                errorMessage.Append("- Please Fill Received Amount");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+
+            try
 			{
 				SaveUpdate();
 				

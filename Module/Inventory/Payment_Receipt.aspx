@@ -16,7 +16,7 @@
 		<script language="javascript">
 function GetFinalDues()
 {
-	var f=document.Form1
+	var f=document.forms[0]
 	f.txtFinalDues.value=""
 	f.txtCr.value=""
 	f.Textbox2.value=""
@@ -93,14 +93,14 @@ function makeRound(t)
 
 function checkDelRec()
 {
-	if(document.Form1.DropReceiptNo != null)
+	if(document.forms[0].DropReceiptNo != null)
 	{
-		if(document.Form1.DropReceiptNo.value!="Select")
+		if(document.forms[0].DropReceiptNo.value!="Select")
 		{
 			if(confirm("Do You Want To Delete The Product"))
-				document.Form1.tempReceiptInfo.value="Yes";
+				document.forms[0].tempReceiptInfo.value="Yes";
 			else
-				document.Form1.tempReceiptInfo.value="No";
+				document.forms[0].tempReceiptInfo.value="No";
 		}
 		else
 		{
@@ -113,32 +113,32 @@ function checkDelRec()
 		alert("Please Click The Edit button");
 		return;
 	}
-	if(document.Form1.tempReceiptInfo.value=="Yes")
-		document.Form1.submit();
+	if(document.forms[0].tempReceiptInfo.value=="Yes")
+		document.forms[0].submit();
 }
 
 function chkSelect(t)
 {
 	if(t.value=="Select")
 	{
-		document.Form1.txtDisc1.disabled=true;
-		document.Form1.txtDisc1.value="";
+		document.forms[0].txtDisc1.disabled=true;
+		document.forms[0].txtDisc1.value="";
 		GetFinalDues();
 	}
 	else
-		document.Form1.txtDisc1.disabled=false;
+		document.forms[0].txtDisc1.disabled=false;
 }
 
 function chkSelect1(t)
 {
 	if(t.value=="Select")
 	{
-		document.Form1.txtDisc2.disabled=true;
-		document.Form1.txtDisc2.value="";
+		document.forms[0].txtDisc2.disabled=true;
+		document.forms[0].txtDisc2.value="";
 		GetFinalDues();
 	}
 	else
-		document.Form1.txtDisc2.disabled=false;
+		document.forms[0].txtDisc2.disabled=false;
 }
 		</script>
 		<script language="javascript" id="Validations" src="../../Sysitem/Js/Validations.js"></script>
@@ -176,7 +176,7 @@ function chkSelect1(t)
 					<TD width="15%"></TD>
 					<TD width="70%">Received with thanks from&nbsp;&nbsp;<STRONG>&nbsp; <FONT color="#ff0000">*</FONT>
 							<asp:comparevalidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Party Name" ControlToValidate="DropCustName"
-								Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator></STRONG>&nbsp;&nbsp;
+								Operator="NotEqual" ValueToCompare="Select" ForeColor="#ff0000">*</asp:comparevalidator></STRONG>&nbsp;&nbsp;
 						<asp:dropdownlist id="DropCustName" runat="server" Width="250px" AutoPostBack="True" CssClass="FontStyle">
 							<asp:ListItem Value="Select">Select</asp:ListItem>
 						</asp:dropdownlist><asp:textbox id="txtCity" runat="server" Width="104px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox></TD>
@@ -229,7 +229,7 @@ function chkSelect1(t)
 											<TD>Mode</TD>
 											<TD>Amount&nbsp; <FONT color="#ff0000">*</FONT>
 												<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill Received Amount"
-													ControlToValidate="txtRecAmount">*</asp:requiredfieldvalidator></TD>
+													ControlToValidate="txtRecAmount" ForeColor="#ff0000">*</asp:requiredfieldvalidator></TD>
 										</TR>
 										<TR>
 											<TD style="HEIGHT: 16px"><asp:dropdownlist id="DropMode" runat="server" AutoPostBack="True" CssClass="FontStyle">
