@@ -80,7 +80,7 @@
 	
 	function selectAll()
 	{
-		var f=document.f1
+	    var f=document.forms[0]
 		if(f.chkSelectAll.checked)
 		{
 		   for(var i=0;i<f.length;i++)
@@ -111,7 +111,7 @@
 	  
 	  var flag=0
 	  var AnyChecked=0
-	  var f=document.f1
+	  var f=document.forms[0]
 	  // DO	NOT ADD/REMOVE ANY COMPONENT FROM THIS FORM
 	  // OTHERWISE CHANGE THE INCREMANTATION  FACTOR APPROPRIATELY
 	  for(var i=6;i<f.length;i=i+6)
@@ -186,7 +186,7 @@
 									<td bgcolor=#EEFFE9><input maxlength=8 disabled type=text size=10 name=txtSaleRate<%=Prod_No%> style="border-style:Groove; FONT-SIZE: 8pt; color=#4A3C8C;" onkeypress="return GetOnlyNumbers(this, event, false,true);" onBlur ="check1(this,txtPurRate<%=Prod_No%>,lblCat<%=Prod_No%>,lblProd_Name<%=Prod_No%>,chk<%=Prod_No%> );"></td> 
 								<% }
 								%>
-								<td align=center bgcolor=#EEFFE9><input type=checkbox name=chk<%=Prod_No%> onclick="enableText(this,document.f1.txtPurRate<%=Prod_No%>,document.f1.txtSaleRate<%=Prod_No%>);"></td>
+								<td align=center bgcolor=#EEFFE9><input type=checkbox name=chk<%=Prod_No%> onclick="enableText(this,document.forms[0].txtPurRate<%=Prod_No%>,document.forms[0].txtSaleRate<%=Prod_No%>);"></td>
 							</tr>
 							<%	Prod_No++;
 								}

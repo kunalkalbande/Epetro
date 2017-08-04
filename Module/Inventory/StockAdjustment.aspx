@@ -28,7 +28,7 @@ function calcPack(t,t1,t2,t3)
 t.value = "";
 var index = t2.selectedIndex;
 var typetext = t2.options[index].text;
-var temp = document.Form1.txtTemp1.value;  
+var temp = document.all.txtTemp1.value;  
 var temp1= "";
 var temp3 ="";
 var arr = new Array();
@@ -58,7 +58,7 @@ function checkStock(t,t1)
 {
 var index = t.selectedIndex;
 var typetext = t.options[index].text;
-var temp = document.Form1.txtQty.value;  
+var temp = document.all.txtQty.value;  
 var temp1= "";
 var arr = new Array();
 var arr1 = new Array();
@@ -118,110 +118,110 @@ var InPackTotal = 0;
 
 
   
-  if(document.Form1.txtOutQtyPack1.value != "")
+  if(document.all.txtOutQtyPack1.value != "")
   {
 
-  OutPackTotal = OutPackTotal+ eval(document.Form1.txtOutQtyPack1.value);
-  calcPack(document.Form1.txtOutQtyLtr1,document.Form1.txtOutQtyPack1,document.Form1.DropOutProd1,document.Form1.tmpOutQtyLtr1);
+  OutPackTotal = OutPackTotal+ eval(document.all.txtOutQtyPack1.value);
+  calcPack(document.all.txtOutQtyLtr1,document.all.txtOutQtyPack1,document.all.DropOutProd1,document.all.tmpOutQtyLtr1);
   }
   
-  if(document.Form1.txtOutQtyLtr1.value != "")
+  if(document.all.txtOutQtyLtr1.value != "")
   {
-    OutLtrTotal = OutLtrTotal+ eval(document.Form1.txtOutQtyLtr1.value);
+    OutLtrTotal = OutLtrTotal+ eval(document.all.txtOutQtyLtr1.value);
   }
   
-   if(document.Form1.txtOutQtyPack2.value != "")
-  {
-  
-  OutPackTotal = OutPackTotal+ eval(document.Form1.txtOutQtyPack2.value);
-  calcPack(document.Form1.txtOutQtyLtr2,document.Form1.txtOutQtyPack2,document.Form1.DropOutProd2,document.Form1.tmpOutQtyLtr2);
-  }
-  
-  if(document.Form1.txtOutQtyLtr2.value != "")
-  {
-  OutLtrTotal = OutLtrTotal+ eval(document.Form1.txtOutQtyLtr2.value);
-  }
-   if(document.Form1.txtOutQtyPack3.value != "")
+   if(document.all.txtOutQtyPack2.value != "")
   {
   
-   OutPackTotal = OutPackTotal+ eval(document.Form1.txtOutQtyPack3.value);
-  calcPack(document.Form1.txtOutQtyLtr3,document.Form1.txtOutQtyPack3,document.Form1.DropOutProd3,document.Form1.tmpOutQtyLtr3);
+  OutPackTotal = OutPackTotal+ eval(document.all.txtOutQtyPack2.value);
+  calcPack(document.all.txtOutQtyLtr2,document.all.txtOutQtyPack2,document.all.DropOutProd2,document.all.tmpOutQtyLtr2);
   }
   
-  if(document.Form1.txtOutQtyLtr3.value != "")
+  if(document.all.txtOutQtyLtr2.value != "")
   {
-  OutLtrTotal = OutLtrTotal+ eval(document.Form1.txtOutQtyLtr3.value);
+  OutLtrTotal = OutLtrTotal+ eval(document.all.txtOutQtyLtr2.value);
   }
-   if(document.Form1.txtOutQtyPack4.value != "")
-  {
-  
-  OutPackTotal = OutPackTotal+ eval(document.Form1.txtOutQtyPack4.value);
-  calcPack(document.Form1.txtOutQtyLtr4,document.Form1.txtOutQtyPack4,document.Form1.DropOutProd4,document.Form1.tmpOutQtyLtr4);
-  }
-  
-  if(document.Form1.txtOutQtyLtr4.value != "")
-  {
-    OutLtrTotal = OutLtrTotal+ eval(document.Form1.txtOutQtyLtr4.value);
-  }
-  
-  if(document.Form1.txtInQtyPack1.value != "")
+   if(document.all.txtOutQtyPack3.value != "")
   {
   
-  InPackTotal = InPackTotal+ eval(document.Form1.txtInQtyPack1.value);
-  calcPack(document.Form1.txtInQtyLtr1,document.Form1.txtInQtyPack1,document.Form1.DropInProd1,document.Form1.tmpInQtyLtr1 );
+   OutPackTotal = OutPackTotal+ eval(document.all.txtOutQtyPack3.value);
+  calcPack(document.all.txtOutQtyLtr3,document.all.txtOutQtyPack3,document.all.DropOutProd3,document.all.tmpOutQtyLtr3);
   }
   
-  if(document.Form1.txtInQtyLtr1.value != "")
+  if(document.all.txtOutQtyLtr3.value != "")
   {
-    InLtrTotal = InLtrTotal+ eval(document.Form1.txtInQtyLtr1.value);
+  OutLtrTotal = OutLtrTotal+ eval(document.all.txtOutQtyLtr3.value);
   }
-  
-  if(document.Form1.txtInQtyPack2.value != "")
-  {
-  
-  InPackTotal = InPackTotal+ eval(document.Form1.txtInQtyPack2.value);
-  calcPack(document.Form1.txtInQtyLtr2,document.Form1.txtInQtyPack2,document.Form1.DropInProd2,document.Form1.tmpInQtyLtr2);
-  }
-  
-  if(document.Form1.txtInQtyLtr2.value != "")
-  {
-    InLtrTotal = InLtrTotal+ eval(document.Form1.txtInQtyLtr2.value);
-  }
-  
-  if(document.Form1.txtInQtyPack3.value != "")
+   if(document.all.txtOutQtyPack4.value != "")
   {
   
-  InPackTotal = InPackTotal+ eval(document.Form1.txtInQtyPack3.value);
-  calcPack(document.Form1.txtInQtyLtr3,document.Form1.txtInQtyPack3,document.Form1.DropInProd3,document.Form1.tmpInQtyLtr3);
+  OutPackTotal = OutPackTotal+ eval(document.all.txtOutQtyPack4.value);
+  calcPack(document.all.txtOutQtyLtr4,document.all.txtOutQtyPack4,document.all.DropOutProd4,document.all.tmpOutQtyLtr4);
   }
   
-  if(document.Form1.txtInQtyLtr3.value != "")
+  if(document.all.txtOutQtyLtr4.value != "")
   {
-    InLtrTotal = InLtrTotal+ eval(document.Form1.txtInQtyLtr3.value);
-  }
-  if(document.Form1.txtInQtyPack4.value != "")
-  {
-  
-  InPackTotal = InPackTotal+ eval(document.Form1.txtInQtyPack4.value);
-  calcPack(document.Form1.txtInQtyLtr4,document.Form1.txtInQtyPack4,document.Form1.DropInProd4,document.Form1.tmpInQtyLtr4);
+    OutLtrTotal = OutLtrTotal+ eval(document.all.txtOutQtyLtr4.value);
   }
   
-  if(document.Form1.txtInQtyLtr4.value != "")
+  if(document.all.txtInQtyPack1.value != "")
   {
-    InLtrTotal = InLtrTotal+ eval(document.Form1.txtInQtyLtr4.value);
+  
+  InPackTotal = InPackTotal+ eval(document.all.txtInQtyPack1.value);
+  calcPack(document.all.txtInQtyLtr1,document.all.txtInQtyPack1,document.all.DropInProd1,document.all.tmpInQtyLtr1 );
   }
- document.Form1.txtTotalOutQtyLtr.value ="";
-  document.Form1.txtTotalOutQtyPack.value = "";
-   document.Form1.txtTotalInQtyLtr.value ="";
-  document.Form1.txtTotalInQtyPack.value = "";
-    document.Form1.txtTotalOutQtyLtr.value = OutLtrTotal;
-   makeRound( document.Form1.txtTotalOutQtyLtr);
-    document.Form1.txtTotalOutQtyPack.value = OutPackTotal;
-   makeRound( document.Form1.txtTotalOutQtyPack);
-      document.Form1.txtTotalInQtyLtr.value = InLtrTotal;
-   makeRound( document.Form1.txtTotalInQtyLtr);
-    document.Form1.txtTotalInQtyPack.value = InPackTotal;
-   makeRound( document.Form1.txtTotalInQtyPack);
+  
+  if(document.all.txtInQtyLtr1.value != "")
+  {
+    InLtrTotal = InLtrTotal+ eval(document.all.txtInQtyLtr1.value);
+  }
+  
+  if(document.all.txtInQtyPack2.value != "")
+  {
+  
+  InPackTotal = InPackTotal+ eval(document.all.txtInQtyPack2.value);
+  calcPack(document.all.txtInQtyLtr2,document.all.txtInQtyPack2,document.all.DropInProd2,document.all.tmpInQtyLtr2);
+  }
+  
+  if(document.all.txtInQtyLtr2.value != "")
+  {
+    InLtrTotal = InLtrTotal+ eval(document.all.txtInQtyLtr2.value);
+  }
+  
+  if(document.all.txtInQtyPack3.value != "")
+  {
+  
+  InPackTotal = InPackTotal+ eval(document.all.txtInQtyPack3.value);
+  calcPack(document.all.txtInQtyLtr3,document.all.txtInQtyPack3,document.all.DropInProd3,document.all.tmpInQtyLtr3);
+  }
+  
+  if(document.all.txtInQtyLtr3.value != "")
+  {
+    InLtrTotal = InLtrTotal+ eval(document.all.txtInQtyLtr3.value);
+  }
+  if(document.all.txtInQtyPack4.value != "")
+  {
+  
+  InPackTotal = InPackTotal+ eval(document.all.txtInQtyPack4.value);
+  calcPack(document.all.txtInQtyLtr4,document.all.txtInQtyPack4,document.all.DropInProd4,document.all.tmpInQtyLtr4);
+  }
+  
+  if(document.all.txtInQtyLtr4.value != "")
+  {
+    InLtrTotal = InLtrTotal+ eval(document.all.txtInQtyLtr4.value);
+  }
+ document.all.txtTotalOutQtyLtr.value ="";
+  document.all.txtTotalOutQtyPack.value = "";
+   document.all.txtTotalInQtyLtr.value ="";
+  document.all.txtTotalInQtyPack.value = "";
+    document.all.txtTotalOutQtyLtr.value = OutLtrTotal;
+   makeRound( document.all.txtTotalOutQtyLtr);
+    document.all.txtTotalOutQtyPack.value = OutPackTotal;
+   makeRound( document.all.txtTotalOutQtyPack);
+      document.all.txtTotalInQtyLtr.value = InLtrTotal;
+   makeRound( document.all.txtTotalInQtyLtr);
+    document.all.txtTotalInQtyPack.value = InPackTotal;
+   makeRound( document.all.txtTotalInQtyPack);
   
 }
 	function makeRound(t)
@@ -246,21 +246,21 @@ var InPackTotal = 0;
 	  var typetext = t.options[index].text;
 	  //alert(t.name);
 	  if(t.name == "dropAccName1")
-	     document.Form1.txtAccName1.value = typetext;
+	     document.all.txtAccName1.value = typetext;
 	  if(t.name == "dropAccName2")
-	     document.Form1.txtAccName2.value = typetext;
+	     document.all.txtAccName2.value = typetext;
 	  if(t.name == "dropAccName3")
-	     document.Form1.txtAccName3.value = typetext;
+	     document.all.txtAccName3.value = typetext;
 	  if(t.name == "dropAccName4")
-		document.Form1.txtAccName4.value = typetext;
+		document.all.txtAccName4.value = typetext;
 	  if(t.name == "dropAccName5")
-		document.Form1.txtAccName5.value = typetext;
+		document.all.txtAccName5.value = typetext;
 	  if(t.name == "dropAccName6")
-		document.Form1.txtAccName6.value = typetext;
+		document.all.txtAccName6.value = typetext;
 	  if(t.name == "dropAccName7")
-		document.Form1.txtAccName7.value = typetext;
+		document.all.txtAccName7.value = typetext;
 	  if(t.name == "dropAccName8")
-		document.Form1.txtAccName8.value = typetext;     
+		document.all.txtAccName8.value = typetext;     
 	       
 	   
 	}
@@ -274,7 +274,7 @@ var InPackTotal = 0;
 	   var index = t.selectedIndex;
 	  
 	   var typetext = t.options[index].text;
-	   var temp = document.Form1.txtTemp.value; 
+	   var temp = document.all.txtTemp.value; 
 	   var temp1="";
 	   var arr =new Array();
 	   var secArr = new Array();
@@ -372,47 +372,47 @@ var InPackTotal = 0;
 											</td>
 										</tr>
 										<tr>
-											<td align="left"><asp:dropdownlist id="DropOutProd1" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtOutStoreIn1,document.Form1.txtOutQtyPack1,document.Form1.txtOutQtyLtr1);"
+											<td align="left"><asp:dropdownlist id="DropOutProd1" runat="server" Width="224px" onChange="return setStore(this,document.all.txtOutStoreIn1,document.all.txtOutQtyPack1,document.all.txtOutQtyLtr1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></td>
 											<td><asp:textbox id="txtOutStoreIn1" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></td>
-											<td><asp:textbox id="txtOutQtyPack1" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd1,this);"
+											<td><asp:textbox id="txtOutQtyPack1" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd1,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></td>
-											<td><asp:textbox id="txtOutQtyLtr1" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd1,this);"
+											<td><asp:textbox id="txtOutQtyLtr1" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd1,this);"
 													CssClass="FontStyle"></asp:textbox></td>
 										</tr>
 										<TR>
-											<TD><asp:dropdownlist id="DropOutProd2" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtOutStoreIn2,document.Form1.txtOutQtyPack2,document.Form1.txtOutQtyLtr2);"
+											<TD><asp:dropdownlist id="DropOutProd2" runat="server" Width="224px" onChange="return setStore(this,document.all.txtOutStoreIn2,document.all.txtOutQtyPack2,document.all.txtOutQtyLtr2);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD><asp:textbox id="txtOutStoreIn2" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtOutQtyPack2" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd2,this);"
+											<TD><asp:textbox id="txtOutQtyPack2" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd2,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtOutQtyLtr2" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd2,this);"
+											<TD><asp:textbox id="txtOutQtyLtr2" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd2,this);"
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropOutProd3" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtOutStoreIn3,document.Form1.txtOutQtyPack3,document.Form1.txtOutQtyLtr3);"
+											<TD><asp:dropdownlist id="DropOutProd3" runat="server" Width="224px" onChange="return setStore(this,document.all.txtOutStoreIn3,document.all.txtOutQtyPack3,document.all.txtOutQtyLtr3);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD><asp:textbox id="txtOutStoreIn3" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtOutQtyPack3" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd3,this);"
+											<TD><asp:textbox id="txtOutQtyPack3" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd3,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtOutQtyLtr3" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd3,this);"
+											<TD><asp:textbox id="txtOutQtyLtr3" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd3,this);"
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropOutProd4" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtOutStoreIn4,document.Form1.txtOutQtyPack4,document.Form1.txtOutQtyLtr4);"
+											<TD><asp:dropdownlist id="DropOutProd4" runat="server" Width="224px" onChange="return setStore(this,document.all.txtOutStoreIn4,document.all.txtOutQtyPack4,document.all.txtOutQtyLtr4);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD><asp:textbox id="txtOutStoreIn4" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtOutQtyPack4" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd4,this);"
+											<TD><asp:textbox id="txtOutQtyPack4" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd4,this);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtOutQtyLtr4" runat="server" Width="40px" onblur="return checkStock(document.Form1.DropOutProd4,this);"
+											<TD><asp:textbox id="txtOutQtyLtr4" runat="server" Width="40px" onblur="return checkStock(document.all.DropOutProd4,this);"
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
@@ -443,47 +443,47 @@ var InPackTotal = 0;
 											</td>
 										</tr>
 										<tr>
-											<td><asp:dropdownlist id="DropInProd1" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtInStoreIn1,document.Form1.txtInQtyPack1,document.Form1.txtInQtyLtr1);"
+											<td><asp:dropdownlist id="DropInProd1" runat="server" Width="224px" onChange="return setStore(this,document.all.txtInStoreIn1,document.all.txtInQtyPack1,document.all.txtInQtyLtr1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></td>
 											<td><asp:textbox id="txtInStoreIn1" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></td>
-											<td><asp:textbox id="txtInQtyPack1" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr1,document.Form1.txtOutQtyLtr1);"
+											<td><asp:textbox id="txtInQtyPack1" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr1,document.all.txtOutQtyLtr1);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></td>
-											<td><asp:textbox id="txtInQtyLtr1" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr1,document.Form1.txtOutQtyLtr1);"
+											<td><asp:textbox id="txtInQtyLtr1" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr1,document.all.txtOutQtyLtr1);"
 													CssClass="FontStyle"></asp:textbox></td>
 										</tr>
 										<TR>
-											<TD><asp:dropdownlist id="DropInProd2" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtInStoreIn2,document.Form1.txtInQtyPack2,document.Form1.txtInQtyLtr2);"
+											<TD><asp:dropdownlist id="DropInProd2" runat="server" Width="224px" onChange="return setStore(this,document.all.txtInStoreIn2,document.all.txtInQtyPack2,document.all.txtInQtyLtr2);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD><asp:textbox id="txtInStoreIn2" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtInQtyPack2" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr2,document.Form1.txtOutQtyLtr2);"
+											<TD><asp:textbox id="txtInQtyPack2" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr2,document.all.txtOutQtyLtr2);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtInQtyLtr2" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr2,document.Form1.txtOutQtyLtr2);"
+											<TD><asp:textbox id="txtInQtyLtr2" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr2,document.all.txtOutQtyLtr2);"
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropInProd3" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtInStoreIn3,document.Form1.txtInQtyPack3,document.Form1.txtInQtyLtr3);"
+											<TD><asp:dropdownlist id="DropInProd3" runat="server" Width="224px" onChange="return setStore(this,document.all.txtInStoreIn3,document.all.txtInQtyPack3,document.all.txtInQtyLtr3);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD><asp:textbox id="txtInStoreIn3" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
-											<TD><asp:textbox id="txtInQtyPack3" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr3,document.Form1.txtOutQtyLtr3);"
+											<TD><asp:textbox id="txtInQtyPack3" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr3,document.all.txtOutQtyLtr3);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
-											<TD><asp:textbox id="txtInQtyLtr3" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr3,document.Form1.txtOutQtyLtr3);"
+											<TD><asp:textbox id="txtInQtyLtr3" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr3,document.all.txtOutQtyLtr3);"
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD style="HEIGHT: 21px"><asp:dropdownlist id="DropInProd4" runat="server" Width="224px" onChange="return setStore(this,document.Form1.txtInStoreIn4,document.Form1.txtInQtyPack4,document.Form1.txtInQtyLtr4);"
+											<TD style="HEIGHT: 21px"><asp:dropdownlist id="DropInProd4" runat="server" Width="224px" onChange="return setStore(this,document.all.txtInStoreIn4,document.all.txtInQtyPack4,document.all.txtInQtyLtr4);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD style="HEIGHT: 21px"><asp:textbox id="txtInStoreIn4" runat="server" Width="70px"  CssClass="FontStyle"></asp:textbox></TD>
-											<TD style="HEIGHT: 21px"><asp:textbox id="txtInQtyPack4" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr4,document.Form1.txtOutQtyLtr4);"
+											<TD style="HEIGHT: 21px"><asp:textbox id="txtInQtyPack4" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr4,document.all.txtOutQtyLtr4);"
 													CssClass="FontStyle" MaxLength="5"></asp:textbox></TD>
-											<TD style="HEIGHT: 21px"><asp:textbox id="txtInQtyLtr4" runat="server" Width="40px" onblur="return checkTotal(document.Form1.txtInQtyLtr4,document.Form1.txtOutQtyLtr4);"
+											<TD style="HEIGHT: 21px"><asp:textbox id="txtInQtyLtr4" runat="server" Width="40px" onblur="return checkTotal(document.all.txtInQtyLtr4,document.all.txtOutQtyLtr4);"
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>

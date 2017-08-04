@@ -40,7 +40,7 @@ function getBeatInfo(t,state,country)
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
   //alert(typetext)
-  var hidtext  = document.Form1.TxtVen.value
+  var hidtext  = document.all.TxtVen.value
   //alert(document.Form1.TxtVen.value)
  
   mainarr = hidtext.split("#")
@@ -69,7 +69,7 @@ function getBeatInfo(t,state,country)
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
   //alert(typetext)
-  var hidtext  = document.Form1.TxtVen.value
+  var hidtext  = document.all.TxtVen.value
   
  //alert(document.Form1.TxtVen.value)
  

@@ -250,7 +250,7 @@ namespace EPetro.Module.Reports
 				
 					#region Fetch Meter Reading
 			    
-					sql = "select Entry_date,d.Nozzle_id,Reading from daily_meter_reading as d,Nozzle as n,tank as t where Entry_date='"+ToMMddYYYY(eDate).ToShortDateString()+"' and d.nozzle_id =n.nozzle_id and n.tank_id = t.tank_id and  t.prod_name = '"+arr[0]+"'";
+					sql = "select Entry_date,d.Nozzle_id,Reading from daily_meter_reading as d,Nozzle as n,tank as t where Entry_date='"+ GenUtil.str2MMDDYYYY(eDate)+"' and d.nozzle_id =n.nozzle_id and n.tank_id = t.tank_id and  t.prod_name = '"+arr[0]+"'";
 					SqlDtr=obj.GetRecordSet(sql); 
 					int j=0;
 					while(SqlDtr.Read())
@@ -266,7 +266,7 @@ namespace EPetro.Module.Reports
 					#region Fetch Tank Dip Reading
 				
 			
-					sql = "select Tank_Dip,d.Remark from Daily_Tank_Reading as d,Tank as t where Entry_Date='"+ToMMddYYYY(eDate).ToShortDateString()+"' and d.tank_id = t.tank_id and t.Prod_Name ='"+arr[0]+"'";
+					sql = "select Tank_Dip,d.Remark from Daily_Tank_Reading as d,Tank as t where Entry_Date='"+ GenUtil.str2MMDDYYYY(eDate)+"' and d.tank_id = t.tank_id and t.Prod_Name ='"+arr[0]+"'";
 					SqlDtr=obj.GetRecordSet(sql); 
 					j=0;
 					tData[i,16]= "0";

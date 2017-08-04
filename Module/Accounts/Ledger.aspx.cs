@@ -332,7 +332,12 @@ namespace EPetro.Module.Accounts
 		{
 			try
 			{
-				string SubGrp = "";
+                if (TxtLedger.Text == string.Empty)
+                {
+                    MessageBox.Show("- Please Enter Ledger Name");
+                    return;
+                }
+                string SubGrp = "";
 				string Group = "";
 				if(!checkAcc_Period())
 				{

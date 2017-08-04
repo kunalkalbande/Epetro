@@ -15,7 +15,7 @@
   var typeindex = t.selectedIndex
   var typetext  = t.options[typeindex].text
   // alert(countrytext)
-  var hidarr  = document.Form1.temptext.value
+  var hidarr  = document.all.temptext.value
   mainarr = hidarr.split(",")
   //alert(cscarr)
   var prodarr = new Array()
@@ -82,7 +82,7 @@ function getPack(prodtype,t,packtype,srate,prodname,txtPack,txtQty,txtAmount)
 	var parr = new Array()
 	var k=0
 	var packarray = new Array()
-	var hiddenarr  = document.Form1.temptext.value
+	var hiddenarr  = document.all.temptext.value
 	mainarr = hiddenarr.split(",")
 	for(var i=0;i<(mainarr.length-1);i++)
 	{
@@ -124,7 +124,7 @@ var prodindex = pname.selectedIndex
   var packtext  = t.options[packindex].text
   packname.value=packtext
   // alert(countrytext)
-  var hidarr  = document.Form1.temptext.value
+  var hidarr  = document.all.temptext.value
   mainarr = hidarr.split(",")
   //alert(cscarr)
   var prodarr = new Array()

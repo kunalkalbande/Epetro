@@ -16,7 +16,7 @@
 		<script language="javascript">
 	function FuelStock()
 	{
-		var f=document.Form1
+		var f=document.all
 		var openingstock=f.txtOpeningStock.value
 		var waterstock=f.txtWaterStock.value
 		var reservestock=f.ReserveStock.value
@@ -78,7 +78,7 @@
 								<TD>Product Name<font color="red">*</font> 
 									<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropProdName" ValueToCompare="Select"
 										ErrorMessage="Please Select Product Name" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
-								<TD><asp:dropdownlist id="DropProdName" runat="server" Width="150px" onChange="getTankNo(this,document.Form1.lblTankName);"
+								<TD><asp:dropdownlist id="DropProdName" runat="server" Width="150px" onChange="getTankNo(this,document.all.lblTankName);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 										<asp:ListItem Value="Auto LPG">Auto LPG</asp:ListItem>

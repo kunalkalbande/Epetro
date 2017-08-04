@@ -18,83 +18,83 @@
 		function checkProd()
 		{
 		var packArray = new Array();		
-		var index1 = document.Form1.DropType1.selectedIndex;
-		var index2 = document.Form1.DropProd1.selectedIndex;
-		var index3 = document.Form1.DropPack1.selectedIndex;
+		var index1 = document.all.DropType1.selectedIndex;
+		var index2 = document.all.DropProd1.selectedIndex;
+		var index3 = document.all.DropPack1.selectedIndex;
 		
-		var index4 = document.Form1.DropType2.selectedIndex;
-		var index5 = document.Form1.DropProd2.selectedIndex;
-		var index6 = document.Form1.DropPack2.selectedIndex;
+		var index4 = document.all.DropType2.selectedIndex;
+		var index5 = document.all.DropProd2.selectedIndex;
+		var index6 = document.all.DropPack2.selectedIndex;
 		
-		var index7 = document.Form1.DropType3.selectedIndex;
-		var index8 = document.Form1.DropProd3.selectedIndex;
-		var index9 = document.Form1.DropPack3.selectedIndex;
+		var index7 = document.all.DropType3.selectedIndex;
+		var index8 = document.all.DropProd3.selectedIndex;
+		var index9 = document.all.DropPack3.selectedIndex;
 		
-		var index10 = document.Form1.DropType4.selectedIndex;
-		var index11 = document.Form1.DropProd4.selectedIndex;
-		var index12 = document.Form1.DropPack4.selectedIndex;
+		var index10 = document.all.DropType4.selectedIndex;
+		var index11 = document.all.DropProd4.selectedIndex;
+		var index12 = document.all.DropPack4.selectedIndex;
 		
-		var index13 = document.Form1.DropType5.selectedIndex;
-		var index14= document.Form1.DropProd5.selectedIndex;
-		var index15 = document.Form1.DropPack5.selectedIndex;
+		var index13 = document.all.DropType5.selectedIndex;
+		var index14= document.all.DropProd5.selectedIndex;
+		var index15 = document.all.DropPack5.selectedIndex;
 		
-		var index16= document.Form1.DropType6.selectedIndex;
-		var index17= document.Form1.DropProd6.selectedIndex;
-		var index18= document.Form1.DropPack6.selectedIndex;
+		var index16= document.all.DropType6.selectedIndex;
+		var index17= document.all.DropProd6.selectedIndex;
+		var index18= document.all.DropPack6.selectedIndex;
 		
-		var index19 = document.Form1.DropType7.selectedIndex;
-		var index20 = document.Form1.DropProd7.selectedIndex;
-		var index21 = document.Form1.DropPack7.selectedIndex;
+		var index19 = document.all.DropType7.selectedIndex;
+		var index20 = document.all.DropProd7.selectedIndex;
+		var index21 = document.all.DropPack7.selectedIndex;
 		
-		var index22 = document.Form1.DropType8.selectedIndex;
-		var index23 = document.Form1.DropProd8.selectedIndex;
-		var index24 = document.Form1.DropPack8.selectedIndex;
+		var index22 = document.all.DropType8.selectedIndex;
+		var index23 = document.all.DropProd8.selectedIndex;
+		var index24 = document.all.DropPack8.selectedIndex;
 		
 		if(index3==-1 )
-		packArray[0]=document.Form1.DropType1.options[index1].text+document.Form1.DropProd1.options[index2].text
+		packArray[0]=document.all.DropType1.options[index1].text+document.all.DropProd1.options[index2].text
 		else
-		packArray[0]=document.Form1.DropType1.options[index1].text+document.Form1.DropProd1.options[index2].text+document.Form1.DropPack1.options[index3].text;
+		packArray[0]=document.all.DropType1.options[index1].text+document.all.DropProd1.options[index2].text+document.all.DropPack1.options[index3].text;
 		
 		if(index6==-1)
-		packArray[1]=document.Form1.DropType2.options[index4].text+document.Form1.DropProd2.options[index5].text
+		packArray[1]=document.all.DropType2.options[index4].text+document.all.DropProd2.options[index5].text
 		else
-		packArray[1]=document.Form1.DropType2.options[index4].text+document.Form1.DropProd2.options[index5].text+document.Form1.DropPack2.options[index6].text;
+		packArray[1]=document.all.DropType2.options[index4].text+document.all.DropProd2.options[index5].text+document.all.DropPack2.options[index6].text;
 		
 		
 		if(index9==-1 )
-		packArray[2]=document.Form1.DropType3.options[index7].text+document.Form1.DropProd3.options[index8].text;
+		packArray[2]=document.all.DropType3.options[index7].text+document.all.DropProd3.options[index8].text;
 		else
-		packArray[2]=document.Form1.DropType3.options[index7].text+document.Form1.DropProd3.options[index8].text+document.Form1.DropPack3.options[index9].text;
+		packArray[2]=document.all.DropType3.options[index7].text+document.all.DropProd3.options[index8].text+document.all.DropPack3.options[index9].text;
 		
 		
 		if(index12==-1)
-		packArray[3]=document.Form1.DropType4.options[index10].text+document.Form1.DropProd4.options[index11].text
+		packArray[3]=document.all.DropType4.options[index10].text+document.all.DropProd4.options[index11].text
 		else
-		packArray[3]=document.Form1.DropType4.options[index10].text+document.Form1.DropProd4.options[index11].text+document.Form1.DropPack4.options[index12].text;
+		packArray[3]=document.all.DropType4.options[index10].text+document.all.DropProd4.options[index11].text+document.all.DropPack4.options[index12].text;
 
 		
 		if(index15==-1)
-		packArray[4]=document.Form1.DropType5.options[index13].text+document.Form1.DropProd5.options[index14].text;
+		packArray[4]=document.all.DropType5.options[index13].text+document.all.DropProd5.options[index14].text;
 		else
-		packArray[4]=document.Form1.DropType5.options[index13].text+document.Form1.DropProd5.options[index14].text+document.Form1.DropPack5.options[index15].text;
+		packArray[4]=document.all.DropType5.options[index13].text+document.all.DropProd5.options[index14].text+document.all.DropPack5.options[index15].text;
 	
 		
 		if(index18==-1)
-		packArray[5]=document.Form1.DropType6.options[index16].text+document.Form1.DropProd6.options[index17].text;
+		packArray[5]=document.all.DropType6.options[index16].text+document.all.DropProd6.options[index17].text;
 		else
-		packArray[5]=document.Form1.DropType6.options[index16].text+document.Form1.DropProd6.options[index17].text+document.Form1.DropPack6.options[index18].text;
+		packArray[5]=document.all.DropType6.options[index16].text+document.all.DropProd6.options[index17].text+document.all.DropPack6.options[index18].text;
 
 		
 		if(index21==-1)
-		packArray[6]=document.Form1.DropType7.options[index19].text+document.Form1.DropProd7.options[index20].text;
+		packArray[6]=document.all.DropType7.options[index19].text+document.all.DropProd7.options[index20].text;
 		else
-		packArray[6]=document.Form1.DropType7.options[index19].text+document.Form1.DropProd7.options[index20].text+document.Form1.DropPack7.options[index21].text;
+		packArray[6]=document.all.DropType7.options[index19].text+document.all.DropProd7.options[index20].text+document.all.DropPack7.options[index21].text;
 	
 		
 		if(index24==-1)
-		packArray[7]=document.Form1.DropType8.options[index22].text+document.Form1.DropProd8.options[index23].text;
+		packArray[7]=document.all.DropType8.options[index22].text+document.all.DropProd8.options[index23].text;
 		else
-		packArray[7]=document.Form1.DropType8.options[index22].text+document.Form1.DropProd8.options[index23].text+document.Form1.DropPack8.options[index24].text;
+		packArray[7]=document.all.DropType8.options[index22].text+document.all.DropProd8.options[index23].text+document.all.DropPack8.options[index24].text;
 		
 		var count = 0;
 
@@ -128,54 +128,54 @@
 		}
 	function calc()
 	{	
-	 document.Form1.txtAmount1.value=document.Form1.txtQty1.value*document.Form1.txtRate1.value	
-	 if(document.Form1.txtAmount1.value==0)
-		document.Form1.txtAmount1.value=""
-	 document.Form1.txtAmount2.value= document.Form1.txtQty2.value*document.Form1.txtRate2.value	
- 	 if(document.Form1.txtAmount2.value==0)
-		document.Form1.txtAmount2.value=""
-	 document.Form1.txtAmount3.value= document.Form1.txtQty3.value*document.Form1.txtRate3.value	
-	 if(document.Form1.txtAmount3.value==0)
-		document.Form1.txtAmount3.value=""
-	 document.Form1.txtAmount4.value= document.Form1.txtQty4.value*document.Form1.txtRate4.value	
-	 if(document.Form1.txtAmount4.value==0)
-		document.Form1.txtAmount4.value=""
-	 document.Form1.txtAmount5.value= document.Form1.txtQty5.value*document.Form1.txtRate5.value	
-	 if(document.Form1.txtAmount5.value==0)
-		document.Form1.txtAmount5.value=""
-	 document.Form1.txtAmount6.value= document.Form1.txtQty6.value*document.Form1.txtRate6.value	
-	 if(document.Form1.txtAmount6.value==0)
-		document.Form1.txtAmount6.value=""
-	 document.Form1.txtAmount7.value= document.Form1.txtQty7.value*document.Form1.txtRate7.value	
-	 if(document.Form1.txtAmount7.value==0)
-		document.Form1.txtAmount7.value=""
-	 document.Form1.txtAmount8.value= document.Form1.txtQty8.value*document.Form1.txtRate8.value	
-	 if(document.Form1.txtAmount8.value==0)
-		document.Form1.txtAmount8.value=""
+	 document.all.txtAmount1.value=document.all.txtQty1.value*document.all.txtRate1.value	
+	 if(document.all.txtAmount1.value==0)
+		document.all.txtAmount1.value=""
+	 document.all.txtAmount2.value= document.all.txtQty2.value*document.all.txtRate2.value	
+ 	 if(document.all.txtAmount2.value==0)
+		document.all.txtAmount2.value=""
+	 document.all.txtAmount3.value= document.all.txtQty3.value*document.all.txtRate3.value	
+	 if(document.all.txtAmount3.value==0)
+		document.all.txtAmount3.value=""
+	 document.all.txtAmount4.value= document.all.txtQty4.value*document.all.txtRate4.value	
+	 if(document.all.txtAmount4.value==0)
+		document.all.txtAmount4.value=""
+	 document.all.txtAmount5.value= document.all.txtQty5.value*document.all.txtRate5.value	
+	 if(document.all.txtAmount5.value==0)
+		document.all.txtAmount5.value=""
+	 document.all.txtAmount6.value= document.all.txtQty6.value*document.all.txtRate6.value	
+	 if(document.all.txtAmount6.value==0)
+		document.all.txtAmount6.value=""
+	 document.all.txtAmount7.value= document.all.txtQty7.value*document.all.txtRate7.value	
+	 if(document.all.txtAmount7.value==0)
+		document.all.txtAmount7.value=""
+	 document.all.txtAmount8.value= document.all.txtQty8.value*document.all.txtRate8.value	
+	 if(document.all.txtAmount8.value==0)
+		document.all.txtAmount8.value=""
 	 GetGrandTotal()
 	 GetNetAmount()
 	}	
 	function GetGrandTotal()
 	{
 	 var GTotal=0
-	 if(document.Form1.txtAmount1.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount1.value)
-	 if(document.Form1.txtAmount2.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount2.value)
-	 if(document.Form1.txtAmount3.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount3.value)
-	 if(document.Form1.txtAmount4.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount4.value)
-	 if(document.Form1.txtAmount5.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount5.value)
-	 if(document.Form1.txtAmount6.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount6.value)
-	 if(document.Form1.txtAmount7.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount7.value)
-	 if(document.Form1.txtAmount8.value!="")
-	 	GTotal=GTotal+eval(document.Form1.txtAmount8.value)
-	document.Form1.txtGrandTotal.value=GTotal ;
-	 makeRound(document.Form1.txtGrandTotal);
+	 if(document.all.txtAmount1.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount1.value)
+	 if(document.all.txtAmount2.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount2.value)
+	 if(document.all.txtAmount3.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount3.value)
+	 if(document.all.txtAmount4.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount4.value)
+	 if(document.all.txtAmount5.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount5.value)
+	 if(document.all.txtAmount6.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount6.value)
+	 if(document.all.txtAmount7.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount7.value)
+	 if(document.all.txtAmount8.value!="")
+	 	GTotal=GTotal+eval(document.all.txtAmount8.value)
+	document.all.txtGrandTotal.value=GTotal ;
+	 makeRound(document.all.txtGrandTotal);
 	}	
 	function makeRound(t)
 	{
@@ -195,14 +195,14 @@
 	}
 	function GetCashDiscount()
 	{
-	 var CashDisc=document.Form1.txtCashDisc.value
+	 var CashDisc=document.all.txtCashDisc.value
 	 if(CashDisc=="" || isNaN(CashDisc))
 		CashDisc=0
 	
-		if(document.Form1.DropCashDiscType.value=="Per")
-			CashDisc=document.Form1.txtGrandTotal.value*CashDisc/100 
-		document.Form1.txtVatValue.value = "";	
-		document.Form1.txtVatValue.value = eval(document.Form1.txtGrandTotal.value) - eval(CashDisc);	
+		if(document.all.DropCashDiscType.value=="Per")
+			CashDisc=document.all.txtGrandTotal.value*CashDisc/100 
+		document.all.txtVatValue.value = "";	
+		document.all.txtVatValue.value = eval(document.all.txtGrandTotal.value) - eval(CashDisc);	
 					    
 	}
 	
@@ -210,18 +210,18 @@
 	{
 	    GetCashDiscount()
 	    
-	    if(document.Form1.No.checked)
+	    if(document.all.No.checked)
 	    {
-	       document.Form1.txtVAT.value = "";
+	       document.all.txtVAT.value = "";
 	      
 	    } 
 	    else
 	    {
-	    var vat_rate = document.Form1.txtVatRate.value
+	    var vat_rate = document.all.txtVatRate.value
 	  // alert(vat_rate);
 	    if(vat_rate == "")
 	       vat_rate = 0;
-	     var vat = document.Form1.txtVatValue.value    
+	     var vat = document.all.txtVatValue.value    
 	       if(vat == "" || vat == null || isNaN(vat))
 	       {
 	      // alert("if");
@@ -231,11 +231,11 @@
 	     var vat_amount = vat * vat_rate/100
 	   // alert("vat_amt : "+vat_amount)
 	    
-	     document.Form1.txtVAT.value = vat_amount
-	     makeRound(document.Form1.txtVAT)
+	     document.all.txtVAT.value = vat_amount
+	     makeRound(document.all.txtVAT)
 	    
 	     
-	     document.Form1.txtVatValue.value = eval(vat) + eval(vat_amount)
+	     document.all.txtVatValue.value = eval(vat) + eval(vat_amount)
 	    // alert("total :"+document.Form1.txtVatValue.value)
 	     
 	       
@@ -247,37 +247,37 @@
 	{
 	
 	var vat_value = 0;
-	if(document.Form1.No.checked)
+	if(document.all.No.checked)
 	    {
 	    GetCashDiscount()
-	    vat_value = document.Form1.txtVatValue.value;
-	    document.Form1.txtVAT.value = "";
+	    vat_value = document.all.txtVatValue.value;
+	    document.all.txtVAT.value = "";
 	    }
 	    else
 	    {
 	    GetVatAmount()
-	    vat_value = document.Form1.txtVatValue.value;
+	    vat_value = document.all.txtVatValue.value;
 	    }
 	    
 	   if(vat_value=="" || isNaN(vat_value))
 		vat_value=0
-	 var Disc=document.Form1.txtDisc.value
+	 var Disc=document.all.txtDisc.value
 	 if(Disc=="" || isNaN(Disc))
 		Disc=0
 
 	 var NetAmount
-		if(document.Form1.DropDiscType.value=="Per")
+		if(document.all.DropDiscType.value=="Per")
 			Disc=vat_value * Disc/100 
 		//*********Start Add Mahesh - Roundoff net amount - 1.10.007
 		//document.Form1.txtNetAmount.value=eval(vat_value) - eval(Disc);
 		var NetAmount = eval(vat_value) - eval(Disc);
 		NetAmount = Math.round(NetAmount)
-		document.Form1.txtNetAmount.value = NetAmount
+		document.all.txtNetAmount.value = NetAmount
 		//********end
-		makeRound(document.Form1.txtNetAmount);
+		makeRound(document.all.txtNetAmount);
 		
-		if(document.Form1.txtNetAmount.value==0  )
-			document.Form1.txtNetAmount.value==""
+		if(document.all.txtNetAmount.value==0  )
+			document.all.txtNetAmount.value==""
 	}/*
 	function GetNetAmount()
 	{
@@ -400,7 +400,7 @@
 													ControlToValidate="DropVendorID" ValueToCompare="Select" Operator="NotEqual">*</asp:CompareValidator>&nbsp; 
 												&nbsp;
 											</TD>
-											<TD colSpan="2"><asp:dropdownlist id="DropVendorID" runat="server" Width="172px" AutoPostBack="False" onChange="getCity(this,document.Form1.lblPlace);"
+											<TD colSpan="2"><asp:dropdownlist id="DropVendorID" runat="server" Width="172px" AutoPostBack="False" onChange="getCity(this,document.all.lblPlace);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -462,15 +462,15 @@
 											<TD align="center"><FONT color="#990066">Amount</FONT></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType1" runat="server" Width="100px" Height="17px" onchange="getProdName(this,document.Form1.DropProd1,document.Form1.DropPack1,document.Form1.txtRate1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
+											<TD><asp:dropdownlist id="DropType1" runat="server" Width="100px" Height="17px" onchange="getProdName(this,document.all.DropProd1,document.all.DropPack1,document.all.txtRate1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd1" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType1,this,document.Form1.DropPack1,document.Form1.txtRate1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
+											<TD><asp:dropdownlist id="DropProd1" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType1,this,document.all.DropPack1,document.all.txtRate1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName1" style="WIDTH: 140px" type="hidden" name="txtProdName1" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack1" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType1,document.Form1.DropProd1,this,document.Form1.txtRate1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtAmount1);"
+											<td><asp:dropdownlist id="DropPack1" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType1,document.all.DropProd1,this,document.all.txtRate1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack1" style="WIDTH: 100px" type="hidden" name="txtPack1" runat="server"></td>
@@ -482,18 +482,18 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType2" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd2,document.Form1.DropPack2,document.Form1.txtRate2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
+											<TD><asp:dropdownlist id="DropType2" runat="server" Width="100px" onchange="getProdName(this,document.all.DropProd2,document.all.DropPack2,document.all.txtRate2,document.all.txtProdName2,document.all.txtPack2,document.all.txtQty2,document.all.txtAmount2);"
 													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
 											<TD>
-												<P><asp:dropdownlist id="DropProd2" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType2,this,document.Form1.DropPack2,document.Form1.txtRate2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
+												<P><asp:dropdownlist id="DropProd2" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType2,this,document.all.DropPack2,document.all.txtRate2,document.all.txtProdName2,document.all.txtPack2,document.all.txtQty2,document.all.txtAmount2);"
 														CssClass="FontStyle">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist><INPUT id="txtProdName2" style="WIDTH: 140px" type="hidden" name="txtProdName2" runat="server"></P>
 											</TD>
 											<td>
-												<P><asp:dropdownlist id="DropPack2" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType2,document.Form1.DropProd2,this,document.Form1.txtRate2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtAmount2);"
+												<P><asp:dropdownlist id="DropPack2" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType2,document.all.DropProd2,this,document.all.txtRate2,document.all.txtPack2,document.all.txtQty2,document.all.txtAmount2);"
 														CssClass="FontStyle">
 														<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 													</asp:dropdownlist><INPUT id="txtPack2" style="WIDTH: 100px" type="hidden" name="txtPack2" runat="server"></P>
@@ -506,15 +506,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType3" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd3,document.Form1.DropPack3,document.Form1.txtRate3,document.Form1.txtProdName3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
+											<TD><asp:dropdownlist id="DropType3" runat="server" Width="100px" onchange="getProdName(this,document.all.DropProd3,document.all.DropPack3,document.all.txtRate3,document.all.txtProdName3,document.all.txtPack3,document.all.txtQty3,document.all.txtAmount3);"
 													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd3" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType3,this,document.Form1.DropPack3,document.Form1.txtRate3,document.Form1.txtProdName3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
+											<TD><asp:dropdownlist id="DropProd3" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType3,this,document.all.DropPack3,document.all.txtRate3,document.all.txtProdName3,document.all.txtPack3,document.all.txtQty3,document.all.txtAmount3);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName3" style="WIDTH: 140px" type="hidden" name="txtProdName3" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack3" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType3,document.Form1.DropProd3,this,document.Form1.txtRate3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtAmount3);"
+											<td><asp:dropdownlist id="DropPack3" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType3,document.all.DropProd3,this,document.all.txtRate3,document.all.txtPack3,document.all.txtQty3,document.all.txtAmount3);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack3" style="WIDTH: 91px" type="hidden" name="txtPack3" runat="server"></td>
@@ -526,15 +526,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType4" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd4,document.Form1.DropPack4,document.Form1.txtRate4,document.Form1.txtProdName4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
+											<TD><asp:dropdownlist id="DropType4" runat="server" Width="100px" onchange="getProdName(this,document.all.DropProd4,document.all.DropPack4,document.all.txtRate4,document.all.txtProdName4,document.all.txtPack4,document.all.txtQty4,document.all.txtAmount4);"
 													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd4" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType4,this,document.Form1.DropPack4,document.Form1.txtRate4,document.Form1.txtProdName4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
+											<TD><asp:dropdownlist id="DropProd4" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType4,this,document.all.DropPack4,document.all.txtRate4,document.all.txtProdName4,document.all.txtPack4,document.all.txtQty4,document.all.txtAmount4);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName4" style="WIDTH: 140px" type="hidden" name="txtProdName4" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack4" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType4,document.Form1.DropProd4,this,document.Form1.txtRate4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtAmount4);"
+											<td><asp:dropdownlist id="DropPack4" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType4,document.all.DropProd4,this,document.all.txtRate4,document.all.txtPack4,document.all.txtQty4,document.all.txtAmount4);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack4" style="WIDTH: 91px" type="hidden" name="txtPack4" runat="server"></td>
@@ -546,15 +546,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType5" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd5,document.Form1.DropPack5,document.Form1.txtRate5,document.Form1.txtProdName5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
+											<TD><asp:dropdownlist id="DropType5" runat="server" Width="100px" onchange="getProdName(this,document.all.DropProd5,document.all.DropPack5,document.all.txtRate5,document.all.txtProdName5,document.all.txtPack5,document.all.txtQty5,document.all.txtAmount5);"
 													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd5" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType5,this,document.Form1.DropPack5,document.Form1.txtRate5,document.Form1.txtProdName5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
+											<TD><asp:dropdownlist id="DropProd5" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType5,this,document.all.DropPack5,document.all.txtRate5,document.all.txtProdName5,document.all.txtPack5,document.all.txtQty5,document.all.txtAmount5);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName5" style="WIDTH: 140px" type="hidden" name="txtProdName5" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack5" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType5,document.Form1.DropProd5,this,document.Form1.txtRate5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtAmount5);"
+											<td><asp:dropdownlist id="DropPack5" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType5,document.all.DropProd5,this,document.all.txtRate5,document.all.txtPack5,document.all.txtQty5,document.all.txtAmount5);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack5" style="WIDTH: 91px" type="hidden" name="txtPack5" runat="server"></td>
@@ -566,15 +566,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType6" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd6,document.Form1.DropPack6,document.Form1.txtRate6,document.Form1.txtProdName6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
+											<TD><asp:dropdownlist id="DropType6" runat="server" Width="100px" onchange="getProdName(this,document.all.DropProd6,document.all.DropPack6,document.all.txtRate6,document.all.txtProdName6,document.all.txtPack6,document.all.txtQty6,document.all.txtAmount6);"
 													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd6" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType6,this,document.Form1.DropPack6,document.Form1.txtRate6,document.Form1.txtProdName6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
+											<TD><asp:dropdownlist id="DropProd6" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType6,this,document.all.DropPack6,document.all.txtRate6,document.all.txtProdName6,document.all.txtPack6,document.all.txtQty6,document.all.txtAmount6);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName6" style="WIDTH: 140px" type="hidden" name="txtProdName6" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack6" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType6,document.Form1.DropProd6,this,document.Form1.txtRate6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtAmount6);"
+											<td><asp:dropdownlist id="DropPack6" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType6,document.all.DropProd6,this,document.all.txtRate6,document.all.txtPack6,document.all.txtQty6,document.all.txtAmount6);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack6" style="WIDTH: 91px" type="hidden" name="txtPack6" runat="server"></td>
@@ -586,15 +586,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType7" runat="server" Width="100px" onchange="getProdName(this,document.Form1.DropProd7,document.Form1.DropPack7,document.Form1.txtRate7,document.Form1.txtProdName7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
+											<TD><asp:dropdownlist id="DropType7" runat="server" Width="100px" onchange="getProdName(this,document.all.DropProd7,document.all.DropPack7,document.all.txtRate7,document.all.txtProdName7,document.all.txtPack7,document.all.txtQty7,document.all.txtAmount7);"
 													CssClass="FontStyle" Height="17px">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd7" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType7,this,document.Form1.DropPack7,document.Form1.txtRate7,document.Form1.txtProdName7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
+											<TD><asp:dropdownlist id="DropProd7" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType7,this,document.all.DropPack7,document.all.txtRate7,document.all.txtProdName7,document.all.txtPack7,document.all.txtQty7,document.all.txtAmount7);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName7" style="WIDTH: 140px" type="hidden" name="txtProdName7" runat="server"></TD>
-											<TD><asp:dropdownlist id="DropPack7" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType7,document.Form1.DropProd7,this,document.Form1.txtRate7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtAmount7);"
+											<TD><asp:dropdownlist id="DropPack7" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType7,document.all.DropProd7,this,document.all.txtRate7,document.all.txtPack7,document.all.txtQty7,document.all.txtAmount7);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack7" style="WIDTH: 91px" type="hidden" name="txtPack7" runat="server"></TD>
@@ -606,15 +606,15 @@
 													CssClass="FontStyle"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD><asp:dropdownlist id="DropType8" runat="server" Width="100px" Height="17px" onchange="getProdName(this,document.Form1.DropProd8,document.Form1.DropPack8,document.Form1.txtRate8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
+											<TD><asp:dropdownlist id="DropType8" runat="server" Width="100px" Height="17px" onchange="getProdName(this,document.all.DropProd8,document.all.DropPack8,document.all.txtRate8,document.all.txtProdName8,document.all.txtPack8,document.all.txtQty8,document.all.txtAmount8);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Type">Type</asp:ListItem>
 												</asp:dropdownlist></TD>
-											<TD><asp:dropdownlist id="DropProd8" runat="server" Width="140px" Height="17px" onchange="getPack(document.Form1.DropType8,this,document.Form1.DropPack8,document.Form1.txtRate8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
+											<TD><asp:dropdownlist id="DropProd8" runat="server" Width="140px" Height="17px" onchange="getPack(document.all.DropType8,this,document.all.DropPack8,document.all.txtRate8,document.all.txtProdName8,document.all.txtPack8,document.all.txtQty8,document.all.txtAmount8);"
 													CssClass="auto-style1">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtProdName8" style="WIDTH: 140px" type="hidden" name="txtProdName8" runat="server"></TD>
-											<td><asp:dropdownlist id="DropPack8" runat="server" Width="100px" Height="17px" onchange="getStock(document.Form1.DropType8,document.Form1.DropProd8,this,document.Form1.txtRate8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtAmount8);"
+											<td><asp:dropdownlist id="DropPack8" runat="server" Width="100px" Height="17px" onchange="getStock(document.all.DropType8,document.all.DropProd8,this,document.all.txtRate8,document.all.txtPack8,document.all.txtQty8,document.all.txtAmount8);"
 													CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
 												</asp:dropdownlist><INPUT id="txtPack8" style="WIDTH: 91px" type="hidden" name="txtPack8" runat="server"></td>
