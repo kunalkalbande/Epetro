@@ -56,7 +56,7 @@
 								<TD style="HEIGHT: 14px">Machine Name<font color="red">*</font> 
 									<asp:comparevalidator id="CompareValidator1" runat="server" Operator="NotEqual" ErrorMessage="Please Select Machine Name"
 										ValueToCompare="Select" ControlToValidate="DropMachineID"><font color="red">*</font></asp:comparevalidator></TD>
-								<TD><asp:dropdownlist id="DropMachineID" runat="server" Width="200px" onChange="getNozzleNo(this,document.Form1.lblNozzleName);"
+								<TD><asp:dropdownlist id="DropMachineID" runat="server" Width="200px" onChange="getNozzleNo(this,document.all.lblNozzleName);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
