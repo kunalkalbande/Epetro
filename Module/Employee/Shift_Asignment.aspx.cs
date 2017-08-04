@@ -247,7 +247,12 @@ namespace EPetro.Module.Employee
 			try
 			{
 				EmployeeClass obj=new EmployeeClass();
-				//if(countNo1==0 && countNo2==0)
+                //if(countNo1==0 && countNo2==0)
+                if (DropShiftID.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Please Select the Shift Name");
+                    return;
+                }
 				if(ListEmpAssigned.Items.Count==0)
 				{
 					MessageBox.Show("Please select an Employee from the Available Employee list");

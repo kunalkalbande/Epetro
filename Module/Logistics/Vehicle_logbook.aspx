@@ -84,8 +84,7 @@
 										CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
 								<TD>&nbsp;Vehicle No.
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please select Vehicle No."
-										ControlToValidate="DropVehicleNo" InitialValue="Select">*</asp:requiredfieldvalidator><FONT color="#ff0000">*
-									</FONT>&nbsp;&nbsp;
+										ControlToValidate="DropVehicleNo" InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator><FONT color="#ff0000">*</FONT>&nbsp;&nbsp;
 									<asp:dropdownlist id="DropVehicleNo" runat="server" Width="162px" CssClass="FontStyle" onchange="return getVehicleInfo(this);">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
@@ -124,7 +123,7 @@
 									<asp:textbox id="txtmeterreadpre" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"
 										></asp:textbox></TD>
 								<td>&nbsp;Meter Reading (Current Day)<FONT color="#ff0033">*</FONT><asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Current Meter Reading"
-										ControlToValidate="txtmeterreadcurr">*</asp:requiredfieldvalidator>&nbsp;<asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtmeterreadcurr"
+										ControlToValidate="txtmeterreadcurr"><font color="red">*</font></asp:requiredfieldvalidator>&nbsp;<asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtmeterreadcurr"
 										runat="server" Width="91px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox></td>
 								<td>&nbsp;Acknowledgement&nbsp;&nbsp;
 									<asp:radiobutton id="Radioyes" runat="server" Text="Yes" GroupName="Acknow"></asp:radiobutton>&nbsp;&nbsp;&nbsp;&nbsp;

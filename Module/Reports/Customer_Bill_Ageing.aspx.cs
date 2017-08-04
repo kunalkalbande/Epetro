@@ -212,9 +212,9 @@ namespace EPetro.Module.Reports
 			System.Data.SqlClient.SqlDataReader rdr=null;
 			string sqlstr="";     			
 			if(DropCustName.SelectedIndex==0)
-				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+System.Convert.ToDateTime(ToMMddYYYY(txtDateFrom.Text)).ToShortDateString()+"' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+System.Convert.ToDateTime(ToMMddYYYY(Textbox1.Text)).ToShortDateString()+"'" ;
+				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) + "'" ;
 			else
-				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where c.Invoice_No=s.Invoice_No and Cust_Name='"+DropCustName.SelectedItem.Text+"' and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+System.Convert.ToDateTime(ToMMddYYYY(txtDateFrom.Text)).ToShortDateString()+"' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+System.Convert.ToDateTime(ToMMddYYYY(Textbox1.Text)).ToShortDateString()+"'" ;
+				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where c.Invoice_No=s.Invoice_No and Cust_Name='"+DropCustName.SelectedItem.Text+"' and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) + "'" ;
 			dbobj.SelectQuery(sqlstr,ref rdr);
 			string subTitle = "From "+txtDateFrom.Text.ToString()+" To "+Textbox1.Text.ToString();
 			if(c.Checked && !InterestText.Text.ToString().Trim().Equals("0")) 
@@ -567,9 +567,9 @@ namespace EPetro.Module.Reports
 			SqlConnection SqlCon11 =new SqlConnection(System .Configuration.ConfigurationSettings.AppSettings["Epetro"]);
 			if(DropCustName.SelectedIndex==0)
 				//sqlstr = "select * from vw_Cust_Ageing where cast(floor(cast(invoice_date as float)) as datetime)>='"+System.Convert.ToDateTime(ToMMddYYYY(txtDateFrom.Text)).ToShortDateString()+"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+System.Convert.ToDateTime(ToMMddYYYY(Textbox1.Text)).ToShortDateString()+"'" ;
-				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+System.Convert.ToDateTime(ToMMddYYYY(txtDateFrom.Text)).ToShortDateString()+"' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+System.Convert.ToDateTime(ToMMddYYYY(Textbox1.Text)).ToShortDateString()+"'" ;
+				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+GenUtil.str2MMDDYYYY(txtDateFrom.Text)+"' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+GenUtil.str2MMDDYYYY(Textbox1.Text) +"'" ;
 			else
-				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where Cust_Name='"+DropCustName.SelectedItem.Text+"' and c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+System.Convert.ToDateTime(ToMMddYYYY(txtDateFrom.Text)).ToShortDateString()+"' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+System.Convert.ToDateTime(ToMMddYYYY(Textbox1.Text)).ToShortDateString()+"'" ;
+				sqlstr = "select c.*,s.* from vw_Cust_Ageing c,Sales_Master s where Cust_Name='"+DropCustName.SelectedItem.Text+"' and c.Invoice_No=s.Invoice_No and cast(floor(cast(c.invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(c.invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) + "'" ;
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon11);
 			da.Fill(ds, "vw_Cust_Ageing");

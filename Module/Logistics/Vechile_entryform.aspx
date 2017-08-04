@@ -57,10 +57,10 @@
 										<asp:ListItem Value="Truck">Truck</asp:ListItem>
 										<asp:ListItem Value="Other">Other</asp:ListItem>
 									</asp:dropdownlist></TD>
-								<TD>&nbsp;Vehicle No <FONT color="#ff0033" size="2">*</FONT></TD>
+								<TD>&nbsp;Vehicle No <font color="red">*</font><asp:requiredfieldvalidator id="RefLnm" ControlToValidate="txtVehicleno" ErrorMessage="You Must Enter Vechicle No"
+										Display="Dynamic" Runat="server"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox id="txtVehicleno" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"
-										MaxLength="20"></asp:textbox><asp:requiredfieldvalidator id="RefLnm" ControlToValidate="txtVehicleno" ErrorMessage="You Must Enter Vechicle No"
-										Display="Dynamic" Runat="server">*</asp:requiredfieldvalidator></TD>
+										MaxLength="20"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;Vehicle Name</TD>
@@ -75,9 +75,9 @@
 								<TD>&nbsp;Model Name</TD>
 								<TD><asp:textbox id="txtmodelnm" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"
 										MaxLength="49"></asp:textbox></TD>
-								<TD>&nbsp;RTO Registration No. <FONT color="#ff0033" size="2">*</FONT></TD>
+								<TD>&nbsp;RTO Registration No. <font color="red">*</font><asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtrtono" ErrorMessage="You Must Enter R.T.O Registration No"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox id="txtrtono" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"
-										MaxLength="20"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtrtono" ErrorMessage="You Must Enter R.T.O Registration No">*</asp:requiredfieldvalidator></TD>
+										MaxLength="20"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;Vehicle Manufact. Date</TD>

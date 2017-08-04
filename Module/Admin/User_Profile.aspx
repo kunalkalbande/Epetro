@@ -54,7 +54,7 @@
 									</TD>
 							</TR>
 							<TR>
-								<TD>Login Name&nbsp;
+								<TD>Login Name<font color="red">*</font>&nbsp;
 									<asp:RequiredFieldValidator id="RequiredFieldValidator1" display="Dynamic" runat="server" ErrorMessage="Please Fill the Login Name"
 										ControlToValidate="txtLoginName"><font color="red">*</font></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								</TD>
@@ -65,7 +65,7 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Password                                    
+								<TD>Password<font color="red">*</font>                                   
 									<asp:RequiredFieldValidator id="RequiredFieldValidator2" display="Dynamic" runat="server" ErrorMessage="Please Fill the Password"
 										ControlToValidate="txtPassword"><font color="red">*</font></asp:RequiredFieldValidator>
 									<asp:RegularExpressionValidator id="RegularExpressionValidator1" runat="server" ControlToValidate="txtPassword"
@@ -86,7 +86,7 @@
 								<TD align="center">Last Name</TD>
 							</TR>
 							<TR>
-								<TD>Name
+								<TD>Name<font color="red">*</font>
 									<asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server" Display="Dynamic" ErrorMessage="Please Fill the User Name"
 										ControlToValidate="txtFName"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 								<TD><asp:textbox id="txtFName" runat="server" Width="130px" BorderStyle="Groove" MaxLength="30" CssClass="FontStyle"></asp:textbox></TD>
@@ -94,7 +94,7 @@
 								<TD><asp:textbox id="txtLName" runat="server" Width="130px" BorderStyle="Groove" MaxLength="10" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>Role&nbsp;
+								<TD>Role<font color="red">*</font>&nbsp;
 									<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select the Role Name"
 										ControlToValidate="DropRole" Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD colspan="2"><asp:dropdownlist id="DropRole" runat="server" Width="192px" CssClass="FontStyle">

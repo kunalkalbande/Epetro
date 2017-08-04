@@ -581,15 +581,15 @@
 											</TR>
 											<TR>
 												<TD>&nbsp;
-													<asp:label id="lblSlipNo" runat="server" CssClass="dropdownlist">Slip No.</asp:label><asp:requiredfieldvalidator id="Requiredfieldvalidator2" runat="server" ControlToValidate="txtSlipNo" ErrorMessage="Please Enter Slip No.">*</asp:requiredfieldvalidator></TD>
+													<asp:label id="lblSlipNo" runat="server" CssClass="dropdownlist">Slip No.<font color="red">*</font></asp:label><asp:requiredfieldvalidator id="Requiredfieldvalidator2" runat="server" ControlToValidate="txtSlipNo" ErrorMessage="Please Enter Slip No."><font color="red">*</font></asp:requiredfieldvalidator></TD>
 												<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtSlipNo" onblur="check(this)"
 														runat="server" Width="80px" BorderStyle="Groove" CssClass="FontStyle" Height="20px" MaxLength="9"
 														tooltip="check11(document.all.txtSlipNo.value)"></asp:textbox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 											</TR>
 											<TR>
-												<TD>&nbsp; Under Sales Man&nbsp;&nbsp;
+												<TD>&nbsp; Under Sales Man<font color="red">*</font>&nbsp;&nbsp;
 													<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropUnderSalesMan" ErrorMessage="Please Select Sales Man"
-														Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator><FONT color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
+														Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator><FONT color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
 												<TD><asp:dropdownlist id="DropUnderSalesMan" runat="server" Width="128" CssClass="FontStyle" Height="22">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist></TD>
@@ -613,9 +613,9 @@
 									<TD align="center">
 										<TABLE style="WIDTH: 314px" cellSpacing="0" cellPadding="0">
 											<TR>
-												<TD style="HEIGHT: 16px">Customer Name
+												<TD style="HEIGHT: 16px">Customer Name<font color="red">*</font>
 													<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropCustName" ErrorMessage="Please Select Customer Name"
-														Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator></TD>
+														Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator></TD>
 												<TD style="HEIGHT: 16px"><asp:dropdownlist id="DropCustName" runat="server" Width="172px" CssClass="FontStyle" AutoPostBack="True"
 														onChange="getcustomerinfo(this,document.all.lblPlace,document.all.lblDueDate,document.all.lblCurrBalance,document.all.lblCreditLimit,document.all.DropVehicleNo);">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -644,9 +644,9 @@
 														 type="text" size="22" name="lblCreditLimit" runat="server"></TD>
 											</TR>
 											<TR>
-												<TD>Vehicle No
-													<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Enter Vehicle No.">*</asp:requiredfieldvalidator><asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" ControlToValidate="DropVehicleNo" ErrorMessage="Please Select Vehicle No."
-														InitialValue="Select">*</asp:requiredfieldvalidator></TD>
+												<TD>Vehicle No<font color="red">*</font>
+													<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Enter Vehicle No."><font color="red">*</font></asp:requiredfieldvalidator><asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" ControlToValidate="DropVehicleNo" ErrorMessage="Please Select Vehicle No."
+														InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 												<TD><asp:textbox id="txtVehicleNo" runat="server" Width="168px" BorderStyle="Groove" Font-Size="Larger"
 														CssClass="FontStyle" MaxLength="20"></asp:textbox><asp:dropdownlist id="DropVehicleNo" runat="server" Width="168px" Visible="False" CssClass="FontStyle"></asp:dropdownlist></TD>
 											</TR>
@@ -661,15 +661,15 @@
 													<TD align="center" colSpan="7"><FONT color="#006400"><STRONG><U>Product &nbsp;Details</U></STRONG></FONT></TD>
 												</TR>
 												<TR>
-													<TD align="center"><FONT color="darkgreen">Product Type
+													<TD align="center"><FONT color="darkgreen">Product Type<font color="red">*</font>
 															<asp:comparevalidator id="CompareValidator3" runat="server" ControlToValidate="DropType1" ErrorMessage="Please Select Atleast one Product Type"
-																Operator="NotEqual" ValueToCompare="Type">*</asp:comparevalidator></FONT></TD>
+																Operator="NotEqual" ValueToCompare="Type"><font color="red">*</font></asp:comparevalidator></FONT></TD>
 													<TD style="WIDTH: 120px" align="center"><FONT color="darkgreen">Name
 															<asp:comparevalidator id="CompareValidator4" runat="server" ControlToValidate="DropProd1" ErrorMessage="Please Select atleast One Product Name"
 																Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator></FONT></TD>
 													<TD style="WIDTH: 2px" align="center"><FONT color="darkgreen">Package</FONT></TD>
-													<TD align="center"><FONT color="darkgreen">Qty
-															<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="txtQty1" ErrorMessage="Please Fill Quantity">*</asp:requiredfieldvalidator></FONT></TD>
+													<TD align="center"><FONT color="darkgreen">Qty<font color="red">*</font>
+															<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="txtQty1" ErrorMessage="Please Fill Quantity"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
 													<TD align="center"><FONT color="darkgreen">Available Stock</FONT></TD>
 													<TD align="center"><FONT color="darkgreen">Rate</FONT></TD>
 													<TD align="center"><FONT color="darkgreen">Amount</FONT></TD>

@@ -402,13 +402,29 @@ namespace EPetro.Module.Logistics
 			this.Load += new System.EventHandler(this.Page_Load);
 
 		}
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// To insert all values in the database with the help of stored procedures.
-		/// </summary>
-		private void btnSave_Click(object sender, System.EventArgs e)
-		{
+        /// <summary>
+        /// To insert all values in the database with the help of stored procedures.
+        /// </summary>
+        private void btnSave_Click(object sender, System.EventArgs e)
+        {
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropVehicleNo.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Vehicle No.");
+                errorMessage.Append("\n");
+            }
+            if (txtmeterreadcurr.Text == string.Empty)
+            {
+                errorMessage.Append("Please Enter Current Meter Reading");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
 			try
 			{
 				string VDLB_ID  =lblVDLBID.Text;

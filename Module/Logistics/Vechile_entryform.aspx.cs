@@ -443,7 +443,23 @@ namespace Epetro.Form.Logistics
 		/// </summary>
 		private void btnSave_Click(object sender, System.EventArgs e)
 		{
-			try
+            StringBuilder errorMessage = new StringBuilder();
+            if (txtVehicleno.Text == string.Empty)
+            {
+                errorMessage.Append("Please Enter Vehile No.");
+                errorMessage.Append("\n");
+            }
+            if (txtrtono.Text == string.Empty)
+            {
+                errorMessage.Append("Please Enter RTO Registration No.");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length>0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+            try
 			{
 				SqlConnection con;
 				string strInsert ;
