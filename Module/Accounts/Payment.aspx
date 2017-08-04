@@ -45,9 +45,9 @@
 								<TD><asp:dropdownlist id="DropLedgerName1" runat="server" Visible="False" Width="200px" AutoPostBack="True"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:dropdownlist id="DropLedgerName" runat="server" Width="200px" CssClass="FontStyle">
+									</asp:dropdownlist><asp:dropdownlist id="DropLedgerName" runat="server" Width="190px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:button id="btnEdit1" runat="server" Width="22px" CausesValidation="False" Text="..." ToolTip="Click here for edit"
+									</asp:dropdownlist>&nbsp;<asp:button id="btnEdit1" runat="server" Width="25px" CausesValidation="False" Text="..." ToolTip="Click here for edit"
 										BackColor="ForestGreen" BorderColor="ForestGreen" ForeColor="White"></asp:button></TD>
 							</TR>
 							<TR>
