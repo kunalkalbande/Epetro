@@ -122,7 +122,7 @@ namespace EPetro.Module.PetrolPump
 			if(DropEntryDate.SelectedIndex!=0)
 			{
 				SqlDataReader SqlDtr=null;
-				dbobj.SelectQuery("select Density,Temprature,Converted_Density,Tank_Dip,Water_Dip,Testing,Remark from Daily_Tank_Reading d,Tank t where cast(floor(cast(cast(d.Entry_Date as datetime) as float)) as datetime)='"+GenUtil.str2DDMMYYYY(DropEntryDate.SelectedItem.Text)+"' and t.tank_id=d.tank_id order by t.prod_name",ref SqlDtr);
+				dbobj.SelectQuery("select Density,Temprature,Converted_Density,Tank_Dip,Water_Dip,Testing,Remark from Daily_Tank_Reading d,Tank t where cast(floor(cast(cast(d.Entry_Date as datetime) as float)) as datetime)='"+GenUtil.str2MMDDYYYY(DropEntryDate.SelectedItem.Text)+"' and t.tank_id=d.tank_id order by t.prod_name",ref SqlDtr);
 				while(SqlDtr.Read())
 				{
 					Tank.Add(GenUtil.strNumericFormat(SqlDtr.GetValue(0).ToString()));
@@ -133,7 +133,7 @@ namespace EPetro.Module.PetrolPump
 					Tank.Add(GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString()));
 					Remarks=SqlDtr.GetValue(6).ToString();
 				}
-				dbobj.SelectQuery("select reading from Daily_Meter_Reading d,nozzle n,machine m where cast(floor(cast(cast(Entry_Date as datetime) as float)) as datetime)='"+GenUtil.str2DDMMYYYY(DropEntryDate.SelectedItem.Text)+"' and d.nozzle_id=n.nozzle_id and n.machine_id=m.machine_id order by machine_name,nozzle_name",ref SqlDtr);
+				dbobj.SelectQuery("select reading from Daily_Meter_Reading d,nozzle n,machine m where cast(floor(cast(cast(Entry_Date as datetime) as float)) as datetime)='"+GenUtil.str2MMDDYYYY(DropEntryDate.SelectedItem.Text)+"' and d.nozzle_id=n.nozzle_id and n.machine_id=m.machine_id order by machine_name,nozzle_name",ref SqlDtr);
 				while(SqlDtr.Read())
 				{
 					Nozzle.Add(GenUtil.strNumericFormat(SqlDtr.GetValue(0).ToString()));

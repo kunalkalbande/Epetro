@@ -291,11 +291,11 @@
 								<% if(flag1==0){%>
 								<tr><td align =	center>&nbsp;&nbsp;<b>Mtr.Read</b>&nbsp;&nbsp;</td>
 								<%}
-									for(int m=0;m<6;m++)
-									{
-										if(EditCount==1)//(Start) add on 26.09.007
-										{
-											if(no_of_nozzels[Machine_No-1]>m){%>
+                                    for(int m=0;m<6;m++)
+                                    {
+                                        if(EditCount==1)//(Start) add on 26.09.007
+                                        {
+                                            if(no_of_nozzels[Machine_No-1]>m && TankCount <= 5){%>
 											<td align=center><input type=text size=5 class="FontStyle" maxlength=10 name=txtM-<%=MachineNo[Machine_No-1]+Nozzels[m]%> style="border-style:Groove;" onkeypress="return GetOnlyNumbers(this, event, false,true);" value="<%=Nozzle[TankCount++]%>"></td>
 											<%}
 										}
