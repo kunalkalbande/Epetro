@@ -35,16 +35,16 @@ function makeRound(t)
 function selectAll()
 {
 	//alert("In");
-	var CheckBox = new Array(document.Form1.Check1,document.Form1.Check2,document.Form1.Check3,document.Form1.Check4,document.Form1.Check5,document.Form1.Check6,document.Form1.Check7,document.Form1.Check8);
-	var ProdName = new Array(document.Form1.txtProdName1,document.Form1.txtProdName2,document.Form1.txtProdName3,document.Form1.txtProdName4,document.Form1.txtProdName5,document.Form1.txtProdName6,document.Form1.txtProdName7,document.Form1.txtProdName8);
-	var Pack = new Array(document.Form1.txtPack1,document.Form1.txtPack2,document.Form1.txtPack3,document.Form1.txtPack4,document.Form1.txtPack5,document.Form1.txtPack6,document.Form1.txtPack7,document.Form1.txtPack8);
-	var Qty = new Array(document.Form1.txtQty1,document.Form1.txtQty2,document.Form1.txtQty3,document.Form1.txtQty4,document.Form1.txtQty5,document.Form1.txtQty6,document.Form1.txtQty7,document.Form1.txtQty8);
-	var Rate = new Array(document.Form1.txtRate1,document.Form1.txtRate2,document.Form1.txtRate3,document.Form1.txtRate4,document.Form1.txtRate5,document.Form1.txtRate6,document.Form1.txtRate7,document.Form1.txtRate8);
-	var Amount = new Array(document.Form1.txtAmount1,document.Form1.txtAmount2,document.Form1.txtAmount3,document.Form1.txtAmount4,document.Form1.txtAmount5,document.Form1.txtAmount6,document.Form1.txtAmount7,document.Form1.txtAmount8);
+    var CheckBox = new Array(document.all.Check1, document.all.Check2, document.all.Check3, document.all.Check4, document.all.Check5, document.all.Check6, document.all.Check7, document.all.Check8);
+	var ProdName = new Array(document.all.txtProdName1,document.all.txtProdName2,document.all.txtProdName3,document.all.txtProdName4,document.all.txtProdName5,document.all.txtProdName6,document.all.txtProdName7,document.all.txtProdName8);
+	var Pack = new Array(document.all.txtPack1,document.all.txtPack2,document.all.txtPack3,document.all.txtPack4,document.all.txtPack5,document.all.txtPack6,document.all.txtPack7,document.all.txtPack8);
+	var Qty = new Array(document.all.txtQty1,document.all.txtQty2,document.all.txtQty3,document.all.txtQty4,document.all.txtQty5,document.all.txtQty6,document.all.txtQty7,document.all.txtQty8);
+	var Rate = new Array(document.all.txtRate1,document.all.txtRate2,document.all.txtRate3,document.all.txtRate4,document.all.txtRate5,document.all.txtRate6,document.all.txtRate7,document.all.txtRate8);
+	var Amount = new Array(document.all.txtAmount1,document.all.txtAmount2,document.all.txtAmount3,document.all.txtAmount4,document.all.txtAmount5,document.all.txtAmount6,document.all.txtAmount7,document.all.txtAmount8);
 	// var TempQty = new Array(document.Form1.txtTempQty1,document.Form1.txtTempQty2,document.Form1.txtTempQty3,document.Form1.txtTempQty4,document.Form1.txtTempQty5,document.Form1.txtTempQty6,document.Form1.txtTempQty7,document.Form1.txtTempQty8);
-	var TempQty = new Array(document.Form1.tmpQty1,document.Form1.tmpQty2,document.Form1.tmpQty3,document.Form1.tmpQty4,document.Form1.tmpQty5,document.Form1.tmpQty6,document.Form1.tmpQty7,document.Form1.tmpQty8);
+	var TempQty = new Array(document.all.tmpQty1,document.all.tmpQty2,document.all.tmpQty3,document.all.tmpQty4,document.all.tmpQty5,document.all.tmpQty6,document.all.tmpQty7,document.all.tmpQty8);
 	
-	if(document.Form1.CheckAll.checked == true)
+	if(document.all.CheckAll.checked == true)
 	{
 		//alert("if")
 		for(var i = 0; i < CheckBox.length ; i++)
@@ -83,7 +83,7 @@ function selectAll()
  
 function allUnChecked()
 {
-	var CheckBox = new Array(document.Form1.Check1,document.Form1.Check2,document.Form1.Check3,document.Form1.Check4,document.Form1.Check5,document.Form1.Check6,document.Form1.Check7,document.Form1.Check8);
+	var CheckBox = new Array(document.all.Check1,document.all.Check2,document.all.Check3,document.all.Check4,document.all.Check5,document.all.Check6,document.all.Check7,document.all.Check8);
 	var c = 0;
  
 	for(var i= 0 ; i < CheckBox.length; i++)
@@ -141,40 +141,40 @@ function calc1(txtQty,txtRate)
 	var sarr = new Array()
 	var temp ="";
 	
-	document.Form1.txtAmount1.value=document.Form1.txtQty1.value*document.Form1.txtRate1.value	
-	if(document.Form1.txtAmount1.value==0)
-		document.Form1.txtAmount1.value=""
-	document.Form1.txtAmount2.value= document.Form1.txtQty2.value*document.Form1.txtRate2.value	
- 	if(document.Form1.txtAmount2.value==0)
-		document.Form1.txtAmount2.value=""
-	document.Form1.txtAmount3.value= document.Form1.txtQty3.value*document.Form1.txtRate3.value	
-	if(document.Form1.txtAmount3.value==0)
-		document.Form1.txtAmount3.value=""
-	document.Form1.txtAmount4.value= document.Form1.txtQty4.value*document.Form1.txtRate4.value	
-	if(document.Form1.txtAmount4.value==0)
-		document.Form1.txtAmount4.value=""
-	document.Form1.txtAmount5.value= document.Form1.txtQty5.value*document.Form1.txtRate5.value	
-	if(document.Form1.txtAmount5.value==0)
-		document.Form1.txtAmount5.value=""
-	document.Form1.txtAmount6.value= document.Form1.txtQty6.value*document.Form1.txtRate6.value	
-	if(document.Form1.txtAmount6.value==0)
-		document.Form1.txtAmount6.value=""
-	document.Form1.txtAmount7.value= document.Form1.txtQty7.value*document.Form1.txtRate7.value	
-	if(document.Form1.txtAmount7.value==0)
-		document.Form1.txtAmount7.value=""
-	document.Form1.txtAmount8.value= document.Form1.txtQty8.value*document.Form1.txtRate8.value	
-	if(document.Form1.txtAmount8.value==0)
-		document.Form1.txtAmount8.value=""
-	document.Form1.txtGrandTotal.value = document.Form1.tmpGrandTotal.value  
-	makeRound(document.Form1.txtGrandTotal);
-	document.Form1.txtDisc.value = document.Form1.tmpDisc.value  
-	makeRound(document.Form1.txtDisc);
-	document.Form1.txtNetAmount.value = document.Form1.tmpNetAmount.value  
-	makeRound(document.Form1.txtNetAmount);
-	document.Form1.txtCashDisc.value = document.Form1.tmpCashDisc.value  
-	makeRound(document.Form1.txtCashDisc.value);
-	document.Form1.txtVAT.value = document.Form1.tmpVatAmount.value  
-	makeRound(document.Form1.txtVAT);	
+	document.all.txtAmount1.value=document.all.txtQty1.value*document.all.txtRate1.value	
+	if(document.all.txtAmount1.value==0)
+		document.all.txtAmount1.value=""
+	document.all.txtAmount2.value= document.all.txtQty2.value*document.all.txtRate2.value	
+ 	if(document.all.txtAmount2.value==0)
+		document.all.txtAmount2.value=""
+	document.all.txtAmount3.value= document.all.txtQty3.value*document.all.txtRate3.value	
+	if(document.all.txtAmount3.value==0)
+		document.all.txtAmount3.value=""
+	document.all.txtAmount4.value= document.all.txtQty4.value*document.all.txtRate4.value	
+	if(document.all.txtAmount4.value==0)
+		document.all.txtAmount4.value=""
+	document.all.txtAmount5.value= document.all.txtQty5.value*document.all.txtRate5.value	
+	if(document.all.txtAmount5.value==0)
+		document.all.txtAmount5.value=""
+	document.all.txtAmount6.value= document.all.txtQty6.value*document.all.txtRate6.value	
+	if(document.all.txtAmount6.value==0)
+		document.all.txtAmount6.value=""
+	document.all.txtAmount7.value= document.all.txtQty7.value*document.all.txtRate7.value	
+	if(document.all.txtAmount7.value==0)
+		document.all.txtAmount7.value=""
+	document.all.txtAmount8.value= document.all.txtQty8.value*document.all.txtRate8.value	
+	if(document.all.txtAmount8.value==0)
+		document.all.txtAmount8.value=""
+	document.all.txtGrandTotal.value = document.all.tmpGrandTotal.value  
+	makeRound(document.all.txtGrandTotal);
+	document.all.txtDisc.value = document.all.tmpDisc.value  
+	makeRound(document.all.txtDisc);
+	document.all.txtNetAmount.value = document.all.tmpNetAmount.value  
+	makeRound(document.all.txtNetAmount);
+	document.all.txtCashDisc.value = document.all.tmpCashDisc.value  
+	makeRound(document.all.txtCashDisc.value);
+	document.all.txtVAT.value = document.all.tmpVatAmount.value  
+	makeRound(document.all.txtVAT);	
 }  
 
 function calc(txtQty,txtRate,txtTempQty)
@@ -193,12 +193,12 @@ function calc(txtQty,txtRate,txtTempQty)
 	var tarr = new Array();
 	var taxarr = new Array();
 	var flag1=0;
-	var tax = document.Form1.tempTaxEntry.value;
+	var tax = document.all.tempTaxEntry.value;
 	tarr = tax.split("~");
 	for(var i=0;i<tarr.length;i++)
 	{
 		taxarr=tarr[i].split(":");
-		if(document.Form1.txtProdName1.value==taxarr[1])
+		if(document.all.txtProdName1.value==taxarr[1])
 		{
 			calcTax(txtQty,txtTempQty)
 			flag1=1;
@@ -207,30 +207,30 @@ function calc(txtQty,txtRate,txtTempQty)
 	if(flag1==0)
 	{
 	//***************/
-		document.Form1.txtAmount1.value=document.Form1.txtQty1.value*document.Form1.txtRate1.value	
-		if(document.Form1.txtAmount1.value==0)
-			document.Form1.txtAmount1.value=""
-		document.Form1.txtAmount2.value= document.Form1.txtQty2.value*document.Form1.txtRate2.value	
- 		if(document.Form1.txtAmount2.value==0)
-			document.Form1.txtAmount2.value=""
-		document.Form1.txtAmount3.value= document.Form1.txtQty3.value*document.Form1.txtRate3.value	
-		if(document.Form1.txtAmount3.value==0)
-			document.Form1.txtAmount3.value=""
-		document.Form1.txtAmount4.value= document.Form1.txtQty4.value*document.Form1.txtRate4.value	
-		if(document.Form1.txtAmount4.value==0)
-			document.Form1.txtAmount4.value=""
-		document.Form1.txtAmount5.value= document.Form1.txtQty5.value*document.Form1.txtRate5.value	
-		if(document.Form1.txtAmount5.value==0)
-			document.Form1.txtAmount5.value=""
-		document.Form1.txtAmount6.value= document.Form1.txtQty6.value*document.Form1.txtRate6.value	
-		if(document.Form1.txtAmount6.value==0)
-			document.Form1.txtAmount6.value=""
-		document.Form1.txtAmount7.value= document.Form1.txtQty7.value*document.Form1.txtRate7.value	
-		if(document.Form1.txtAmount7.value==0)
-			document.Form1.txtAmount7.value=""
-		document.Form1.txtAmount8.value= document.Form1.txtQty8.value*document.Form1.txtRate8.value	
-		if(document.Form1.txtAmount8.value==0)
-			document.Form1.txtAmount8.value=""
+		document.all.txtAmount1.value=document.all.txtQty1.value*document.all.txtRate1.value	
+		if(document.all.txtAmount1.value==0)
+			document.all.txtAmount1.value=""
+		document.all.txtAmount2.value= document.all.txtQty2.value*document.all.txtRate2.value	
+ 		if(document.all.txtAmount2.value==0)
+			document.all.txtAmount2.value=""
+		document.all.txtAmount3.value= document.all.txtQty3.value*document.all.txtRate3.value	
+		if(document.all.txtAmount3.value==0)
+			document.all.txtAmount3.value=""
+		document.all.txtAmount4.value= document.all.txtQty4.value*document.all.txtRate4.value	
+		if(document.all.txtAmount4.value==0)
+			document.all.txtAmount4.value=""
+		document.all.txtAmount5.value= document.all.txtQty5.value*document.all.txtRate5.value	
+		if(document.all.txtAmount5.value==0)
+			document.all.txtAmount5.value=""
+		document.all.txtAmount6.value= document.all.txtQty6.value*document.all.txtRate6.value	
+		if(document.all.txtAmount6.value==0)
+			document.all.txtAmount6.value=""
+		document.all.txtAmount7.value= document.all.txtQty7.value*document.all.txtRate7.value	
+		if(document.all.txtAmount7.value==0)
+			document.all.txtAmount7.value=""
+		document.all.txtAmount8.value= document.all.txtQty8.value*document.all.txtRate8.value	
+		if(document.all.txtAmount8.value==0)
+			document.all.txtAmount8.value=""
 		GetGrandTotal()
 		GetNetAmount()
 	}	
@@ -239,60 +239,60 @@ function calc(txtQty,txtRate,txtTempQty)
 function GetGrandTotal()
 {
 	var GTotal=0
-	if(document.Form1.txtAmount1.value!="" && document.Form1.Check1.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount1.value)
-	if(document.Form1.txtAmount2.value!="" && document.Form1.Check2.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount2.value)
-	if(document.Form1.txtAmount3.value!="" && document.Form1.Check3.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount3.value)
-	if(document.Form1.txtAmount4.value!="" && document.Form1.Check4.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount4.value)
-	if(document.Form1.txtAmount5.value!="" && document.Form1.Check5.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount5.value)
-	if(document.Form1.txtAmount6.value!="" && document.Form1.Check6.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount6.value)
-	if(document.Form1.txtAmount7.value!="" && document.Form1.Check7.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount7.value)
-	if(document.Form1.txtAmount8.value!="" && document.Form1.Check8.checked == true)
-	 	GTotal=GTotal+eval(document.Form1.txtAmount8.value)
-	document.Form1.txtGrandTotal.value=GTotal ;
-	makeRound(document.Form1.txtGrandTotal);
+	if(document.all.txtAmount1.value!="" && document.all.Check1.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount1.value)
+	if(document.all.txtAmount2.value!="" && document.all.Check2.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount2.value)
+	if(document.all.txtAmount3.value!="" && document.all.Check3.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount3.value)
+	if(document.all.txtAmount4.value!="" && document.all.Check4.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount4.value)
+	if(document.all.txtAmount5.value!="" && document.all.Check5.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount5.value)
+	if(document.all.txtAmount6.value!="" && document.all.Check6.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount6.value)
+	if(document.all.txtAmount7.value!="" && document.all.Check7.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount7.value)
+	if(document.all.txtAmount8.value!="" && document.all.Check8.checked == true)
+	 	GTotal=GTotal+eval(document.all.txtAmount8.value)
+	document.all.txtGrandTotal.value=GTotal ;
+	makeRound(document.all.txtGrandTotal);
 }	
 	
 function GetCashDiscount()
 {
-	var CashDisc=document.Form1.txtCashDisc.value
+	var CashDisc=document.all.txtCashDisc.value
 	if(CashDisc=="" || isNaN(CashDisc))
 		CashDisc=0
-	if(document.Form1.txtCashDiscType.value=="%")
-		CashDisc=document.Form1.txtGrandTotal.value*CashDisc/100 
-	document.Form1.txtVatValue.value = "";	
-	document.Form1.txtVatValue.value = eval(document.Form1.txtGrandTotal.value) - eval(CashDisc);	
+	if(document.all.txtCashDiscType.value=="%")
+		CashDisc=document.all.txtGrandTotal.value*CashDisc/100 
+	document.all.txtVatValue.value = "";	
+	document.all.txtVatValue.value = eval(document.all.txtGrandTotal.value) - eval(CashDisc);	
 }
 	
 function GetVatAmount()
 {
     GetCashDiscount()
-    if(document.Form1.No.checked)
+    if(document.all.No.checked)
     {
-	    document.Form1.txtVAT.value = "";
+	    document.all.txtVAT.value = "";
 	} 
 	else
 	{
-		var vat_rate = document.Form1.txtVatRate.value
+		var vat_rate = document.all.txtVatRate.value
 		// alert(vat_rate);
 	    if(vat_rate == "")
 			vat_rate = 0;
-		var vat = document.Form1.txtVatValue.value    
+		var vat = document.all.txtVatValue.value    
 	    if(vat == "" || isNaN(vat))
 			vat = 0;
 	    //alert("disc: "+vat)
 	    var vat_amount = vat * vat_rate/100
 	    // alert("vat_amt : "+vat_amount)
-	    document.Form1.txtVAT.value = vat_amount
-	    makeRound(document.Form1.txtVAT)
+	    document.all.txtVAT.value = vat_amount
+	    makeRound(document.all.txtVAT)
 	    
-	    document.Form1.txtVatValue.value = eval(vat) + eval(vat_amount)
+	    document.all.txtVatValue.value = eval(vat) + eval(vat_amount)
 	    // alert("total :"+document.Form1.txtVatValue.value)
 	}
 }
@@ -300,29 +300,29 @@ function GetVatAmount()
 function GetNetAmount()
 {
 	var vat_value = 0;
-	if(document.Form1.No.checked)
+	if(document.all.No.checked)
     {
 	    GetCashDiscount()
-	    vat_value = document.Form1.txtVatValue.value;
-	    document.Form1.txtVAT.value = "";
+	    vat_value = document.all.txtVatValue.value;
+	    document.all.txtVAT.value = "";
     }
     else
     {
 	    GetVatAmount()
-	    vat_value = document.Form1.txtVatValue.value;
+	    vat_value = document.all.txtVatValue.value;
     }
     if(vat_value=="" || isNaN(vat_value))
 		vat_value=0
-	var Disc=document.Form1.txtDisc.value
+	var Disc=document.all.txtDisc.value
 	if(Disc=="" || isNaN(Disc))
 		Disc=0
 	var NetAmount
-	if(document.Form1.txtDiscType.value=="%")
+	if(document.all.txtDiscType.value=="%")
 		Disc=vat_value * Disc/100 
-	document.Form1.txtNetAmount.value=eval(vat_value) - eval(Disc);
-	makeRound(document.Form1.txtNetAmount);
-	if(document.Form1.txtNetAmount.value==0)
-		document.Form1.txtNetAmount.value=""
+	document.all.txtNetAmount.value=eval(vat_value) - eval(Disc);
+	makeRound(document.all.txtNetAmount);
+	if(document.all.txtNetAmount.value==0)
+		document.all.txtNetAmount.value=""
 }
 
 //var ChkFlag = new Array(false,false,false,false)
@@ -330,11 +330,11 @@ function GetNetAmount()
 function calcTax(txtQty,txtTempQty)
 {
 	var q=txtQty.name.substring(6)
-	var Check = new Array(document.Form1.Check1,document.Form1.Check2,document.Form1.Check3,document.Form1.Check4);
-	var ProdName = new Array(document.Form1.txtProdName1,document.Form1.txtProdName2,document.Form1.txtProdName3,document.Form1.txtProdName4);
-	var Qty = new Array(document.Form1.txtQty1,document.Form1.txtQty2,document.Form1.txtQty3,document.Form1.txtQty4);
-	var Rate = new Array(document.Form1.txtRate1,document.Form1.txtRate2,document.Form1.txtRate3,document.Form1.txtRate4);
-	var Amount = new Array(document.Form1.txtAmount1,document.Form1.txtAmount2,document.Form1.txtAmount3,document.Form1.txtAmount4);
+	var Check = new Array(document.all.Check1,document.all.Check2,document.all.Check3,document.all.Check4);
+	var ProdName = new Array(document.all.txtProdName1,document.all.txtProdName2,document.all.txtProdName3,document.all.txtProdName4);
+	var Qty = new Array(document.all.txtQty1,document.all.txtQty2,document.all.txtQty3,document.all.txtQty4);
+	var Rate = new Array(document.all.txtRate1,document.all.txtRate2,document.all.txtRate3,document.all.txtRate4);
+	var Amount = new Array(document.all.txtAmount1,document.all.txtAmount2,document.all.txtAmount3,document.all.txtAmount4);
 	var k=q-1;
 	//for(var k=q-1;k<Check.length;k++)
 	//{
@@ -346,7 +346,7 @@ function calcTax(txtQty,txtTempQty)
 			{
 				var tarr = new Array();
 				var taxarr = new Array();
-				var tax = document.Form1.tempTaxEntry.value;
+				var tax = document.all.tempTaxEntry.value;
 				tarr = tax.split("~");
 				var j=0;
 				for(var i=0;i<tarr[j].length;i++)
@@ -865,13 +865,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName1" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack1" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack1" runat="server"></TD>
-													<TD align="center"><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty1" onblur="calc(this,document.Form1.txtRate1,document.Form1.tmpQty1)"
+													<TD align="center"><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty1" onblur="calc(this,document.all.txtRate1,document.all.tmpQty1)"
 															runat="server" size="22" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate1" runat="server" size="22" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount1" runat="server" size="22" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check1" onclick="select1(document.Form1.Check1,document.Form1.txtProdName1,document.Form1.txtPack1,document.Form1.txtQty1,document.Form1.txtRate1,document.Form1.txtAmount1,document.Form1.tmpQty1)"
+													<TD align="center"><INPUT id="Check1" onclick="select1(document.all.Check1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtRate1,document.all.txtAmount1,document.all.tmpQty1)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -879,13 +879,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName2" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack2" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack2" runat="server"></TD>
-													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty2" onblur="calc(this,document.Form1.txtRate2,document.Form1.tmpQty2)"
+													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty2" onblur="calc(this,document.all.txtRate2,document.all.tmpQty2)"
 															runat="server" size="22" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate2" runat="server" size="22" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount2" runat="server" size="22" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check2" onclick="select1(document.Form1.Check2,document.Form1.txtProdName2,document.Form1.txtPack2,document.Form1.txtQty2,document.Form1.txtRate2,document.Form1.txtAmount2,document.Form1.tmpQty2)"
+													<TD align="center"><INPUT id="Check2" onclick="select1(document.all.Check2,document.all.txtProdName2,document.all.txtPack2,document.all.txtQty2,document.all.txtRate2,document.all.txtAmount2,document.all.tmpQty2)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -893,13 +893,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName3" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack3" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack3" runat="server"></TD>
-													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty3" onblur="calc(this,document.Form1.txtRate3,document.Form1.tmpQty3)"
+													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty3" onblur="calc(this,document.all.txtRate3,document.all.tmpQty3)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate3" runat="server" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount3" runat="server" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check3" onclick="select1(document.Form1.Check3,document.Form1.txtProdName3,document.Form1.txtPack3,document.Form1.txtQty3,document.Form1.txtRate3,document.Form1.txtAmount3,document.Form1.tmpQty3)"
+													<TD align="center"><INPUT id="Check3" onclick="select1(document.all.Check3,document.all.txtProdName3,document.all.txtPack3,document.all.txtQty3,document.all.txtRate3,document.all.txtAmount3,document.all.tmpQty3)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -907,13 +907,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName4" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack4" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack4" runat="server"></TD>
-													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty4" onblur="calc(this,document.Form1.txtRate4,document.Form1.tmpQty4)"
+													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty4" onblur="calc(this,document.all.txtRate4,document.all.tmpQty4)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate4" runat="server" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount4" runat="server" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check4" onclick="select1(document.Form1.Check4,document.Form1.txtProdName4,document.Form1.txtPack4,document.Form1.txtQty4,document.Form1.txtRate4,document.Form1.txtAmount4,document.Form1.tmpQty4)"
+													<TD align="center"><INPUT id="Check4" onclick="select1(document.all.Check4,document.all.txtProdName4,document.all.txtPack4,document.all.txtQty4,document.all.txtRate4,document.all.txtAmount4,document.all.tmpQty4)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -922,13 +922,13 @@ function calcTax(txtQty,txtTempQty)
 													</TD>
 													<TD><INPUT class="FontStyle" id="txtPack5" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack5" runat="server"></TD>
-													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty5" onblur="calc(this,document.Form1.txtRate5,document.Form1.tmpQty5)"
+													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty5" onblur="calc(this,document.all.txtRate5,document.all.tmpQty5)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate5" runat="server" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount5" runat="server" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check5" onclick="select1(document.Form1.Check5,document.Form1.txtProdName5,document.Form1.txtPack5,document.Form1.txtQty5,document.Form1.txtRate5,document.Form1.txtAmount5,document.Form1.tmpQty5)"
+													<TD align="center"><INPUT id="Check5" onclick="select1(document.all.Check5,document.all.txtProdName5,document.all.txtPack5,document.all.txtQty5,document.all.txtRate5,document.all.txtAmount5,document.all.tmpQty5)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -936,13 +936,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName6" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack6" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack6" runat="server"></TD>
-													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty6" onblur="calc(this,document.Form1.txtRate6,document.Form1.tmpQty6)"
+													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty6" onblur="calc(this,document.all.txtRate6,document.all.tmpQty6)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate6" runat="server" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount6" runat="server" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check6" onclick="select1(document.Form1.Check6,document.Form1.txtProdName6,document.Form1.txtPack6,document.Form1.txtQty6,document.Form1.txtRate6,document.Form1.txtAmount6,document.Form1.tmpQty6)"
+													<TD align="center"><INPUT id="Check6" onclick="select1(document.all.Check6,document.all.txtProdName6,document.all.txtPack6,document.all.txtQty6,document.all.txtRate6,document.all.txtAmount6,document.all.tmpQty6)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -950,13 +950,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName7" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack7" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack7" runat="server"></TD>
-													<TD><asp:textbox id="txtQty7" onblur="calc(this,document.Form1.txtRate7,document.Form1.tmpQty7)"
+													<TD><asp:textbox id="txtQty7" onblur="calc(this,document.all.txtRate7,document.all.tmpQty7)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate7" runat="server" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount7" runat="server" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check7" onclick="select1(document.Form1.Check7,document.Form1.txtProdName7,document.Form1.txtPack7,document.Form1.txtQty7,document.Form1.txtRate7,document.Form1.txtAmount7,document.Form1.tmpQty7)"
+													<TD align="center"><INPUT id="Check7" onclick="select1(document.all.Check7,document.all.txtProdName7,document.all.txtPack7,document.all.txtQty7,document.all.txtRate7,document.all.txtAmount7,document.all.tmpQty7)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>
@@ -964,13 +964,13 @@ function calcTax(txtQty,txtTempQty)
 															disabled  type="text" size="22" name="txtProdName8" runat="server"></TD>
 													<TD><INPUT class="FontStyle" id="txtPack8" style="WIDTH: 100px; BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove;  BORDER-BOTTOM-STYLE: groove"
 															disabled  type="text" size="22" name="txtPack8" runat="server"></TD>
-													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty8" onblur="calc(this,document.Form1.txtRate8,document.Form1.tmpQty8)"
+													<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty8" onblur="calc(this,document.all.txtRate8,document.all.tmpQty8)"
 															runat="server" Width="52px" BorderStyle="Groove" CssClass="FontStyle" Enabled="False" MaxLength="5"></asp:textbox></TD>
 													<TD><asp:textbox id="txtRate8" runat="server" Width="52px" BorderStyle="Groove"  CssClass="FontStyle"
 															Enabled="False"></asp:textbox></TD>
 													<TD><asp:textbox id="txtAmount8" runat="server" Width="79px" BorderStyle="Groove" 
 															CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
-													<TD align="center"><INPUT id="Check8" onclick="select1(document.Form1.Check8,document.Form1.txtProdName8,document.Form1.txtPack8,document.Form1.txtQty8,document.Form1.txtRate8,document.Form1.txtAmount8,document.Form1.tmpQty8)"
+													<TD align="center"><INPUT id="Check8" onclick="select1(document.all.Check8,document.all.txtProdName8,document.all.txtPack8,document.all.txtQty8,document.all.txtRate8,document.all.txtAmount8,document.all.tmpQty8)"
 															type="checkbox" name="Checkbox1" runat="server"></TD>
 												</TR>
 												<TR>

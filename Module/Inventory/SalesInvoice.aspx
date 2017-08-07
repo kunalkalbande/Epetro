@@ -571,8 +571,7 @@
 											</TR>
 											<TR>
 												<TD style="HEIGHT: 21px">&nbsp; Sales Type</TD>
-												<TD style="HEIGHT: 21px"><asp:dropdownlist id="DropSalesType" runat="server" Width="128" CssClass="FontStyle" AutoPostBack="True"
-														Height="22">
+												<TD style="HEIGHT: 21px"><asp:dropdownlist id="DropSalesType" runat="server" Width="128" CssClass="FontStyle" AutoPostBack="True">
 														<asp:ListItem Value="Credit Card Sale">Credit Card Sale</asp:ListItem>
 														<asp:ListItem Value="Fleet Card Sale">Fleet Card Sale</asp:ListItem>
 														<asp:ListItem Value="General Credit">General Credit</asp:ListItem>
@@ -583,14 +582,14 @@
 												<TD>&nbsp;
 													<asp:label id="lblSlipNo" runat="server" CssClass="dropdownlist">Slip No.<font color="red">*</font></asp:label><asp:requiredfieldvalidator id="Requiredfieldvalidator2" runat="server" ControlToValidate="txtSlipNo" ErrorMessage="Please Enter Slip No."><font color="red">*</font></asp:requiredfieldvalidator></TD>
 												<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtSlipNo" onblur="check(this)"
-														runat="server" Width="80px" BorderStyle="Groove" CssClass="FontStyle" Height="20px" MaxLength="9"
+														runat="server" Width="128px" BorderStyle="Groove" CssClass="FontStyle" Height="22px" MaxLength="9"
 														tooltip="check11(document.all.txtSlipNo.value)"></asp:textbox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 											</TR>
 											<TR>
 												<TD>&nbsp; Under Sales Man<font color="red">*</font>&nbsp;&nbsp;
 													<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropUnderSalesMan" ErrorMessage="Please Select Sales Man"
 														Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator><FONT color="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
-												<TD><asp:dropdownlist id="DropUnderSalesMan" runat="server" Width="128" CssClass="FontStyle" Height="22">
+												<TD><asp:dropdownlist id="DropUnderSalesMan" runat="server" Width="128" CssClass="FontStyle">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist></TD>
 											</TR>

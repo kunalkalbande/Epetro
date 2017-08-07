@@ -21,7 +21,7 @@
 	//To selected the all checkboxes
 	function selectAll()
 	{
-		var f=document.f1
+	    var f = document.forms[0]
 		if(f.chkSelectAll.checked)
 			for(var i=0;i<f.length;i++)
 				f.elements[i].checked=true
