@@ -438,7 +438,13 @@ namespace EPetro.Module.Inventory
 		/// </summary>
 		public void Insert()
 		{
-			flag = 0;
+            
+            if (DropVoucherName.SelectedIndex == 0)
+            {
+                MessageBox.Show("- Please select Voucher Type");
+                return;
+            }
+            flag = 0;
 			if(txtVouchID.Visible==true)
 				id = txtID.Value;
 			else

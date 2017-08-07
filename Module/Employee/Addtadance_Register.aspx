@@ -20,7 +20,7 @@
 	
 	function selectAll()
 	{
-		var f=document.f1
+	    var f = document.forms[0]
 		if(f.chkSelectAll.checked)
 			for(var i=0;i<f.length;i++)
 				f.elements[i].checked=true
@@ -181,6 +181,11 @@
 		{
 			try
 			{
+                if (DropEmp.SelectedIndex == 0)
+                {
+                    MessageBox.Show("- Please select the Date");
+                    return;
+                }
 				EmployeeClass obj=new EmployeeClass(); 
 				int Total_Rows=0;
 				SqlDataReader SqlDtr;
@@ -279,6 +284,11 @@
 		{
 			try
 			{
+                if (DropEmp.Visible == true && DropEmp.SelectedIndex == 0)
+                {
+                    MessageBox.Show("- Please select the Date");
+                    return;
+                }
 				panEmp.Visible=true;
 				EmployeeClass obj=new EmployeeClass(); 
 				SqlDataReader SqlDtr;
