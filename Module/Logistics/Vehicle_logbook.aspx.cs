@@ -787,8 +787,27 @@ namespace EPetro.Module.Logistics
 		{
 			try
 			{
-		
-				if(DropVDLBID.SelectedIndex == 0)
+                if (DropVDLBID.Visible == true)
+                {
+                    StringBuilder errorMessage = new StringBuilder();
+                    if (DropVehicleNo.SelectedIndex == 0)
+                    {
+                        errorMessage.Append("Please Select Vehicle No.");
+                        errorMessage.Append("\n");
+                    }
+                    if (txtmeterreadcurr.Text == string.Empty)
+                    {
+                        errorMessage.Append("Please Enter Current Meter Reading");
+                        errorMessage.Append("\n");
+                    }
+                    if (errorMessage.Length > 0)
+                    {
+                        MessageBox.Show(errorMessage.ToString());
+                        return;
+                    }
+                }
+
+                if (DropVDLBID.SelectedIndex == 0)
 				{
 					MessageBox.Show("Please select VDLB ID");
 					return ;
@@ -1074,7 +1093,24 @@ namespace EPetro.Module.Logistics
 		/// </summary>
 		public void print()
 		{
-			byte[] bytes = new byte[1024];
+            StringBuilder errorMessage = new StringBuilder();
+            if (DropVehicleNo.SelectedIndex == 0)
+            {
+                errorMessage.Append("Please Select Vehicle No.");
+                errorMessage.Append("\n");
+            }
+            if (txtmeterreadcurr.Text == string.Empty)
+            {
+                errorMessage.Append("Please Enter Current Meter Reading");
+                errorMessage.Append("\n");
+            }
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage.ToString());
+                return;
+            }
+
+            byte[] bytes = new byte[1024];
 
 			// Connect to a remote device.
 			try 

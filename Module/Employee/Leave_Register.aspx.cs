@@ -187,11 +187,7 @@ namespace EPetro.Module.Employee
                     MessageBox.Show("Date From Should Be Less Than Date To");
                     return;
                 }
-                if (DateTime.Compare(ToMMddYYYY(GenUtil.str2MMDDYYYY(GenUtil.trimDate(DateTime.Now.ToString()))), ToMMddYYYY(txtDateFrom.Text)) > 0)
-                {
-                    MessageBox.Show("Date From Should Be Gratter Or Equal to Date To");
-                    return;
-                }
+                
                 int Count=0;
 				string str = "select count(*) from Leave_Register where Emp_ID='"+DropEmpName.SelectedItem.Value.Substring(0,DropEmpName.SelectedItem.Value.LastIndexOf(":"))+"' and cast(floor(cast(cast(date_from as datetime) as float)) as datetime) <='"+GenUtil.str2MMDDYYYY(txtDateFrom.Text)+"' and cast(floor(cast(cast(date_to as datetime) as float)) as datetime)>='"+GenUtil.str2MMDDYYYY(txtDateFrom.Text)+"' and isSanction=1";
 				dbobj.ExecuteScalar(str,ref Count);
