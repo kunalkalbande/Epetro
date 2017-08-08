@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="Supplier_Entry.aspx.cs" AutoEventWireup="false"  %>
+<%@ Page language="c#" Codebehind="Supplier_Entry.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Parties.Supplier_Entry" %>
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -80,7 +80,7 @@
 										<asp:ListItem Value="Misc.">Misc.</asp:ListItem>
 									</asp:dropdownlist></TD>
 								<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tin 
-									No. <font color="red">*</font><asp:RequiredFieldValidator id="Requiredfieldvalidator2" runat="server" ControlToValidate="txtTinNo" ErrorMessage="Please Fill TinNo"><font color="red">*</font></asp:RequiredFieldValidator>
+									No. <font color="red">*</font><asp:RequiredFieldValidator id="Requiredfieldvalidator3" runat="server" ControlToValidate="txtTinNo" ErrorMessage="Please Fill TinNo"><font color="red">*</font></asp:RequiredFieldValidator>
 									<asp:regularexpressionvalidator id="Regularexpressionvalidator6" runat="server" ErrorMessage="Invalid Tin No" ControlToValidate="txtTinNo"
 										ValidationExpression="\d{11}"><font color="red">*</font></asp:regularexpressionvalidator></TD>
 								<TD style="WIDTH: 127px">

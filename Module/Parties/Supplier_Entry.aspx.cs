@@ -63,8 +63,8 @@ namespace EPetro.Module.Parties
 		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 		protected System.Web.UI.WebControls.TextBox txtbeatname;
 		protected System.Web.UI.WebControls.RegularExpressionValidator Regularexpressionvalidator6;
-		protected System.Web.UI.WebControls.RequiredFieldValidator Requiredfieldvalidator2;
-		string uid;
+        protected System.Web.UI.WebControls.RequiredFieldValidator Requiredfieldvalidator3;
+        string uid;
 
 		/// <summary>
 		/// This method is used for setting the Session variable for userId and 
