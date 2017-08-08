@@ -851,7 +851,7 @@ namespace EPetro.Module.Inventory
 			string sql;
             //***************
 
-            if (txtSlipNo.Text == string.Empty)
+            if (txtSlipNo.Visible == true && txtSlipNo.Text == string.Empty)
             {
                 erroMessage.Append("- Please Enter Slip No.");
                 erroMessage.Append("\n");

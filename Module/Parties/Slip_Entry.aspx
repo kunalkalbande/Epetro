@@ -23,7 +23,7 @@
 <!--
 function calc()
 {
-	document.Form1.txtTotalSlips.value=eval(document.Form1.txtEndNo.value)-(eval(document.Form1.txtStartNo.value)-1)
+	document.all.txtTotalSlips.value=eval(document.all.txtEndNo.value)-(eval(document.all.txtStartNo.value)-1)
 }
 function window_onblur() {
 

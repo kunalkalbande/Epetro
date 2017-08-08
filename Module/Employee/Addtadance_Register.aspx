@@ -181,7 +181,7 @@
 		{
 			try
 			{
-                if (DropEmp.SelectedIndex == 0)
+                if (DropEmp.Visible == true  && DropEmp.SelectedIndex == 0)
                 {
                     MessageBox.Show("- Please select the Date");
                     return;
