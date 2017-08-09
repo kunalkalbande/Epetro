@@ -463,7 +463,7 @@ namespace EPetro.Module.Reports
 						}
 						SqlDtr.Close();
 						
-						dbobj.SelectQuery("Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ToMMddYYYY(txtDateFrom.Text)+"' order by Entry_Date desc",ref SqlDtr); 
+						dbobj.SelectQuery("Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' order by Entry_Date desc",ref SqlDtr); 
 						string bt="";
 						string bl="";
 						if(SqlDtr.Read())
@@ -589,12 +589,12 @@ namespace EPetro.Module.Reports
 				else if(drop_value=="Sales A/C")
 				{
 					Flag=1;
-					sql="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where (particulars like 'Sales Invoice (%' or particulars like 'Sales in Cash(%') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"'"; 
+					sql="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where (particulars like 'Sales Invoice (%' or particulars like 'Sales in Cash(%') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "'"; 
 				}
 				else if(drop_value=="Purchase A/C")
 				{
 					Flag=1;
-					sql="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where particulars like 'Purchase Invoice (%' and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"'"; 
+					sql="Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where particulars like 'Purchase Invoice (%' and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "'"; 
 				}
 				SqlDataAdapter da=new SqlDataAdapter(sql,sqlcon);
 				DataSet ds=new DataSet();
@@ -930,7 +930,7 @@ namespace EPetro.Module.Reports
 						}
 						SqlDtr.Close();
 						
-						dbobj.SelectQuery("Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ToMMddYYYY(txtDateFrom.Text)+"' order by Entry_Date desc",ref SqlDtr); 
+						dbobj.SelectQuery("Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' order by Entry_Date desc",ref SqlDtr); 
 					
 						if(SqlDtr.Read())
 						{
@@ -956,7 +956,7 @@ namespace EPetro.Module.Reports
 					//dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type  from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strOrderBy"]+"",ref SqlDtr); 
 					if(TotalSales.Visible==false)
 					{
-						dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strOrderBy"],ref SqlDtr); 
+						dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strOrderBy"],ref SqlDtr); 
 						if(SqlDtr.HasRows)
 						{
 							while(SqlDtr.Read())
@@ -997,7 +997,7 @@ namespace EPetro.Module.Reports
 					{
 						if(DropPartyName.SelectedItem.Text.Equals("Sales A/C"))
 						{
-							dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where (Particulars like 'Sales Invoice (%' or Particulars like 'Sales in Cash(%') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strorderby"],ref SqlDtr); 
+							dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where (Particulars like 'Sales Invoice (%' or Particulars like 'Sales in Cash(%') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strorderby"],ref SqlDtr); 
 							if(SqlDtr.HasRows)
 							{
 								while(SqlDtr.Read())
@@ -1031,7 +1031,7 @@ namespace EPetro.Module.Reports
 						}
 						else if(DropPartyName.SelectedItem.Text.Equals("Purchase A/C"))
 						{
-							dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Particulars like 'Purchase Invoice (%' and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strorderby"],ref SqlDtr); 
+							dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Particulars like 'Purchase Invoice (%' and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strorderby"],ref SqlDtr); 
 							if(SqlDtr.HasRows)
 							{
 								while(SqlDtr.Read())
@@ -1173,7 +1173,7 @@ namespace EPetro.Module.Reports
 						Ledger_ID = SqlDtr.GetValue(0).ToString();  
 					}
 					SqlDtr.Close();
-					dbobj.SelectQuery("Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ToMMddYYYY(txtDateFrom.Text)+"' order by Entry_Date desc",ref SqlDtr); 
+					dbobj.SelectQuery("Select top 1 Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) < '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' order by Entry_Date desc",ref SqlDtr); 
 					if(SqlDtr.Read())
 					{
 						bt=SqlDtr.GetValue(5).ToString();
@@ -1195,7 +1195,7 @@ namespace EPetro.Module.Reports
 				string BalType="";
 				if(TotalSales.Visible==false)
 				{
-					dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strOrderBy"],ref SqlDtr); 
+					dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Ledger_ID = "+Ledger_ID+" and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strOrderBy"],ref SqlDtr); 
 					if(SqlDtr.HasRows)
 					{
 						while(SqlDtr.Read())
@@ -1227,7 +1227,7 @@ namespace EPetro.Module.Reports
 				{
 					if(DropPartyName.SelectedItem.Text.Equals("Sales A/C"))
 					{
-						dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where (Particulars like 'Sales Invoice (%' or Particulars like 'Sales in Cash(%') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strorderby"],ref SqlDtr); 
+						dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where (Particulars like 'Sales Invoice (%' or Particulars like 'Sales in Cash(%') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strorderby"],ref SqlDtr); 
 						if(SqlDtr.HasRows)
 						{
 							while(SqlDtr.Read())
@@ -1261,7 +1261,7 @@ namespace EPetro.Module.Reports
 					}
 					else if(DropPartyName.SelectedItem.Text.Equals("Purchase A/C"))
 					{
-						dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Particulars like 'Purchase Invoice (%' and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ToMMddYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ToMMddYYYY(txtDateTo.Text)+"' order by "+Cache["strorderby"],ref SqlDtr); 
+						dbobj.SelectQuery("Select Entry_Date,Particulars,Debit_Amount,Credit_Amount,Balance, Bal_Type,(Balance-Debit_Amount+Credit_Amount) opb from AccountsLedgerTable where Particulars like 'Purchase Invoice (%' and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+ GenUtil.str2MMDDYYYY(txtDateTo.Text) + "' order by "+Cache["strorderby"],ref SqlDtr); 
 						if(SqlDtr.HasRows)
 						{
 							while(SqlDtr.Read())

@@ -833,7 +833,24 @@ namespace EPetro.Module.Reports
 		{
 			try
 			{
-				if(DropMonth.SelectedIndex==0)
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropProduct.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please Select Product Name");
+                    errorMessage.Append("\n");
+                }
+                if (DropTank.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please Select Tank ID");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+
+                if (DropMonth.SelectedIndex==0)
 				{
 					MessageBox.Show("Please select the correct Month");
 					DropMonth.SelectedIndex=(int)Session["selmonth"];
@@ -867,12 +884,12 @@ namespace EPetro.Module.Reports
             StringBuilder errorMessage = new StringBuilder();
             if (DropProduct.SelectedIndex == 0)
             {
-                errorMessage.Append("Please Select Product Name");
+                errorMessage.Append("- Please Select Product Name");
                 errorMessage.Append("\n");
             }
             if (DropTank.SelectedIndex == 0)
             {
-                errorMessage.Append("Please Select Tank ID");
+                errorMessage.Append("- Please Select Tank ID");
                 errorMessage.Append("\n");
             }
             if (errorMessage.Length > 0)

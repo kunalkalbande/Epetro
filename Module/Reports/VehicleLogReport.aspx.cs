@@ -243,7 +243,13 @@ namespace EPetro
                 StringBuilder errorMessage = new StringBuilder();
                 if (DropOption.SelectedIndex == 0)
                 {
-                    errorMessage.Append("Please Select Option");
+                    errorMessage.Append("- Please Select Option");
+                    errorMessage.Append("\n");
+                }
+                if (Dropvehicleno.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please Select Vehicle No.");
+                    errorMessage.Append("\n");
                 }
                 if (errorMessage.Length > 0)
                 {

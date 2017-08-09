@@ -458,21 +458,15 @@ namespace EPetro.Module.Reports
 		/// This method is used to call the GetData() function for prepare the report.
 		/// </summary>
 		private void btnView_Click(object sender, System.EventArgs e)
-		{
-            StringBuilder errorMessage = new StringBuilder();
-            if (DropProduct.SelectedIndex == 0)
-            {
-                errorMessage.Append("Please Select Product Name");
-                errorMessage.Append("\n");
-            }
-            if (errorMessage.Length > 0)
-            {
-                MessageBox.Show(errorMessage.ToString());
-                return;
-            }
+		{                       
 			try
 			{
-				if(DropMonth.SelectedIndex==0)
+                if (DropProduct.SelectedIndex == 0)
+                {
+                    MessageBox.Show("- Please Select Product Name");
+                    return;
+                }
+                if (DropMonth.SelectedIndex==0)
 				{
 					MessageBox.Show("Please select the correct Month");
 					DropMonth.SelectedIndex=(int)Session["selmonth"];
@@ -573,7 +567,12 @@ namespace EPetro.Module.Reports
 		{
 			try
 			{
-				if(DropMonth.SelectedIndex==0)
+                if (DropProduct.SelectedIndex == 0)
+                {
+                    MessageBox.Show("- Please Select Product Name");
+                    return;
+                }
+                if (DropMonth.SelectedIndex==0)
 				{
 					MessageBox.Show("Please select the correct Month");
 					DropMonth.SelectedIndex=(int)Session["selmonth"];
