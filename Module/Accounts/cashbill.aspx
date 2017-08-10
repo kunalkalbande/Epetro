@@ -404,15 +404,15 @@
 														<TD align="center" colSpan="7"><FONT color="#006400"><STRONG><U>Product &nbsp;Details</U></STRONG></FONT></TD>
 													</TR>
 													<TR>
-														<TD style="WIDTH: 16px" align="center"><FONT color="darkgreen">Product&nbsp;Type&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Type" Operator="NotEqual"
-																	ErrorMessage="Please Select Category" ControlToValidate="DropType1">*</asp:comparevalidator></FONT></TD>
+														<TD style="WIDTH: 16px" align="center"><FONT color="darkgreen">Product&nbsp;Type<font color="red">*</font>&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Type" Operator="NotEqual"
+																	ErrorMessage="Please Select Category" ControlToValidate="DropType1"><font color="red">*</font></asp:comparevalidator></FONT></TD>
 														<TD style="WIDTH: 120px" align="center"><FONT color="darkgreen">Name
 																<asp:comparevalidator id="CompareValidator4" runat="server" ValueToCompare="Select" Operator="NotEqual"
 																	ErrorMessage="Please Select atleast One Product Name" ControlToValidate="DropProd1">*</asp:comparevalidator></FONT></TD>
 														<TD style="WIDTH: 2px" align="center"><FONT color="darkgreen">Package</FONT></TD>
-														<TD align="center"><FONT color="darkgreen">Qty
+														<TD align="center"><FONT color="darkgreen">Qty<font color="red">*</font>
 																<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ErrorMessage="Please Fill Quantity"
-																	ControlToValidate="txtQty1">*</asp:requiredfieldvalidator></FONT></TD>
+																	ControlToValidate="txtQty1"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Available Stock</FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Rate</FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Amount</FONT></TD>

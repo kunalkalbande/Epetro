@@ -215,8 +215,8 @@ namespace EPetro.Module.Inventory
 				txtMessage.Text =(Session["Message"].ToString());
 				txtVatRate.Value  = (Session["VAT_Rate"].ToString());  
 				lblEntryBy.Text = uid;
-				lblEntryTime.Text = DateTime.Now.ToString (); 
-				if(!Page.IsPostBack)
+				lblEntryTime.Text = DateTime.Now.ToString("dd'/'MM'/'yyyy hh:mm:ss tt");
+                if (!Page.IsPostBack)
 				{
 					getTaxEntry();
 					checkPrevileges(); 

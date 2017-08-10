@@ -48,8 +48,8 @@
 						<table border=1 bgcolor=#EEFFE9 bordercolor=DarkSeaGreen cellspacing=0 cellpadding=0>
 							<asp:Panel Runat=server ID=panEmp>
 							<tr>
-							<td colspan=4>Attendance Date &nbsp;&nbsp;<asp:DropDownList Runat=server ID="DropEmp" AutoPostBack=True><asp:ListItem Value="Select">Select</asp:ListItem></asp:DropDownList>
-							<asp:CompareValidator ID=cv1 Runat=server ControlToValidate="DropEmp" ErrorMessage="Please Select The Date" ValueToCompare="Select" Operator=NotEqual>*</asp:CompareValidator>
+							<td colspan=4>Attendance Date &nbsp;&nbsp;<asp:DropDownList Runat=server ID="DropEmp" AutoPostBack=True><asp:ListItem Value="Select">Select</asp:ListItem></asp:DropDownList><font color="red">*</font>
+							<asp:CompareValidator ID=cv1 Runat=server ControlToValidate="DropEmp" ErrorMessage="Please Select The Date" ValueToCompare="Select" Operator=NotEqual><font color="red">*</font></asp:CompareValidator>
 							</td>
 							</tr>
 							</asp:Panel>
