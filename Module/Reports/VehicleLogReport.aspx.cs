@@ -246,7 +246,7 @@ namespace EPetro
                     errorMessage.Append("- Please Select Option");
                     errorMessage.Append("\n");
                 }
-                if (Dropvehicleno.SelectedIndex == 0)
+                if (Dropvehicleno.Visible== true && Dropvehicleno.SelectedIndex == 0)
                 {
                     errorMessage.Append("- Please Select Vehicle No.");
                     errorMessage.Append("\n");
