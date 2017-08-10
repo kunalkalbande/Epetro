@@ -399,7 +399,29 @@ namespace EPetro.Module.Accounts
 		{
 			try
 			{
-				if(txtRate1.Text=="" && txtAmount1.Text=="")
+                StringBuilder errorMessage = new StringBuilder();
+                if (DropType1.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please select Category");
+                    errorMessage.Append("\n");
+                }
+                if (dropInvoiceNo.Visible == true && DropProd1.SelectedIndex == 0)
+                {
+                    errorMessage.Append("- Please select atleast one Product Name");
+                    errorMessage.Append("\n");
+                }
+                if (txtQty1.Text == string.Empty)
+                {
+                    errorMessage.Append("- Please Fill Quantity");
+                    errorMessage.Append("\n");
+                }
+                if (errorMessage.Length > 0)
+                {
+                    MessageBox.Show(errorMessage.ToString());
+                    return;
+                }
+
+                if (txtRate1.Text=="" && txtAmount1.Text=="")
 				{
 					MessageBox.Show("Please Select Product...");
 					clear1();

@@ -1071,7 +1071,7 @@
 			return;
 		}
 		if (document.all.tempInvoiceInfo.value == "Yes")
-		    document.all.submit();
+		    document.forms[0].submit();
 	}
 	</script>
 
