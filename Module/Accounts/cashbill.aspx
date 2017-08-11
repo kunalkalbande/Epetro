@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="cashbill.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Accounts.cashbill" %>
+<%@ Page language="c#" Codebehind="cashbill.aspx.cs" AutoEventWireup="false" EnableEventValidation="false" Inherits="EPetro.Module.Accounts.cashbill" %>
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <%@ Import namespace="System.Data.SqlClient"%>
@@ -17,6 +17,11 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<script language="JavaScript">
+		    function SaveData()
+		    {
+		        debugger;
+		        getProdName(document.all.DropType1, document.all.DropProd1, document.all.DropPack1, document.all.txtAvStock1, document.all.txtRate1, document.all.txtProdName1, document.all.txtPack1, document.all.txtQty1, document.all.txtAmount1);
+		    }
 		function checkProd()
 		{
 		var packArray = new Array();		
@@ -306,7 +311,7 @@
 </script>
 </HEAD>
 	<body MS_POSITIONING="GridLayout">
-		<form id="Form1" method="post" runat="server">
+		<form id="Form1" runat="server">
 			<INPUT id="tmpQty4" style="Z-INDEX: 113; LEFT: 287px; WIDTH: 10px; POSITION: absolute; TOP: 16px; HEIGHT: 22px"
 				type="hidden" size="1" name="tmpQty4" runat="server"><INPUT id="txttottank" style="Z-INDEX: 127; LEFT: 468px; WIDTH: 10px; POSITION: absolute; TOP: 11px; HEIGHT: 22px"
 				type="hidden" size="1" name="txttottank" runat="server"><INPUT id="txttankdd11" style="Z-INDEX: 125; LEFT: 242px; WIDTH: 10px; POSITION: absolute; TOP: 15px; HEIGHT: 22px"
@@ -404,15 +409,15 @@
 														<TD align="center" colSpan="7"><FONT color="#006400"><STRONG><U>Product &nbsp;Details</U></STRONG></FONT></TD>
 													</TR>
 													<TR>
-														<TD style="WIDTH: 16px" align="center"><FONT color="darkgreen">Product&nbsp;Type<font color="red">*</font>&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Type" Operator="NotEqual"
-																	ErrorMessage="Please Select Category" ControlToValidate="DropType1"><font color="red">*</font></asp:comparevalidator></FONT></TD>
+														<TD style="WIDTH: 16px" align="center"><FONT color="darkgreen">Product&nbsp;Type&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Type" Operator="NotEqual"
+																	ErrorMessage="Please Select Category" ControlToValidate="DropType1">*</asp:comparevalidator></FONT></TD>
 														<TD style="WIDTH: 120px" align="center"><FONT color="darkgreen">Name
 																<asp:comparevalidator id="CompareValidator4" runat="server" ValueToCompare="Select" Operator="NotEqual"
 																	ErrorMessage="Please Select atleast One Product Name" ControlToValidate="DropProd1">*</asp:comparevalidator></FONT></TD>
 														<TD style="WIDTH: 2px" align="center"><FONT color="darkgreen">Package</FONT></TD>
-														<TD align="center"><FONT color="darkgreen">Qty<font color="red">*</font>
+														<TD align="center"><FONT color="darkgreen">Qty
 																<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ErrorMessage="Please Fill Quantity"
-																	ControlToValidate="txtQty1"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
+																	ControlToValidate="txtQty1">*</asp:requiredfieldvalidator></FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Available Stock</FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Rate</FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Amount</FONT></TD>
@@ -468,7 +473,7 @@
 								</TBODY>
 							</TABLE>
 					<TR>
-						<td align="right"><asp:button id="btnSave" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
+						<td align="right"><asp:button id="btnSave" OnClientClick="SaveData()" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
 								BackColor="ForestGreen" Text="Save"></asp:button>&nbsp;<asp:button id="Button1" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
 								BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:button>&nbsp;<asp:Button id="btnPrePrint" runat="server" Width="80px" ForeColor="White" Text="PrePrint" CausesValidation="False"
 								BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:Button>&nbsp;<asp:button id="btnDelete" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
