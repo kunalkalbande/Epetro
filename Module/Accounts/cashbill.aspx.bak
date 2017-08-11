@@ -17,7 +17,11 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<script language="JavaScript">
-		   
+		    function SaveData()
+		    {
+		        debugger;
+		        getProdName(document.all.DropType1, document.all.DropProd1, document.all.DropPack1, document.all.txtAvStock1, document.all.txtRate1, document.all.txtProdName1, document.all.txtPack1, document.all.txtQty1, document.all.txtAmount1);
+		    }
 		function checkProd()
 		{
 		var packArray = new Array();		
@@ -32,14 +36,14 @@
 		
 		
 		if(index3==-1 )
-		    packArray[0] = document.all.DropType1.options[index1].text + document.all.DropProd1.options[index2].text;
+		packArray[0]=document.all.DropType1.options[index1].text+document.all.DropProd1.options[index2].text
 		else
 		packArray[0]=document.all.DropType1.options[index1].text+document.all.DropProd1.options[index2].text+document.all.DropPack1.options[index3].text;
 		
 		if(index6==-1)
-		    packArray[1] = document.all.DropType2.options[index4].text + document.all.DropProd2.options[index5].text;
+		packArray[1]=document.all.DropType2.options[index4].text+document.all.DropProd2.options[index5].text
 		else
-		    packArray[1] = document.all.DropType2.options[index4].text + document.all.DropProd2.options[index5].text + document.all.DropPack2.options[index6].text;
+		packArray[1]=document.all.DropType2.options[index4].text+document.all.DropProd2.options[index5].text+document.all.DropPack2.options[index6].text;
 		
 		
 		/*if(index9==-1 )
@@ -418,7 +422,7 @@
 														<TD align="center"><FONT color="darkgreen">Rate</FONT></TD>
 														<TD align="center"><FONT color="darkgreen">Amount</FONT></TD>
 													</TR>
-														<TD style="WIDTH: 16px"><asp:dropdownlist CssClass=fontstyle id="DropType1" runat="server" Width="91px" Height="17px" onchange="getProdName(this,document.all.DropProd1,document.all.DropPack1,document.all.txtAvStock1,document.all.txtRate1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1)" >
+														<TD style="WIDTH: 16px"><asp:dropdownlist CssClass=fontstyle id="DropType1" runat="server" Width="91px" Height="17px" onchange="getProdName(this,document.all.DropProd1,document.all.DropPack1,document.all.txtAvStock1,document.all.txtRate1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1)">
 																<asp:ListItem Value="Type">Type</asp:ListItem>
 															</asp:dropdownlist></TD>
 														<TD style="WIDTH: 275px"><asp:dropdownlist CssClass=fontstyle id="DropProd1" runat="server" Width="275px" Height="17px" onchange="getPack(document.all.DropType1,this,document.all.DropPack1,document.all.txtAvStock1,document.all.txtRate1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1)">
@@ -433,7 +437,7 @@
 														<TD><asp:textbox CssClass=fontstyle id="txtAmount1" runat="server" Width="79px" BorderStyle="Groove" onblur="CalcQty(this,document.all.txtQty1,document.all.txtAvStock1,document.all.txtRate1,document.all.tmpQty1,document.all.DropType1,document.all.DropPack1)"></asp:textbox></TD>
 													</TR>
 													<TR>
-														<TD style="WIDTH: 16px"><asp:dropdownlist CssClass=fontstyle id="DropType2" runat="server" Width="91px" onchange="getProdName(this,document.all.DropProd2,document.all.DropPack2,document.all.txtAvStock2,document.all.txtRate2,document.all.txtProdName2,document.all.txtPack2,document.all.txtQty2,document.all.txtAmount2)" Height="17px" >
+														<TD style="WIDTH: 16px"><asp:dropdownlist CssClass=fontstyle id="DropType2" runat="server" Width="91px" onchange="getProdName(this,document.all.DropProd2,document.all.DropPack2,document.all.txtAvStock2,document.all.txtRate2,document.all.txtProdName2,document.all.txtPack2,document.all.txtQty2,document.all.txtAmount2)" Height="17px">
 																<asp:ListItem Value="Type">Type</asp:ListItem>
 															</asp:dropdownlist></TD>
 														<TD style="WIDTH: 275px"><asp:dropdownlist CssClass=fontstyle id="DropProd2" runat="server" Width="275px" Height="17px" onchange="getPack(document.all.DropType2,this,document.all.DropPack2,document.all.txtAvStock2,document.all.txtRate2,document.all.txtProdName2,document.all.txtPack2,document.all.txtQty2,document.all.txtAmount2)">
@@ -468,7 +472,7 @@
 								</TBODY>
 							</TABLE>
 					<TR>
-						<td align="right"><asp:button id="btnSave"  runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
+						<td align="right"><asp:button id="btnSave" OnClientClick="SaveData()" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
 								BackColor="ForestGreen" Text="Save"></asp:button>&nbsp;<asp:button id="Button1" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
 								BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:button>&nbsp;<asp:Button id="btnPrePrint" runat="server" Width="80px" ForeColor="White" Text="PrePrint" CausesValidation="False"
 								BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:Button>&nbsp;<asp:button id="btnDelete" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"

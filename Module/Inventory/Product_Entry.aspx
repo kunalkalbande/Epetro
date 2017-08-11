@@ -170,7 +170,7 @@
 			return;
 		}
 	    if (document.all.tempDelinfo.value == "Yes")
-	        document.all.submit();
+	        document.forms[0].submit();
 	}
 		</script>
 		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">

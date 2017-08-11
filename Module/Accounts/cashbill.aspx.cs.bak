@@ -202,7 +202,9 @@ namespace EPetro.Module.Accounts
                     GetProducts();
                     FuelWiseTotalLtr();
                     CreateLogFiles.ErrorLog("Form:cashbilling.aspx,Method:PageLoad.  user " + uid);
-                }                
+                }
+                lblInvoiceDate.Text = Request.Form["lblInvoiceDate"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["lblInvoiceDate"].ToString().Trim();
+                //lblInvoiceDate.Text = Request.Form["lblInvoiceDate"] == null ? GenUtil.str2DDMMYYYY(System.DateTime.Now.ToShortDateString()) : Request.Form["lblInvoiceDate"].ToString().Trim();
             }
             catch (Exception ex)
             {
@@ -448,104 +450,46 @@ namespace EPetro.Module.Accounts
         }
 
         /// <summary>
-        /// Inserts data in controls containing in Product Details
-        /// </summary>
-        private void InsertDataInControls()
-        {
-            string strQty1 = txtQty1.Text;
-            string strRate1 = txtRate1.Text;
-            string strAmount1 = txtAmount1.Text;
-            string strAvStock1 = txtAvStock1.Text;
-            string strProdName = string.Empty;
-            string strPack1 = string.Empty;
-            /*if (DropProd1.SelectedValue != null)
-            {
-                 strProdName = DropProd1.SelectedValue;
-            }
-            if (DropPack1.SelectedValue != null)
-            {
-                strPack1 = DropPack1.SelectedValue;
-            }*/
-
-            DropProd1.Items.Clear();
-            DropProd2.Items.Clear();
-            //settank();
-            GetProducts();
-            //FuelWiseTotalLtr();
-            //string[] mainarr = new string[200];
-            //mainarr = temptext.Value.;
-            string[] strArrayOne = new string[] { "" };
-            strArrayOne = temptext.Value.Split(',');
-            for (int i = 0; i <= strArrayOne.Length - 1; i++)
-            {
-                string[] strArraytwo = new string[] { "" };
-                strArraytwo = strArrayOne[i].Split(':');
-
-
-                if (DropType1.SelectedValue == strArraytwo[0])
-                {
-                    if (strArraytwo[0] == "Fuel")
-                    {
-                        DropProd1.Items.Add(strArraytwo[1] + ':' + strArraytwo[6]);
-                        //txtAvStock1.Text = strArraytwo[4] + " " + strArraytwo[5];                            
-                        //txtRate1.Text = strArraytwo[3];
-
-                        txtAvStock1.Text = strAvStock1;
-                        txtRate1.Text = strRate1;
-                        txtAmount1.Text = strAmount1;
-                        //DropProd11.SelectedValue = strProdName;
-                        //DropPack1.SelectedValue = strPack1;
-
-                        txtAvStock1.Enabled = false;
-                        DropPack1.Enabled = false;
-                    }
-                    else
-                    {
-                        DropProd1.Items.Add(strArraytwo[1]);
-                        DropPack1.Items.Add(strArraytwo[2]);
-                        //txtAvStock1.Text = strArraytwo[4] + " " + strArraytwo[5];
-                        //txtRate1.Text = strArraytwo[3];
-
-                        txtAvStock1.Text = strAvStock1;
-                        txtRate1.Text = strRate1;
-                        txtAmount1.Text = strAmount1;
-
-                        //DropProd11.SelectedValue = strProdName;
-                        //DropPack1.SelectedValue = strPack1;
-
-                        txtAvStock1.Enabled = false;
-                    }
-                }
-                if (DropType2.SelectedValue == strArraytwo[0])
-                {
-                    if (strArraytwo[0] == "Fuel")
-                    {
-                        DropProd2.Items.Add(strArraytwo[1] + ':' + strArraytwo[6]);
-                        txtAvStock2.Text = strArraytwo[4] + " " + strArraytwo[5];
-                        txtRate2.Text = strArraytwo[3];
-                        DropPack2.Enabled = false;
-                        txtAvStock1.Enabled = false;
-                    }
-                    else
-                    {
-                        DropProd2.Items.Add(strArraytwo[1]);
-                        DropPack2.Items.Add(strArraytwo[2]);
-                        txtAvStock2.Text = strArraytwo[4] + " " + strArraytwo[5];
-                        txtRate2.Text = strArraytwo[3];
-                        txtAvStock1.Enabled = false;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
         /// Insert all details in the database with the help of stored procedures and 
         /// generate the print file also.
         /// </summary>
         public void Insert()
         {            
             try
-            {                
+            {
+                DropProd1.Items.Clear();
+                DropProd2.Items.Clear();
+                GetProductsType();
+                //string[] mainarr = new string[200];
+                //mainarr = temptext.Value.;
+                string[] strArrayOne = new string[] { "" };
+                strArrayOne = temptext.Value.Split(',');
+                for (int i = 0; i <= strArrayOne.Length; i++)
+                {
+                    string[] strArraytwo = new string[] { "" };
+                    strArraytwo = strArrayOne[i].Split(':');
+
+                    if (DropType1.SelectedValue == strArraytwo[0])
+                    {
+                        DropProd1.Items.Add(strArraytwo[1]);
+                    }
+                }
+
+                string[] strArrayThree = new string[] { "" };
+                strArrayThree = temptext.Value.Split(',');
+                for (int i = 0; i <= strArrayThree.Length; i++)
+                {
+                    string[] strArrayFour = new string[] { "" };
+                    strArrayFour = strArrayThree[i].Split(':');
+
+                    if (DropType2.SelectedValue == strArrayFour[0])
+                    {
+                        DropProd2.Items.Add(strArrayFour[1]);
+                    }
+                }
+
+                //DropProd1.Items.Add(new ListItem { Text = "Select", Value = "Select" });
+                //DropProd1.Items.Add(new ListItem { Text = "Servo Break Oil", Value = "Servo Break Oil", Selected = true });
 
                 StringBuilder errorMessage = new StringBuilder();
                 if (DropType1.SelectedIndex == 0)
@@ -566,22 +510,19 @@ namespace EPetro.Module.Accounts
                 if (errorMessage.Length > 0)
                 {
                     MessageBox.Show(errorMessage.ToString());
-                    InsertDataInControls();
                     return;
                 }
 
                 if (txtRate1.Text == "" && txtAmount1.Text == "")
                 {
                     MessageBox.Show("Please Select Product...");
-                    //clear1();
-                    InsertDataInControls();
+                    clear1();
                     return;
                 }
                 if (txtRate2.Text != "" && txtAmount2.Text == "")
                 {
                     MessageBox.Show("Please Select Product or Qty...");
-                    //clear1();
-                    InsertDataInControls();
+                    clear1();
                     return;
                 }
                 InventoryClass obj = new InventoryClass();
@@ -2405,7 +2346,8 @@ namespace EPetro.Module.Accounts
 					*/
                 }
             }
-        }                
+        }
+
 
         public void StockMaster(string PType, string PName, string PackType)
         {

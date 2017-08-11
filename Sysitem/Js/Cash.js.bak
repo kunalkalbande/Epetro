@@ -11,12 +11,8 @@
  
  
  function getProdName(t,pname,packtype,avstock,srate,txtProdName,txtPack,txtQty,txtAmount)
- {    
-     var i;
-     for (i = pname.options.length - 1 ; i >= 0 ; i--)
-     {
-         pname.remove(i);
-     } 
+ {  
+ 
   var ProdName
   var mainarr = new Array()
   var typeindex = t.selectedIndex
@@ -30,7 +26,7 @@
   var prodarr = new Array()
   var prodnamearr = new Array()
   var status="n"
-  var k = 0
+  var k = 0                 
   var r =0;
   pname.length    = 1
   packtype.length = 1
@@ -51,7 +47,7 @@
   {
     prodarr = mainarr[i].split(":")
     //alert(sarr[i])
-    if(ProdName==prodarr[1])
+    if(ProdName==prodarr[1])                 
     {
  		status="y"; 
     }
