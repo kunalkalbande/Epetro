@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="Ledger.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Accounts.Ledgre" %>
+<%@ Page language="c#" Codebehind="Ledger.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Accounts.Ledgre" EnableEventValidation="false"%>
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >

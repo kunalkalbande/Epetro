@@ -344,7 +344,7 @@ namespace EPetro.Module.Inventory
 					/////////////////////////////////////////////////////////
 					txtSlipNo.ToolTip = "Please Select Customer";
 					getSlips(); 
-					GetProducts();
+					GetProducts();                    
 					//FillSlipArray();
 					//FetchData();
 				}
@@ -840,11 +840,107 @@ namespace EPetro.Module.Inventory
 			SqlDtr.Close();
 		}
 
-		/// <summary>
-		/// It calls the save_updateInvoice() function to save or update the Invoice Details and calls the reportmaking4() fucntion to creates the print file and calls the print() code fire the print of passing file.
-		/// </summary>
-		private void btnSave_Click(object sender, System.EventArgs e)
+        public void GetProductsType()
+        {
+           
+            try
+            {
+                InventoryClass obj = new InventoryClass();
+                InventoryClass obj1 = new InventoryClass();
+                SqlDataReader SqlDtr;
+                string sql;
+                //SqlDataReader rdr = null;
+                int count = 0;
+                int count1 = 0;
+                dbobj.ExecuteScalar("Select Count(Prod_id) from  products", ref count);
+                dbobj.ExecuteScalar("select count(distinct p.Prod_ID) from products p, Price_Updation pu where p.Prod_id = pu.Prod_id", ref count1);
+                
+                if (count != count1)
+                {
+                    lblMessage.Text = "Price updation not available for some products";
+                }
+
+                #region Fetch the Product Types and fill in the ComboBoxes
+                string str = "";
+                sql = "select distinct p.Prod_ID,Category,Prod_Name,Pack_Type,Unit from products p, Price_Updation pu where p.Prod_id = pu.Prod_id order by Category,Prod_Name";
+                SqlDtr = obj.GetRecordSet(sql);
+                while (SqlDtr.Read())
+                {
+                    #region Fetch Sales Rate
+                    str = str + SqlDtr["Category"] + ":" + SqlDtr["Prod_Name"] + ",";
+
+
+                    #endregion
+                }
+                SqlDtr.Close();
+                temptext.Value = str;               
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                CreateLogFiles.ErrorLog("Form:cashbilling.aspx,Method:GetProducts().  EXCEPTION: " + ex.Message + "  user " + uid);
+            }
+
+        }
+        /// <summary>
+        /// It calls the save_updateInvoice() function to save or update the Invoice Details and calls the reportmaking4() fucntion to creates the print file and calls the print() code fire the print of passing file.
+        /// </summary>
+        private void btnSave_Click(object sender, System.EventArgs e)
 		{
+            DropProd1.Items.Clear();
+            DropProd2.Items.Clear();
+            DropProd3.Items.Clear();
+            DropProd4.Items.Clear();
+            DropProd5.Items.Clear();
+            DropProd6.Items.Clear();
+            DropProd7.Items.Clear();
+            DropProd8.Items.Clear();
+
+            GetProductsType();
+           
+            string[] strArrayOne = new string[] { "" };
+            strArrayOne = temptext.Value.Split(',');
+            
+            for (int i = 0; i <= strArrayOne.Length-1; i++)
+            {
+                string[] strArraytwo = new string[] { "" };
+                strArraytwo = strArrayOne[i].Split(':');
+
+                if (DropType1.SelectedValue == strArraytwo[0])
+                {                    
+                    DropProd1.Items.Add(strArraytwo[1]);
+                }
+                if (DropType2.SelectedValue == strArraytwo[0])
+                {                   
+                    DropProd2.Items.Add(strArraytwo[1]);
+                }
+                if (DropType3.SelectedValue == strArraytwo[0])
+                {
+                    DropProd3.Items.Add(strArraytwo[1]);
+                }
+                if (DropType4.SelectedValue == strArraytwo[0])
+                {
+                    DropProd4.Items.Add(strArraytwo[1]);
+                }
+                if (DropType5.SelectedValue == strArraytwo[0])
+                {
+                    DropProd5.Items.Add(strArraytwo[1]);
+                }
+                if (DropType6.SelectedValue == strArraytwo[0])
+                {
+                    DropProd6.Items.Add(strArraytwo[1]);
+                }
+                if (DropType7.SelectedValue == strArraytwo[0])
+                {
+                    DropProd7.Items.Add(strArraytwo[1]);
+                }
+                if (DropType8.SelectedValue == strArraytwo[0])
+                {
+                    DropProd8.Items.Add(strArraytwo[1]);
+                }                
+            }
+            
+
             StringBuilder erroMessage = new StringBuilder();
             if (txtSlipNo.Visible == true && txtSlipNo.Text == string.Empty)
             {
@@ -951,7 +1047,7 @@ namespace EPetro.Module.Inventory
 				else
 					CreateLogFiles.ErrorLog("Form:SalesInvoice.aspx,Method:btnSave_Click - InvoiceNo : " + dropInvoiceNo.SelectedItem.Text  );
 				GetNextInvoiceNo();
-				GetProducts();
+                GetProducts();                
 				getSlips();
 				//FetchData();
 				lblInvoiceNo.Visible=true;
@@ -969,13 +1065,15 @@ namespace EPetro.Module.Inventory
 				return;
 			}
 			checkPrevileges();
-			checkPrePrint(); 
-		}
+			checkPrePrint();
+           
+        }
 
-		/// <summary>
-		/// To insert or update to sales_master and sales_details tables with the help of stored procedures.
-		/// </summary>
-		public void save_updateInvoive()
+
+        /// <summary>
+        /// To insert or update to sales_master and sales_details tables with the help of stored procedures.
+        /// </summary>
+        public void save_updateInvoive()
 		{
 			SqlDataReader rdr = null;
 			InventoryClass  obj=new InventoryClass();
@@ -992,7 +1090,7 @@ namespace EPetro.Module.Inventory
 						Clear();
 						clear1();
 						GetNextInvoiceNo();
-						GetProducts();
+                        GetProducts();                        
 						getSlips();
 						lblInvoiceNo.Visible=true; 
 						dropInvoiceNo.Visible=false;
@@ -4012,7 +4110,7 @@ namespace EPetro.Module.Inventory
 				Clear();
 				clear1();
 				GetNextInvoiceNo();
-				GetProducts();
+				GetProducts();                
 				FetchData();
 				lblInvoiceNo.Visible=true;
 				dropInvoiceNo.Visible=false;

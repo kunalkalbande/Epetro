@@ -10,7 +10,12 @@
 */		
 
  function getProdName(t,pname,packtype,avstock,srate,txtProdName,txtPack,txtQty,txtAmount,CustName)
- { 
+ {    
+  var i;
+  for (i = pname.options.length - 1 ; i >= 0 ; i--)
+  {
+         pname.remove(i);
+  }
   var ProdName 
   var mainarr = new Array()
   var typeindex = t.selectedIndex

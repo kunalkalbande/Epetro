@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="SalesInvoice.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Inventory.SalesInvoice" %>
+<%@ Page language="c#" Codebehind="SalesInvoice.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Inventory.SalesInvoice" EnableEventValidation="false" %>
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -644,10 +644,12 @@
 											</TR>
 											<TR>
 												<TD>Vehicle No<font color="red">*</font>
-													<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Enter Vehicle No."><font color="red">*</font></asp:requiredfieldvalidator><asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" ControlToValidate="DropVehicleNo" ErrorMessage="Please Select Vehicle No."
-														InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator></TD>
-												<TD><asp:textbox id="txtVehicleNo" runat="server" Width="168px" BorderStyle="Groove" Font-Size="Larger"
-														CssClass="FontStyle" MaxLength="20"></asp:textbox><asp:dropdownlist id="DropVehicleNo" runat="server" Width="168px" Visible="False" CssClass="FontStyle"></asp:dropdownlist></TD>
+													<asp:requiredfieldvalidator id="RequiredFieldValidator1"  runat="server" ControlToValidate="txtVehicleNo" ErrorMessage="Please Enter Vehicle No."><font color="red">*</font></asp:requiredfieldvalidator>
+                                                    <asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" ControlToValidate="DropVehicleNo" ErrorMessage="Please Select Vehicle No." InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator>
+                                                    
+												</TD>
+												<TD><asp:textbox id="txtVehicleNo" runat="server" Width="168px"  BorderStyle="Groove" Font-Size="Larger" CssClass="FontStyle"  MaxLength="20"></asp:textbox>
+                                                    <asp:dropdownlist id="DropVehicleNo" runat="server"  Width="168px" Visible="False" CssClass="FontStyle"></asp:dropdownlist></TD>
 											</TR>
 										</TABLE>
 									</TD>

@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="voucher.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Inventory.voucher" %>
+<%@ Page language="c#" Codebehind="voucher.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Inventory.voucher"  EnableEventValidation="false"%>
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >

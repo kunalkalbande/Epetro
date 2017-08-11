@@ -17,7 +17,8 @@
 		<meta name="CODE_LANGUAGE" Content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<script language="javascript" id="Validations" src="Validations.js"></script>
+		<%--<script language="javascript" id="Validations" src="Validations.js"></script>--%>
+        <script language="javascript" id="Validations" src="../../Sysitem/Js/Validations.js"></script>
 		<LINK href="../../Sysitem/Styles.css" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
