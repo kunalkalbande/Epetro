@@ -883,10 +883,10 @@ namespace EPetro.Module.Inventory
 
         }
         /// <summary>
-        /// It calls the save_updateInvoice() function to save or update the Invoice Details and calls the reportmaking4() fucntion to creates the print file and calls the print() code fire the print of passing file.
+        /// Inserts data in controls containing in Product Details
         /// </summary>
-        private void btnSave_Click(object sender, System.EventArgs e)
-		{
+        private void InsertDataInControls()
+        {
             DropProd1.Items.Clear();
             DropProd2.Items.Clear();
             DropProd3.Items.Clear();
@@ -896,51 +896,137 @@ namespace EPetro.Module.Inventory
             DropProd7.Items.Clear();
             DropProd8.Items.Clear();
 
-            GetProductsType();
-           
+            GetProducts();
+
             string[] strArrayOne = new string[] { "" };
             strArrayOne = temptext.Value.Split(',');
-            
-            for (int i = 0; i <= strArrayOne.Length-1; i++)
+
+            for (int i = 0; i <= strArrayOne.Length - 1; i++)
             {
                 string[] strArraytwo = new string[] { "" };
                 strArraytwo = strArrayOne[i].Split(':');
 
                 if (DropType1.SelectedValue == strArraytwo[0])
-                {                    
-                    DropProd1.Items.Add(strArraytwo[1]);
+                {
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd1.Items.Add(strArraytwo[1]);
+
+                        DropPack1.Enabled = false;
+                        txtAvStock1.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd1.Items.Add(strArraytwo[1]);
+                    }
+
                 }
                 if (DropType2.SelectedValue == strArraytwo[0])
-                {                   
-                    DropProd2.Items.Add(strArraytwo[1]);
+                {
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd2.Items.Add(strArraytwo[1]);
+
+                        DropPack2.Enabled = false;
+                        txtAvStock2.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd2.Items.Add(strArraytwo[1]);
+                    }
                 }
                 if (DropType3.SelectedValue == strArraytwo[0])
                 {
-                    DropProd3.Items.Add(strArraytwo[1]);
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd3.Items.Add(strArraytwo[1]);
+
+                        DropPack3.Enabled = false;
+                        txtAvStock3.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd3.Items.Add(strArraytwo[1]);
+                    }
                 }
                 if (DropType4.SelectedValue == strArraytwo[0])
                 {
-                    DropProd4.Items.Add(strArraytwo[1]);
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd4.Items.Add(strArraytwo[1]);
+
+                        DropPack4.Enabled = false;
+                        txtAvStock4.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd4.Items.Add(strArraytwo[1]);
+                    }
                 }
                 if (DropType5.SelectedValue == strArraytwo[0])
                 {
-                    DropProd5.Items.Add(strArraytwo[1]);
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd5.Items.Add(strArraytwo[1]);
+
+                        DropPack5.Enabled = false;
+                        txtAvStock5.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd5.Items.Add(strArraytwo[1]);
+                    }
                 }
                 if (DropType6.SelectedValue == strArraytwo[0])
                 {
-                    DropProd6.Items.Add(strArraytwo[1]);
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd6.Items.Add(strArraytwo[1]);
+
+                        DropPack6.Enabled = false;
+                        txtAvStock6.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd6.Items.Add(strArraytwo[1]);
+                    }
                 }
                 if (DropType7.SelectedValue == strArraytwo[0])
                 {
-                    DropProd7.Items.Add(strArraytwo[1]);
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd7.Items.Add(strArraytwo[1]);
+
+                        DropPack7.Enabled = false;
+                        txtAvStock7.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd7.Items.Add(strArraytwo[1]);
+                    }
                 }
                 if (DropType8.SelectedValue == strArraytwo[0])
                 {
-                    DropProd8.Items.Add(strArraytwo[1]);
-                }                
-            }
-            
+                    if (strArraytwo[0] == "Fuel")
+                    {
+                        DropProd8.Items.Add(strArraytwo[1]);
 
+                        DropPack8.Enabled = false;
+                        txtAvStock8.Enabled = false;
+                    }
+                    else
+                    {
+                        DropProd8.Items.Add(strArraytwo[1]);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// It calls the save_updateInvoice() function to save or update the Invoice Details and calls the reportmaking4() fucntion to creates the print file and calls the print() code fire the print of passing file.
+        /// </summary>
+        private void btnSave_Click(object sender, System.EventArgs e)
+		{                        
             StringBuilder erroMessage = new StringBuilder();
             if (txtSlipNo.Visible == true && txtSlipNo.Text == string.Empty)
             {
@@ -975,6 +1061,7 @@ namespace EPetro.Module.Inventory
             if (erroMessage.Length > 0)
             {
                 MessageBox.Show(erroMessage.ToString());
+                InsertDataInControls();
                 return;
             }
 
