@@ -483,9 +483,11 @@ namespace EPetro.Module.Inventory
 					}
 				}
 			}
-			DateTime Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtDate.Text.ToString())+" "+DateTime.Now.TimeOfDay.ToString());
-			
-			int intID = System.Convert.ToInt32(id.ToString());
+            //string dtInvoice_Date = GenUtil.str2MMDDYYYY(txtDate.Text);
+
+            DateTime Invoice_Date = System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtDate.Text.ToString()) + " " + DateTime.Now.TimeOfDay.ToString());
+
+            int intID = System.Convert.ToInt32(id.ToString());
 			//int flag = 0;
 			//flag = 0;
 			for(int i=0; i<(dropAccName.Length/2);i++)
@@ -542,7 +544,7 @@ namespace EPetro.Module.Inventory
 					}
 						
 					//dbobj.Insert_or_Update("Insert into Voucher_Transaction values("+intID+",'"+Vouch_Type.Trim()+"','"+date+"',"+crID.Trim() +","+Amount_cr.Trim() +","+drID.Trim() +","+Amount_Dr.Trim() +",'"+narration+"','"+L_Type+"')",ref c);
-					dbobj.Insert_or_Update("Insert into Voucher_Transaction values("+intID+",'"+Vouch_Type.Trim()+"','"+Invoice_Date.ToString()+"',"+crID.Trim() +","+Amount_cr.Trim() +","+drID.Trim() +","+Amount_Dr.Trim() +",'"+narration+"','"+L_Type+"')",ref c);
+					dbobj.Insert_or_Update("Insert into Voucher_Transaction values("+intID+",'"+Vouch_Type.Trim()+ "',Convert(datetime,'" + Invoice_Date + "',103),"+crID.Trim() +","+Amount_cr.Trim() +","+drID.Trim() +","+Amount_Dr.Trim() +",'"+narration+"','"+L_Type+"')",ref c);
 					object obj = null;
 					//dbobj.ExecProc(OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",drID.Trim(),"@Particulars",Vouch_Type.Trim()+" ("+intID+")","@Debit_Amount",Amount_Dr.Trim(),"@Credit_Amount","0.0","@type","Dr");
 					dbobj.ExecProc(OprType.Insert,"ProInsertAccountsLedger",ref obj,"@Ledger_ID",drID.Trim(),"@Particulars",Vouch_Type.Trim()+" ("+intID+")","@Debit_Amount",Amount_Dr.Trim(),"@Credit_Amount","0.0","@type","Dr","@Invoice_Date",Invoice_Date);
@@ -1356,7 +1358,7 @@ namespace EPetro.Module.Inventory
 			if(Entry_Date.IndexOf(" ")>0)
 			{
 				string[] CheckDate = Entry_Date.Split(new char[] {' '},Entry_Date.Length);
-				if(DateTime.Compare(System.Convert.ToDateTime(CheckDate[0].ToString()),System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtDate.Text)))>0)
+				if(DateTime.Compare(System.Convert.ToDateTime(CheckDate[0].ToString()),System.Convert.ToDateTime(txtDate.Text))>0)
 					tempDate=GenUtil.str2MMDDYYYY(txtDate.Text);
 				else
 					tempDate=CheckDate[0].ToString();
@@ -1365,11 +1367,11 @@ namespace EPetro.Module.Inventory
 				tempDate=GenUtil.str2MMDDYYYY(txtDate.Text);
 			for(int k=0;k<LedgerID.Count;k++)
 			{
-				dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref obj1,"@Ledger_ID",LedgerID[k].ToString(),"@Invoice_Date",tempDate.ToString());
+				dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref obj1,"@Ledger_ID",LedgerID[k].ToString(),"@Invoice_Date", System.Convert.ToDateTime(tempDate.ToString()));
 				dbobj.SelectQuery("select cust_id from customer,ledger_master where ledger_name=cust_name and ledger_id='"+LedgerID[k].ToString()+"'",ref rdr);
 				if(rdr.Read())
 				{
-					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref obj1,"@Cust_ID",rdr["Cust_ID"].ToString(),"@Invoice_Date",tempDate);
+					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref obj1,"@Cust_ID",rdr["Cust_ID"].ToString(),"@Invoice_Date", System.Convert.ToDateTime(tempDate.ToString()));
 				}
 				rdr.Close();
 				//				rdr = obj.GetRecordSet("select top 1 Entry_Date from AccountsLedgerTable where Ledger_ID='"+LedgerID[k].ToString()+"' and Entry_Date<='"+tempDate+"' order by entry_date desc");

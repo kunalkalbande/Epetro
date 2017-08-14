@@ -680,7 +680,7 @@
 															<asp:ListItem Value="Type">Type</asp:ListItem>
 														</asp:dropdownlist></TD>
 													<TD style="WIDTH: 120px"><asp:dropdownlist id="DropProd1" runat="server" Width="140px" CssClass="FontStyle" Height="17px" onchange="getPack(document.all.DropType1,this,document.all.DropPack1,document.all.txtAvStock1,document.all.txtRate1,document.all.txtProdName1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1)">
-															<asp:ListItem Value="select">select</asp:ListItem>
+															<asp:ListItem Value="Select">Select</asp:ListItem>
 														</asp:dropdownlist><INPUT id="txtProdName1" style="WIDTH: 140px" type="hidden" name="txtProdName1" runat="server"></TD>
 													<TD style="WIDTH: 2px"><asp:dropdownlist id="DropPack1" runat="server" Width="91px" CssClass="FontStyle" Height="17px" onchange="getStock(document.all.DropType1,document.all.DropProd1,this,document.all.txtAvStock1,document.all.txtRate1,document.all.txtPack1,document.all.txtQty1,document.all.txtAmount1)"></asp:dropdownlist><INPUT id="txtPack1" style="WIDTH: 91px" type="hidden" name="txtPack1" runat="server"></TD>
 													<TD align="center"><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtQty1" onblur="calc(this,document.all.txtAvStock1,document.all.txtRate1,document.all.tmpQty1,document.all.txtProdName1,document.all.txtPack1)"
