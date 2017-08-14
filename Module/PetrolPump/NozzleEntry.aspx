@@ -38,14 +38,14 @@
 								<TD colSpan="2"><FONT color="#ff0000">Fields Marked as (*) Are Mandatory</FONT></TD>
 							</TR>
 							<TR>
-								<TD align="left" style="HEIGHT: 28px">Nozzle&nbsp;ID<font color="red">*</font></TD>
+								<TD align="left" style="HEIGHT: 28px">Nozzle&nbsp;ID</TD>
 								<TD style="HEIGHT: 28px"><asp:label id="lblNozzleID" runat="server" ForeColor="Purple" Width="112px"></asp:label><br>
 									<asp:dropdownlist id="DropNozzleID" runat="server" Width="164px" Visible="False" AutoPostBack="True"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 									</asp:dropdownlist>&nbsp;
 									<asp:CompareValidator id="CompareValidator3" runat="server" ControlToValidate="DropNozzleID" ValueToCompare="Select"
-										ErrorMessage="Please Select The Nozzle ID" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></TD>
+										ErrorMessage="Please Select The Nozzle ID" Operator="NotEqual"><font color="red"></font></asp:CompareValidator></TD>
 							</TR>
 							<TR>
 								<TD>Nozzle&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -53,7 +53,7 @@
 										 CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD style="HEIGHT: 14px">Machine Name<font color="red">*</font> 
+								<TD style="HEIGHT: 14px">Machine Name
 									<asp:comparevalidator id="CompareValidator1" runat="server" Operator="NotEqual" ErrorMessage="Please Select Machine Name"
 										ValueToCompare="Select" ControlToValidate="DropMachineID"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropMachineID" runat="server" Width="200px" onChange="getNozzleNo(this,document.all.lblNozzleName);"
@@ -67,7 +67,7 @@
 										BorderStyle="Groove" MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>Tank&nbsp;Name<font color="red">*</font> 
+								<TD>Tank&nbsp;Name 
 									<asp:comparevalidator id="CompareValidator2" runat="server" Operator="NotEqual" ErrorMessage="Please Select Tank Name"
 										ValueToCompare="Select" ControlToValidate="DropTankID"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropTankID" runat="server" Width="200px" CssClass="FontStyle">

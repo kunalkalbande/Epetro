@@ -59,7 +59,7 @@
 							</TR>
 							<TR>
 								<TD>
-									Name&nbsp; <font color="red">*</font>
+									Name&nbsp; 
 									<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="Please Fill Supplier Name"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 								<TD><asp:textbox id="txtFName" runat="server" Width="130px" onkeypress="return GetOnlyChars(this, event);"
 										BorderStyle="Groove" CssClass="FontStyle" MaxLength="30"></asp:textbox></TD>
@@ -70,7 +70,7 @@
 							</TR>
 							<TR>
 								<TD>
-									Type&nbsp;&nbsp; <font color="red">*</font>
+									Type&nbsp;&nbsp; 
 									<asp:CompareValidator id="CompareValidator1" runat="server" ControlToValidate="DropType" ErrorMessage="Please Select Customer Type"
 										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:dropdownlist id="DropType" runat="server" Width="132px" CssClass="FontStyle">
@@ -80,7 +80,7 @@
 										<asp:ListItem Value="Misc.">Misc.</asp:ListItem>
 									</asp:dropdownlist></TD>
 								<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tin 
-									No. <font color="red">*</font><asp:RequiredFieldValidator id="Requiredfieldvalidator3" runat="server" ControlToValidate="txtTinNo" ErrorMessage="Please Fill TinNo"><font color="red">*</font></asp:RequiredFieldValidator>
+									No. <asp:RequiredFieldValidator id="Requiredfieldvalidator3" runat="server" ControlToValidate="txtTinNo" ErrorMessage="Please Fill TinNo"><font color="red">*</font></asp:RequiredFieldValidator>
 									<asp:regularexpressionvalidator id="Regularexpressionvalidator6" runat="server" ErrorMessage="Invalid Tin No" ControlToValidate="txtTinNo"
 										ValidationExpression="\d{11}"><font color="red">*</font></asp:regularexpressionvalidator></TD>
 								<TD style="WIDTH: 127px">
@@ -89,7 +89,7 @@
 							</TR>
 							<TR>
 								<TD>
-									City&nbsp;&nbsp; <font color="red">*</font>
+									City&nbsp;&nbsp; 
 									<asp:CompareValidator id="CompareValidator2" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
 										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.all.DropState,document.all.DropCountry);"

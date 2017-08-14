@@ -67,7 +67,7 @@ function SetCheck()
       <hr>
     </TH></TR>
   <tr height=10>
-    <td align=center>Select Bank Name&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Select" Operator="NotEqual" ErrorMessage="Please Select Bank Name" ControlToValidate="DropBank">*</asp:comparevalidator>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID=DropBank Runat=server><asp:ListItem Value="Select">Select</asp:ListItem></asp:DropDownList>&nbsp;&nbsp;&nbsp;&nbsp;
+    <td align=center>Select Bank Name&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Select" Operator="NotEqual" ErrorMessage="Please Select Bank Name" ControlToValidate="DropBank"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID=DropBank Runat=server><asp:ListItem Value="Select">Select</asp:ListItem></asp:DropDownList>&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:button id="btnShow" runat="server" CausesValidation=True ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen" Width="80" Text="View" OnClick="btnShow_Click"></asp:button>&nbsp;&nbsp;
 <asp:button id=btnView runat="server" CausesValidation=True ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen" Width="80" Text="Reconciled" OnClick="Recon"></asp:button>&nbsp;&nbsp;
 <asp:button id=btnPrint runat="server" CausesValidation=True ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen" Width="70" Text="Print"></asp:button>&nbsp;&nbsp;

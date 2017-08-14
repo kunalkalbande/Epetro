@@ -80,7 +80,7 @@
 							<TABLE>
 								<TR>
 									<td vAlign="top">Select Option&nbsp;<asp:comparevalidator id="cv1" Runat="server" ErrorMessage="Please Select The Option" Operator="NotEqual"
-											ControlToValidate="DropOption" ValueToCompare="Select">*</asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;<asp:dropdownlist id="DropOption" Width="170" AutoPostBack="True" Runat="server" CssClass="FontStyle">
+											ControlToValidate="DropOption" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;<asp:dropdownlist id="DropOption" Width="170" AutoPostBack="True" Runat="server" CssClass="FontStyle">
 											<asp:ListItem Value="Select">Select</asp:ListItem>
 											<asp:ListItem Value="Fright Report">Fright Report</asp:ListItem>
 											<asp:ListItem Value="Vehicle Log Book Report">Vehicle Log Book Report</asp:ListItem>

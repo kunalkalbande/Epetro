@@ -50,7 +50,7 @@
 				<tr>
 					<td colspan="2" align="center">Product&nbsp;&nbsp;
 						<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Product Name"
-							Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropProduct">*</asp:CompareValidator></td>
+							Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropProduct"><font color="red">*</font></asp:CompareValidator></td>
 					<td colspan="3"><asp:DropDownList id="DropProduct" runat="server" Width="150px" CssClass="FontStyle">
 							<asp:ListItem Value="Select">Select</asp:ListItem>
 						</asp:DropDownList></td>

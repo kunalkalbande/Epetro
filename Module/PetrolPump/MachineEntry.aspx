@@ -77,7 +77,8 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Machine Type <font color="red">*</font> </TD>
+								<TD>Machine Type <asp:CompareValidator id="CompareValidator2" runat="server" ErrorMessage="Please Select The Machine Type"
+										ControlToValidate="DropMachineType" ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator> </TD>
 								<TD colspan="3"><asp:dropdownlist id="DropMachineType" runat="server" Width="300px" onChange="check(this);" CssClass="FontStyle">
 										<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 										<asp:ListItem Value="Avery">Avery</asp:ListItem>
@@ -87,8 +88,7 @@
 										<asp:ListItem Value="Tatsuno">Tatsuno</asp:ListItem>
 										<asp:ListItem Value="Tokhiam">Tokheim</asp:ListItem>
 									</asp:dropdownlist>
-									<asp:CompareValidator id="CompareValidator2" runat="server" ErrorMessage="Please Select The Machine Type"
-										ControlToValidate="DropMachineType" ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></TD>
+									</TD>
 							</TR>
 							<tr>
 								<TD style="WIDTH: 100px; HEIGHT: 18px"><FONT color="#0000ff">(if another, Specify)</FONT></TD>

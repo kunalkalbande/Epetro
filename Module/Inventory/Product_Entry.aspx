@@ -205,12 +205,12 @@
 										ForeColor="White" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
 							</TR>
 							<TR>
-								<TD>Product Name <FONT color="red">*</FONT></TD>
+								<TD>Product Name <asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtProdName" ErrorMessage="Please Enter Product Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD colspan="3"><asp:textbox id="txtProdName" runat="server" Width="382px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
 									<asp:label id="lblProd" runat="server"></asp:label></TD>
 							</TR>
 							<TR>
-								<TD>Category&nbsp;Type <FONT color="red">*</FONT></TD>
+								<TD>Category&nbsp;Type <asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Category Type" Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropCategory"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:dropdownlist id="DropCategory" Width="160px" AutoPostBack="false" Runat="server" OnChange="check(this);"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -220,7 +220,7 @@
 										MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>Package Type <FONT color="red">*</FONT></TD>
+								<TD>Package Type <asp:CompareValidator id="CompareValidator2" runat="server" ErrorMessage="Please Select Package Type" Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropPackage"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:dropdownlist id="DropPackage" runat="server" Width="160px" onChange="check2(this);" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="Loose Oil">Loose Oil</asp:ListItem>
@@ -238,7 +238,7 @@
 								<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtOp_Stock" onblur="CalcQty()"
 										runat="server" Width="78px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtBox" runat="server"
 										Width="78px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox></TD>
-								<TD>Package&nbsp;Qty&nbsp; <FONT color="red">*</FONT></TD>
+								<TD>Package&nbsp;Qty&nbsp;<asp:CompareValidator id="CompareValidator5" runat="server" ErrorMessage="Please Select Package Qty Unit" Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropPackUnit"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:textbox id="txtTotalQty" runat="server" Width="58px" BorderStyle="Groove" 
 										CssClass="FontStyle"></asp:textbox><asp:dropdownlist id="DropPackUnit" runat="server" Width="60px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -249,7 +249,7 @@
 									</asp:dropdownlist></TD>
 							</TR>
 							<TR>
-								<TD>Unit <FONT color="red">*</FONT></TD>
+								<TD>Unit <asp:CompareValidator id="CompareValidator3" runat="server" ErrorMessage="Please Select Unit" Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropUnit"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:dropdownlist id="DropUnit" runat="server" Width="160px" onChange="check1(this);" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="Barrel">Barrel</asp:ListItem>
@@ -265,7 +265,7 @@
 										CssClass="FontStyle" MaxLength="40"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>Store in <FONT color="red">*</FONT></TD>
+								<TD>Store in <asp:CompareValidator id="CompareValidator4" runat="server" ErrorMessage="Please Select Store In" Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropStorein"><font color="red">*</font></asp:CompareValidator></TD>
 								<TD><asp:dropdownlist id="DropStorein" runat="server" Width="160px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="Godown">Godown</asp:ListItem>

@@ -52,14 +52,14 @@
 								<TD>Last Name</TD>
 							</TR>
 							<TR>
-								<TD>Name&nbsp; <FONT color="#ff0000">*</FONT>
+								<TD>Name&nbsp; 
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="Please Fill Customer name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox id="txtFName" runat="server" Width="130px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="30"></asp:textbox></TD>
 								<TD><asp:textbox id="txtMName" runat="server" Width="130px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="10"></asp:textbox></TD>
 								<TD><asp:textbox id="txtLName" runat="server" Width="130px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="9"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>Type&nbsp;&nbsp; <FONT color="#ff0000">*</FONT> <FONT color="red">
+								<TD>Type&nbsp;&nbsp;  <FONT color="red">
 										<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropType" ErrorMessage="Please Select Customer Type"
 											ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></FONT></TD>
 								<TD><asp:dropdownlist id="DropType" runat="server" Width="130px" CssClass="FontStyle">
@@ -77,7 +77,7 @@
 										CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD style="HEIGHT: 2px">City&nbsp;&nbsp; <FONT color="#ff0000">*</FONT>
+								<TD style="HEIGHT: 2px">City&nbsp;&nbsp; 
 									<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
 										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD style="HEIGHT: 2px"><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.all.DropState,document.all.DropCountry);"

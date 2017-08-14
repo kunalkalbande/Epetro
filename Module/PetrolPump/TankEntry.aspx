@@ -57,13 +57,13 @@
 								<TD colSpan="3"><FONT color="#ff0000">Fields Marked as (*) Are Mandatory</FONT></TD>
 							</TR>
 							<TR>
-								<TD>Tank ID<font color="red">*</font></TD>
+								<TD>Tank ID</TD>
 								<TD><asp:label id="lblTankID" runat="server" Width="112px" ForeColor="Purple"></asp:label><asp:dropdownlist id="DropTankID" runat="server" Width="180px" AutoPostBack="True" Visible="False"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist>&nbsp;
 									<asp:CompareValidator id="CompareValidator2" runat="server" Width="2px" Operator="NotEqual" ErrorMessage="Please Select The Tank ID"
-										ValueToCompare="Select" ControlToValidate="DropTankID"><font color="red">*</font></asp:CompareValidator></TD>
+										ValueToCompare="Select" ControlToValidate="DropTankID"><font color="red"></font></asp:CompareValidator></TD>
 								<TD>&nbsp;</TD>
 							</TR>
 							<TR>
@@ -75,7 +75,7 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Product Name<font color="red">*</font> 
+								<TD>Product Name 
 									<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropProdName" ValueToCompare="Select"
 										ErrorMessage="Please Select Product Name" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropProdName" runat="server" Width="150px" onChange="getTankNo(this,document.all.lblTankName);"
@@ -91,13 +91,13 @@
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Short Name<font color="red">*</font> <asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ControlToValidate="txtProdAbbr" ErrorMessage="Please Enter Short Name"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
+								<TD>Short Name <asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ControlToValidate="txtProdAbbr" ErrorMessage="Please Enter Short Name"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
 								<TD><asp:textbox id="txtProdAbbr" runat="server" Width="150px" CssClass="FontStyle" BorderStyle="Groove"
 										MaxLength="49"></asp:textbox></TD>
 								<TD></TD>
 							</TR>
 							<TR>
-								<TD>Capacity<font color="red">*</font>&nbsp; 
+								<TD>Capacity&nbsp; 
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtCapacity" ErrorMessage="Please Fill Capacity"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtCapacity" runat="server"
 										Width="150px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox></TD>

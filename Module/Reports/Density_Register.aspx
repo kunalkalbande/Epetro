@@ -53,13 +53,13 @@
 				<tr>
 					<td colspan="2" align="center">Product
 						<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Product Name"
-							Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropProduct">*</asp:CompareValidator></td>
+							Operator="NotEqual" ValueToCompare="Select" ControlToValidate="DropProduct"><font color="red">*</font></asp:CompareValidator></td>
 					<td colspan="3"><asp:DropDownList id="DropProduct" runat="server" Width="150px" AutoPostBack="True" CssClass="FontStyle">
 							<asp:ListItem Value="Select">Select</asp:ListItem>
 						</asp:DropDownList></td>
 					<td colspan="3" align="center">Month
 						<asp:CompareValidator id="CompareValidator3" runat="server" ErrorMessage="Please Select Month Name" Operator="NotEqual"
-							ValueToCompare="Select" ControlToValidate="DropMonth">*</asp:CompareValidator></td>
+							ValueToCompare="Select" ControlToValidate="DropMonth"><font color="red">*</font></asp:CompareValidator></td>
 					<td colspan="5"><asp:DropDownList id="DropMonth" runat="server" CssClass="FontStyle">
 							<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 							<asp:ListItem Value="January">January</asp:ListItem>
@@ -80,7 +80,7 @@
 				<tr>
 					<td colspan="2" align="center">Tank ID
 						<asp:CompareValidator id="CompareValidator2" runat="server" ErrorMessage="Please Select Tank Name" Operator="NotEqual"
-							ValueToCompare="Select" ControlToValidate="DropTank">*</asp:CompareValidator></td>
+							ValueToCompare="Select" ControlToValidate="DropTank"><font color="red">*</font></asp:CompareValidator></td>
 					<td colspan="3" align="center"><asp:DropDownList id="DropTank" runat="server" Width="150px" CssClass="FontStyle">
 							<asp:ListItem Value="Select">Select</asp:ListItem>
 						</asp:DropDownList></td>

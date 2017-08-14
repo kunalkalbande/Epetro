@@ -157,7 +157,7 @@ document.all.item('chkall').checked=false
 								<TD align="center" colSpan="2">
 									<TABLE cellpadding="0" cellspacing="0">
 										<TR>
-											<TD>Product Name&nbsp; <FONT color="#ff0000">*</FONT>
+											<TD>Product Name&nbsp; 
 												<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Product Name"
 													ValueToCompare="Select" ControlToValidate="drp_pname" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></TD>
 											<TD><asp:dropdownlist id="drp_pname" runat="server" AutoPostBack="True" Width="120px" CssClass="FontStyle"></asp:dropdownlist></TD>

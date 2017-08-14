@@ -48,13 +48,13 @@
 									</asp:dropdownlist></TD>
 							</TR>
 							<TR>
-								<TD>Shift Name&nbsp; <FONT color="#ff0000">*</FONT>
+								<TD>Shift Name&nbsp; 
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtShiftName" ErrorMessage="Please Fill Shift Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:textbox onkeypress="return GetOnlyChars(this, event);" id="txtShiftName" runat="server"
 										BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>Time&nbsp;From&nbsp; <FONT color="#ff0000">*</FONT>
+								<TD>Time&nbsp;From&nbsp; 
 									<asp:comparevalidator id="CompareValidator3" runat="server" ControlToValidate="DropHour1" ErrorMessage="Please Select From Hours"
 										ValueToCompare="HH" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator><asp:comparevalidator id="CompareValidator4" runat="server" ControlToValidate="DropMinute1" ErrorMessage="Please Select From Minute"
 										ValueToCompare="MM" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
@@ -93,7 +93,7 @@
 									</asp:dropdownlist></TD>
 							</TR>
 							<TR>
-								<TD style="HEIGHT: 20px">Time&nbsp;To&nbsp; <FONT color="#ff0000">*</FONT>
+								<TD style="HEIGHT: 20px">Time&nbsp;To&nbsp; 
 									<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropHour2" ErrorMessage="Please Select To Hour"
 										ValueToCompare="HH" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator><asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropMinute2" ErrorMessage="Please Select To Minute"
 										ValueToCompare="MM" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
