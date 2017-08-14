@@ -267,8 +267,8 @@
 			{ 
 				if(Request.Params.Get("Chk"+i)!=null)
 				{ 
-					obj.Eff_Date=DateTime.Now.Date.ToShortDateString();
-					
+					//obj.Eff_Date=DateTime.Now.Date.ToShortDateString();
+					obj.Eff_Date=GenUtil.str2MMDDYYYY(DateTime.Now.Date.ToShortDateString());
 					obj.Product_Name=Request.Params.Get("lblProd_Name"+i); 
 					obj.Package_Type=Request.Params.Get("lblPack_Type"+i); 
 					prod_cat = Request.Params.Get("lblCat"+i);
