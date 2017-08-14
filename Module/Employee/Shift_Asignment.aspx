@@ -34,11 +34,11 @@
 					<td align="center">
 						<TABLE cellpadding="5" cellspacing="5">
 							<TR>
-								<TD align="center" colSpan="3">Shift&nbsp;Name &nbsp; <FONT color="red">*&nbsp;&nbsp; </FONT>
+								<TD align="center" colSpan="3">Shift&nbsp;Name &nbsp; <asp:comparevalidator id="cvShiftName" runat="server" ValueToCompare="Select" Operator="NotEqual" ControlToValidate="DropShiftID"
+										ErrorMessage="Please select the shift name"><font color="red">*</font></asp:comparevalidator>
 									<asp:dropdownlist id="DropShiftID" runat="server" Width="150px" Height="20px" AutoPostBack="True" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:comparevalidator id="cvShiftName" runat="server" ValueToCompare="Select" Operator="NotEqual" ControlToValidate="DropShiftID"
-										ErrorMessage="Please select the shift name"><font color="red">*</font></asp:comparevalidator><asp:textbox id="txtShiftTime" runat="server" Height="21px" Width="126px" BorderStyle="Groove" Enabled="False"
+									</asp:dropdownlist><asp:textbox id="txtShiftTime" runat="server" Height="21px" Width="126px" BorderStyle="Groove" Enabled="False"
 										CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>

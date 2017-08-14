@@ -50,14 +50,14 @@
                                     <asp:button id="Button1" runat="server" Text="..." CausesValidation="False" ForeColor="White" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
 							</TR>
 							<TR>
-								<TD>&nbsp;Name Of Dealer&nbsp;<font color="red">*</font>
+								<TD>&nbsp;Name Of Dealer&nbsp;
 									<asp:RequiredFieldValidator id="Requiredfieldvalidator2" runat="server" ErrorMessage="Please Fill the Dealer Name"
 										ControlToValidate="txtDealerName"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 								<TD colSpan="3"><asp:textbox id="txtDealerName" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD valign="top">&nbsp;Dealership&nbsp;<font color="red">*</font>
+								<TD valign="top">&nbsp;Dealership&nbsp;
 									<asp:comparevalidator id="Comparevalidator1" runat="server" ControlToValidate="DropDealerShip" ErrorMessage="Please Select DealerShip Name"
 										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD colSpan="3"><asp:dropdownlist id="DropDealerShip" runat="server" Width="362px" CssClass="FontStyle">
@@ -72,7 +72,7 @@
 										MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>&nbsp;Address&nbsp;<font color="red">*</font>
+								<TD>&nbsp;Address&nbsp;
 									<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill the Address"
 										ControlToValidate="TxtAddress"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 								<TD colSpan="3"><asp:textbox CausesValidation="true" id="TxtAddress" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
@@ -89,7 +89,7 @@
 										MaxLength="50"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD>&nbsp;City&nbsp;<font color="red">*</font>
+								<TD>&nbsp;City&nbsp;
 									<asp:comparevalidator id="CompareValidator2" runat="server" ControlToValidate="DropCity" ErrorMessage="Please Select City"
 										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
 								<TD><asp:dropdownlist id="DropCity" runat="server" Width="130px" onChange="getBeatInfo(this,document.all.DropState,document.all.DropCountry);"
@@ -143,18 +143,18 @@
 								<TD>&nbsp;Explosive Lic No</TD>
 								<TD><asp:textbox id="txtExplosive" runat="server" Width="134px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="24"></asp:textbox></TD>
-								<TD>&nbsp;Tin No <font color="red">*</font><asp:RequiredFieldValidator id="Requiredfieldvalidator3" runat="server" ControlToValidate="TxtTinno" ErrorMessage="Please Fill the TinNo"><font color="red">*</font></asp:RequiredFieldValidator>
+								<TD>&nbsp;Tin No <asp:RequiredFieldValidator id="Requiredfieldvalidator3" runat="server" ControlToValidate="TxtTinno" ErrorMessage="Please Fill the TinNo"><font color="red">*</font></asp:RequiredFieldValidator>
 									<asp:regularexpressionvalidator id="Regularexpressionvalidator4" runat="server" ErrorMessage="Invalid Tin No" ControlToValidate="TxtTinno"
 										ValidationExpression="\d{11}">*</asp:regularexpressionvalidator></TD>
 								<TD><asp:textbox id="TxtTinno" runat="server" Width="101px" BorderStyle="Groove" onkeypress="return GetOnlyNumbers(this, event, false,false);"
 										MaxLength="11" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<tr>
-								<td>&nbsp;Fleet Card Reload A/C Name&nbsp;&nbsp;<font color="red">*</font>
+								<td>&nbsp;Fleet Card Reload A/C Name&nbsp;&nbsp;
                                     <asp:RequiredFieldValidator id="Requiredfieldvalidator4" runat="server" ControlToValidate="txtFleetCard" ErrorMessage="Please Enter Fleet Card Name"><font color="red">*</font></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;</td>
 								<td><asp:TextBox Runat="server" ID="txtFleetCard" onkeypress="return GetSpace(this, event);" Width="134"
 										BorderStyle="Groove" CssClass="FontStyle" MaxLength="40"></asp:TextBox></td>
-								<td>&nbsp;Credit Card Banker Name&nbsp;&nbsp;<font color="red">*</font><asp:RequiredFieldValidator id="Requiredfieldvalidator5" runat="server" ControlToValidate="txtCreditCard" ErrorMessage="Please Enter Credit Card Name"><font color="red">*</font></asp:RequiredFieldValidator></td>
+								<td>&nbsp;Credit Card Banker Name&nbsp;&nbsp;<asp:RequiredFieldValidator id="Requiredfieldvalidator5" runat="server" ControlToValidate="txtCreditCard" ErrorMessage="Please Enter Credit Card Name"><font color="red">*</font></asp:RequiredFieldValidator></td>
 								<td><asp:TextBox Runat="server" ID="txtCreditCard" onkeypress="return GetSpace(this, event);" Width="101"
 										BorderStyle="Groove" CssClass="FontStyle" MaxLength="40"></asp:TextBox></td>
 							</tr>

@@ -35,14 +35,14 @@
 						<TABLE style="WIDTH: 331px" cellpadding="0" cellspacing="0">
 							<TBODY>
 								<TR>
-									<TD id="r1" style="HEIGHT: 21px">Route Name</TD>
+									<TD id="r1" style="HEIGHT: 21px">Route Id</TD>
 									<TD style="HEIGHT: 21px"><asp:Label id="lblRouteid" runat="server"></asp:Label><asp:dropdownlist id="DropDownList1" runat="server" AutoPostBack="True" Width="170px" Visible="False"
 											CssClass="FontStyle"></asp:dropdownlist>
 										<FONT face="Arial" size="2"></FONT>
 									</TD>
 								</TR>
 								<TR>
-									<TD id="r2">Route Name</TD>
+									<TD id="r2">Route Name <asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtrname" ErrorMessage="Please Select Route Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 									<TD><asp:textbox id="txtrname" runat="server" Width="170px" CssClass="FontStyle" MaxLength="49"></asp:textbox><FONT face="Arial" size="2"></FONT></TD>
 								</TR>
 								<TR>

@@ -84,7 +84,7 @@
 										CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
 								<TD>&nbsp;Vehicle No.
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please select Vehicle No."
-										ControlToValidate="DropVehicleNo" InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator><FONT color="#ff0000">*</FONT>&nbsp;&nbsp;
+										ControlToValidate="DropVehicleNo" InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator>&nbsp;&nbsp;
 									<asp:dropdownlist id="DropVehicleNo" runat="server" Width="162px" CssClass="FontStyle" onchange="return getVehicleInfo(this);">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
@@ -122,7 +122,7 @@
 								<TD colSpan="2">&nbsp;Meter Reading&nbsp;&nbsp; (Previous Day)&nbsp;&nbsp;&nbsp;
 									<asp:textbox id="txtmeterreadpre" runat="server" Width="100px" CssClass="FontStyle" BorderStyle="Groove"
 										></asp:textbox></TD>
-								<td>&nbsp;Meter Reading (Current Day)<FONT color="#ff0033">*</FONT><asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Current Meter Reading"
+								<td>&nbsp;Meter Reading (Current Day)<asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Current Meter Reading"
 										ControlToValidate="txtmeterreadcurr"><font color="red">*</font></asp:requiredfieldvalidator>&nbsp;<asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtmeterreadcurr"
 										runat="server" Width="91px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox></td>
 								<td>&nbsp;Acknowledgement&nbsp;&nbsp;
@@ -132,8 +132,11 @@
 							<TR>
 								<TD>&nbsp;Vehicle Route</TD>
 								<TD><asp:dropdownlist id="Dropvehicleroute" runat="server" Width="159px" CssClass="FontStyle"></asp:dropdownlist></TD>
-								<TD colSpan="2">&nbsp;Fuel Used <FONT color="#ff0000">*</FONT> &nbsp;&nbsp;&nbsp;&nbsp;<asp:dropdownlist id="Dropfuelused" runat="server" Width="130px" CssClass="FontStyle"></asp:dropdownlist><asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtfuelused" runat="server"
-										Width="36px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox></TD>
+								<TD colSpan="2">&nbsp;Fuel Used <asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" ControlToValidate="txtfuelused" ErrorMessage="Enter Fuel Used"><font color="red">*</font></asp:requiredfieldvalidator>&nbsp;&nbsp;&nbsp;&nbsp;<asp:dropdownlist id="Dropfuelused" runat="server" Width="130px" CssClass="FontStyle"></asp:dropdownlist>
+                                    <asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtfuelused" runat="server"
+										Width="36px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox>
+                                    
+								</TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;Engine Oil</TD>

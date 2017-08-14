@@ -235,25 +235,25 @@ namespace EPetro.Module.Employee
 
                 if (DropHour1.SelectedIndex == 0)
                 {
-                    erroMessage.Append("- Please select Time From");
+                    erroMessage.Append("- Please select Time From HH");
                     erroMessage.Append("\n");
                 }
 
                 if (DropMinute1.SelectedIndex == 0)
                 {
-                    erroMessage.Append("- Please select Time From");
+                    erroMessage.Append("- Please select Time From MM");
                     erroMessage.Append("\n");
                 }
 
                 if (DropHour2.SelectedIndex == 0)
                 {
-                    erroMessage.Append("- Please select Time To");
+                    erroMessage.Append("- Please select Time To HH");
                     erroMessage.Append("\n");
                 }
 
                 if (DropMinute2.SelectedIndex == 0)
                 {
-                    erroMessage.Append("- Please select Time To");
+                    erroMessage.Append("- Please select Time To MM");
                     erroMessage.Append("\n");
                 }
 

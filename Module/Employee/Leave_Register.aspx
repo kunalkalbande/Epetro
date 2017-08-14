@@ -32,22 +32,22 @@
         <TR>
           <TD colSpan=2><FONT color=#ff0000>Fields Marked as (*) Are Mandatory</FONT></TD></TR>
         <TR>
-          <TD>Employee ID&nbsp;<font color="red">*</font><asp:comparevalidator id=CompareValidator1 runat="server" ValueToCompare="Select" Operator="NotEqual" ControlToValidate="DropEmpName" ErrorMessage="Please Select Employee ID"><font color="red">*</font></asp:comparevalidator></TD>
+          <TD>Employee ID&nbsp;<asp:comparevalidator id=CompareValidator1 runat="server" ValueToCompare="Select" Operator="NotEqual" ControlToValidate="DropEmpName" ErrorMessage="Please Select Employee ID"><font color="red">*</font></asp:comparevalidator></TD>
           <TD><asp:dropdownlist id=DropEmpName runat="server" Width="215px" CssClass="FontStyle"><asp:ListItem Value="Select">Select</asp:ListItem></asp:dropdownlist></TD>
         </TR>
 
         <TR>
-          <TD>Date&nbsp;From&nbsp;&nbsp;&nbsp;<font color="red">*</font><asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtDateFrom" ErrorMessage="Please Select Date From"><font color="red">*</font></asp:requiredfieldvalidator></TD>
+          <TD>Date&nbsp;From&nbsp;&nbsp;&nbsp;<font color="white">*</font><asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtDateFrom" ErrorMessage="Please Select Date From"><font color="red">*</font></asp:requiredfieldvalidator></TD>
           <TD><asp:textbox id=txtDateFrom runat="server" Width="110px" CssClass="FontStyle" BorderStyle="Groove" ></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD>
         </TR>
 
         <TR>
-          <TD>Date To&nbsp;&nbsp;&nbsp;<font color="red">*</font><asp:requiredfieldvalidator id=RequiredFieldValidator3 runat="server" ControlToValidate="txtDateTO" ErrorMessage="Please Select Date To"><font color="red">*</font></asp:requiredfieldvalidator></TD>
+          <TD>Date To&nbsp;&nbsp;&nbsp;<font color="white">*</font><asp:requiredfieldvalidator id=RequiredFieldValidator3 runat="server" ControlToValidate="txtDateTO" ErrorMessage="Please Select Date To"><font color="red">*</font></asp:requiredfieldvalidator></TD>
           <TD><asp:textbox id=txtDateTO runat="server" Width="110px" CssClass="FontStyle" BorderStyle="Groove" ></asp:textbox><A  onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTO);return false;" ><IMG class=PopcalTrigger alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align=absMiddle border=0 ></A></TD>
         </TR>
 
         <TR>
-          <TD>Reason&nbsp;&nbsp; <font color="red">*</font><asp:requiredfieldvalidator id=RequiredFieldValidator1 runat="server" ControlToValidate="txtReason" ErrorMessage="Please Specify the Reason of Leave"><font color="red">*</font></asp:requiredfieldvalidator></TD>
+          <TD>Reason&nbsp;&nbsp; <asp:requiredfieldvalidator id=RequiredFieldValidator1 runat="server" ControlToValidate="txtReason" ErrorMessage="Please Specify the Reason of Leave"><font color="red">*</font></asp:requiredfieldvalidator></TD>
           <td><asp:textbox id=txtReason runat="server" Width="215px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="49" TextMode="MultiLine" Height="42px"></asp:textbox></TD></TR>
         <TR>
           <TD align=right colSpan=2><asp:button id=btnApply runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Apply"></asp:button></TD></TR></TABLE><asp:validationsummary id=ValidationSummary1 runat="server" Height="16px" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TD></TR></TABLE><iframe 

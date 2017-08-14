@@ -174,7 +174,7 @@ function chkSelect1(t)
 				</asp:panel>
 				<TR>
 					<TD width="15%"></TD>
-					<TD width="70%">Received with thanks from&nbsp;&nbsp;<STRONG>&nbsp; <FONT color="#ff0000">*</FONT>
+					<TD width="70%">Received with thanks from&nbsp;&nbsp;<STRONG>&nbsp; 
 							<asp:comparevalidator id="CompareValidator1" runat="server" ErrorMessage="Please Select Party Name" ControlToValidate="DropCustName"
 								Operator="NotEqual" ValueToCompare="Select" ForeColor="#ff0000">*</asp:comparevalidator></STRONG>&nbsp;&nbsp;
 						<asp:dropdownlist id="DropCustName" runat="server" Width="250px" AutoPostBack="True" CssClass="FontStyle">
@@ -227,7 +227,7 @@ function chkSelect1(t)
 									<TABLE cellSpacing="0" cellPadding="0">
 										<TR>
 											<TD>Mode</TD>
-											<TD>Amount&nbsp; <FONT color="#ff0000">*</FONT>
+											<TD>Amount&nbsp; 
 												<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill Received Amount"
 													ControlToValidate="txtRecAmount" ForeColor="#ff0000">*</asp:requiredfieldvalidator></TD>
 										</TR>

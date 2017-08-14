@@ -854,7 +854,7 @@ function calcTax(txtQty,txtTempQty)
 												<TR>
 													<TD align="center"><FONT color="#006400">Name</FONT></TD>
 													<TD align="center"><FONT color="#006400">&nbsp;&nbsp;&nbsp;&nbsp;Package</FONT></TD>
-													<TD align="center"><FONT color="#006400">Qty<font color="red">*</font>
+													<TD align="center"><FONT color="#006400">Qty
 															<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="txtQty1" ErrorMessage="Please Fill Quentity"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
 													<TD align="center"><FONT color="#006400">Rate</FONT></TD>
 													<TD align="center"><FONT color="#006400">Amount</FONT></TD>

@@ -395,7 +395,7 @@
 								<TD align="center"><FONT color="#990066">Vendor Information</FONT></FONT></U>
 									<TABLE cellpadding="0" cellspacing="0">
 										<TR>
-											<TD>&nbsp; Vendor&nbsp;Name<font color="red">*</font>&nbsp;&nbsp;
+											<TD>&nbsp; Vendor&nbsp;Name&nbsp;&nbsp;
 												<asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="Please Select the Vendor Name"
 													ControlToValidate="DropVendorID" ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator>&nbsp; 
 												&nbsp;
@@ -412,7 +412,7 @@
 													 type="text" size="23" name="lblPlace" runat="server" class="FontStyle"></TD>
 										</TR>
 										<TR>
-											<TD>&nbsp; Vehicle No<font color="red">*</font>&nbsp;
+											<TD>&nbsp; Vehicle No&nbsp;
 												<asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter The Vehicle No"
 													ControlToValidate="txtVehicleNo"><font color="red">*</font></asp:RequiredFieldValidator>
 											</TD>
@@ -420,7 +420,7 @@
 													CssClass="FontStyle" MaxLength="12"></asp:textbox></TD>
 										</TR>
 										<TR>
-											<TD>&nbsp; Invoice No<font color="red">*</font>&nbsp;&nbsp;
+											<TD>&nbsp; Invoice No&nbsp;&nbsp;
 												<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter The Vendor Invoice No"
 													ControlToValidate="txtVInnvoiceNo"><font color="red">*</font></asp:RequiredFieldValidator></TD>
 											<TD colSpan="2"><asp:textbox id="txtVInnvoiceNo" runat="server" Width="170px" Height="20px" BorderStyle="Groove"
@@ -443,18 +443,18 @@
 											<TD align="center" colSpan="6"><FONT color="#990066"><STRONG><U>Products Details</U></STRONG></FONT></TD>
 										</TR>
 										<TR>
-											<TD align="center"><FONT color="#990066">Product Type <font color="red">*</font>
+											<TD align="center"><FONT color="#990066">Product Type 
 														<asp:CompareValidator id="CompareValidator2" runat="server" ErrorMessage="Please Select the Product Type"
 															ControlToValidate="DropType1" ValueToCompare="Type" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator></FONT>
 												</FONT>
 											</TD>
-											<TD align="center"><FONT color="#990066">Name<font color="red">*</font>&nbsp;
+											<TD align="center"><FONT color="#990066">Name&nbsp;
 													<asp:CompareValidator id="CompareValidator3" runat="server" ErrorMessage="Please Select the Product Name"
 														ControlToValidate="DropProd1" ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:CompareValidator>
 												</FONT>
 											</TD>
 											<TD align="center"><FONT color="#990066">Package</FONT></TD>
-											<TD align="center"><FONT color="#990066">Qty <font color="red">*</font>
+											<TD align="center"><FONT color="#990066">Qty 
 														<asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server" ErrorMessage="Please Enter The Qty"
 															ControlToValidate="txtQty1"><font color="red">*</font></asp:RequiredFieldValidator></FONT></FONT>
 											</TD>

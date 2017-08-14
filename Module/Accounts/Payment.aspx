@@ -41,7 +41,7 @@
 							<TR>
 								<TD>Ledger Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" InitialValue="Select" ControlToValidate="DropLedgerName"
-										ErrorMessage="Please Select Ledger Name">*</asp:requiredfieldvalidator><FONT color="red"></FONT></TD>
+										ErrorMessage="Please Select Ledger Name"><font color="red">*</font></asp:requiredfieldvalidator><FONT color="red"></FONT></TD>
 								<TD><asp:dropdownlist id="DropLedgerName1" runat="server" Visible="False" Width="200px" AutoPostBack="True"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -53,7 +53,7 @@
 							<TR>
 								<TD>By&nbsp;
 									<asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" InitialValue="Select" ControlToValidate="DropBy"
-										ErrorMessage="Please Select By Account Name">*</asp:requiredfieldvalidator></TD>
+										ErrorMessage="Please Select By Account Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 								<TD><asp:dropdownlist id="DropBy" runat="server" Width="154px" AutoPostBack="True" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist></TD>
@@ -74,7 +74,7 @@
 								<TR>
 									<TD>Amount
 										<asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Amount "
-											ControlToValidate="TxtAmount">*</asp:requiredfieldvalidator></TD>
+											ControlToValidate="TxtAmount"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 									<TD>
 										<asp:textbox onkeypress="return GetOnlyNumbers(this, event, false,true);" id="txtAmount" runat="server"
 											Width="154px" CssClass="FontStyle" MaxLength="12" BorderStyle="Groove"></asp:textbox></TD>

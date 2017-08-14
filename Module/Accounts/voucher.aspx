@@ -416,8 +416,8 @@ if(document.all.txtAmount1.value != "")
 											<asp:label id="lblVid" runat="server" Width="66px"></asp:label></FONT></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 90px" align="left">Voucher Type<FONT color="#ff0000">*</FONT><asp:comparevalidator id="Comparevalidator5" runat="server" ErrorMessage="Please Select Voucher type"
-											ControlToValidate="DropVoucherName" Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator><FONT color="red"></FONT></TD>
+									<TD style="WIDTH: 90px" align="left">Voucher Type<asp:comparevalidator id="Comparevalidator5" runat="server" ErrorMessage="Please Select Voucher type"
+											ControlToValidate="DropVoucherName" Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator><FONT color="red"></FONT></TD>
 									<TD><asp:dropdownlist id="DropVoucherName" runat="server" Width="130px" onChange="return getAcountName(this,document.all.txtVouchID);"
 											CssClass="FontStyle">
 											<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -426,9 +426,9 @@ if(document.all.txtAmount1.value != "")
 											<asp:ListItem Value="Debit Note">Debit Note</asp:ListItem>
 											<asp:ListItem Value="Journal">Journal</asp:ListItem>
 										</asp:dropdownlist></TD>
-									<TD>&nbsp;&nbsp;&nbsp;Voucher ID <FONT color="#ff0000">*</FONT>
+									<TD>&nbsp;&nbsp;&nbsp;Voucher ID 
 										<asp:comparevalidator id="Comparevalidator6" runat="server" ErrorMessage="Please Select Voucher ID " ControlToValidate="DropDownID"
-											Operator="NotEqual" ValueToCompare="Select" ForeColor="White">*</asp:comparevalidator>&nbsp;&nbsp;</TD>
+											Operator="NotEqual" ValueToCompare="Select" ForeColor="White"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;</TD>
 									<TD vAlign="top" align="left" Width="125">
 										<P align="left" valign="top"><asp:dropdownlist id="DropDownID" runat="server" Width="69px" CssClass="FontStyle" AutoPostBack="True">
 												<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -437,9 +437,9 @@ if(document.all.txtAmount1.value != "")
 												Text="..." BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button><INPUT id="txtID" style="WIDTH: 9px; HEIGHT: 22px" type="hidden" size="1" name="txtID"
 												runat="server"></P>
 									</TD>
-									<TD align="center">&nbsp; Voucher Date <FONT color="#ff0000">*</FONT>
+									<TD align="center">&nbsp; Voucher Date
 										<asp:requiredfieldvalidator id="Requiredfieldvalidator1" runat="server" ErrorMessage="Please Enter Voucher Date"
-											ControlToValidate="txtDate" ForeColor="White">*</asp:requiredfieldvalidator></TD>
+											ControlToValidate="txtDate" ForeColor="White"><font color="red">*</font></asp:requiredfieldvalidator></TD>
 									<TD colSpan="2"><asp:textbox id="txtDate" runat="server" Width="84px" CssClass="FontStyle"  BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDate);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 												border="0"></A></TD>
 								</TR>

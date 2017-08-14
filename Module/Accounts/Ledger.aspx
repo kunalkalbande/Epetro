@@ -176,9 +176,8 @@
 										Mandatory</FONT></TD>
 							</TR>
 							<TR>
-								<TD style="WIDTH: 98px; HEIGHT: 10px" align="left">Ledger Name&nbsp; <FONT color="#ff0000">
-										*</FONT>
-									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtLedger" ErrorMessage="Please Enter Ledger Name">*</asp:requiredfieldvalidator><FONT color="red"></FONT></TD>
+								<TD style="WIDTH: 98px; HEIGHT: 10px" align="left">Ledger Name&nbsp; 
+									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtLedger" ErrorMessage="Please Enter Ledger Name"><FONT color="red">*</FONT></asp:requiredfieldvalidator></TD>
 								<TD style="HEIGHT: 10px"><asp:dropdownlist id="dropLedgerName" runat="server" Visible="False" AutoPostBack="True" Width="229px"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
@@ -187,7 +186,9 @@
 										BorderColor="ForestGreen" BackColor="ForestGreen" ForeColor="White"></asp:button></TD>
 							</TR>
 							<TR>
-								<TD style="WIDTH: 98px; HEIGHT: 15px" align="left">SubGroup Name <FONT color="#ff3333">*</FONT></TD>
+								<TD style="WIDTH: 98px; HEIGHT: 15px" align="left">SubGroup Name 
+                                    <asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ControlToValidate="TxtSub" ErrorMessage="Please Enter Subgroup Name"><FONT color="red">*</FONT></asp:requiredfieldvalidator>
+								</TD>
 								<TD style="HEIGHT: 15px"><asp:dropdownlist id="DropSub" runat="server" Width="170px" onChange="return getGroup(this);" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist>&nbsp;<FONT color="#0000ff">(if another, Specify)</FONT>
@@ -195,7 +196,8 @@
 										MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD style="WIDTH: 98px; HEIGHT: 9px" width="98">Group Name <FONT color="#ff0000">*</FONT>
+								<TD style="WIDTH: 98px; HEIGHT: 9px" width="98">Group Name 
+                                    <asp:requiredfieldvalidator id="RequiredFieldValidator3" runat="server" ControlToValidate="TxtGroup" ErrorMessage="Please Enter Subgroup Name"><FONT color="red">*</FONT></asp:requiredfieldvalidator>
 								</TD>
 								<TD style="HEIGHT: 9px"><asp:dropdownlist id="DropGroup" runat="server" Width="170px" onchange="return setNature(document.all.DropSub);"
 										CssClass="FontStyle">
