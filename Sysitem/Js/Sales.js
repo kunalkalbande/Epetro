@@ -10,10 +10,11 @@
 */		
 
  function getProdName(t,pname,packtype,avstock,srate,txtProdName,txtPack,txtQty,txtAmount,CustName)
- {    
+ {
   var i;
   for (i = pname.options.length - 1 ; i >= 0 ; i--)
   {
+      if (pname.value != "Select")
          pname.remove(i);
   }
   var ProdName 

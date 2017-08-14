@@ -471,11 +471,17 @@ namespace EPetro.Module.Accounts
             DropProd2.Items.Clear();
             //settank();
             GetProducts();
+
+
             //FuelWiseTotalLtr();
             //string[] mainarr = new string[200];
             //mainarr = temptext.Value.;
             string[] strArrayOne = new string[] { "" };
             strArrayOne = temptext.Value.Split(',');
+
+            DropProd1.Items.Add("Select");
+            DropProd2.Items.Add("Select");
+
             for (int i = 0; i <= strArrayOne.Length - 1; i++)
             {
                 string[] strArraytwo = new string[] { "" };

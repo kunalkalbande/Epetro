@@ -901,6 +901,15 @@ namespace EPetro.Module.Inventory
             string[] strArrayOne = new string[] { "" };
             strArrayOne = temptext.Value.Split(',');
 
+            DropProd1.Items.Add("Select");
+            DropProd2.Items.Add("Select");
+            DropProd3.Items.Add("Select");
+            DropProd4.Items.Add("Select");
+            DropProd5.Items.Add("Select");
+            DropProd6.Items.Add("Select");
+            DropProd7.Items.Add("Select");
+            DropProd8.Items.Add("Select");
+
             for (int i = 0; i <= strArrayOne.Length - 1; i++)
             {
                 string[] strArraytwo = new string[] { "" };
@@ -909,7 +918,7 @@ namespace EPetro.Module.Inventory
                 if (DropType1.SelectedValue == strArraytwo[0])
                 {
                     if (strArraytwo[0] == "Fuel")
-                    {
+                    {                        
                         DropProd1.Items.Add(strArraytwo[1]);
 
                         DropPack1.Enabled = false;
@@ -917,14 +926,16 @@ namespace EPetro.Module.Inventory
                     }
                     else
                     {
+                        
                         DropProd1.Items.Add(strArraytwo[1]);
-                    }
-
+                    }                    
                 }
                 if (DropType2.SelectedValue == strArraytwo[0])
                 {
                     if (strArraytwo[0] == "Fuel")
                     {
+                        if (i == 0)
+                            DropProd2.Items.Add("Select");
                         DropProd2.Items.Add(strArraytwo[1]);
 
                         DropPack2.Enabled = false;
@@ -932,6 +943,8 @@ namespace EPetro.Module.Inventory
                     }
                     else
                     {
+                        if (i == 0)
+                            DropProd2.Items.Add("Select");
                         DropProd2.Items.Add(strArraytwo[1]);
                     }
                 }
@@ -939,6 +952,7 @@ namespace EPetro.Module.Inventory
                 {
                     if (strArraytwo[0] == "Fuel")
                     {
+
                         DropProd3.Items.Add(strArraytwo[1]);
 
                         DropPack3.Enabled = false;
