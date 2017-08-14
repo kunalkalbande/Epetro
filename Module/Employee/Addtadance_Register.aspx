@@ -70,7 +70,7 @@
 							if(panEmp.Visible==false)
 							{
 							//try{
-								 sql=" select employee.emp_id,employee.Emp_Name,employee.Designation from employee where emp_id!=all(select distinct Attandance_Register.emp_id from Attandance_Register where att_Date ='"+str1+"')and emp_ID!=all(    select  emp_id from leave_Register where  getdate() between Date_from and DATEADD(day, 1, date_to) and  issanction=1)"; 
+								 sql=" select employee.emp_id,employee.Emp_Name,employee.Designation from employee where emp_id!=all(select distinct Attandance_Register.emp_id from Attandance_Register where att_Date ='"+GenUtil.str2MMDDYYYY(str1)+"')and emp_ID!=all(    select  emp_id from leave_Register where  getdate() between Date_from and DATEADD(day, 1, date_to) and  issanction=1)"; 
 								 SqlDtr=obj.GetRecordSet(sql);
 													
 								 while(SqlDtr.Read())
@@ -130,195 +130,196 @@
 
 
 <script language=C# runat=server >
-		
-		private void Page_Load(object sender, System.EventArgs e)
-		{
-			/*
-			string uid="";
-			DBOperations.DBUtil dbobj=new DBOperations.DBUtil(System.Configuration.ConfigurationSettings.AppSettings["epetro"],true);
-			try
-			{
-				 uid=(Session["User_Name"].ToString());
-			}
-			catch(Exception ex)
-			{
-				CreateLogFiles.ErrorLog("Form:Addtandance_Registor,Method:Page_load  userid "+ uid);
-				Response.Redirect("../../Sysitem/ErrorPage.aspx",false);
-				return;
-			}
-			if(!IsPostBack)
-			{
-				#region Check Privileges
-				int i;
-				string View_flag="0", Add_Flag="0", Edit_Flag="0", Del_Flag="0";
-				string Module="2";
-				string SubModule="3";
-				string[,] Priv=(string[,]) Session["Privileges"];
-				for(i=0;i<Priv.GetLength(0);i++)
-				{
-					if(Priv[i,0]== Module &&  Priv[i,1]==SubModule)
-					{						
-						View_flag=Priv[i,2];
-						Add_Flag=Priv[i,3];
-						Edit_Flag=Priv[i,4];
-						Del_Flag=Priv[i,5];
-						break;
-					}
-				}	
-				if(Add_Flag=="0")
-				{
-					string msg="UnAthourized Visit to Attandance Register Page";
-					
-					Response.Redirect("../../Sysitem/AccessDeny.aspx",false);
-				}
-				#endregion
-			}
-			*/
-		}
-		
-		// this method used to save the attendance of the present employee.
-		public void attan(Object sender, EventArgs e)
-		{
-			try
-			{
-                if (DropEmp.Visible == true  && DropEmp.SelectedIndex == 0)
-                {
-                    MessageBox.Show("- Please select the Date");
-                    return;
+
+    private void Page_Load(object sender, System.EventArgs e)
+    {
+        /*
+        string uid="";
+        DBOperations.DBUtil dbobj=new DBOperations.DBUtil(System.Configuration.ConfigurationSettings.AppSettings["epetro"],true);
+        try
+        {
+             uid=(Session["User_Name"].ToString());
+        }
+        catch(Exception ex)
+        {
+            CreateLogFiles.ErrorLog("Form:Addtandance_Registor,Method:Page_load  userid "+ uid);
+            Response.Redirect("../../Sysitem/ErrorPage.aspx",false);
+            return;
+        }
+        if(!IsPostBack)
+        {
+            #region Check Privileges
+            int i;
+            string View_flag="0", Add_Flag="0", Edit_Flag="0", Del_Flag="0";
+            string Module="2";
+            string SubModule="3";
+            string[,] Priv=(string[,]) Session["Privileges"];
+            for(i=0;i<Priv.GetLength(0);i++)
+            {
+                if(Priv[i,0]== Module &&  Priv[i,1]==SubModule)
+                {						
+                    View_flag=Priv[i,2];
+                    Add_Flag=Priv[i,3];
+                    Edit_Flag=Priv[i,4];
+                    Del_Flag=Priv[i,5];
+                    break;
                 }
-				EmployeeClass obj=new EmployeeClass(); 
-				int Total_Rows=0;
-				SqlDataReader SqlDtr;
-				string sql;
-				/*
-				sql="select Count(*) from Attandance_Register where Att_Date='"+DateTime.Today.Month.ToString()+"/"+DateTime.Today.Day.ToString()+"/"+DateTime.Today.Year.ToString() +"'";
-				SqlDtr=obj.GetRecordSet(sql); 
-				while(SqlDtr.Read())
-				{
-					int flag=System.Convert.ToInt32(SqlDtr.GetValue(0).ToString()); 
-					if(flag>0)
-					{
-						return;					
-					}
-				}
-				SqlDtr.Close();
-				*/
-			
-				string empid ="";
-				string empid1 ="";
-				if(panEmp.Visible==false)
-				{
-					Total_Rows=System.Convert.ToInt32(Request.Params.Get("lblTotal_Row"));
-					for(int i=0;i<Total_Rows;i++)
-					{
-						if(Request.Params.Get("Chk"+i)!=null)
-						{	
-							string str="";
-							obj.Att_Date=DateTime.Now.ToShortDateString();  
-							obj.Emp_ID=Request.Params.Get("lblEmpID"+i); 
-							obj.Status="1";
-							EmployeeClass obj1=new EmployeeClass(); 
-							SqlDataReader SqlDtr11;
-							string sql1;
-							sql1="select Status from Attandance_Register where Att_Date='"+DateTime.Now.ToShortDateString()+"' and  Emp_ID="+Request.Params.Get("lblEmpID"+i)+""; 
-							SqlDtr11=obj1.GetRecordSet(sql1);
-							while(SqlDtr11.Read())
-							{
-								str=SqlDtr11.GetValue(0).ToString();
-							}
-							if(str.Equals("0") || str.Equals(""))		
-							{
-								obj.InsertEmployeeAttandance();
-								CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). Attendance of employee ID "+Request.Params.Get("lblEmpID"+i)+" Saved. userid :"+ Session["User_Name"].ToString());			
-								empid= empid+" "+Request.Params.Get("lblEmpID"+i)+"   ";
-							}
-							else
-							{
-								empid1= empid1+" "+Request.Params.Get("lblEmpID"+i)+"   ";
-							}
-						}
-					}
-					if(!empid.Equals(""))
-					{
-						MessageBox.Show("Attendance Saved");
-					}
-					if(!empid1.Equals(""))
-						MessageBox.Show("Attandance Already Exits For Employee ID "+empid1); 
-				}
-				else
-				{
-					Total_Rows=System.Convert.ToInt32(Request.Params.Get("CountEdit"));
-					for(int i=0;i<Total_Rows;i++)
-					{
-						string str="";
-						if(Request.Params.Get("Chk"+i)!=null)
-						{	
-							//obj.Att_Date=DropEmp.SelectedItem.Text;  
-							obj.Att_Date=GenUtil.str2MMDDYYYY(DropEmp.SelectedItem.Text);  
-							obj.Emp_ID=Request.Params.Get("tempEmpID"+i); 
-							obj.Status="1";
-							obj.UpdateEmployeeAttandance();
-							CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). Attendance of employee ID "+Request.Params.Get("tempEmpID"+i)+" Updated. userid :"+ Session["User_Name"].ToString());
-						}
-						else
-						{
-							//obj.Att_Date=DropEmp.SelectedItem.Text;  
-							obj.Att_Date=GenUtil.str2MMDDYYYY(DropEmp.SelectedItem.Text);  
-							obj.Emp_ID=Request.Params.Get("tempEmpID"+i); 
-							obj.Status="0";
-							obj.UpdateEmployeeAttandance();
-							CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). Attendance of employee ID "+Request.Params.Get("tempEmpID"+i)+" Updated. userid :"+ Session["User_Name"].ToString());
-						}
-					}
-					MessageBox.Show("Attendance Update");
-					panEmp.Visible=false;
-				}
-			}
-			catch(Exception ex)
-			{
-				CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). EXCEPTION: "+ ex.Message+" userid :"+ Session["User_Name"].ToString());
-			}
-		}
-		
-		public void View(Object sender, EventArgs e)
-		{
-			try
-			{
-                if (DropEmp.Visible == true && DropEmp.SelectedIndex == 0)
+            }	
+            if(Add_Flag=="0")
+            {
+                string msg="UnAthourized Visit to Attandance Register Page";
+
+                Response.Redirect("../../Sysitem/AccessDeny.aspx",false);
+            }
+            #endregion
+        }
+        */
+    }
+
+    // this method used to save the attendance of the present employee.
+    public void attan(Object sender, EventArgs e)
+    {
+        try
+        {
+            if (DropEmp.Visible == true  && DropEmp.SelectedIndex == 0)
+            {
+                MessageBox.Show("- Please select the Date");
+                return;
+            }
+            EmployeeClass obj=new EmployeeClass();
+            int Total_Rows=0;
+            SqlDataReader SqlDtr;
+            string sql;
+            /*
+            sql="select Count(*) from Attandance_Register where Att_Date='"+DateTime.Today.Month.ToString()+"/"+DateTime.Today.Day.ToString()+"/"+DateTime.Today.Year.ToString() +"'";
+            SqlDtr=obj.GetRecordSet(sql); 
+            while(SqlDtr.Read())
+            {
+                int flag=System.Convert.ToInt32(SqlDtr.GetValue(0).ToString()); 
+                if(flag>0)
                 {
-                    MessageBox.Show("- Please select the Date");
-                    return;
+                    return;					
                 }
-				panEmp.Visible=true;
-				EmployeeClass obj=new EmployeeClass(); 
-				SqlDataReader SqlDtr;
-				string sql;
-				sql="select distinct Att_Date from Attandance_Register";
-				SqlDtr=obj.GetRecordSet(sql);
-				DropEmp.Items.Clear();
-				DropEmp.Items.Add("Select");
-				while(SqlDtr.Read())
-				{
-					//DropEmp.Items.Add(SqlDtr["Att_Date"].ToString());
-					DropEmp.Items.Add(GenUtil.str2DDMMYYYY(GenUtil.trimDate(SqlDtr["Att_Date"].ToString())));
-				}
-				SqlDtr.Close();
-			}
-			catch(Exception ex)
-			{
-				CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). EXCEPTION: "+ ex.Message+" userid :"+ Session["User_Name"].ToString());
-			}
-		}
-		
-		public DateTime ToMMddYYYY(string str)
-		{
-			int dd,mm,yy;
-			string [] strarr = new string[3];			
-			strarr=str.Split(new char[]{'/'},str.Length);
-			dd=Int32.Parse(strarr[0]);
-			mm=Int32.Parse(strarr[1]);
-			yy=Int32.Parse(strarr[2]);
-			DateTime dt=new DateTime(yy,mm,dd);			
-			return(dt);
-		}
+            }
+            SqlDtr.Close();
+            */
+
+            string empid ="";
+            string empid1 ="";
+            if(panEmp.Visible==false)
+            {
+                Total_Rows=System.Convert.ToInt32(Request.Params.Get("lblTotal_Row"));
+                for(int i=0;i<Total_Rows;i++)
+                {
+                    if(Request.Params.Get("Chk"+i)!=null)
+                    {
+                        string str="";
+                        obj.Att_Date=DateTime.Now.ToShortDateString();
+                        obj.Emp_ID=Request.Params.Get("lblEmpID"+i);
+                        obj.Status="1";
+                        EmployeeClass obj1=new EmployeeClass();
+                        SqlDataReader SqlDtr11;
+                        string sql1;
+                        string dtTime = GenUtil.str2DDMMYYYY(DateTime.Now.ToShortDateString());
+                        sql1="select Status from Attandance_Register where Att_Date=Convert(datetime,'" + dtTime+"',103) and  Emp_ID="+Request.Params.Get("lblEmpID"+i)+"";
+                        SqlDtr11=obj1.GetRecordSet(sql1);
+                        while(SqlDtr11.Read())
+                        {
+                            str=SqlDtr11.GetValue(0).ToString();
+                        }
+                        if(str.Equals("0") || str.Equals(""))
+                        {
+                            obj.InsertEmployeeAttandance();
+                            CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). Attendance of employee ID "+Request.Params.Get("lblEmpID"+i)+" Saved. userid :"+ Session["User_Name"].ToString());
+                            empid= empid+" "+Request.Params.Get("lblEmpID"+i)+"   ";
+                        }
+                        else
+                        {
+                            empid1= empid1+" "+Request.Params.Get("lblEmpID"+i)+"   ";
+                        }
+                    }
+                }
+                if(!empid.Equals(""))
+                {
+                    MessageBox.Show("Attendance Saved");
+                }
+                if(!empid1.Equals(""))
+                    MessageBox.Show("Attandance Already Exits For Employee ID "+empid1);
+            }
+            else
+            {
+                Total_Rows=System.Convert.ToInt32(Request.Params.Get("CountEdit"));
+                for(int i=0;i<Total_Rows;i++)
+                {
+                    string str="";
+                    if(Request.Params.Get("Chk"+i)!=null)
+                    {
+                        //obj.Att_Date=DropEmp.SelectedItem.Text;  
+                        obj.Att_Date=GenUtil.str2MMDDYYYY(DropEmp.SelectedItem.Text);
+                        obj.Emp_ID=Request.Params.Get("tempEmpID"+i);
+                        obj.Status="1";
+                        obj.UpdateEmployeeAttandance();
+                        CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). Attendance of employee ID "+Request.Params.Get("tempEmpID"+i)+" Updated. userid :"+ Session["User_Name"].ToString());
+                    }
+                    else
+                    {
+                        //obj.Att_Date=DropEmp.SelectedItem.Text;  
+                        obj.Att_Date=GenUtil.str2MMDDYYYY(DropEmp.SelectedItem.Text);
+                        obj.Emp_ID=Request.Params.Get("tempEmpID"+i);
+                        obj.Status="0";
+                        obj.UpdateEmployeeAttandance();
+                        CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). Attendance of employee ID "+Request.Params.Get("tempEmpID"+i)+" Updated. userid :"+ Session["User_Name"].ToString());
+                    }
+                }
+                MessageBox.Show("Attendance Update");
+                panEmp.Visible=false;
+            }
+        }
+        catch(Exception ex)
+        {
+            CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). EXCEPTION: "+ ex.Message+" userid :"+ Session["User_Name"].ToString());
+        }
+    }
+
+    public void View(Object sender, EventArgs e)
+    {
+        try
+        {
+            if (DropEmp.Visible == true && DropEmp.SelectedIndex == 0)
+            {
+                MessageBox.Show("- Please select the Date");
+                return;
+            }
+            panEmp.Visible=true;
+            EmployeeClass obj=new EmployeeClass();
+            SqlDataReader SqlDtr;
+            string sql;
+            sql="select distinct Att_Date from Attandance_Register";
+            SqlDtr=obj.GetRecordSet(sql);
+            DropEmp.Items.Clear();
+            DropEmp.Items.Add("Select");
+            while(SqlDtr.Read())
+            {
+                //DropEmp.Items.Add(SqlDtr["Att_Date"].ToString());
+                DropEmp.Items.Add(GenUtil.str2DDMMYYYY(GenUtil.trimDate(SqlDtr["Att_Date"].ToString())));
+            }
+            SqlDtr.Close();
+        }
+        catch(Exception ex)
+        {
+            CreateLogFiles.ErrorLog("Form:Attendance_Register.aspx.cs,Method:attan(). EXCEPTION: "+ ex.Message+" userid :"+ Session["User_Name"].ToString());
+        }
+    }
+
+    public DateTime ToMMddYYYY(string str)
+    {
+        int dd,mm,yy;
+        string [] strarr = new string[3];
+        strarr=str.Split(new char[]{'/'},str.Length);
+        dd=Int32.Parse(strarr[0]);
+        mm=Int32.Parse(strarr[1]);
+        yy=Int32.Parse(strarr[2]);
+        DateTime dt=new DateTime(yy,mm,dd);
+        return(dt);
+    }
 </script>

@@ -4238,8 +4238,9 @@ namespace EPetro.Sysitem.Classes
 			SqlCmd.Parameters .Add("@Actual_Amount",Actual_Amount );
 			SqlCmd.Parameters .Add("@BankName",BankName);
 			SqlCmd.Parameters .Add("@ChequeNo",ChequeNo);
-			SqlCmd.Parameters .Add("@ChequeDate",ChequeDate);
-			SqlCmd.Parameters .Add("@Mode",Mode);
+			SqlCmd.Parameters .Add("@ChequeDate", System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(ChequeDate) + " " + DateTime.Now.TimeOfDay.ToString())); 
+
+            SqlCmd.Parameters .Add("@Mode",Mode);
 			SqlCmd.Parameters .Add("@Receipt",Receipt);
 			//SqlCmd.Parameters .Add("@AccType",AccType);
 			SqlCmd.Parameters .Add("@Cust_ID",Cust_ID);

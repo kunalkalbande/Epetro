@@ -1598,7 +1598,7 @@ payment against Bill details given on account of your supply.
 			obj.discount=txtDisc1.Text;
 			obj.Discount=txtDisc2.Text;
 			obj.CustBankName=txtBankName.Text;
-			obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString());
+			obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString());
 			string DiscID1="0",DiscID2="0";
 			if(DropDiscount1.SelectedIndex==0)
 				obj.discountid1="";
@@ -1761,11 +1761,11 @@ payment against Bill details given on account of your supply.
 					obj.Actual_Amount = System.Convert.ToString(double.Parse(txtRecAmount.Text));
 					obj.InsertPaymentReceived();
 					
-					dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", TotalAmt,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",DropReceiptNo.SelectedItem.Text,"@ActualAmount",txtRecAmount.Text,"@RecDate",System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()));
+					dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", TotalAmt,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",DropReceiptNo.SelectedItem.Text,"@ActualAmount",txtRecAmount.Text,"@RecDate",System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()));
 					if(txtDisc1.Text!="" && txtDisc1.Text!="0")
-						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",DropReceiptNo.SelectedItem.Text,"@Amount",txtDisc1.Text,"@Ledger_ID",DiscID1,"@RecDate",System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType1);
+						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",DropReceiptNo.SelectedItem.Text,"@Amount",txtDisc1.Text,"@Ledger_ID",DiscID1,"@RecDate",System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType1);
 					if(txtDisc2.Text!="" && txtDisc2.Text!="0")
-						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",DropReceiptNo.SelectedItem.Text,"@Amount",txtDisc2.Text,"@Ledger_ID",DiscID2,"@RecDate",System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType2);
+						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",DropReceiptNo.SelectedItem.Text,"@Amount",txtDisc2.Text,"@Ledger_ID",DiscID2,"@RecDate",System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType2);
 				}
 				else
 				{
@@ -1776,11 +1776,11 @@ payment against Bill details given on account of your supply.
 					obj.Actual_Amount = System.Convert.ToString(double.Parse(txtRecAmount.Text));
 					obj.InsertPaymentReceived();
 
-					dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", TotalAmt,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",ReceiptNo.ToString(),"@ActualAmount",txtRecAmount.Text,"@RecDate",System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()));
+					dbobj.ExecProc(OprType.Insert,"ProCustLedgerEntry",ref op,"@Cust_Name",DropCustName.SelectedItem.Value,"@City",txtCity.Text.ToString(),"@Amount", TotalAmt,"@Rec_Acc_Type",Acc_Type,"@Receipt",Receipt,"@Receipt_No",ReceiptNo.ToString(),"@ActualAmount",txtRecAmount.Text,"@RecDate", System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()));
 					if(txtDisc1.Text!="" && txtDisc1.Text!="0")
-						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",ReceiptNo.ToString(),"@Amount",txtDisc1.Text,"@Ledger_ID",DiscID1,"@RecDate",System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType1);
+						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",ReceiptNo.ToString(),"@Amount",txtDisc1.Text,"@Ledger_ID",DiscID1,"@RecDate", System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text) + " "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType1);
 					if(txtDisc2.Text!="" && txtDisc2.Text!="0")
-						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",ReceiptNo.ToString(),"@Amount",txtDisc2.Text,"@Ledger_ID",DiscID2,"@RecDate",System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType2);
+						dbobj.ExecProc(OprType.Insert,"ProSpacialDiscountEntry",ref op,"@Cust_ID",Cust_ID,"@Receipt","Save","@Receipt_No",ReceiptNo.ToString(),"@Amount",txtDisc2.Text,"@Ledger_ID",DiscID2,"@RecDate", System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text) + " "+DateTime.Now.TimeOfDay.ToString()),"@DisType",DisType2);
 				}
 				if(PanReceiptNo.Visible==true)
 					UpdateLedgDetails(OldCustID.ToString());
@@ -1803,14 +1803,14 @@ payment against Bill details given on account of your supply.
 				string BalType="",tempDate="";
 				int i=0;
 					
-				if(DateTime.Compare(System.Convert.ToDateTime(Invoice_Date),System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(txtReceivedDate.Text)))>0)
+				if(DateTime.Compare(System.Convert.ToDateTime(Invoice_Date),System.Convert.ToDateTime(txtReceivedDate.Text))>0)
 					tempDate=GenUtil.str2MMDDYYYY(txtReceivedDate.Text);
 				else
 					tempDate=Invoice_Date;
 										
 				for(int p=0;p<UpdateLedgerID.Count;p++)
 				{
-					dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref obj1,"@Ledger_ID",UpdateLedgerID[p].ToString(),"@Invoice_Date",tempDate);
+					dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref obj1,"@Ledger_ID",UpdateLedgerID[p].ToString(),"@Invoice_Date", System.Convert.ToDateTime(tempDate));
 					/* Comment This code by Mahesh on 11.11.008,
 						 * This process handle by store procedures.
 						 * 
@@ -1879,7 +1879,7 @@ payment against Bill details given on account of your supply.
 				//string str1="select * from CustomerLedgerTable where CustID=(select Cust_ID from Customer where Cust_Name='"+DropCustName.SelectedItem.Text+"') order by entrydate";
 				for(int p=0;p<UpdateCustomerID.Count;p++)
 				{
-					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref obj1,"@Cust_ID",UpdateCustomerID[p].ToString(),"@Invoice_Date",tempDate);
+					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref obj1,"@Cust_ID",UpdateCustomerID[p].ToString(),"@Invoice_Date", System.Convert.ToDateTime(tempDate));
 					/* Comment This Process By Mahesh on 11.11.008,
 						* This process hanble by stored procedures
 						* 
@@ -1944,11 +1944,11 @@ payment against Bill details given on account of your supply.
 			else
 			{
 				object op=null;
-				dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref op,"@Ledger_ID",Cust_ID,"@Invoice_Date",GenUtil.str2MMDDYYYY(txtReceivedDate.Text));
+				dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref op,"@Ledger_ID",Cust_ID,"@Invoice_Date", System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)));
 				dbobj.SelectQuery("Select * from Customer, Ledger_Master where Ledger_Name=Cust_Name and Ledger_ID='"+Cust_ID+"'",ref SqlDtr);
 				if(SqlDtr.Read())
 				{
-					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref op,"@Cust_ID",SqlDtr["Cust_ID"].ToString(),"@Invoice_Date",GenUtil.str2MMDDYYYY(txtReceivedDate.Text));
+					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref op,"@Cust_ID",SqlDtr["Cust_ID"].ToString(),"@Invoice_Date", System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(txtReceivedDate.Text)));
 				}
 				SqlDtr.Close();
 			}
