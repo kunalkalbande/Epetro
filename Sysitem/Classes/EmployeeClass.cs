@@ -938,7 +938,7 @@ namespace EPetro.Sysitem.Classes
 		{
 			SqlCmd=new SqlCommand("ProEmpAttadanceEntry",SqlCon);
 			SqlCmd.CommandType =CommandType.StoredProcedure;
-			SqlCmd.Parameters.Add("@Att_Date",Att_Date.ToString());
+			SqlCmd.Parameters.Add("@Att_Date", System.Convert.ToDateTime(Att_Date.ToString()));
 			SqlCmd.Parameters.Add("@Emp_ID",Emp_ID.ToString());
 			SqlCmd.Parameters.Add("@Status",Status.ToString() );
 			SqlCmd.ExecuteNonQuery();			
