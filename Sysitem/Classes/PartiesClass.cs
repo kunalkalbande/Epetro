@@ -1112,7 +1112,7 @@ namespace EPetro.Sysitem.Classes
 			sqcom=new SqlCommand("ProCustomerEntry",sqcon);
 			sqcom.CommandType =CommandType.StoredProcedure;
 			sqcom.Parameters .Add("@Cust_ID",Cust_ID );
-			sqcom.Parameters .Add("@EntryDate",EntryDate );
+			sqcom.Parameters .Add("@EntryDate",System.Convert.ToDateTime(EntryDate));
 			sqcom.Parameters .Add("@Cust_Name",Cust_Name );
 			sqcom.Parameters .Add("@Cust_Type",Cust_Type );
 			sqcom.Parameters .Add("@Address",Address );

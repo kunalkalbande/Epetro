@@ -334,12 +334,12 @@ namespace EPetro.Module.Parties
 				else
 					obj.Op_Balance=txtOpBalance.Text;
 				obj.Balance_Type =DropBal.SelectedItem.Value.ToString();
-				obj.EntryDate=ToMMddYYYY(DateTime.Now.Date.ToShortDateString()).ToString();
+				obj.EntryDate=GenUtil.str2DDMMYYYY(DateTime.Now.Date.ToShortDateString());
 				obj.Tin_No = txtTinNo.Text.Trim(); 
 				// Call to this method Inserts the customer details into the customer table.
 				obj.InsertCustomer();
 				MessageBox.Show("Customer Saved");
-				CreateLogFiles.ErrorLog("Form:Customer_Entry.aspx,Class:PartiesClass.cs: Method:btnUpdate_Click "+" Cust Name  "+ obj.Cust_Name    +" Cust id  "+obj.Cust_ID +"Cust Type    "+ obj.Cust_Type  +"  Cust Address  "+ obj.Address   +" Cust City "+obj.City  +" Cust State  "+ obj.State   +" Cust Cuntry "+ ToMMddYYYY(DateTime.Now.Date.ToShortDateString()).ToShortDateString()+"obj.Country" +" Opening Balance  "+  obj.Op_Balance  +"  date  "+obj.EntryDate +"    IS  SAVED    User  "+uid );
+				CreateLogFiles.ErrorLog("Form:Customer_Entry.aspx,Class:PartiesClass.cs: Method:btnUpdate_Click "+" Cust Name  "+ obj.Cust_Name    +" Cust id  "+obj.Cust_ID +"Cust Type    "+ obj.Cust_Type  +"  Cust Address  "+ obj.Address   +" Cust City "+obj.City  +" Cust State  "+ obj.State   +" Cust Cuntry "+ GenUtil.str2DDMMYYYY(DateTime.Now.Date.ToShortDateString()) + "obj.Country" +" Opening Balance  "+  obj.Op_Balance  +"  date  "+obj.EntryDate +"    IS  SAVED    User  "+uid );
 				Clear();
 				GetNextCustomerID();
 			}
