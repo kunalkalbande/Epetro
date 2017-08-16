@@ -2477,7 +2477,7 @@ namespace EPetro
 					"','"+txtDivisionOff.Text+
 					"','"+txtDistrict.Value+
 					"','"+d1+"','"+
-                    GenUtil.str2MMDDYYYY(txtSalesPerformanceDate.Value)+
+					txtSalesPerformanceDate.Value+
 					"','"+d2+
 					"','"+txtMSTarget1.Value+
 					"','"+txtMScyear1.Value+
