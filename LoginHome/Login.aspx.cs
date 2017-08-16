@@ -204,8 +204,15 @@ namespace EPetro.LoginHome
 					}
 					else
 					{
-						//RMG.MessageBox.Show("Invalid User Login Name or Password");			
-						return;
+                        if (TxtPassword.Text == "")
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            RMG.MessageBox.Show("Invalid User Login Name or Password");
+                            return;
+                        }
 					}
 				}
 				else
