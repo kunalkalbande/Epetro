@@ -260,6 +260,33 @@ namespace EPetro.Module.Parties
                     //MessageBox.Show("Please select the Dealership");
                     //   return;
                 }
+                if (txtTinNo.Text != string.Empty)
+                {
+                    if (txtTinNo.Text.Length != 11)
+                    {
+                        erroMessage.Append("- Invalid Tin No");
+                        erroMessage.Append("\n");
+                    }
+                }
+                if (txtMobile.Text != string.Empty)
+                {
+                    if (txtMobile.Text.Length < 10)
+                    {
+                        erroMessage.Append("- Mobile No. Between 10 to 12 Digits");
+                        erroMessage.Append("\n");
+                    }
+                }
+
+                if (txtEMail.Text != string.Empty)
+                {
+                    string sPattern = "\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+                    if (!System.Text.RegularExpressions.Regex.IsMatch(txtEMail.Text, sPattern))
+                    {
+                        erroMessage.Append("- Please Fill Valid E-mail");
+                        erroMessage.Append("\n");
+                    }
+                }
+
                 if (erroMessage.Length > 0)
                 {
                     MessageBox.Show(erroMessage.ToString());
