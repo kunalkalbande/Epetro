@@ -826,9 +826,7 @@ namespace EPetro.Module.Admin
                 if (DropDealerShip.SelectedIndex == 0)
                 {
                     erroMessage.Append("- Please select the Dealership Name");
-                    erroMessage.Append("\n");
-                    //MessageBox.Show("Please select the Dealership");
-                 //   return;
+                    erroMessage.Append("\n");                   
                 }
                 if(TxtAddress.Text==string.Empty)
                 {
@@ -852,7 +850,12 @@ namespace EPetro.Module.Admin
                 }
                 if (txtCreditCard.Text == string.Empty)
                 {
-                    erroMessage.Append("- Please Enter Credit Card Name");                 
+                    erroMessage.Append("- Please Enter Credit Card Name");
+                    erroMessage.Append("\n");
+                }
+                if(TxtTinno.Text.Length != 11)
+                {
+                    erroMessage.Append("- Invalid Tin No");
                 }
                 if (erroMessage.Length > 0)
                 {
