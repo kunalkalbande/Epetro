@@ -276,6 +276,22 @@ namespace EPetro.Module.Parties
                         erroMessage.Append("\n");
                     }
                 }
+                if (txtPhoneOff.Text != string.Empty)
+                {
+                    if (txtPhoneOff.Text.Length < 6)
+                    {
+                        erroMessage.Append("- Contact No. Between 6-12 Digits");
+                        erroMessage.Append("\n");
+                    }
+                }
+                if (txtPhoneRes.Text != string.Empty)
+                {
+                    if (txtPhoneRes.Text.Length < 6)
+                    {
+                        erroMessage.Append("- Contact No. Between 6-12 Digits");
+                        erroMessage.Append("\n");
+                    }
+                }
 
                 if (txtEMail.Text != string.Empty)
                 {

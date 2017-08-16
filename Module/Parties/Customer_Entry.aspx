@@ -87,7 +87,7 @@
 								<TD style="HEIGHT: 2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 									Phone No(Off.)
 									<asp:regularexpressionvalidator id="RegularExpressionValidator3" runat="server" ControlToValidate="txtPhoneOff"
-										ErrorMessage="Contact No. Between 6-12 Digits" ValidationExpression="\d{6,12}">*</asp:regularexpressionvalidator></TD>
+										ErrorMessage="Contact No. Between 6-12 Digits" ValidationExpression="\d{6,12}"><font color="red">*</font></asp:regularexpressionvalidator></TD>
 								<TD style="HEIGHT: 2px"><asp:textbox id="txtPhoneOff" runat="server" Width="130px" BorderStyle="Groove" onkeypress="return GetOnlyNumbers(this, event, false,false);"
 										MaxLength="11" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
@@ -98,7 +98,7 @@
 									</asp:dropdownlist></TD>
 								<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone No(Res.)
 									<asp:regularexpressionvalidator id="RegularExpressionValidator4" runat="server" ControlToValidate="txtPhoneRes"
-										ErrorMessage="Contact No. Between 6-12 Digits" ValidationExpression="\d{6,12}">*</asp:regularexpressionvalidator></TD>
+										ErrorMessage="Contact No. Between 6-12 Digits" ValidationExpression="\d{6,12}"><font color="red">*</font></asp:regularexpressionvalidator></TD>
 								<TD><asp:textbox id="txtPhoneRes" runat="server" Width="130px" BorderStyle="Groove" MaxLength="11"
 										onkeypress="return GetOnlyNumbers(this, event, false,false);" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
@@ -121,7 +121,7 @@
 							<TR>
 								<TD>E - Mail
 									<asp:regularexpressionvalidator id="RegularExpressionValidator2" runat="server" ControlToValidate="txtEMail" ErrorMessage="Please Fill Valid E-mail"
-										ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:regularexpressionvalidator></TD>
+										ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"><font color="red">*</font></asp:regularexpressionvalidator></TD>
 								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="392px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
