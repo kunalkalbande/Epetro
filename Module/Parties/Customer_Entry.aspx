@@ -109,7 +109,7 @@
 									</asp:dropdownlist></TD>
 								<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile No
 									<asp:regularexpressionvalidator id="RegularExpressionValidator1" runat="server" ControlToValidate="txtMobile" ErrorMessage="Mobile No. Between 10-12 Digits"
-										ValidationExpression="\d{10,12}">*</asp:regularexpressionvalidator></TD>
+										ValidationExpression="\d{10,12}"><font color="red">*</font></asp:regularexpressionvalidator></TD>
 								<TD><asp:textbox id="txtMobile" runat="server" Width="130px" BorderStyle="Groove" onkeypress="return GetOnlyNumbers(this, event, false,false);"
 										MaxLength="11" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
