@@ -473,98 +473,105 @@ namespace EPetro.Module.Reports
 		/// </summary>
 		public void ConvertToExcel()
 		{
-			InventoryClass obj=new InventoryClass();
-			//string sql="";
-			string home_drive = Environment.SystemDirectory;
-			home_drive = home_drive.Substring(0,2); 
-			string strExcelPath  = home_drive+"\\ePetro_ExcelFile\\";
-			Directory.CreateDirectory(strExcelPath);
-			string path = home_drive+@"\ePetro_ExcelFile\TradingAccount.xls";
-			StreamWriter sw = new StreamWriter(path);
-			sw.WriteLine("From Date\t"+txtDateFrom.Text ); 
-			sw.WriteLine("To Date\t"+txtDateTo.Text ); 
-			sw.WriteLine(""); 
-			sw.WriteLine("Debit Side\t\tCredit Side");
-			SqlConnection con = null;
-			SqlCommand cmd= null;
-			SqlDataReader SqlDtr = null;
-			string gross_profit= "";
-			double gross_pro = 0;
-			string Net_Profit = "";
-			double Net_Pro = 0;
-			double total1 = 0;
-			double total2 = 0;
-			con=new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["epetro"]);
-			con.Open ();
-			cmd = new SqlCommand( "exec getProfitLoss '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text)+"','"+GenUtil.str2MMDDYYYY(txtDateTo.Text)+"'", con );
-			SqlDtr = cmd.ExecuteReader();
-			if(SqlDtr.Read())
-			{
-				sw.WriteLine("Opening Stock\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(0).ToString())+"\tSales\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(2).ToString())); 
-				sw.WriteLine("Purchase\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(1).ToString())+"\tClosing Stock\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(3).ToString()));
-				sw.WriteLine("Direct Expenses\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(4).ToString())+"\tDirect Income\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString()));              
-				sw.WriteLine(); 
-				gross_profit  = GenUtil.strNumericFormat(SqlDtr.GetValue(6).ToString());
-				if(!gross_profit.Equals("")) 
-				{
-					gross_pro = System.Convert.ToDouble(gross_profit);
-					if(gross_pro < 0)
-					{
-						gross_pro = (gross_pro * -1);
-						total1 = gross_pro;
-						sw.WriteLine("\t\tGross Loss\t"+GenUtil.strNumericFormat(gross_pro.ToString())); 
-					}
-					else
-					{
-						total2 = gross_pro;
-						sw.WriteLine("Gross Profit\t"+GenUtil.strNumericFormat(gross_pro.ToString())); 
-					}
-				}
-				sw.WriteLine();
-				sw.WriteLine("Total\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(7).ToString())+"\tTotal\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(8).ToString())); 
-				sw.WriteLine(); 
-				sw.WriteLine(); 
-				sw.WriteLine("Profit & Loss Account"); 
-				if(!gross_profit.Equals("")) 
-				{
-					gross_pro = System.Convert.ToDouble(gross_profit);
-					if(gross_pro < 0)
-					{
-						gross_pro = (gross_pro * -1);
-						sw.WriteLine("Gross Loss\t"+GenUtil.strNumericFormat(gross_pro.ToString()));
-					}
-					else
-					{
-						sw.WriteLine("\t\tGross Profit\t"+GenUtil.strNumericFormat(gross_pro.ToString()));
-					}
-				}
-				sw.WriteLine("Indirect Expenses\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(9).ToString())+"\tIndirect Income\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));  
-				Net_Profit  = GenUtil.strNumericFormat(SqlDtr.GetValue(11).ToString());
-				if(!Net_Profit.Equals("")) 
-				{
-					Net_Pro = System.Convert.ToDouble(Net_Profit);
-					if(Net_Pro < 0)
-					{
-						Net_Pro = (Net_Pro * -1);
-						total2  = total2 + Net_Pro;
-						sw.WriteLine("\t\tNet Loss\t"+GenUtil.strNumericFormat(Net_Pro.ToString())); 
-					}
-					else
-					{
-						total1 = total1 + Net_Pro;
-						sw.WriteLine("Net Profit\t"+GenUtil.strNumericFormat(Net_Pro.ToString())); 
-					}
-				}
-				total1 = total1 + System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(9).ToString()));
-				total2 = total2 + System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
-				sw.WriteLine(); 
-				sw.WriteLine("Total\t"+GenUtil.strNumericFormat(total1.ToString())+"\tTotal\t"+GenUtil.strNumericFormat(total2.ToString())); 
-			}
-			dbobj.Dispose();
-			SqlDtr.Close();
-			con.Close();
-			sw.Close();
-		}
+            try
+            {
+                InventoryClass obj = new InventoryClass();
+                //string sql="";
+                string home_drive = Environment.SystemDirectory;
+                home_drive = home_drive.Substring(0, 2);
+                string strExcelPath = home_drive + "\\ePetro_ExcelFile\\";
+                Directory.CreateDirectory(strExcelPath);
+                string path = home_drive + @"\ePetro_ExcelFile\TradingAccount.xls";
+                StreamWriter sw = new StreamWriter(path);
+                sw.WriteLine("From Date\t" + txtDateFrom.Text);
+                sw.WriteLine("To Date\t" + txtDateTo.Text);
+                sw.WriteLine("");
+                sw.WriteLine("Debit Side\t\tCredit Side");
+                SqlConnection con = null;
+                SqlCommand cmd = null;
+                SqlDataReader SqlDtr = null;
+                string gross_profit = "";
+                double gross_pro = 0;
+                string Net_Profit = "";
+                double Net_Pro = 0;
+                double total1 = 0;
+                double total2 = 0;
+                con = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["epetro"]);
+                con.Open();
+                cmd = new SqlCommand("exec getProfitLoss '" + GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "','" + GenUtil.str2MMDDYYYY(txtDateTo.Text) + "'", con);
+                SqlDtr = cmd.ExecuteReader();
+                if (SqlDtr.Read())
+                {
+                    sw.WriteLine("Opening Stock\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(0).ToString()) + "\tSales\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(2).ToString()));
+                    sw.WriteLine("Purchase\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(1).ToString()) + "\tClosing Stock\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(3).ToString()));
+                    sw.WriteLine("Direct Expenses\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(4).ToString()) + "\tDirect Income\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString()));
+                    sw.WriteLine();
+                    gross_profit = GenUtil.strNumericFormat(SqlDtr.GetValue(6).ToString());
+                    if (!gross_profit.Equals(""))
+                    {
+                        gross_pro = System.Convert.ToDouble(gross_profit);
+                        if (gross_pro < 0)
+                        {
+                            gross_pro = (gross_pro * -1);
+                            total1 = gross_pro;
+                            sw.WriteLine("\t\tGross Loss\t" + GenUtil.strNumericFormat(gross_pro.ToString()));
+                        }
+                        else
+                        {
+                            total2 = gross_pro;
+                            sw.WriteLine("Gross Profit\t" + GenUtil.strNumericFormat(gross_pro.ToString()));
+                        }
+                    }
+                    sw.WriteLine();
+                    sw.WriteLine("Total\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(7).ToString()) + "\tTotal\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(8).ToString()));
+                    sw.WriteLine();
+                    sw.WriteLine();
+                    sw.WriteLine("Profit & Loss Account");
+                    if (!gross_profit.Equals(""))
+                    {
+                        gross_pro = System.Convert.ToDouble(gross_profit);
+                        if (gross_pro < 0)
+                        {
+                            gross_pro = (gross_pro * -1);
+                            sw.WriteLine("Gross Loss\t" + GenUtil.strNumericFormat(gross_pro.ToString()));
+                        }
+                        else
+                        {
+                            sw.WriteLine("\t\tGross Profit\t" + GenUtil.strNumericFormat(gross_pro.ToString()));
+                        }
+                    }
+                    sw.WriteLine("Indirect Expenses\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(9).ToString()) + "\tIndirect Income\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
+                    Net_Profit = GenUtil.strNumericFormat(SqlDtr.GetValue(11).ToString());
+                    if (!Net_Profit.Equals(""))
+                    {
+                        Net_Pro = System.Convert.ToDouble(Net_Profit);
+                        if (Net_Pro < 0)
+                        {
+                            Net_Pro = (Net_Pro * -1);
+                            total2 = total2 + Net_Pro;
+                            sw.WriteLine("\t\tNet Loss\t" + GenUtil.strNumericFormat(Net_Pro.ToString()));
+                        }
+                        else
+                        {
+                            total1 = total1 + Net_Pro;
+                            sw.WriteLine("Net Profit\t" + GenUtil.strNumericFormat(Net_Pro.ToString()));
+                        }
+                    }
+                    total1 = total1 + System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(9).ToString()));
+                    total2 = total2 + System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
+                    sw.WriteLine();
+                    sw.WriteLine("Total\t" + GenUtil.strNumericFormat(total1.ToString()) + "\tTotal\t" + GenUtil.strNumericFormat(total2.ToString()));
+                }
+                dbobj.Dispose();
+                SqlDtr.Close();
+                con.Close();
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                CreateLogFiles.ErrorLog("Form:TradingAccount.aspx,Method:ConvertToExcel.  EXCEPTION: " + ex.Message + "  User: " + uid);
+            }
+        }
 
 		/// <summary>
 		/// This method is used to contacts the print server and sends the Trading.txt file name to print.

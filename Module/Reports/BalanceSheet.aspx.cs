@@ -624,153 +624,160 @@ namespace EPetro.Module.Reports
 		/// </summary>
 		public void ConvertToExcel()
 		{
-			InventoryClass obj=new InventoryClass();
-			//string sql="";
-			string home_drive = Environment.SystemDirectory;
-			home_drive = home_drive.Substring(0,2); 
-			string strExcelPath  = home_drive+"\\ePetro_ExcelFile\\";
-			Directory.CreateDirectory(strExcelPath);
-			string path = home_drive+@"\ePetro_ExcelFile\BalanceSheet.xls";
-			StreamWriter sw = new StreamWriter(path);
-			sw.WriteLine("From Date\t"+txtDateFrom.Text);
-			sw.WriteLine("To Date\t"+txtDateTo.Text);
-			sw.WriteLine();
-			sw.WriteLine("LIABILITIES\t\tASSETS");
-			SqlConnection con = null;
-			SqlCommand cmd= null;
-			SqlDataReader SqlDtr = null;
-			string Op_Stock= "";
-			double Opening_Stock = 0;
-			string Cl_Stock= "";
-			double Closing_Stock = 0;
-			string Net_Profit = "";
-			double Net_Pro = 0;
-			double Net_Loss= 0;
-			con=new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["epetro"]);
-			con.Open ();
-			cmd = new SqlCommand( "exec getProfitLoss '"+getFromDate()+"','"+GenUtil.str2MMDDYYYY(txtDateTo.Text)+"'", con );
-			SqlDtr = cmd.ExecuteReader();
-			if(SqlDtr.Read())
-			{
-				Net_Profit = GenUtil.strNumericFormat(SqlDtr["Net_Profit"].ToString());
-				if(!Net_Profit.Trim().Equals("") )
-				{
-					Net_Pro = System.Convert.ToDouble(Net_Profit);
-					if(Net_Pro < 0 )
-					{
-						Net_Pro = (Net_Pro * -1);
-						Net_Loss = Net_Pro;
-						Net_Pro = 0;
-					}
-					else
-					{
-						Net_Loss = 0;
-					}
-				}
-				Op_Stock = GenUtil.strNumericFormat(SqlDtr["Opening_Stock"].ToString());
-				Cl_Stock = GenUtil.strNumericFormat(SqlDtr["Closing_Stock"].ToString());
-			}
-			SqlDtr.Close();
-			string op_bal_dr = "";
-			string op_bal_cr = "";
-			double op_bal_d = 0;
-			double op_bal_c = 0;
-			cmd = new SqlCommand( "exec getBalanceSheet '"+getFromDate()+"','"+GenUtil.str2MMDDYYYY(txtDateTo.Text)+"'", con );
-			SqlDtr = cmd.ExecuteReader();
-			if(SqlDtr.Read())
-			{
-				sw.WriteLine("Capital\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(2).ToString())+"\tFixed Assets\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(7).ToString()));    
-				sw.WriteLine("Reserve & Surplus\t"+GenUtil.strNumericFormat(Net_Pro.ToString())+"\tInvestments\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(8).ToString()));
-				if(!Cl_Stock.Trim().Equals(""))
-				{
-					Closing_Stock = System.Convert.ToDouble(Cl_Stock);   
-				}
-				string current_assets = GenUtil.strNumericFormat(SqlDtr.GetValue(9).ToString());     
-				double C_A = 0;
-				if(!current_assets.Trim().Equals(""))
-				{
-					C_A = System.Convert.ToDouble(current_assets);   
-					C_A = C_A + Closing_Stock;
-				}	
-				sw.WriteLine("Secured Loans\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(3).ToString())+"\tCurrent Assets\t"+GenUtil.strNumericFormat(C_A.ToString()));
-				sw.WriteLine("Unsecured Loans\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(4).ToString())+"\tLoan & Advances\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
-				sw.WriteLine("Current Liabilities\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString())+"\tProfit & Loss A/C\t"+GenUtil.strNumericFormat(Net_Loss.ToString()));
-				sw.WriteLine("Provisions\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(6).ToString())+"\tMisc. Expenditure\t"+GenUtil.strNumericFormat(SqlDtr.GetValue(11).ToString())); 
-				op_bal_dr = GenUtil.strNumericFormat(SqlDtr.GetValue(0).ToString());
-				op_bal_cr = GenUtil.strNumericFormat(SqlDtr.GetValue(1).ToString());
-				if(!Op_Stock.Trim().Equals(""))
-				{
-					Opening_Stock = System.Convert.ToDouble(Op_Stock);   
-				}
-				if(!op_bal_dr.Trim().Equals(""))
-				{
-					op_bal_d = System.Convert.ToDouble(op_bal_dr);   
-					op_bal_d = op_bal_d + Opening_Stock;
-				}
-				if(!op_bal_cr.Trim().Equals(""))
-				{
-					op_bal_c = System.Convert.ToDouble(op_bal_cr);  
-				}
-				bool d1 = false;
-				bool d2 = false;
-				if(op_bal_d != op_bal_c)
-				{
-					op_bal_d = op_bal_d - op_bal_c;
-					if(op_bal_d < 0)
-					{
-						op_bal_d = (op_bal_d * -1);
-						sw.WriteLine("\t\tDiff. in Op. Balance\t"+GenUtil.strNumericFormat(op_bal_d.ToString())); 
-						d2 = true;
-					}
-					else
-					{
-						sw.WriteLine("Diff. in Op. Balance\t"+GenUtil.strNumericFormat(op_bal_d.ToString() )); 
-						d1 = true;
-					}
-				}
-				else
-				{
-					sw.WriteLine();
-				}
-				sw.WriteLine();
-				double  total11 = 0;
-				double capital1 = 0;
-				double Res_Sur = 0;
-				double Sec_Loan = 0;
-				double Un_sec_ln  =0;
-				double Curr_liab = 0;
-				double Provision = 0;
-				capital1 = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(2).ToString()));  
-				Res_Sur = System.Convert.ToDouble(GenUtil.strNumericFormat(Net_Pro.ToString()));
-				Sec_Loan = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(3).ToString()));
-				Un_sec_ln = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(4).ToString()));
-				Curr_liab  = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString()));
-				Provision   = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(6).ToString()));
-				total11  = capital1+Res_Sur+Sec_Loan+Un_sec_ln+Curr_liab +Provision;
-				if(d1 == true )
-					total11 = total11+op_bal_d ;
-				double  total22 = 0;
-				double Fix_Assets = 0;
-				double investment = 0;
-				double Curr_assets = 0;
-				double Pro_loss  =0;
-				double Misc = 0;
-				double Loan_adv = 0;
-				Fix_Assets = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(7).ToString()));  
-				investment = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(8).ToString()));
-				Curr_assets = System.Convert.ToDouble(GenUtil.strNumericFormat(C_A.ToString()));
-				Loan_adv = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
-				Pro_loss  = System.Convert.ToDouble(GenUtil.strNumericFormat(Net_Loss.ToString()));
-				Misc   = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(11).ToString()));
-				total22  = Fix_Assets+investment +Curr_assets+Pro_loss +Misc+Loan_adv;
-				if(d2 == true )
-					total22 = total22+op_bal_d ;
-				sw.WriteLine("Total\t"+GenUtil.strNumericFormat(total11.ToString())+"\tTotal\t"+GenUtil.strNumericFormat(total22.ToString()));
-			}
-			dbobj.Dispose();
-			SqlDtr.Close();
-			sw.Close();
-		}
+            try
+            {
+                InventoryClass obj = new InventoryClass();
+                //string sql="";
+                string home_drive = Environment.SystemDirectory;
+                home_drive = home_drive.Substring(0, 2);
+                string strExcelPath = home_drive + "\\ePetro_ExcelFile\\";
+                Directory.CreateDirectory(strExcelPath);
+                string path = home_drive + @"\ePetro_ExcelFile\BalanceSheet.xls";
+                StreamWriter sw = new StreamWriter(path);
+                sw.WriteLine("From Date\t" + txtDateFrom.Text);
+                sw.WriteLine("To Date\t" + txtDateTo.Text);
+                sw.WriteLine();
+                sw.WriteLine("LIABILITIES\t\tASSETS");
+                SqlConnection con = null;
+                SqlCommand cmd = null;
+                SqlDataReader SqlDtr = null;
+                string Op_Stock = "";
+                double Opening_Stock = 0;
+                string Cl_Stock = "";
+                double Closing_Stock = 0;
+                string Net_Profit = "";
+                double Net_Pro = 0;
+                double Net_Loss = 0;
+                con = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["epetro"]);
+                con.Open();
+                cmd = new SqlCommand("exec getProfitLoss '" + getFromDate() + "','" + GenUtil.str2MMDDYYYY(txtDateTo.Text) + "'", con);
+                SqlDtr = cmd.ExecuteReader();
+                if (SqlDtr.Read())
+                {
+                    Net_Profit = GenUtil.strNumericFormat(SqlDtr["Net_Profit"].ToString());
+                    if (!Net_Profit.Trim().Equals(""))
+                    {
+                        Net_Pro = System.Convert.ToDouble(Net_Profit);
+                        if (Net_Pro < 0)
+                        {
+                            Net_Pro = (Net_Pro * -1);
+                            Net_Loss = Net_Pro;
+                            Net_Pro = 0;
+                        }
+                        else
+                        {
+                            Net_Loss = 0;
+                        }
+                    }
+                    Op_Stock = GenUtil.strNumericFormat(SqlDtr["Opening_Stock"].ToString());
+                    Cl_Stock = GenUtil.strNumericFormat(SqlDtr["Closing_Stock"].ToString());
+                }
+                SqlDtr.Close();
+                string op_bal_dr = "";
+                string op_bal_cr = "";
+                double op_bal_d = 0;
+                double op_bal_c = 0;
+                cmd = new SqlCommand("exec getBalanceSheet '" + getFromDate() + "','" + GenUtil.str2MMDDYYYY(txtDateTo.Text) + "'", con);
+                SqlDtr = cmd.ExecuteReader();
+                if (SqlDtr.Read())
+                {
+                    sw.WriteLine("Capital\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(2).ToString()) + "\tFixed Assets\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(7).ToString()));
+                    sw.WriteLine("Reserve & Surplus\t" + GenUtil.strNumericFormat(Net_Pro.ToString()) + "\tInvestments\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(8).ToString()));
+                    if (!Cl_Stock.Trim().Equals(""))
+                    {
+                        Closing_Stock = System.Convert.ToDouble(Cl_Stock);
+                    }
+                    string current_assets = GenUtil.strNumericFormat(SqlDtr.GetValue(9).ToString());
+                    double C_A = 0;
+                    if (!current_assets.Trim().Equals(""))
+                    {
+                        C_A = System.Convert.ToDouble(current_assets);
+                        C_A = C_A + Closing_Stock;
+                    }
+                    sw.WriteLine("Secured Loans\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(3).ToString()) + "\tCurrent Assets\t" + GenUtil.strNumericFormat(C_A.ToString()));
+                    sw.WriteLine("Unsecured Loans\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(4).ToString()) + "\tLoan & Advances\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
+                    sw.WriteLine("Current Liabilities\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString()) + "\tProfit & Loss A/C\t" + GenUtil.strNumericFormat(Net_Loss.ToString()));
+                    sw.WriteLine("Provisions\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(6).ToString()) + "\tMisc. Expenditure\t" + GenUtil.strNumericFormat(SqlDtr.GetValue(11).ToString()));
+                    op_bal_dr = GenUtil.strNumericFormat(SqlDtr.GetValue(0).ToString());
+                    op_bal_cr = GenUtil.strNumericFormat(SqlDtr.GetValue(1).ToString());
+                    if (!Op_Stock.Trim().Equals(""))
+                    {
+                        Opening_Stock = System.Convert.ToDouble(Op_Stock);
+                    }
+                    if (!op_bal_dr.Trim().Equals(""))
+                    {
+                        op_bal_d = System.Convert.ToDouble(op_bal_dr);
+                        op_bal_d = op_bal_d + Opening_Stock;
+                    }
+                    if (!op_bal_cr.Trim().Equals(""))
+                    {
+                        op_bal_c = System.Convert.ToDouble(op_bal_cr);
+                    }
+                    bool d1 = false;
+                    bool d2 = false;
+                    if (op_bal_d != op_bal_c)
+                    {
+                        op_bal_d = op_bal_d - op_bal_c;
+                        if (op_bal_d < 0)
+                        {
+                            op_bal_d = (op_bal_d * -1);
+                            sw.WriteLine("\t\tDiff. in Op. Balance\t" + GenUtil.strNumericFormat(op_bal_d.ToString()));
+                            d2 = true;
+                        }
+                        else
+                        {
+                            sw.WriteLine("Diff. in Op. Balance\t" + GenUtil.strNumericFormat(op_bal_d.ToString()));
+                            d1 = true;
+                        }
+                    }
+                    else
+                    {
+                        sw.WriteLine();
+                    }
+                    sw.WriteLine();
+                    double total11 = 0;
+                    double capital1 = 0;
+                    double Res_Sur = 0;
+                    double Sec_Loan = 0;
+                    double Un_sec_ln = 0;
+                    double Curr_liab = 0;
+                    double Provision = 0;
+                    capital1 = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(2).ToString()));
+                    Res_Sur = System.Convert.ToDouble(GenUtil.strNumericFormat(Net_Pro.ToString()));
+                    Sec_Loan = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(3).ToString()));
+                    Un_sec_ln = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(4).ToString()));
+                    Curr_liab = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(5).ToString()));
+                    Provision = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(6).ToString()));
+                    total11 = capital1 + Res_Sur + Sec_Loan + Un_sec_ln + Curr_liab + Provision;
+                    if (d1 == true)
+                        total11 = total11 + op_bal_d;
+                    double total22 = 0;
+                    double Fix_Assets = 0;
+                    double investment = 0;
+                    double Curr_assets = 0;
+                    double Pro_loss = 0;
+                    double Misc = 0;
+                    double Loan_adv = 0;
+                    Fix_Assets = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(7).ToString()));
+                    investment = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(8).ToString()));
+                    Curr_assets = System.Convert.ToDouble(GenUtil.strNumericFormat(C_A.ToString()));
+                    Loan_adv = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(10).ToString()));
+                    Pro_loss = System.Convert.ToDouble(GenUtil.strNumericFormat(Net_Loss.ToString()));
+                    Misc = System.Convert.ToDouble(GenUtil.strNumericFormat(SqlDtr.GetValue(11).ToString()));
+                    total22 = Fix_Assets + investment + Curr_assets + Pro_loss + Misc + Loan_adv;
+                    if (d2 == true)
+                        total22 = total22 + op_bal_d;
+                    sw.WriteLine("Total\t" + GenUtil.strNumericFormat(total11.ToString()) + "\tTotal\t" + GenUtil.strNumericFormat(total22.ToString()));
+                }
+                dbobj.Dispose();
+                SqlDtr.Close();
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                CreateLogFiles.ErrorLog("Form:BalanceSheet.aspx,Method:ConvertToExcel.  EXCEPTION: " + ex.Message + "  User: " + uid);
+            }
+        }
 		
 		/// <summary>
 		/// This method is used to Sends the file BalanceSheet.txt to print server to print.
