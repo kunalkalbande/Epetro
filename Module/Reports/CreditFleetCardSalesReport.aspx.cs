@@ -181,10 +181,10 @@ namespace EPetro.Module.Reports
 			string sqlstr="";
 			if(DropSalesType.SelectedItem.Text.Equals("Combine Sales"))
 				//sqlstr="select * from vw_CreditFleetCardSales where cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
-				sqlstr="select * from vw_SaleBook where (Sales_Type='Credit Card Sale' or Sales_Type='Fleet Card Sale') and cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
+				sqlstr="select * from vw_SaleBook where (Sales_Type='Credit Card Sale' or Sales_Type='Fleet Card Sale') and cast(floor(cast(invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) +"'";
 			else
 				//sqlstr="select * from vw_CreditFleetCardSales where Sales_Type='"+DropSalesType.SelectedItem.Text+"' and cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
-				sqlstr="select * from vw_SaleBook where Sales_Type='"+DropSalesType.SelectedItem.Text+"' and cast(floor(cast(invoice_date as float)) as datetime)>='"+ ToMMddYYYY(txtDateFrom.Text)  +"' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ ToMMddYYYY(Textbox1.Text) +"'";
+				sqlstr="select * from vw_SaleBook where Sales_Type='"+DropSalesType.SelectedItem.Text+"' and cast(floor(cast(invoice_date as float)) as datetime)>='"+ GenUtil.str2MMDDYYYY(txtDateFrom.Text) + "' and cast(floor(cast(invoice_date as float)) as datetime)<='"+ GenUtil.str2MMDDYYYY(Textbox1.Text) + "'";
 			DataSet ds= new DataSet();
 			SqlDataAdapter da = new SqlDataAdapter(sqlstr, SqlCon);
 			da.Fill(ds,"Sales_Master");

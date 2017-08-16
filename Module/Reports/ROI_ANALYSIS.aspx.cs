@@ -722,40 +722,40 @@ namespace EPetro
 				Response.Redirect("../../Sysitem/ErrorPage.aspx",false);
 				return;
 			}
-			txtDate.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txtSalesPerformanceDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txtCummulativeuptoDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt3adatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt3bdatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt3cdatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt5bstdate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt10_3_aDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt17a_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt17b_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt17c_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5eN1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5eN2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5eN3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5eN4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5eN5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5eN6.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5fN1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5fN2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5fN3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5fN4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5fN5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt18_5fN6.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt19_0Date1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt19_0Date2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt19_0Date3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt19_0Date4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt19_0Date5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt20_0Date1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt20_0Date2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt20_0Date3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt20_0Date4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txt20_0Date5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			txtIOCDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txtDate.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txtSalesPerformanceDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txtCummulativeuptoDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt3adatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt3bdatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt3cdatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt5bstdate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt10_3_aDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt17a_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt17b_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt17c_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5eN1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5eN2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5eN3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5eN4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5eN5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5eN6.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5fN1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5fN2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5fN3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5fN4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5fN5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt18_5fN6.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt19_0Date1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt19_0Date2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt19_0Date3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt19_0Date4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt19_0Date5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt20_0Date1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt20_0Date2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt20_0Date3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt20_0Date4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txt20_0Date5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
+			//txtIOCDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
 			
 			try
 			{
@@ -3110,10 +3110,10 @@ namespace EPetro
 				c16dT4_Y=setCheck1(c16dT4_Y,chk16dT4_Y);		
 	
 				// Return Date in MM/DD/YYYY for Display and Print Input is DD/MM/YYYY
-
-				txtSalesPerformanceDate.Value=GenUtil.str2MMDDYYYY(txtSalesPerformanceDate.Value.ToString());
-				txtDate.Text=GenUtil.str2MMDDYYYY(txtDate.Text.ToString());
-				txtCummulativeuptoDate.Value=GenUtil.str2MMDDYYYY(txtCummulativeuptoDate.Value.ToString());
+               
+                txtSalesPerformanceDate.Value=GenUtil.str2MMDDYYYY(txtSalesPerformanceDate.Value.ToString());
+                txtDate.Text =GenUtil.str2MMDDYYYY(txtDate.Text.ToString());
+                txtCummulativeuptoDate.Value=GenUtil.str2MMDDYYYY(txtCummulativeuptoDate.Value.ToString());
 				txt3adatepk.Value=GenUtil.str2MMDDYYYY(txt3adatepk.Value.ToString());
 				txt3bdatepk.Value=GenUtil.str2MMDDYYYY(txt3bdatepk.Value.ToString());
 				txt3cdatepk.Value=GenUtil.str2MMDDYYYY(txt3cdatepk.Value.ToString());
@@ -3170,7 +3170,7 @@ namespace EPetro
 					"',Other='"+other+
 					"',Divoffice='"+txtDivisionOff.Text+
 					"',Distr='"+txtDistrict.Value+
-					"',Pvdt='"+txtDate.Text+
+					"',Pvdt='"+ txtDate.Text +
 					"',Spdt1='"+txtSalesPerformanceDate.Value+
 					"',Spcum1='"+txtCummulativeuptoDate.Value+
 					"',Mstar1='"+txtMSTarget1.Value+
