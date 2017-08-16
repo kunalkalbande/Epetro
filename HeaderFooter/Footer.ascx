@@ -6,13 +6,13 @@
 		<LINK href="../Sysitem/Styles.css" type="text/css" rel="stylesheet">
 	</HEAD>
 	<BODY BGCOLOR="#ffffff" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
-		<TABLE WIDTH="778" BORDER="0" CELLPADDING="0" CELLSPACING="0" align="center">
+		<TABLE WIDTH="1350" BORDER="0" CELLPADDING="0" CELLSPACING="0" align="center">
 			<TR>
-				<TD background="/EPetro/HeaderFooter/images/Menu_07.gif" WIDTH="778" HEIGHT="2"></TD>
+				<TD background="/EPetro/HeaderFooter/images/Menu_07.gif" WIDTH="1350" HEIGHT="2"></TD>
 			</TR>
 			<TR>
-				<TD background="/EPetro/HeaderFooter/images/Menu_08.gif" WIDTH="778" HEIGHT="28">
-					<table width="772" cellspacing="0" border="0" cellpadding="0">
+				<TD background="/EPetro/HeaderFooter/images/Menu_08.gif" WIDTH="1350" HEIGHT="28">
+					<table width="1350" cellspacing="0" border="0" cellpadding="0">
 						<tr>
 							<td width="150">
 								<p align="center"><a href="/epetro/Module/Inventory/SalesInvoice.aspx"><font color="#ffffff">Sales 
