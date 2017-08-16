@@ -276,11 +276,19 @@ namespace EPetro.Module.Reports
 		/// set the column name and order format in session variable.
 		/// </summary>
 		private void btnView_Click(object sender, System.EventArgs e)
-		{
+		{            
 			strOrderBy = "Particulars ASC";
 			Session["Column"] = "Particulars";
 			Session["Order"] = "ASC";
-			BindTheData();
+            try
+            {
+                BindTheData();
+            }            
+			catch(Exception ex)
+			{
+
+                CreateLogFiles.ErrorLog("Form:CustomerLedger.aspx,Method:btnView_Click()  EXCEPTION  " + ex.Message+".  User_ID:"+ uid );
+			}            
 		}
 		
 		/// <summary>
