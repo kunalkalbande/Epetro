@@ -2952,8 +2952,9 @@ namespace EPetro.Module.Inventory
 								OS=CS;
 							CS=OS+double.Parse(rdr1["receipt"].ToString())-double.Parse(rdr1["sales"].ToString());
 							Con.Open();
-							cmd = new SqlCommand("update Stock_Master set opening_stock='"+OS.ToString()+"', Closing_Stock='"+CS.ToString()+"' where ProductID='"+rdr1["Productid"].ToString()+"' and Stock_Date='"+rdr1["stock_date"].ToString()+"'",Con);
-							cmd.ExecuteNonQuery();
+							cmd = new SqlCommand("update Stock_Master set opening_stock='"+OS.ToString()+"', Closing_Stock='"+CS.ToString()+"' where ProductID='"+rdr1["Productid"].ToString()+ "' and Stock_Date=CONVERT(datetime, '" + rdr1["stock_date"].ToString() + "', 103)",Con); 
+
+                            cmd.ExecuteNonQuery();
 							cmd.Dispose();
 							Con.Close();
 						}
