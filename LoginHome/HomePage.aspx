@@ -23,7 +23,7 @@
 	<body MS_POSITIONING="GridLayout">
 		<form id="HomePage" method="post" runat="server">
 			<uc1:header1 id="Header11" runat="server"></uc1:header1>
-			<TABLE height="265" cellSpacing="0" cellPadding="0" width="778" align="center">
+			<TABLE height="265" cellSpacing="0" cellPadding="0" width="1350" align="center">
 				<TR>
 					<TH align="center" colSpan="12">
 						<hr>
@@ -300,6 +300,9 @@
 					<TD></TD>
 					<TD><asp:hyperlink id="Hyperlink60" runat="server" NavigateUrl="../Module/Reports/VehicleLogReport.aspx">Vehicle Report</asp:hyperlink></TD>
 				</TR>
+                <tr>
+                    <td height="180"></td>
+                </tr>
 			</TABLE>
 			<uc1:footer id="Footer1" runat="server"></uc1:footer></form>
 	</body>

@@ -41,12 +41,13 @@
 	<BODY bgColor="#ffffff" leftMargin="0" topMargin="0" onload="Check();" MARGINHEIGHT="0"
 		MARGINWIDTH="0">
 		<form id="Form1" runat="server">
-			<TABLE width="778" border="0" align="center" cellPadding="0" cellSpacing="0" height="445">
+			<TABLE width="1350" border="0" align="center" cellPadding="0" cellSpacing="0" height="445">
+              
 				<TR>
-					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/Login-Page_01.gif" width="778" height="49"></TD>
+					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/Login-Page_01.gif" width="1350" height="49"></TD>
 				</TR>
 				<TR>
-					<TD width="778" height="12" colSpan="20" background="../HeaderFooter/images/Login-Page_03.gif"></TD>
+					<TD width="1350" height="12" colSpan="20" background="../HeaderFooter/images/Login-Page_03.gif"></TD>
 					<TD width="1" height="12"></TD>
 				</TR>
 				<TR>
@@ -64,7 +65,7 @@
 					<TD width="1" height="16"></TD>
 				</TR>
 				<TR>
-					<TD></TD>
+					<TD ></TD>
 					<TD width="767" height="9" colSpan="18" align="center" vAlign="middle" background="../HeaderFooter/images/Login-Page_12.gif"></TD>
 					<TD></TD>
 					<TD width="1" height="9"></TD>
@@ -83,6 +84,7 @@
 					<TD width="10" height="269" rowSpan="15" background="../HeaderFooter/images/Login-Page_21.gif"></TD>
 					<TD width="1" height="2"></TD>
 				</TR>
+             
 				<TR>
 					<TD rowSpan="13"></TD>
 					<TD rowSpan="13">
@@ -239,7 +241,7 @@
 					<TD width="1" height="13"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="16"></TD>
+					<TD colSpan="16" height="180"></TD>
 					<TD width="1" height="3"></TD>
 				</TR>
 				<TR>
