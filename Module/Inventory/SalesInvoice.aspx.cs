@@ -933,18 +933,14 @@ namespace EPetro.Module.Inventory
                 if (DropType2.SelectedValue == strArraytwo[0])
                 {
                     if (strArraytwo[0] == "Fuel")
-                    {
-                        if (i == 0)
-                            DropProd2.Items.Add("Select");
+                    {                       
                         DropProd2.Items.Add(strArraytwo[1]);
 
                         DropPack2.Enabled = false;
                         txtAvStock2.Enabled = false;
                     }
                     else
-                    {
-                        if (i == 0)
-                            DropProd2.Items.Add("Select");
+                    {                        
                         DropProd2.Items.Add(strArraytwo[1]);
                     }
                 }

@@ -455,27 +455,18 @@ namespace EPetro.Module.Accounts
             string strQty1 = txtQty1.Text;
             string strRate1 = txtRate1.Text;
             string strAmount1 = txtAmount1.Text;
-            string strAvStock1 = txtAvStock1.Text;
-            string strProdName = string.Empty;
-            string strPack1 = string.Empty;
-            /*if (DropProd1.SelectedValue != null)
-            {
-                 strProdName = DropProd1.SelectedValue;
-            }
-            if (DropPack1.SelectedValue != null)
-            {
-                strPack1 = DropPack1.SelectedValue;
-            }*/
+            string strAvStock1 = txtAvStock1.Text;           
+
+            string strQty2 = txtQty2.Text;
+            string strRate2 = txtRate2.Text;
+            string strAmount2 = txtAmount2.Text;
+            string strAvStock2 = txtAvStock2.Text;
 
             DropProd1.Items.Clear();
             DropProd2.Items.Clear();
-            //settank();
+            
             GetProducts();
 
-
-            //FuelWiseTotalLtr();
-            //string[] mainarr = new string[200];
-            //mainarr = temptext.Value.;
             string[] strArrayOne = new string[] { "" };
             strArrayOne = temptext.Value.Split(',');
 
@@ -492,34 +483,27 @@ namespace EPetro.Module.Accounts
                 {
                     if (strArraytwo[0] == "Fuel")
                     {
-                        DropProd1.Items.Add(strArraytwo[1] + ':' + strArraytwo[6]);
-                        //txtAvStock1.Text = strArraytwo[4] + " " + strArraytwo[5];                            
-                        //txtRate1.Text = strArraytwo[3];
+                        DropProd1.Items.Add(strArraytwo[1] + ':' + strArraytwo[6]);                        
 
                         txtAvStock1.Text = strAvStock1;
                         txtRate1.Text = strRate1;
-                        txtAmount1.Text = strAmount1;
-                        //DropProd11.SelectedValue = strProdName;
-                        //DropPack1.SelectedValue = strPack1;
+                        txtAmount1.Text = strAmount1;                        
 
                         txtAvStock1.Enabled = false;
                         DropPack1.Enabled = false;
+                        txtRate1.Text = string.Empty;
                     }
                     else
                     {
-                        DropProd1.Items.Add(strArraytwo[1]);
-                        DropPack1.Items.Add(strArraytwo[2]);
-                        //txtAvStock1.Text = strArraytwo[4] + " " + strArraytwo[5];
-                        //txtRate1.Text = strArraytwo[3];
+                        DropProd1.Items.Add(strArraytwo[1]);                        
 
                         txtAvStock1.Text = strAvStock1;
                         txtRate1.Text = strRate1;
                         txtAmount1.Text = strAmount1;
 
-                        //DropProd11.SelectedValue = strProdName;
-                        //DropPack1.SelectedValue = strPack1;
-
                         txtAvStock1.Enabled = false;
+                        DropPack1.Enabled = false;
+                        txtRate1.Text = string.Empty;
                     }
                 }
                 if (DropType2.SelectedValue == strArraytwo[0])
@@ -527,18 +511,25 @@ namespace EPetro.Module.Accounts
                     if (strArraytwo[0] == "Fuel")
                     {
                         DropProd2.Items.Add(strArraytwo[1] + ':' + strArraytwo[6]);
-                        txtAvStock2.Text = strArraytwo[4] + " " + strArraytwo[5];
-                        txtRate2.Text = strArraytwo[3];
+
+                        txtAvStock2.Text = strAvStock2;
+                        txtRate2.Text = strRate2;
+                        txtAmount2.Text = strAmount2;
+                        
                         DropPack2.Enabled = false;
-                        txtAvStock1.Enabled = false;
+                        txtAvStock2.Enabled = false;
+                        txtRate2.Text = string.Empty;
                     }
                     else
                     {
                         DropProd2.Items.Add(strArraytwo[1]);
-                        DropPack2.Items.Add(strArraytwo[2]);
-                        txtAvStock2.Text = strArraytwo[4] + " " + strArraytwo[5];
-                        txtRate2.Text = strArraytwo[3];
-                        txtAvStock1.Enabled = false;
+                        txtAvStock2.Text = strAvStock2;
+                        txtRate2.Text = strRate2;
+                        txtAmount2.Text = strAmount2;
+
+                        txtAvStock2.Enabled = false;
+                        DropPack2.Enabled = false;
+                        txtRate2.Text = string.Empty;                        
                     }
                 }
             }
@@ -549,10 +540,9 @@ namespace EPetro.Module.Accounts
         /// generate the print file also.
         /// </summary>
         public void Insert()
-        {            
+        {                        
             try
-            {                
-
+            {                                
                 StringBuilder errorMessage = new StringBuilder();
                 if (DropType1.SelectedIndex == 0)
                 {
