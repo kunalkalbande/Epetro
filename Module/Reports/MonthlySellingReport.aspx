@@ -24,6 +24,11 @@
 		<script language="javascript" id="Validations" src="../../Sysitem/Js/Validations.js"></script>
 		<LINK href="../../Sysitem/Styles.css" type="text/css" rel="stylesheet">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+	    <style type="text/css">
+            .auto-style1 {
+                width: 717px;
+            }
+        </style>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
@@ -80,7 +85,7 @@
 							<%if(DropMonth.SelectedIndex!=0 && DropYear.SelectedIndex!=0){%>
 							<tr>
 								<td colSpan="5">
-									<table borderColor="green" cellSpacing="0" cellPadding="0" width="600" align="center" border="1">
+									<table borderColor="green" cellSpacing="0" cellPadding="0" align="center" border="1" class="auto-style1">
 										<%
 										DBUtil dbobj=new DBUtil(System.Configuration.ConfigurationSettings.AppSettings["epetro"],true);
 										InventoryClass obj=new InventoryClass();
