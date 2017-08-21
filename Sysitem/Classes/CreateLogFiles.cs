@@ -49,13 +49,13 @@ namespace EPetro.Sysitem.Classes
 			home_drive = home_drive.Substring(0,2); 
 			fileName = home_drive+"\\Inetpub\\wwwroot\\EPetro\\Sysitem\\Logs\\" +DateTime.Today.Day.ToString()+ "-" +DateTime.Today.Month.ToString() + "-" + DateTime.Today.Year.ToString() + ".log";
 			sLogFormat = DateTime.Now.ToShortDateString().ToString()+" "+DateTime.Now.ToLongTimeString().ToString()+" ==> ";
-			//StreamWriter sw = new StreamWriter(@"C:\Inetpub\wwwroot\EPetro\Logs"+sErrorTime,true);
-			//StreamWriter sw = new StreamWriter(fileName,true);
+            //StreamWriter sw = new StreamWriter(@"C:\Inetpub\wwwroot\EPetro\Logs"+sErrorTime,true);
+            StreamWriter sw = new StreamWriter(fileName, true);
 
-			//sw.WriteLine(sLogFormat + sErrMsg);
-			//sw.Flush();
-			//sw.Close();
-		}
+            sw.WriteLine(sLogFormat + sErrMsg);
+            sw.Flush();
+            sw.Close();
+        }
 	}
 }
 //CreateLogFiles.ErrorLog("Form:ProductWiseSales.aspx,Method:cmdrpt_Click" + ex.Message);
