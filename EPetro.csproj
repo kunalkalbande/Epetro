@@ -146,6 +146,8 @@
     <Content Include="HeaderFooter\images\blank.gif" />
     <Content Include="HeaderFooter\images\button.gif" />
     <Content Include="HeaderFooter\images\button.jpg" />
+    <Content Include="HeaderFooter\images\ePetro_Footer.png" />
+    <Content Include="HeaderFooter\images\ePetro_Header.png" />
     <Content Include="HeaderFooter\images\Header.swf" />
     <Content Include="HeaderFooter\images\intro.swf" />
     <Content Include="HeaderFooter\images\large size.jpg" />

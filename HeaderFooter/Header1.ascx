@@ -8,11 +8,8 @@
 	<BODY BGCOLOR="#ffffff" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
 		<TABLE WIDTH="1350" BORDER="0" CELLPADDING="0" CELLSPACING="0" align="center">
 			<TR>
-				<TD colspan="2" background="/EPetro/HeaderFooter/images/Login-Page_01.gif" width="1350" height="49">
-				</TD>
-			</TR>
-			<TR>
-				<TD colspan="2" background="/EPetro/HeaderFooter/images/Menu_03.gif" WIDTH="1350" HEIGHT="8"></TD>
+                <TD colSpan="2"> <IMG src="../HeaderFooter/images/ePetro_Header.png" width="1350" height="60">
+					</TD>								
 			</TR>
 			<TR>
 				<TD colspan="2" background="/EPetro/HeaderFooter/images/Menu_04.gif" WIDTH="1350" HEIGHT="31">

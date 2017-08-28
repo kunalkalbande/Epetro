@@ -38,13 +38,8 @@
 				</TD>
 			</TR>
 			<TR>
-				<TD background="/EPetro/HeaderFooter/images/Menu_09_02.gif" WIDTH="778" HEIGHT="30">
-					<p align="center"><font color="#ffffff"><b>© </b></font><a href="http://www.bbnisys.com">
-							<font color="#ffffff"><b>bbnisys</b></font></a> <font color="#ffffff">Technologies 
-							(P) Ltd. India, Contact us : 0091 - 751 - 4010134 E-mail :</B></font><a href="mailto: support@bbnisys.com"><font color="#ffffff">
-								support @ bbnisys.com</font></a></p>
-					</B>
-				</TD>
+				<TD colSpan="20"> <IMG src="../HeaderFooter/images/ePetro_Footer.png" width="1350" height="30">
+					</TD>
 			</TR>
 		</TABLE>
 	</BODY>

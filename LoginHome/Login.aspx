@@ -44,7 +44,7 @@
 			<TABLE width="1350" border="0" align="center" cellPadding="0" cellSpacing="0" height="445">
               
 				<TR>
-					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/Login-Page_01.gif" width="1350" height="49"></TD>
+					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/ePetro_Header.png" width="1350" height="60"></TD>
 				</TR>
 				<TR>
 					<TD width="1350" height="12" colSpan="20" background="../HeaderFooter/images/Login-Page_03.gif"></TD>
@@ -245,10 +245,7 @@
 					<TD width="1" height="3"></TD>
 				</TR>
 				<TR>
-					<TD align="center" width="778" background="../HeaderFooter/images/Menu_09_02.gif" colSpan="20"
-						height="34"><font color="#ffffff"><b>©</b></font><A href="http//:www.bbnisys.com"><font color="#ffffff"><b>bbnisys</b></font></A>
-						<font color="#ffffff">Technologies (P) Ltd. India, Contact us : 0091 - 751 - 
-							4010134 E-mail :</font><A href="mailto: support@bbnisys.com"><font color="#ffffff"> <b>support@bbnisys.com</b></font></A>
+					<TD colSpan="20"> <IMG src="../HeaderFooter/images/ePetro_Footer.png" width="1350" height="34">
 					</TD>
 				</TR>
 				<TR>
