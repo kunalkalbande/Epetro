@@ -71,23 +71,23 @@
 					<TD width="1" height="9"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="2" rowSpan="17"></TD>
-					<TD width="11" height="279" rowSpan="17" background="../HeaderFooter/images/Login-Page_15.gif"></TD>
+					<TD colSpan="2" rowSpan="16"></TD>
+					<TD width="11" height="279" rowSpan="16" background="../HeaderFooter/images/Login-Page_15.gif"></TD>
 					<TD colSpan="3" rowSpan="2"></TD>
 					<TD background="../HeaderFooter/images/Login-Page_10.gif"></TD>
 					<TD align="center" colSpan="10" rowSpan="2"></TD>
-					<TD width="11" height="279" rowSpan="17" background="../HeaderFooter/images/Login-Page_19.gif"></TD>
-					<TD colSpan="2" rowSpan="17"></TD>
+					<TD width="11" height="279" rowSpan="16" background="../HeaderFooter/images/Login-Page_19.gif"></TD>
+					<TD colSpan="2" rowSpan="16"></TD>
 					<TD width="1" height="14"></TD>
 				</TR>
 				<TR>
-					<TD width="10" height="269" rowSpan="15" background="../HeaderFooter/images/Login-Page_21.gif"></TD>
+					<TD width="10" height="269" rowSpan="14" background="../HeaderFooter/images/Login-Page_21.gif"></TD>
 					<TD width="1" height="2"></TD>
 				</TR>
              
 				<TR>
-					<TD rowSpan="13"></TD>
-					<TD rowSpan="13">
+					<TD rowSpan="12"></TD>
+					<TD rowSpan="12">
 						<OBJECT codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
 							height="260" width="337" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" VIEWASTEXT>
 							<PARAM NAME="_cx" VALUE="8916">
@@ -112,58 +112,47 @@
 								type="application/x-shockwave-flash"> </embed>
 						</OBJECT>
 					</TD>
-					<TD rowSpan="13"></TD>
-					<TD rowSpan="13"></TD>
-					<TD width="337" height="10" colSpan="8" background="../HeaderFooter/images/Login-Page_26.gif"></TD>
-					<TD rowSpan="13"></TD>
-					<TD width="1" height="10"></TD>
-				</TR>
-				<TR>
-					<TD width="9" height="241" rowSpan="11" background="../HeaderFooter/images/Login-Page_28.gif"></TD>
-					<TD colSpan="6"></TD>
-					<TD width="11" height="250" rowSpan="12" background="../HeaderFooter/images/Login-Page_30.gif"></TD>
+					<TD rowSpan="12"></TD>
+					<TD rowSpan="12"></TD>
+					<TD width="9" height="241" rowSpan="11" background="../HeaderFooter/images/Login-Page_15.gif"></TD>
+					<TD colSpan="6"> <IMG width="900" src="../HeaderFooter/images/ePetro_LoginUser.png"  height="40"></TD>
+					<TD width="9" height="250" rowSpan="12" background="../HeaderFooter/images/Login-Page_15.gif"></TD>
+					<TD rowSpan="12"></TD>
 					<TD width="1" height="4"></TD>
 				</TR>
 				<TR>
-					<TD width="98" height="45" colSpan="2" align="center" background="../HeaderFooter/images/Login-Page_31.gif"><b><h7>User 
+					<TD width="98" height="45" colSpan="2" align="center" ><b><h7>User 
         Type :</h7></b>
 					</TD>
-					<TD></TD>
-					<TD width="215" height="45" colSpan="3" background="../HeaderFooter/images/Login-Page_33.gif">&nbsp;&nbsp;&nbsp;
+					<TD height="45" colSpan="3" >&nbsp;&nbsp;&nbsp;
 						<asp:dropdownlist id=DropUser Runat="server" Width="140px" DataSource="<%# Page %>" onChange="Enable();" CssClass="fontstyle">
 							<asp:ListItem Value="Select">Select</asp:ListItem>
 						</asp:dropdownlist></TD>
-					<TD width="1" height="45"></TD>
-				</TR>
-				<TR>
-					<TD colSpan="6"></TD>
-					<TD width="1" height="6"></TD>
-				</TR>
-				<TR>
-					<TD width="97" height="44" align="center" background="../HeaderFooter/images/Login-Page_35.gif"><b><h7>User 
-        Login:</h7></b>
-					</TD>
-					<TD width="1" background="../HeaderFooter/images/Login-Page_36.gif" height="44"></TD>
-					<TD colSpan="2"></TD>
-					<TD width="214" height="44" colSpan="2"  background="../HeaderFooter/images/Login-Page_38.gif">&nbsp;&nbsp;&nbsp;
-						<asp:textbox id="TxtUserName" runat="server" Width="140px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
-						<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtUserName"   ErrorMessage="Please Enter Login Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
-					<TD width="1" height="44"></TD>
 				</TR>
 				<TR>
 					<TD colSpan="6"></TD>
 					<TD width="1" height="4"></TD>
 				</TR>
 				<TR>
-					<TD width="98" height="46" colSpan="2" align="center" background="../HeaderFooter/images/Login-Page_40.gif"><b><h7>Password 
+					<TD width="98" height="44" colSpan="2" align="center" ><b><h7>User 
+        Login:</h7></b>
+					</TD>
+					<TD height="44" colSpan="3"  >&nbsp;&nbsp;&nbsp;
+						<asp:textbox id="TxtUserName" runat="server" Width="140px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
+						<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TxtUserName"   ErrorMessage="Please Enter Login Name"><font color="red">*</font></asp:requiredfieldvalidator>
+				</TR>
+				<TR>
+					<TD colSpan="6"></TD>
+					<TD width="1" height="4"></TD>
+				</TR>
+				<TR>
+					<TD width="98" height="46" colSpan="2" align="center" ><b><h7>Password 
         :</h7></b>
 					</TD>
-					<TD></TD>
-					<TD width="215" height="46" colSpan="3" background="../HeaderFooter/images/Login-Page_42.gif">&nbsp;&nbsp;&nbsp;
+					<TD height="46" colSpan="3" >&nbsp;&nbsp;&nbsp;
 						<asp:textbox id="TxtPassword" runat="server" Width="140px" TextMode="Password" BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox>
 						<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="TxtPassword"  ErrorMessage="Please Enter Password "><font color="red">*</font></asp:requiredfieldvalidator></TD>
-					<TD width="1" height="46"></TD>
 				</TR>
 				<TR>
 					<TD colSpan="6"></TD>
@@ -178,32 +167,30 @@
 							</tr>
 						</table>
 					</TD>-->
-					<TD width="98" height="32" colSpan="2" align="center" background="../HeaderFooter/images/Login-Page_44.gif"><b><h7>Set 
+					<TD width="98" height="32" colSpan="2" align="center" ><b><h7>Set 
         Date :</h7></b>
 					</TD>
-					<TD height="32"></TD>
-					<TD width="215" height="32" colSpan="3" background="../HeaderFooter/images/Login-Page_44.gif">&nbsp;&nbsp;&nbsp;
-						<asp:textbox id="txtDateFrom" runat="server" Width="140px"  BorderStyle="Groove"
+					<TD height="32" colSpan="3" >&nbsp;&nbsp;&nbsp;
+						<asp:textbox id="txtDateFrom" runat="server" Width="115px"  BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox>
-						&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"
+						<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"
 							id="a1"><IMG class="PopcalTrigger" alt="" src="../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0" id="Cal_Img" runat="server"></A><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.Form1.txtDateFrom);return false;"></A><IMG class="PopcalTrigger" alt="" src="../HeaderFooter/DTPicker/calendar_icon1.gif" align="absMiddle"
 							border="0" id="Cal_Img1" runat="server">
 					</TD>
-					<TD width="1" height="32"></TD>
 				</TR>
 				<TR>
 					<TD colSpan="6"></TD>
 					<TD width="1" height="4"></TD>
 				</TR>
 				<TR>
-					<TD width="317" height="45" colSpan="6" background="../HeaderFooter/images/Login-Page_46.gif">
+					<TD width="317" height="45" colSpan="6" >
 						<table height="28" width="315">
 							<tr>
 								<td width="116" height="28">&nbsp;</td>
-								<td align="center" width="64" height="28"><asp:imagebutton id="btnSign" runat="server" AlternateText="Sign in" ImageUrl="..\HeaderFooter\images\button.jpg"
+								<td align="center" width="64" height="28">&nbsp;</td>
+								<td width="119" height="28"><asp:imagebutton id="btnSign" runat="server" AlternateText="Sign in" ImageUrl="..\HeaderFooter\images\button.jpg"
 										Height="28px"></asp:imagebutton></td>
-								<td width="119" height="28">&nbsp;</td>
 							</tr>
 						</table>
 					</TD>
@@ -214,7 +201,7 @@
 					<TD width="1" height="8"></TD>
 				</TR>
 				<TR>
-					<TD width="328" height="9" colSpan="7" background="../HeaderFooter/images/Login-Page_48.gif"></TD>
+					<TD width="328" height="9" colSpan="7"  background="../HeaderFooter/images/Login-Page_53.gif"></TD>
 					<TD width="1" height="8"></TD>
 				</TR>
 				<TR >
