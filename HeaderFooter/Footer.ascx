@@ -38,7 +38,7 @@
 				</TD>
 			</TR>
 			<TR>
-				<TD colSpan="20"> <IMG src="../HeaderFooter/images/ePetro_Footer.png" width="1350" height="30">
+				<TD colSpan="20"> <IMG img src="<%= Page.ResolveUrl("~/HeaderFooter/images/ePetro_Footer.png")%>" width="1350" height="50">
 					</TD>
 			</TR>
 		</TABLE>
