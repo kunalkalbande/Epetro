@@ -232,7 +232,7 @@
 					<TD width="1" height="3"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="20"> <IMG src="../HeaderFooter/images/ePetro_Footer.png" width="1350" height="34">
+					<TD colSpan="20"> <IMG src="../HeaderFooter/images/ePetro_Footer.png" width="1350" height="50">
 					</TD>
 				</TR>
 				<TR>
