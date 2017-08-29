@@ -121,7 +121,7 @@
 					<TD width="1" height="4"></TD>
 				</TR>
 				<TR>
-					<TD width="70" height="45" colSpan="1" align="center" ><b><h7>User 
+					<TD width="175" height="45" colSpan="1" align="center" ><b><h7>User 
         Type :</h7></b>
 					</TD>
 					<TD height="45" colSpan="1" >
