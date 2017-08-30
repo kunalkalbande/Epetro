@@ -1405,7 +1405,7 @@ namespace EPetro.Module.Inventory
 				else 
 				{
 					//obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text));
-					obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text)+" "+DateTime.Now.TimeOfDay.ToString());
+					obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(lblInvoiceDate.Text)+" "+DateTime.Now.TimeOfDay.ToString());
 					//obj.Invoice_Date = DateTime.Now;
 					obj.Sales_Type=DropSalesType.SelectedItem.Value;
 					obj.Under_SalesMan =DropUnderSalesMan.SelectedItem.Value;
@@ -1523,7 +1523,7 @@ namespace EPetro.Module.Inventory
 							temp = Qty[j].Text; 
 						}
 						//Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()),GenUtil.strNumericFormat(CashDisc.ToString()));
-						Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString())+" "+DateTime.Now.TimeOfDay.ToString(),GenUtil.strNumericFormat(CashDisc.ToString()));
+						Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2DDMMYYYY(lblInvoiceDate.Text.ToString())+" "+DateTime.Now.TimeOfDay.ToString(),GenUtil.strNumericFormat(CashDisc.ToString()));
 						if(lblInvoiceNo.Visible==false)
 							StockMaster(ProdType[j].SelectedItem.Text,ProdName[j].Value,PackType[j].Value);
 					}
@@ -1550,14 +1550,14 @@ namespace EPetro.Module.Inventory
 		/// </summary>
 		public void clear1()
 		{
-			DropPack1.SelectedIndex=0;
-			DropPack2.SelectedIndex=0;
-			DropPack3.SelectedIndex=0;
-			DropPack4.SelectedIndex=0;
-			DropPack5.SelectedIndex=0;
-			DropPack6.SelectedIndex=0;
-			DropPack7.SelectedIndex=0;
-			DropPack8.SelectedIndex=0;
+			//DropPack1.SelectedIndex=0;
+			//DropPack2.SelectedIndex=0;
+			//DropPack3.SelectedIndex=0;
+			//DropPack4.SelectedIndex=0;
+			//DropPack5.SelectedIndex=0;
+			//DropPack6.SelectedIndex=0;
+			//DropPack7.SelectedIndex=0;
+			//DropPack8.SelectedIndex=0;
 
 			DropDownList[] ProdType={DropType1, DropType2, DropType3, DropType4, DropType5, DropType6, DropType7, DropType8};
 			DropDownList[] ProdName={DropProd1, DropProd2, DropProd3, DropProd4, DropProd5, DropProd6, DropProd7, DropProd8};
@@ -1604,14 +1604,14 @@ namespace EPetro.Module.Inventory
 			DropPack6.Items.Clear();
 			DropPack7.Items.Clear();
 			DropPack8.Items.Clear();
-			DropPack1.SelectedIndex=0;
-			DropPack2.SelectedIndex=0;
-			DropPack3.SelectedIndex=0;
-			DropPack4.SelectedIndex=0;
-			DropPack5.SelectedIndex=0;
-			DropPack6.SelectedIndex=0;
-			DropPack7.SelectedIndex=0;
-			DropPack8.SelectedIndex=0;
+			//DropPack1.SelectedIndex=0;
+			//DropPack2.SelectedIndex=0;
+			//DropPack3.SelectedIndex=0;
+			//DropPack4.SelectedIndex=0;
+			//DropPack5.SelectedIndex=0;
+			//DropPack6.SelectedIndex=0;
+			//DropPack7.SelectedIndex=0;
+			//DropPack8.SelectedIndex=0;
 			txtQty1.Text="";
 			txtQty2.Text="";
 			txtQty3.Text="";

@@ -714,7 +714,49 @@ namespace EPetro
 		{
 			try
 			{
-				uid=(Session["User_Name"].ToString());
+                txtarea4NilSalesDryout.Attributes.Add("readonly", "readonly");
+                txtSalesPerformanceDate.Attributes.Add("readonly", "readonly");
+                txtDate.Attributes.Add("readonly", "readonly");
+                txtroiid.Attributes.Add("readonly", "readonly");
+                txtCummulativeuptoDate.Attributes.Add("readonly", "readonly");
+                txt3adatepk.Attributes.Add("readonly", "readonly");
+                txt3bdatepk.Attributes.Add("readonly", "readonly");
+                txt3cdatepk.Attributes.Add("readonly", "readonly");
+                txt5bstdate.Attributes.Add("readonly", "readonly");
+                txt10_3_aDate.Attributes.Add("readonly", "readonly");
+                txt17a_Date.Attributes.Add("readonly", "readonly");
+                txt17b_Date.Attributes.Add("readonly", "readonly");
+                txt17c_Date.Attributes.Add("readonly", "readonly");
+                txt18_5dN1.Attributes.Add("readonly", "readonly");
+                txt18_5dN2.Attributes.Add("readonly", "readonly");
+                txt18_5dN3.Attributes.Add("readonly", "readonly");
+                txt18_5dN4.Attributes.Add("readonly", "readonly");
+                txt18_5dN5.Attributes.Add("readonly", "readonly");
+                txt18_5dN6.Attributes.Add("readonly", "readonly");
+                txt18_5eN1.Attributes.Add("readonly", "readonly");
+                txt18_5eN2.Attributes.Add("readonly", "readonly");
+                txt18_5eN3.Attributes.Add("readonly", "readonly");
+                txt18_5eN4.Attributes.Add("readonly", "readonly");
+                txt18_5eN5.Attributes.Add("readonly", "readonly");
+                txt18_5eN6.Attributes.Add("readonly", "readonly");
+                txt18_5fN1.Attributes.Add("readonly", "readonly");
+                txt18_5fN2.Attributes.Add("readonly", "readonly");
+                txt18_5fN3.Attributes.Add("readonly", "readonly");
+                txt18_5fN4.Attributes.Add("readonly", "readonly");
+                txt18_5fN5.Attributes.Add("readonly", "readonly");
+                txt18_5fN6.Attributes.Add("readonly", "readonly");
+                txt19_0Date1.Attributes.Add("readonly", "readonly");
+                txt19_0Date2.Attributes.Add("readonly", "readonly");
+                txt19_0Date3.Attributes.Add("readonly", "readonly");
+                txt19_0Date4.Attributes.Add("readonly", "readonly");
+                txt19_0Date5.Attributes.Add("readonly", "readonly");
+                txt20_0Date1.Attributes.Add("readonly", "readonly");
+                txt20_0Date2.Attributes.Add("readonly", "readonly");
+                txt20_0Date3.Attributes.Add("readonly", "readonly");
+                txt20_0Date4.Attributes.Add("readonly", "readonly");
+                txt20_0Date5.Attributes.Add("readonly", "readonly");
+                txtIOCDate.Attributes.Add("readonly", "readonly");
+                uid =(Session["User_Name"].ToString());
 			}
 			catch(Exception ex)
 			{
@@ -722,87 +764,47 @@ namespace EPetro
 				Response.Redirect("../../Sysitem/ErrorPage.aspx",false);
 				return;
 			}
-			//txtDate.Text=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txtSalesPerformanceDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txtCummulativeuptoDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt3adatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt3bdatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt3cdatepk.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt5bstdate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt10_3_aDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt17a_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt17b_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt17c_Date.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5eN1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5eN2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5eN3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5eN4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5eN5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5eN6.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5fN1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5fN2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5fN3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5fN4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5fN5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt18_5fN6.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt19_0Date1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt19_0Date2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt19_0Date3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt19_0Date4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt19_0Date5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt20_0Date1.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt20_0Date2.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt20_0Date3.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt20_0Date4.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txt20_0Date5.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			//txtIOCDate.Value=DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+ DateTime.Now.Year;
-			
-			try
+            
+
+            try
 			{
 				if(!IsPostBack)
 				{
-                    txtarea4NilSalesDryout.Attributes.Add("readonly", "readonly");
-                    txtSalesPerformanceDate.Attributes.Add("readonly", "readonly");
-                    txtDate.Attributes.Add("readonly", "readonly");
-                    txtroiid.Attributes.Add("readonly", "readonly");
-                    txtCummulativeuptoDate.Attributes.Add("readonly", "readonly");
-                    txt3adatepk.Attributes.Add("readonly", "readonly");
-                    txt3bdatepk.Attributes.Add("readonly", "readonly");
-                    txt3cdatepk.Attributes.Add("readonly", "readonly");
-                    txt5bstdate.Attributes.Add("readonly", "readonly");
-                    txt10_3_aDate.Attributes.Add("readonly", "readonly");
-                    txt17a_Date.Attributes.Add("readonly", "readonly");
-                    txt17b_Date.Attributes.Add("readonly", "readonly");
-                    txt17c_Date.Attributes.Add("readonly", "readonly");
-                    txt18_5dN1.Attributes.Add("readonly", "readonly");
-                    txt18_5dN2.Attributes.Add("readonly", "readonly");
-                    txt18_5dN3.Attributes.Add("readonly", "readonly");
-                    txt18_5dN4.Attributes.Add("readonly", "readonly");
-                    txt18_5dN5.Attributes.Add("readonly", "readonly");
-                    txt18_5dN6.Attributes.Add("readonly", "readonly");
-                    txt18_5eN1.Attributes.Add("readonly", "readonly");
-                    txt18_5eN2.Attributes.Add("readonly", "readonly");
-                    txt18_5eN3.Attributes.Add("readonly", "readonly");
-                    txt18_5eN4.Attributes.Add("readonly", "readonly");
-                    txt18_5eN5.Attributes.Add("readonly", "readonly");
-                    txt18_5eN6.Attributes.Add("readonly", "readonly");
-                    txt18_5fN1.Attributes.Add("readonly", "readonly");
-                    txt18_5fN2.Attributes.Add("readonly", "readonly");
-                    txt18_5fN3.Attributes.Add("readonly", "readonly");
-                    txt18_5fN4.Attributes.Add("readonly", "readonly");
-                    txt18_5fN5.Attributes.Add("readonly", "readonly");
-                    txt18_5fN6.Attributes.Add("readonly", "readonly");
-                    txt19_0Date1.Attributes.Add("readonly", "readonly");
-                    txt19_0Date2.Attributes.Add("readonly", "readonly");
-                    txt19_0Date3.Attributes.Add("readonly", "readonly");
-                    txt19_0Date4.Attributes.Add("readonly", "readonly");
-                    txt19_0Date5.Attributes.Add("readonly", "readonly");
-                    txt20_0Date1.Attributes.Add("readonly", "readonly");
-                    txt20_0Date2.Attributes.Add("readonly", "readonly");
-                    txt20_0Date3.Attributes.Add("readonly", "readonly");
-                    txt20_0Date4.Attributes.Add("readonly", "readonly");
-                    txt20_0Date5.Attributes.Add("readonly", "readonly");
-                    txtIOCDate.Attributes.Add("readonly", "readonly");
+                    
+                    txtDate.Text = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txtSalesPerformanceDate.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txtCummulativeuptoDate.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt3adatepk.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt3bdatepk.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt3cdatepk.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt5bstdate.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt10_3_aDate.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt17a_Date.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt17b_Date.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt17c_Date.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5eN1.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5eN2.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5eN3.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5eN4.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5eN5.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5eN6.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5fN1.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5fN2.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5fN3.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5fN4.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5fN5.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt18_5fN6.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt19_0Date1.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt19_0Date2.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt19_0Date3.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt19_0Date4.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt19_0Date5.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt20_0Date1.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt20_0Date2.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt20_0Date3.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt20_0Date4.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txt20_0Date5.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    txtIOCDate.Value = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
 
                     #region Check Privileges
                     int i;

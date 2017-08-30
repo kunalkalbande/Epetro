@@ -740,7 +740,7 @@ namespace EPetro.Module.Reports
 				string sql="";
 				string drop_value=DropPartyName.SelectedItem.Text.Trim();
 				string[] strArr = drop_value.Split(new char[] {':'},drop_value.Length);
-				sql="Select substring(datename(month,entry_date),0,4)+' '+substring(datename(year,entry_date),3,4) entry_date,sum(Debit_Amount) Debit_Amount,sum(Credit_Amount) Credit_Amount from AccountsLedgerTable where ledger_id=(select ledger_id from ledger_master where ledger_name='"+strArr[0].ToString()+"') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+GenUtil.str2DDMMYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+GenUtil.str2DDMMYYYY(txtDateTo.Text)+"' group by datename(month,entry_date),datename(year,entry_date)";
+				sql="Select substring(datename(month,entry_date),0,4)+' '+substring(datename(year,entry_date),3,4) entry_date,sum(Debit_Amount) Debit_Amount,sum(Credit_Amount) Credit_Amount from AccountsLedgerTable where ledger_id=(select ledger_id from ledger_master where ledger_name='"+strArr[0].ToString()+"') and cast(floor(cast(Entry_Date as float)) as datetime) >= '"+GenUtil.str2MMDDYYYY(txtDateFrom.Text)+"' and cast(floor(cast(Entry_Date as float)) as datetime) <= '"+GenUtil.str2MMDDYYYY(txtDateTo.Text)+"' group by datename(month,entry_date),datename(year,entry_date)";
 				SqlDataAdapter da=new SqlDataAdapter(sql,sqlcon);
 				DataSet ds=new DataSet();
 				da.Fill(ds,"AccountsLedgerTable");
