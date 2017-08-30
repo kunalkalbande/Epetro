@@ -277,7 +277,7 @@ namespace EPetro.Module.Employee
                 obj1.OT_From = str1;
                 string OtTo = DropHour2.SelectedItem.Value.ToString() + ":" + DropMinute2.SelectedItem.Value.ToString();
                 obj1.OT_To = OtTo.ToString();
-                sql = "select  count (status)  from attandance_register where att_date='" + ToMMddYYYY(txtDate.Text).ToShortDateString() + "' and Emp_ID=" + id + " and status =1";
+                sql = "select  count (status)  from attandance_register where att_date='" + GenUtil.str2MMDDYYYY(txtDate.Text) + "' and Emp_ID=" + id + " and status =1";
                 SqlDtr = obj1.GetRecordSet(sql);
                 if (SqlDtr.Read())
                 {

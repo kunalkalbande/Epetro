@@ -861,11 +861,11 @@ namespace EPetro.Module.Accounts
 			{
 				//if(btnEdit1.Visible!=true)
 				//{
-				dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref obj1,"@Ledger_ID",LedgerID[p].ToString(),"@Invoice_Date",GenUtil.trimDate(Entry_Date));
+				dbobj.ExecProc(OprType.Insert,"UpdateAccountsLedgerForCustomer",ref obj1,"@Ledger_ID",LedgerID[p].ToString(),"@Invoice_Date",GenUtil.str2MMDDYYYY(Entry_Date.ToString()));
 				dbobj.SelectQuery("select cust_id from customer,ledger_master where ledger_name=cust_name and ledger_id='"+LedgerID[p].ToString()+"'",ref rdr);
 				if(rdr.Read())
 				{
-					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref obj1,"@Cust_ID",rdr["Cust_ID"].ToString(),"@Invoice_Date",GenUtil.trimDate(Entry_Date));
+					dbobj.ExecProc(OprType.Insert,"UpdateCustomerLedgerForCustomer",ref obj1,"@Cust_ID",rdr["Cust_ID"].ToString(),"@Invoice_Date",GenUtil.str2MMDDYYYY(Entry_Date.ToString()));
 				}
 				rdr.Close();
 				//}

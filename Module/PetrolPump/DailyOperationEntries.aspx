@@ -322,11 +322,14 @@
 <!--************************************	End		*************************************-->
 			<!--tr><td align =center colspan=3><hr   size=2></td></tr-->
 			<tr>
-			<%if(EditCount==1){%>
-				<td valign=middle>&nbsp;&nbsp;&nbsp;Remark&nbsp;&nbsp;&nbsp;<input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;" value=<%=Remarks%>>
+			<%--<%if(EditCount==1){%>
+				<td valign=middle>&nbsp;&nbsp;&nbsp;Remark&nbsp;&nbsp;&nbsp;
+                    <input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;" value=<%=Remarks%>>
 			<%}else%>
-				<td valign=middle>&nbsp;&nbsp;&nbsp;Remark&nbsp;&nbsp;&nbsp;<input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;">
-			&nbsp;&nbsp;&nbsp;&nbsp;
+				<td valign=middle>&nbsp;&nbsp;&nbsp;Remark&nbsp;&nbsp;&nbsp;
+                    <input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;">
+			&nbsp;&nbsp;&nbsp;&nbsp;--%>
+           <td valign=middle>&nbsp;&nbsp;&nbsp;Remark&nbsp;&nbsp;&nbsp;<input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;" value=>
 			<asp:Button ID=Btnsave Text=Submit Runat=server OnClick="save" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>
 			<asp:Button ID="btnEdit" Text=Edit Runat=server OnClick="Update" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>
 			<asp:Button ID="btnDelete" Text=Delete Runat=server OnClick="Del" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>

@@ -32,7 +32,7 @@
 							<table border="0">
 								<tr vAlign="top">
 									<td vAlign="top"><asp:image id="imgSample" runat="server" Width="48px" Height="51px"></asp:image></td>
-									<td vAlign="top" align="center"><asp:label id="txtname1" runat="server" Width="472px" Height="8px" Font-Size="X-Small" Font-Bold="True"
+									<td vAlign="top" align="center"><asp:label id="txtname1" runat="server" Width="472px" Height="8px" Font-Size="Medium" Font-Bold="True"
 											ForeColor="DarkGreen" Visible="true">Shree ParamSukh Filling Station</asp:label><br>
 										<asp:label id="txtdet1" runat="server" Visible="true" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen">INDIAN OIL CORPORATION LTD.</asp:label><br>
 										<asp:label id="txtadd1" runat="server" Visible="true" Width="472px" Font-Size="8pt" Font-Bold="True" ForeColor="DarkGreen">Near Unda Khad Gram Mundla, Baroda Dist. Sheopur</asp:label><br>
@@ -57,7 +57,7 @@
 												<td height=10></td>
 											</tr>
 										</table>-->
-										<!--</P>--><font  color="DarkGreen" size="4">Credit Bill</font></td></tr>
+										<!--</P>--><font  color="DarkGreen" size="4"></font></td></tr>
 							</table>
 							<!-- <P></P>-->
 							<hr align="center">
