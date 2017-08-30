@@ -1451,22 +1451,22 @@ payment against Bill details given on account of your supply.
             //			{
             //				CreateLogFiles.ErrorLog("Form:Payment_Receipt.aspx,Class:InventoryClass.cs,Method:btnSaved_Clicked "+"   EXCEPTION " +ex.Message +" "+ ex.StackTrace   +uid);
             //			}
-            StringBuilder errorMessage = new StringBuilder();
-            if (DropCustName.SelectedIndex == 0)
-            {
-                errorMessage.Append("- Please Select Party Name");
-                errorMessage.Append("\n");
-            }
-            if (txtRecAmount.Text == string.Empty)
-            {
-                errorMessage.Append("- Please Fill Received Amount");
-                errorMessage.Append("\n");
-            }
-            if (errorMessage.Length > 0)
-            {
-                MessageBox.Show(errorMessage.ToString());
-                return;
-            }
+            //StringBuilder errorMessage = new StringBuilder();
+            //if (DropCustName.SelectedIndex == 0)
+            //{
+            //    errorMessage.Append("- Please Select Party Name");
+            //    errorMessage.Append("\n");
+            //}
+            //if (txtRecAmount.Text == string.Empty)
+            //{
+            //    errorMessage.Append("- Please Fill Received Amount");
+            //    errorMessage.Append("\n");
+            //}
+            //if (errorMessage.Length > 0)
+            //{
+            //    MessageBox.Show(errorMessage.ToString());
+            //    return;
+            //}
 
             try
 			{

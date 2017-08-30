@@ -46,7 +46,8 @@
                 width: 10px;
             }
             .auto-style6 {
-                width: 647px;
+                width: 653px;
+                height: 9px;
             }
             .auto-style7 {
                 width: 1277px;
@@ -75,6 +76,14 @@
             }
             .auto-style16 {
                 width: 636px;
+                margin-top: 0px;
+            }
+            .auto-style17 {
+                height: 10px;
+            }
+            .auto-style18 {
+                width: 11px;
+                height: 10px;
             }
         </style>
 	</HEAD>
@@ -154,9 +163,9 @@
 					</TD>
 					<TD rowSpan="12" class="auto-style8"></TD>
 					<TD rowSpan="12"></TD>
-					<TD width="9" height="241" rowSpan="11" background="../HeaderFooter/images/Login-Page_15.gif" class="auto-style8"></TD>
+					<TD width="9" rowSpan="11" background="../HeaderFooter/images/Login-Page_15.gif" class="auto-style8"></TD>
 					<TD colSpan="5"> <IMG src="../HeaderFooter/images/ePetro_LoginUser.png"  height="40" class="auto-style16"></TD>
-					<TD colSpan="0" rowSpan="12"><IMG src="../HeaderFooter/images/Login-Page_15.gif" height="330" width="5" class="auto-style2" /></TD>
+					<TD colSpan="0" rowSpan="11"><IMG src="../HeaderFooter/images/Login-Page_15.gif" height="285" width="5" class="auto-style2" /></TD>
 					<TD rowSpan="12" class="auto-style9"></TD>
 					<TD width="1" height="4" class="auto-style9"></TD>
 				</TR>
@@ -237,11 +246,11 @@
 					<TD width="1" height="45" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="6"></TD>
-					<TD width="1" height="8" class="auto-style9"></TD>
+					<TD colSpan="6" class="auto-style17"></TD>
+					<TD width="1" class="auto-style18"></TD>
 				</TR>
 				<TR>
-					<TD  colSpan="7"><IMG src="../HeaderFooter/images/Login-Page_53.gif" height="9" class="auto-style6" width="640px"></TD>
+					<TD  colSpan="7"><IMG src="../HeaderFooter/images/Login-Page_53.gif" class="auto-style6"></TD>
 					<TD width="1" height="8" class="auto-style9"></TD>
 				</TR>
 				<TR >
@@ -250,7 +259,7 @@
 					<TD width="1" height="16" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="6"> <IMG src="../HeaderFooter/images/Login-Page_10.gif" ></TD>
+					<TD colSpan="1"> <IMG src="../HeaderFooter/images/Login-Page_10.gif" ></TD>
 					<TD width="1" height="2" class="auto-style9"></TD>
 				</TR>
 				<TR>
