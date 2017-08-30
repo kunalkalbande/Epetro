@@ -46,8 +46,10 @@
                 width: 10px;
             }
             .auto-style6 {
-                width: 653px;
-                height: 9px;
+                width: 651px;
+                height: 13px;
+                margin-bottom: 0px;
+                margin-top: 0px;
             }
             .auto-style7 {
                 width: 1277px;
@@ -61,9 +63,6 @@
             }
             .auto-style10 {
                 width: 449px;
-            }
-            .auto-style11 {
-                width: 254px;
             }
             .auto-style12 {
                 width: 316px;
@@ -81,9 +80,10 @@
             .auto-style17 {
                 height: 10px;
             }
-            .auto-style18 {
-                width: 11px;
-                height: 10px;
+            .auto-style19 {
+                width: 641px;
+                height: 7px;
+                margin-left: 0px;
             }
         </style>
 	</HEAD>
@@ -93,6 +93,7 @@
 			<TABLE border="0" align="center" cellPadding="0" cellSpacing="0" height="445" class="auto-style7">
               
 				<TR>
+
 					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/ePetro_Header.png" height="60" class="auto-style14"></TD>
 				</TR>
 				<TR>
@@ -121,16 +122,16 @@
 				</TR>
 				<TR>
 					<TD colSpan="1" rowSpan="16"></TD>
-					<TD height="279" rowSpan="16" background="../HeaderFooter/images/Login-Page_15.gif" class="auto-style8"></TD>
+					<TD height="279" rowSpan="18" background="../HeaderFooter/images/Login-Page_15.gif" class="auto-style8"></TD>
 					<TD colSpan="3" rowSpan="2"></TD>
 					<TD background="../HeaderFooter/images/Login-Page_10.gif"></TD>
 					<TD align="center" colSpan="10" rowSpan="2"></TD>
-					<TD width="11" height="279" rowSpan="16" background="../HeaderFooter/images/Login-Page_19.gif" class="auto-style9"></TD>
+					<TD width="11" height="279" rowSpan="18" background="../HeaderFooter/images/Login-Page_19.gif" class="auto-style9"></TD>
 					<TD  ></TD>
 					<TD width="1" height="14" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD width="10" height="269" rowSpan="14" background="../HeaderFooter/images/Login-Page_21.gif" class="auto-style9"></TD>
+					<TD width="10" height="269" rowSpan="17" background="../HeaderFooter/images/Login-Page_21.gif" class="auto-style9"></TD>
 					<TD width="1" height="2" class="auto-style9"></TD>
 				</TR>
              
@@ -163,14 +164,17 @@
 					</TD>
 					<TD rowSpan="12" class="auto-style8"></TD>
 					<TD rowSpan="12"></TD>
-					<TD width="9" rowSpan="11" background="../HeaderFooter/images/Login-Page_15.gif" class="auto-style8"></TD>
+					<TD width="9" rowSpan="13" background="../HeaderFooter/images/Login-Page_15.gif" class="auto-style8"></TD>
+                    <TR>
+                        <TD  colSpan="7"><IMG src="../HeaderFooter/images/Login-Page_53.gif" class="auto-style19"></TD>
+                    </TR>
 					<TD colSpan="5"> <IMG src="../HeaderFooter/images/ePetro_LoginUser.png"  height="40" class="auto-style16"></TD>
-					<TD colSpan="0" rowSpan="11"><IMG src="../HeaderFooter/images/Login-Page_15.gif" height="285" width="5" class="auto-style2" /></TD>
+					<TD colSpan="0" rowSpan="12"><IMG src="../HeaderFooter/images/Login-Page_15.gif" height="291" width="5" class="auto-style2" /></TD>
 					<TD rowSpan="12" class="auto-style9"></TD>
 					<TD width="1" height="4" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD width="175" height="45" colSpan="1" align="center" class="auto-style11" ><b><h7>User 
+					<TD height="45" colSpan="1" align="center" ><b><h7>User 
         Type :</h7></b>
 					</TD>
 					<TD height="45" colSpan="1" class="auto-style12" >
@@ -183,7 +187,7 @@
 					<TD width="1" height="4" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD width="70" height="44" colSpan="1" align="center" class="auto-style11" ><b><h7>User 
+					<TD height="44" colSpan="1" align="center" ><b><h7>User 
         Login :</h7></b>
 					</TD>
 					<TD height="44" colSpan="1" class="auto-style12"  >
@@ -195,7 +199,7 @@
 					<TD width="1" height="4" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD width="70" height="46" colSpan="1" align="center" class="auto-style11" ><b><h7>Password 
+					<TD height="46" colSpan="1" align="center" ><b><h7>Password 
         :</h7></b>
 					</TD>
 					<TD height="46" colSpan="1" class="auto-style12" >
@@ -216,7 +220,7 @@
 							</tr>
 						</table>
 					</TD>-->
-					<TD width="70" height="32" colSpan="1" align="center" class="auto-style11" ><b><h7>Set 
+					<TD height="32" colSpan="1" align="center" ><b><h7>Set 
         Date :</h7></b>
 					</TD>
 					<TD height="32" colSpan="1" class="auto-style12" >
@@ -247,11 +251,12 @@
 				</TR>
 				<TR>
 					<TD colSpan="6" class="auto-style17"></TD>
-					<TD width="1" class="auto-style18"></TD>
+					<%--<TD class="auto-style17"></TD>--%>
 				</TR>
 				<TR>
-					<TD  colSpan="7"><IMG src="../HeaderFooter/images/Login-Page_53.gif" class="auto-style6"></TD>
-					<TD width="1" height="8" class="auto-style9"></TD>
+					<TD  colSpan="5">&nbsp;</TD>
+					<%--<TD width="1" height="8" class="auto-style9"></TD>--%>
+                    <TD  colSpan="7"><IMG src="../HeaderFooter/images/Login-Page_53.gif" class="auto-style6"></TD>
 				</TR>
 				<TR >
 					<TD colSpan="3" rowSpan="2"></TD>
@@ -259,7 +264,7 @@
 					<TD width="1" height="16" class="auto-style9"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="1"> <IMG src="../HeaderFooter/images/Login-Page_10.gif" ></TD>
+					<TD colSpan="1"> &nbsp;</TD>
 					<TD width="1" height="2" class="auto-style9"></TD>
 				</TR>
 				<TR>
@@ -287,7 +292,7 @@
 					<TD width="11" height="2" class="auto-style9"></TD>
 					<TD width="10" height="2" class="auto-style9"></TD>
 					<TD width="12" height="2" class="auto-style8"></TD>
-					<TD width="9" height="2" class="auto-style11"></TD>
+					<TD height="2"></TD>
 					<TD height="2" class="auto-style12"></TD>
 					<TD width="1" height="2" class="auto-style13"></TD>
 					<TD width="4" height="2" class="auto-style13"></TD>
