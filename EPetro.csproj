@@ -149,6 +149,7 @@
     <Content Include="HeaderFooter\images\ePetro_Footer.png" />
     <Content Include="HeaderFooter\images\ePetro_Header.png" />
     <Content Include="HeaderFooter\images\ePetro_LoginUser.png" />
+    <Content Include="HeaderFooter\images\header.png" />
     <Content Include="HeaderFooter\images\Header.swf" />
     <Content Include="HeaderFooter\images\intro.swf" />
     <Content Include="HeaderFooter\images\large size.jpg" />
