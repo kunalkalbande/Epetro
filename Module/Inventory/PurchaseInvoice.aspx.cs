@@ -225,8 +225,8 @@ namespace EPetro.Module.Inventory
 					txtVInvoiceDate.Text=DateTime.Now.Day+"/"+DateTime.Now.Month+"/"+DateTime.Now.Year;
 					checkPrevileges();
 					lblInvoiceDate.Text=GenUtil.str2DDMMYYYY(DateTime.Today.ToShortDateString());  
-					lblEntryTime.Text=DateTime.Now.ToString();
-					lblEntryBy.Text =Session["User_Name"].ToString();
+					lblEntryTime.Text=DateTime.Now.ToString("dd'/'MM'/'yyyy hh:mm:ss tt");
+                    lblEntryBy.Text =Session["User_Name"].ToString();
 					DropDownList[] ProductType={DropType1, DropType2, DropType3, DropType4, DropType5, DropType6, DropType7, DropType8 };
 					InventoryClass obj=new InventoryClass ();
 					SqlDataReader SqlDtr;
@@ -654,13 +654,7 @@ namespace EPetro.Module.Inventory
                     erroMessage.Append("- Please select the Product Type");
                     erroMessage.Append("\n");
                 }
-
-                if (DropProd1.SelectedIndex == 0)
-                {
-                    erroMessage.Append("- Please select the Product Name");
-                    erroMessage.Append("\n");
-                }
-
+                   
                 if (txtQty1.Text == string.Empty)
                 {
                     erroMessage.Append("- Please Enter the Qty");
@@ -711,7 +705,7 @@ namespace EPetro.Module.Inventory
                         obj.Promo_Scheme = txtPromoScheme.Text;
                         obj.Remerk = txtRemark.Text;
                         obj.Entry_By = lblEntryBy.Text;
-                        obj.Entry_Time = DateTime.Parse(lblEntryTime.Text);
+                        obj.Entry_Time = DateTime.Parse(DateTime.Now.ToString("dd'/'MM'/'yyyy hh:mm:ss tt"));
                         if (txtCashDisc.Text.Trim() == "")
                             obj.Cash_Discount = "0.0";
                         else

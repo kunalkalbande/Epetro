@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="PurchaseInvoice.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Inventory.PurchaseInvoice" %>
+<%@ Page language="c#" Codebehind="PurchaseInvoice.aspx.cs" AutoEventWireup="false" Inherits="EPetro.Module.Inventory.PurchaseInvoice" EnableEventValidation="false" %>
 <%@ Register TagPrefix="uc1" TagName="Header" Src="../../HeaderFooter/Header.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="Footer" Src="../../HeaderFooter/Footer.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -13,7 +13,7 @@
    any  purpose  without the express  written  permission of
    bbnisys Technologies.
 -->
-		<script language="javascript" id="purchase" src="../../Sysitem/Js/Purchase.js.js"></script>
+		<script language="javascript" id="purchase" src="../../Sysitem/Js/Purchase.js"></script>
 		<script language="javascript">
 		function checkProd()
 		{
