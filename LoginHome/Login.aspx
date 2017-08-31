@@ -71,7 +71,7 @@
                 width: 22px;
             }
             .auto-style14 {
-                width: 1239px;
+                width: 1347px;
             }
             .auto-style16 {
                 width: 636px;
@@ -81,9 +81,15 @@
                 height: 10px;
             }
             .auto-style19 {
-                width: 641px;
+                width: 643px;
                 height: 7px;
                 margin-left: 0px;
+            }
+            .auto-style20 {
+                width: 1348px;
+            }
+            .auto-style21 {
+                width: 65px;
             }
         </style>
 	</HEAD>
@@ -94,10 +100,10 @@
               
 				<TR>
 
-					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/ePetro_Header.png" height="60" class="auto-style14"></TD>
+					<TD colSpan="20" height="49"><IMG src="../HeaderFooter/images/header.png" height="60" class="auto-style20"></TD>
 				</TR>
 				<TR>
-					<TD width="1150" height="12" colSpan="17" background="../HeaderFooter/images/Login-Page_03.gif"></TD>
+					<TD width="1250" height="12" colSpan="17" background="../HeaderFooter/images/Login-Page_03.gif"></TD>
 					<TD width="1" height="12" class="auto-style4"></TD>
 				</TR>
 				<TR>
@@ -169,7 +175,7 @@
                         <TD  colSpan="7"><IMG src="../HeaderFooter/images/Login-Page_53.gif" class="auto-style19"></TD>
                     </TR>
 					<TD colSpan="5"> <IMG src="../HeaderFooter/images/ePetro_LoginUser.png"  height="40" class="auto-style16"></TD>
-					<TD colSpan="0" rowSpan="12"><IMG src="../HeaderFooter/images/Login-Page_15.gif" height="291" width="5" class="auto-style2" /></TD>
+					<TD colSpan="0" rowSpan="12" class="auto-style21"><IMG src="../HeaderFooter/images/Login-Page_15.gif" height="291" width="5" class="auto-style2" /></TD>
 					<TD rowSpan="12" class="auto-style9"></TD>
 					<TD width="1" height="4" class="auto-style9"></TD>
 				</TR>
@@ -261,10 +267,10 @@
 				<TR >
 					<TD colSpan="3" rowSpan="2"></TD>
 					<TD colSpan="10" rowSpan="2" style="color:red;" ><asp:validationsummary id="ValidationSummary1"  runat="server"></asp:validationsummary></TD>
-					<TD width="1" height="16" class="auto-style9"></TD>
+					<TD height="16" class="auto-style21"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="1"> &nbsp;</TD>
+					<TD colSpan="1" class="auto-style21"> &nbsp;</TD>
 					<TD width="1" height="2" class="auto-style9"></TD>
 				</TR>
 				<TR>
@@ -297,7 +303,7 @@
 					<TD width="1" height="2" class="auto-style13"></TD>
 					<TD width="4" height="2" class="auto-style13"></TD>
 					<TD width="1" height="2" class="auto-style13"></TD>
-					<TD height="2"></TD>
+					<TD height="2" class="auto-style21"></TD>
 					<TD height="2" class="auto-style9"></TD>
 					<TD width="11" height="2" class="auto-style9"></TD>
 					<TD width="9" height="2" class="auto-style9"></TD>
