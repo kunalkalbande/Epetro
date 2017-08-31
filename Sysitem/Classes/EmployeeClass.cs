@@ -965,7 +965,7 @@ namespace EPetro.Sysitem.Classes
 			SqlCmd=new SqlCommand("proInsertOverTimeRegister",SqlCon);
 			SqlCmd.CommandType=CommandType.StoredProcedure;
 			SqlCmd.Parameters.Add("@Emp_ID",Emp_ID);
-			SqlCmd.Parameters.Add("@OT_Date",OT_Date );
+			SqlCmd.Parameters.Add("@OT_Date",GenUtil.str2MMDDYYYY(OT_Date.ToString()) );
 			SqlCmd.Parameters.Add("@OT_From",OT_From );
 			SqlCmd.Parameters.Add("@OT_To",OT_To );
 			SqlCmd.ExecuteNonQuery();          

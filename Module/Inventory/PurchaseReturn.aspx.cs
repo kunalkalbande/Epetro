@@ -584,7 +584,7 @@ namespace EPetro.Module.Inventory
 					dropInvoiceNo.SelectedIndex = 0;
 					return;
 				}
-				obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2MMDDYYYY (lblInvoiceDate.Text.ToString()));
+				obj.Invoice_Date=System.Convert.ToDateTime(lblInvoiceDate.Text);
 				obj.Vendor_Name=lblVendName.Value.ToString();
 				obj.City=lblPlace.Value .ToString();
 				obj.Vehicle_No=lblVehicleNo.Value;
