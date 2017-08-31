@@ -995,24 +995,28 @@ namespace EPetro.Module.Inventory
 				{
 					DateTime dt=System.Convert.ToDateTime(SqlDtr2.GetValue(2).ToString());
 					//string str1=dt.ToShortDateString();
-					string str1=DateTime.Now.ToString();
+					string str1=GenUtil.trimDate(DateTime.Now.ToString());
 					string str2=SqlDtr2.GetValue(1).ToString();
 					string str3=SqlDtr2.GetValue(4).ToString();
 					string str4=SqlDtr2.GetValue(5).ToString();
 					string str5=SqlDtr2.GetValue(6).ToString();
 					string str6=SqlDtr2.GetValue(7).ToString();
 					string str7=SqlDtr2.GetValue(3).ToString();
-					//********
-					string str8=SqlDtr2.GetValue(8).ToString();
+                    
+                    //********
+                    string str8=SqlDtr2.GetValue(8).ToString();
 					string str9=GenUtil.str2MMDDYYYY(txtDateFrom.Text);
 					string str10=GenUtil.str2MMDDYYYY(txtDateTO.Text);
 					string str11=SqlDtr2.GetValue(2).ToString();
 					string str12=SqlDtr2.GetValue(0).ToString();
-					//********
-					if(lblBillNo.Visible==true)
-						sql1="insert into Print_Credit_Bill(Bill_No,Bill_date,Slip_no,Particulars,Qty,Rate,Amount,Vehicle_No,Cust_ID,FromDate,ToDate,Invoice_Date,Invoice_No)values('"+lblBillNo.Text.ToString()+"','"+str1+"','"+str2+"','"+str3+"','"+str4+"','"+str5+"','"+str6+"','"+str7+"','"+str8+"','"+str9+"','"+str10+"','"+str11+"','"+str12+"')";
+                    string str13 = GenUtil.trimDate(str11);
+                    string str14 = GenUtil.str2MMDDYYYY(str13);
+                    string str15 = GenUtil.str2MMDDYYYY(str1);
+                    //********
+                    if (lblBillNo.Visible==true)
+						sql1="insert into Print_Credit_Bill(Bill_No,Bill_date,Slip_no,Particulars,Qty,Rate,Amount,Vehicle_No,Cust_ID,FromDate,ToDate,Invoice_Date,Invoice_No)values('"+lblBillNo.Text.ToString()+"','"+str15+"','"+str2+"','"+str3+"','"+str4+"','"+str5+"','"+str6+"','"+str7+"','"+str8+"','"+str9+"','"+str10+"','"+str14+"','"+str12+"')";
 					else
-						sql1="insert into Print_Credit_Bill(Bill_No,Bill_date,Slip_no,Particulars,Qty,Rate,Amount,Vehicle_No,Cust_ID,FromDate,ToDate,Invoice_Date,Invoice_No)values('"+BillNo[0].ToString()+"','"+str1+"','"+str2+"','"+str3+"','"+str4+"','"+str5+"','"+str6+"','"+str7+"','"+str8+"','"+str9+"','"+str10+"','"+str11+"','"+str12+"')";
+						sql1="insert into Print_Credit_Bill(Bill_No,Bill_date,Slip_no,Particulars,Qty,Rate,Amount,Vehicle_No,Cust_ID,FromDate,ToDate,Invoice_Date,Invoice_No)values('"+BillNo[0].ToString()+"','"+str15+"','"+str2+"','"+str3+"','"+str4+"','"+str5+"','"+str6+"','"+str7+"','"+str8+"','"+str9+"','"+str10+"','"+str14+"','"+str12+"')";
 					obj1.InsertRecord(sql1);
 				}		 
 				SqlDtr2.Close();

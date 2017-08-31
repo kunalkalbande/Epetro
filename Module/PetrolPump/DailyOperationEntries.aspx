@@ -389,6 +389,7 @@ public void save(Object sender, EventArgs e)
 { 
 	try
 	{
+        string strDate = DateTime.Now.ToString("MM/dd/yyyy");
 	    if(panEntry.Visible==true)
 	    {
 			if(DropEntryDate.SelectedIndex==0)
@@ -403,14 +404,15 @@ public void save(Object sender, EventArgs e)
 		{
 			InventoryClass obj1 = new InventoryClass();
 			SqlDataReader rdr;
-			rdr = obj1.GetRecordSet("select * from daily_tank_reading where entry_date='"+DateTime.Now.Date.ToShortDateString()+"'");
+            
+			rdr = obj1.GetRecordSet("select * from daily_tank_reading where entry_date='"+ strDate +"'");
 			if(rdr.HasRows)
 			{
 				MessageBox.Show("Data Already Exists");
 				return;
 			}
 			rdr.Close();
-			rdr = obj1.GetRecordSet("select * from daily_meter_reading where entry_date='"+DateTime.Now.Date.ToShortDateString()+"'");
+			rdr = obj1.GetRecordSet("select * from daily_meter_reading where entry_date='"+ strDate +"'");
 			if(rdr.HasRows)
 			{
 				MessageBox.Show("Data Already Exists");
@@ -528,13 +530,13 @@ public void save(Object sender, EventArgs e)
 				if(panEntry.Visible==false)
 				{
 					obj.OpeningStock="0";
-					obj.EntryDate=DateTime.Now.Date.ToShortDateString();
+					obj.EntryDate=strDate;
 					obj.InsertDailyTankReading();
 				}
 				else
 				{
 					obj.OpeningStock="1";
-					obj.EntryDate=GenUtil.str2DDMMYYYY(DropEntryDate.SelectedItem.Text);
+					obj.EntryDate=GenUtil.str2MMDDYYYY(DropEntryDate.SelectedItem.Text);
 					obj.InsertDailyTankReading(); 
 				}
 						
@@ -554,13 +556,13 @@ public void save(Object sender, EventArgs e)
 				if(panEntry.Visible==false)
 				{
 					obj.OpeningStock="0";
-					obj.EntryDate=DateTime.Now.Date.ToShortDateString();
+					obj.EntryDate = strDate;
 					obj.InsertDailyMeterReading(); 
 				}
 				else
 				{
 					obj.OpeningStock="1";
-					obj.EntryDate=GenUtil.str2DDMMYYYY(DropEntryDate.SelectedItem.Text);
+					obj.EntryDate=GenUtil.str2MMDDYYYY(DropEntryDate.SelectedItem.Text);
 					obj.InsertDailyMeterReading();
 				}
 			}
