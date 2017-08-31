@@ -280,7 +280,7 @@
 			return;
 		}
 		if (document.all.tempInfo.value == "Yes")
-		    document.all.submit();
+		    document.forms[0].submit();
 	}
 	
 	function CalcQty(amt,qty,stock,rate,tempqty,type,pack)

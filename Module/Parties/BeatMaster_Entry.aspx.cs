@@ -336,8 +336,7 @@ namespace EPetro.Module.Parties
 		/// This function to clear the form.
 		/// </summary>
 		public void Clear()
-		{
-			DropBeatNo.SelectedIndex=0;
+		{			
 			txtCity.Text="";
 			txtState.Text="";
 			txtCountry.Text=""; 

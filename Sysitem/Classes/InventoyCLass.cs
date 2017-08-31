@@ -3852,8 +3852,8 @@ namespace EPetro.Sysitem.Classes
 			SqlCmd=new SqlCommand("ProCashbilling",SqlCon);
 			SqlCmd.CommandType = CommandType.StoredProcedure;
 			SqlCmd.Parameters .Add("@Invoice_no1",Invoice_no1);
-			SqlCmd.Parameters .Add("@Invoice_date1",System.Convert.ToDateTime(Invoice_date1));
-			SqlCmd.Parameters .Add("@Cust_name1",Cust_name1);
+            SqlCmd.Parameters .Add("@Invoice_date1",System.Convert.ToDateTime(Invoice_date1));           
+            SqlCmd.Parameters .Add("@Cust_name1",Cust_name1);
 			SqlCmd.Parameters .Add("@Vehicle_no1",Vehicle_no1);
 			SqlCmd.Parameters .Add("@Remark1",Remark1);
 			SqlCmd.Parameters .Add("@Netamt1",Netamt1);
