@@ -574,7 +574,7 @@ namespace EPetro.Module.Accounts
                 prePrintCashMemo();
                 //InventoryClass  obj=new InventoryClass ();
                 if (lblInvoiceNo.Visible == true)
-                    obj.Invoice_date1 = DateTime.Now.ToString();
+                    obj.Invoice_date1 = DateTime.Now.ToString("dd/MM/yyyy");
                 else
                     obj.Invoice_date1 = GenUtil.str2MMDDYYYY(lblInvoiceDate.Text);
                 obj.Cust_name1 = txtcustname.Text;
@@ -2129,13 +2129,13 @@ namespace EPetro.Module.Accounts
             SqlDtr = obj.GetRecordSet(sql);
             while (SqlDtr.Read())
             {
-                dbobj.SelectQuery("select sum(Qty) from sales_Details sd,sales_master sm where Prod_ID=" + SqlDtr["Prod_ID"].ToString() + " and sm.invoice_no=sd.invoice_no and cast(floor(cast(cast(sm.invoice_date as datetime) as float)) as datetime)='" + GenUtil.trimDate(DateTime.Now.ToString()) + "'", ref rdr);
+                dbobj.SelectQuery("select sum(Qty) from sales_Details sd,sales_master sm where Prod_ID=" + SqlDtr["Prod_ID"].ToString() + " and sm.invoice_no=sd.invoice_no and cast(floor(cast(cast(sm.invoice_date as datetime) as float)) as datetime)='" + DateTime.Now.ToString("MM/dd/yyyy") + "'", ref rdr);
                 if (rdr.Read())
                     Quantity11[i] = rdr.GetValue(0).ToString();
                 rdr.Close();
                 if (Quantity11[i].Equals(""))
                     Quantity11[i] = "0";
-                dbobj.SelectQuery("select sum(Qty) from sales_Details sd,cashbilling c where sd.Prod_ID=" + SqlDtr["Prod_ID"].ToString() + " and c.Invoice_No=sd.Invoice_No and cast(floor(cast(cast(c.invoice_date as datetime) as float)) as datetime)='" + GenUtil.trimDate(DateTime.Now.ToString()) + "'", ref rdr);
+                dbobj.SelectQuery("select sum(Qty) from sales_Details sd,cashbilling c where sd.Prod_ID=" + SqlDtr["Prod_ID"].ToString() + " and c.Invoice_No=sd.Invoice_No and cast(floor(cast(cast(c.invoice_date as datetime) as float)) as datetime)='" + DateTime.Now.ToString("MM/dd/yyyy") + "'", ref rdr);
                 if (rdr.Read())
                     Cash[i] = rdr.GetValue(0).ToString();
                 rdr.Close();
@@ -2442,9 +2442,10 @@ namespace EPetro.Module.Accounts
             dbobj.ExecuteScalar("select Ledger_ID from Ledger_Master where Sub_grp_ID=118 and Ledger_Name='Cash'", ref Ledger_ID);
             if (lblInvoiceNo.Visible != true)
             {
-                if (DateTime.Compare(System.Convert.ToDateTime(Invoice_Date), System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text))) > 0)
+                //DateTime dt =
+                if (DateTime.Compare(System.Convert.ToDateTime(Invoice_Date), System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(lblInvoiceDate.Text))) > 0)
                     Invoice_Date = GenUtil.str2MMDDYYYY(lblInvoiceDate.Text);
-                dbobj.ExecProc(OprType.Update, "UpdateAccountsLedgerForCustomer", ref op, "@Ledger_ID", Ledger_ID, "@Invoice_Date", Invoice_Date);
+                dbobj.ExecProc(OprType.Update, "UpdateAccountsLedgerForCustomer", ref op, "@Ledger_ID", Ledger_ID, "@Invoice_Date", GenUtil.str2MMDDYYYY(Invoice_Date));
             }
             else
             {
