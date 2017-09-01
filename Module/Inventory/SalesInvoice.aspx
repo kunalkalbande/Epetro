@@ -665,9 +665,9 @@
 													<TD align="center"><FONT color="darkgreen">Product Type
 															<asp:comparevalidator id="CompareValidator3" runat="server" ControlToValidate="DropType1" ErrorMessage="Please Select Atleast one Product Type"
 																Operator="NotEqual" ValueToCompare="Type"><font color="red">*</font></asp:comparevalidator></FONT></TD>
-													<TD style="WIDTH: 120px" align="center"><FONT color="darkgreen">Name
+													<TD style="WIDTH: 120px" align="center"><FONT color="darkgreen">Name</FONT>
 															<asp:comparevalidator id="CompareValidator4" runat="server" ControlToValidate="DropProd1" ErrorMessage="Please Select atleast One Product Name"
-																Operator="NotEqual" ValueToCompare="Select">*</asp:comparevalidator></FONT></TD>
+																Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator></TD>
 													<TD style="WIDTH: 2px" align="center"><FONT color="darkgreen">Package</FONT></TD>
 													<TD align="center"><FONT color="darkgreen">Qty
 															<asp:requiredfieldvalidator id="RequiredFieldValidator4" runat="server" ControlToValidate="txtQty1" ErrorMessage="Please Fill Quantity"><font color="red">*</font></asp:requiredfieldvalidator></FONT></TD>
