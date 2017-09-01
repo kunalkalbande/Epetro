@@ -317,7 +317,7 @@
 				return;
 			}
 			if(document.all.tempInvoiceInfo.value=="Yes")
-				document.all.submit();
+			    document.forms[0].submit();
 		}
 		</script>
 		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
@@ -692,7 +692,7 @@
 								<TD><asp:label id="lblEntryTime" runat="server"></asp:label></TD>
 								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="50px" Text="Save" ></asp:button>&nbsp;&nbsp;
                                     <asp:Button id="btnPrint" runat="server" Width="50px"  Text="Print" CausesValidation="False"></asp:Button>&nbsp;&nbsp;
-                                    <asp:button id="btnDelete" runat="server" Width="50px" Text="Delete"  onmouseup="checkDelRec()"></asp:button></TD>
+                                    <asp:button id="btnDelete" runat="server" Width="60px" Text="Delete"  onmouseup="checkDelRec()"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:ValidationSummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:ValidationSummary>

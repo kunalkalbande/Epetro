@@ -47,7 +47,7 @@
 							<TR>
 								<TD>Name</TD>
 								<TD colSpan="2">
-									<asp:TextBox id="lblName" runat="server" Width="250px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:TextBox></TD>
+									<asp:TextBox id="lblName" runat="server" Width="180px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:TextBox></TD>
 								<TD></TD>
 							</TR>
 							<TR>
@@ -106,14 +106,14 @@
 							</TR>
 							<TR>
 								<TD>Address</TD>
-								<TD colSpan="3"><asp:textbox id="txtAddress" runat="server" Width="405px" MaxLength="99" BorderStyle="Groove"
+								<TD colSpan="3"><asp:textbox id="txtAddress" runat="server" Width="180px" MaxLength="99" BorderStyle="Groove"
 										TextMode="MultiLine" Font-Names="Arial" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>E - Mail&nbsp;
 									<asp:regularexpressionvalidator id="RegularExpressionValidator2" runat="server" ControlToValidate="txtEMail" ErrorMessage="Please Fill Valid E-mail"
 										ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:regularexpressionvalidator>&nbsp;</TD>
-								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="268px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
+								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="180px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>Credit Limit&nbsp;
