@@ -1036,134 +1036,141 @@ namespace EPetro.Module.Inventory
         /// It calls the save_updateInvoice() function to save or update the Invoice Details and calls the reportmaking4() fucntion to creates the print file and calls the print() code fire the print of passing file.
         /// </summary>
         private void btnSave_Click(object sender, System.EventArgs e)
-		{                        
-            StringBuilder erroMessage = new StringBuilder();
-            if (txtSlipNo.Visible == true && txtSlipNo.Text == string.Empty)
+		{
+            try
             {
-                erroMessage.Append("- Please Enter Slip No.");
-                erroMessage.Append("\n");
+                StringBuilder erroMessage = new StringBuilder();
+                if (txtSlipNo.Visible == true && txtSlipNo.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter Slip No.");
+                    erroMessage.Append("\n");
+                }
+                if (DropUnderSalesMan.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Sales Man");
+                    erroMessage.Append("\n");
+                }
+                if (DropCustName.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select Customer Name");
+                    erroMessage.Append("\n");
+                }
+                if (txtVehicleNo.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Enter Vehicle No");
+                    erroMessage.Append("\n");
+                }
+                if (DropType1.SelectedIndex == 0)
+                {
+                    erroMessage.Append("- Please select atleast one Product Type");
+                    erroMessage.Append("\n");
+                }
+                if (txtQty1.Text == string.Empty)
+                {
+                    erroMessage.Append("- Please Fill Quantity");
+                    erroMessage.Append("\n");
+                }
+                if (erroMessage.Length > 0)
+                {
+                    MessageBox.Show(erroMessage.ToString());
+                    InsertDataInControls();
+                    return;
+                }
+
+                InventoryClass obj = new InventoryClass();
+                SqlDataReader SqlDtr = null;
+                string sql;
+                //***************
+
+
+                if (DropSalesType.SelectedItem.Text.Equals("Credit Card Sale"))
+                {
+                    dbobj.SelectQuery("select * from Organisation", ref SqlDtr);
+                    if (SqlDtr.Read())
+                    {
+                        if (SqlDtr["CreditCard"].ToString().Equals(""))
+                        {
+                            MessageBox.Show("Please Create The Credit Card Sale A/C");
+                            return;
+                        }
+                    }
+                }
+                if (DropSalesType.SelectedItem.Text.Equals("Fleet Card Sale"))
+                {
+                    dbobj.SelectQuery("select * from Organisation", ref SqlDtr);
+                    if (SqlDtr.Read())
+                    {
+                        if (SqlDtr["FleetCard"].ToString().Equals(""))
+                        {
+                            MessageBox.Show("Please Create The Fleet Card Sale A/C");
+                            return;
+                        }
+                    }
+                }
+                //***************
+                if (DropSalesType.SelectedItem.Text.Equals("Slip Wise Credit"))
+                {
+                    double NetAmt = double.Parse(txtNetAmount.Text);
+                    //double CrAmt=double.Parse(lblCreditLimit.Value);
+                    double CrAmt = 0;
+                    sql = "select Curr_Credit from Customer where Cust_Name='" + DropCustName.SelectedItem.Text.Trim() + "'";
+                    SqlDtr = obj.GetRecordSet(sql);
+                    while (SqlDtr.Read())
+                    {
+                        CrAmt = System.Convert.ToDouble(SqlDtr.GetValue(0).ToString());
+                    }
+                    SqlDtr.Close();
+                    if (CrAmt != 0)
+                    {
+                        if (NetAmt > CrAmt)
+                        {
+                            MessageBox.Show("Credit Limit is less than Net Amount");
+                            return;
+                        }
+                    }
+                }
+
+                Button1.Enabled = false;
+                save_updateInvoive();
+                if (flag == 0)
+                {
+                    reportmaking4();
+                    //this code hide by Mahesh, stop the print command. 
+                    //				string home_drive = Environment.SystemDirectory;
+                    //				home_drive = home_drive.Substring(0,2); 
+                    //				print(home_drive+"\\Inetpub\\wwwroot\\EPetro\\Sysitem\\EpetroPrintServices\\ReportView\\SalesInvoiceReport.txt");
+                    Clear();
+                    clear1();
+                    if (lblInvoiceNo.Visible == true)
+                        CreateLogFiles.ErrorLog("Form:SalesInvoice.aspx,Method:btnSave_Click - InvoiceNo : " + lblInvoiceNo.Text);
+                    else
+                        CreateLogFiles.ErrorLog("Form:SalesInvoice.aspx,Method:btnSave_Click - InvoiceNo : " + dropInvoiceNo.SelectedItem.Text);
+                    GetNextInvoiceNo();
+                    GetProducts();
+                    getSlips();
+                    //FetchData();
+                    lblInvoiceNo.Visible = true;
+                    dropInvoiceNo.Visible = false;
+                    btnEdit.Visible = true;
+                    //lblSlipNo.Visible=false;
+                    //txtSlipNo.Visible=false;
+                    Button1.Enabled = true;
+                }
+                else
+                {
+                    flag = 0;
+                    checkPrevileges();
+                    checkPrePrint();
+                    return;
+                }
+                checkPrevileges();
+                checkPrePrint();
             }
-            if (DropUnderSalesMan.SelectedIndex == 0)
+            catch (Exception ex)
             {
-                erroMessage.Append("- Please select Sales Man");
-                erroMessage.Append("\n");
-            }
-            if (DropCustName.SelectedIndex == 0)
-            {
-                erroMessage.Append("- Please select Customer Name");
-                erroMessage.Append("\n");
-            }
-            if (txtVehicleNo.Text == string.Empty)
-            {
-                erroMessage.Append("- Please Enter Vehicle No");
-                erroMessage.Append("\n");
-            }
-            if (DropType1.SelectedIndex == 0)
-            {
-                erroMessage.Append("- Please select atleast one Product Type");
-                erroMessage.Append("\n");
-            }
-            if (txtQty1.Text == string.Empty)
-            {
-                erroMessage.Append("- Please Fill Quantity");
-                erroMessage.Append("\n");
-            }
-            if (erroMessage.Length > 0)
-            {
-                MessageBox.Show(erroMessage.ToString());
-                InsertDataInControls();
-                return;
+                CreateLogFiles.ErrorLog("Form:salesInvoice.aspx,Method:btnSave_Click - InvoiceNo : " + dropInvoiceNo.SelectedItem.Text + " ,Exception : " + ex.Message + " user : " + uid);
             }
 
-            InventoryClass obj=new InventoryClass();            
-            SqlDataReader  SqlDtr=null;
-			string sql;
-            //***************
-            
-
-            if (DropSalesType.SelectedItem.Text.Equals("Credit Card Sale"))
-			{
-				dbobj.SelectQuery("select * from Organisation",ref SqlDtr);
-				if(SqlDtr.Read())
-				{
-					if(SqlDtr["CreditCard"].ToString().Equals(""))
-					{
-						MessageBox.Show("Please Create The Credit Card Sale A/C");
-						return;
-					}
-				}
-			}
-			if(DropSalesType.SelectedItem.Text.Equals("Fleet Card Sale"))
-			{
-				dbobj.SelectQuery("select * from Organisation",ref SqlDtr);
-				if(SqlDtr.Read())
-				{
-					if(SqlDtr["FleetCard"].ToString().Equals(""))
-					{
-						MessageBox.Show("Please Create The Fleet Card Sale A/C");
-						return;
-					}
-				}
-			}
-			//***************
-			if(DropSalesType.SelectedItem.Text.Equals("Slip Wise Credit"))
-			{
-				double NetAmt=double.Parse(txtNetAmount.Text);
-				//double CrAmt=double.Parse(lblCreditLimit.Value);
-				double CrAmt=0;
-				sql= "select Curr_Credit from Customer where Cust_Name='"+DropCustName.SelectedItem.Text.Trim()+"'";  
-				SqlDtr = obj.GetRecordSet(sql);
-				while(SqlDtr.Read ())
-				{
-					CrAmt=System.Convert.ToDouble(SqlDtr.GetValue(0).ToString());
-				}
-				SqlDtr.Close();
-				if(CrAmt != 0)
-				{
-					if(NetAmt > CrAmt)
-					{
-						MessageBox.Show("Credit Limit is less than Net Amount");
-						return;
-					}
-				}
-			}
-			
-			Button1.Enabled = false;     
-			save_updateInvoive(); 
-			if(flag == 0)
-			{
-				reportmaking4();
-				//this code hide by Mahesh, stop the print command. 
-				//				string home_drive = Environment.SystemDirectory;
-				//				home_drive = home_drive.Substring(0,2); 
-				//				print(home_drive+"\\Inetpub\\wwwroot\\EPetro\\Sysitem\\EpetroPrintServices\\ReportView\\SalesInvoiceReport.txt");
-				Clear();
-				clear1();
-				if(lblInvoiceNo.Visible==true)
-					CreateLogFiles.ErrorLog("Form:SalesInvoice.aspx,Method:btnSave_Click - InvoiceNo : " + lblInvoiceNo.Text  );
-				else
-					CreateLogFiles.ErrorLog("Form:SalesInvoice.aspx,Method:btnSave_Click - InvoiceNo : " + dropInvoiceNo.SelectedItem.Text  );
-				GetNextInvoiceNo();
-                GetProducts();                
-				getSlips();
-				//FetchData();
-				lblInvoiceNo.Visible=true;
-				dropInvoiceNo.Visible=false;
-				btnEdit.Visible=true;
-				//lblSlipNo.Visible=false;
-				//txtSlipNo.Visible=false;
-				Button1.Enabled = true;  
-			}
-			else
-			{
-				flag = 0;
-				checkPrevileges();
-				checkPrePrint(); 
-				return;
-			}
-			checkPrevileges();
-			checkPrePrint();
-           
         }
 
 
@@ -1405,7 +1412,7 @@ namespace EPetro.Module.Inventory
 				else 
 				{
 					//obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text));
-					obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(lblInvoiceDate.Text)+" "+DateTime.Now.TimeOfDay.ToString());
+					obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text));
 					//obj.Invoice_Date = DateTime.Now;
 					obj.Sales_Type=DropSalesType.SelectedItem.Value;
 					obj.Under_SalesMan =DropUnderSalesMan.SelectedItem.Value;
@@ -1425,7 +1432,7 @@ namespace EPetro.Module.Inventory
 					obj.Promo_Scheme=txtPromoScheme.Text;
 					obj.Remerk =txtRemark.Text;
 					obj.Entry_By =lblEntryBy.Text ;
-					obj.Entry_Time =DateTime.Parse(lblEntryTime .Text);
+					obj.Entry_Time =DateTime.Parse(lblEntryTime.Text);
 					if(txtCashDisc.Text.Trim() =="")
 						obj.Cash_Discount  ="0.0";
 					else
@@ -4252,8 +4259,10 @@ namespace EPetro.Module.Inventory
 							else
 								OS=CS;
 							CS=OS+double.Parse(rdr1["receipt"].ToString())-double.Parse(rdr1["sales"].ToString());
-							Con.Open();
-							cmd = new SqlCommand("update Stock_Master set opening_stock='"+OS.ToString()+"', Closing_Stock='"+CS.ToString()+"' where ProductID='"+rdr1["Productid"].ToString()+"' and Stock_Date='"+rdr1["stock_date"].ToString()+"'",Con);
+                            DateTime SD =System.Convert.ToDateTime(rdr1["stock_date"].ToString());
+
+                            Con.Open();
+							cmd = new SqlCommand("update Stock_Master set opening_stock='"+OS.ToString()+"', Closing_Stock='"+CS.ToString()+"' where ProductID='"+rdr1["Productid"].ToString()+"' and Stock_Date='"+GenUtil.str2MMDDYYYY(SD.ToString())+"'",Con);
 							cmd.ExecuteNonQuery();
 							cmd.Dispose();
 							Con.Close();
@@ -4297,7 +4306,7 @@ namespace EPetro.Module.Inventory
 						OS=CS;
 					CS=OS+double.Parse(rdr1["receipt"].ToString())-double.Parse(rdr1["sales"].ToString());
 					Con.Open();
-					cmd = new SqlCommand("update Stock_Master set opening_stock='"+OS.ToString()+"', Closing_Stock='"+CS.ToString()+"' where ProductID='"+rdr1["Productid"].ToString()+"' and Stock_Date='"+rdr1["stock_date"].ToString()+"'",Con);
+					cmd = new SqlCommand("update Stock_Master set opening_stock='"+OS.ToString()+"', Closing_Stock='"+CS.ToString()+"' where ProductID='"+rdr1["Productid"].ToString()+"' and Stock_Date='"+GenUtil.str2MMDDYYYY(rdr1["stock_date"].ToString())+"'",Con);
 					cmd.ExecuteNonQuery();
 					cmd.Dispose();
 					Con.Close();
