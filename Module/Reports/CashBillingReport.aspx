@@ -45,10 +45,10 @@
 								></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.Textbox1);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 									border="0"></A>
 							<asp:requiredfieldvalidator id="rfvDateTo" runat="server" ErrorMessage="Please Select To Date From the Calender"
-								ControlToValidate="Textbox1">*</asp:requiredfieldvalidator><asp:checkbox id="chkDel" Text="Delete Record" Runat="server"></asp:checkbox>&nbsp;&nbsp;<asp:button id="btnShow" runat="server" Width="70px" Text="View" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen"></asp:button>&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" Text="Print  " Runat="server" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen"></asp:button>&nbsp;&nbsp;<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen"></asp:button>
+								ControlToValidate="Textbox1">*</asp:requiredfieldvalidator><asp:checkbox id="chkDel" Text="Delete Record" Runat="server"></asp:checkbox>&nbsp;&nbsp;
+                            <asp:button id="btnShow" runat="server" Width="70px" Text="View" ></asp:button>&nbsp;&nbsp;
+                            <asp:button id="BtnPrint" Width="70px" Text="Print  " Runat="server" ></asp:button>&nbsp;&nbsp;
+                            <asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server" ></asp:button>
 						</td>
 					<!--tr>
 					<td valign="top" align="center">&nbsp;</td>

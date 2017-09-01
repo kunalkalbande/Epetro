@@ -69,11 +69,9 @@
 										</asp:dropdownlist></TD>
 								<tr>
 									<td colspan="4" align="center">
-										<asp:button id="cmdrpt" runat="server" Width="70px" Text="View " BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-											ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" Text="Print" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-											ForeColor="White"></asp:button>&nbsp;&nbsp;
-										<asp:button id="btnExcel" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-											Text="Excel" Runat="server"></asp:button></td>
+										<asp:button id="cmdrpt" runat="server" Width="70px" Text="View " ></asp:button>&nbsp;&nbsp;&nbsp;
+                                        <asp:button id="BtnPrint" Width="70px" Text="Print" Runat="server" ></asp:button>&nbsp;&nbsp;
+										<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:button></td>
 								</tr>
 							</TABLE>
 						</TD>

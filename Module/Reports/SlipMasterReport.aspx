@@ -26,10 +26,9 @@
 				<TR>
 					<TH align="center">
 						<font color="#006400">Slip&nbsp;Report</font><HR>
-						<asp:Button id="Button1" runat="server" Text="View  " Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="Btnreport" Runat="server" Text="Print  " Width="70px" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="btnExcel" Runat="server" Text="Excel" Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:Button>
+						<asp:Button id="Button1" runat="server" Text="View  " Width="70px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Btnreport" Runat="server" Text="Print  " Width="70px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnExcel" Runat="server" Text="Excel" Width="70px" ></asp:Button>
 					</TH>
 				</TR>
 				<tr>

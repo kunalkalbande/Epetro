@@ -65,12 +65,9 @@ function window_onload()
 									</asp:dropdownlist></td>
 							</tr>
 						</TABLE>
-						<asp:button id="cmdrpt" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="prnButton" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" Text=" Print "></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnExcel" runat="server" Width="70px" Text="Excel" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button></TD>
+						<asp:button id="cmdrpt" runat="server" Width="70px"  Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="prnButton" runat="server" Width="70px"  Text=" Print "></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="btnExcel" runat="server" Width="70px" Text="Excel" ></asp:button></TD>
 				</TR>
 				<tr>
 					<td align="center"><asp:datagrid id="grdLeg" runat="server" BackColor="DarkSeaGreen" BorderColor="DarkSeaGreen" OnSortCommand="SortCommand_Click"

@@ -25,12 +25,9 @@
 				<TR>
 					<TH height="20">
 						<font color="#006400">Machine Report</font><hr>
-						<asp:Button id="Button1" runat="server" Text="View  " Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;
-						<asp:Button id="Button2" runat="server" Text="Print " Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;
-						<asp:Button id="btnExcel" runat="server" Text="Excel" Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:Button>
+						<asp:Button id="Button1" runat="server" Text="View  " Width="70px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+						<asp:Button id="Button2" runat="server" Text="Print " Width="70px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+						<asp:Button id="btnExcel" runat="server" Text="Excel" Width="70px" ></asp:Button>
 					</TH>
 				</TR>
 				<tr>

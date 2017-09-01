@@ -67,12 +67,9 @@ function window_onload()
 							</tr>
 						</TABLE>
 						<br>
-						<asp:button id="cmdrpt" runat="server" Text="View " Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnPrint" Text="Print  " Runat="server" Width="70px" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnExcel" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							Text="Excel" Runat="server"></asp:button></TD>
+						<asp:button id="cmdrpt" runat="server" Text="View " Width="70px" ></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="btnPrint" Text="Print  " Runat="server" Width="70px" ></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:button></TD>
 				</TR>
 				<tr>
 					<td align="center">

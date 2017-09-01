@@ -988,9 +988,8 @@ Report&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 									</TD>
 								</TR>
 								<TR>
-									<TD align="center"><asp:button id="btnAllocate" runat="server" ForeColor="White" Text="Allocate Privileges" BorderColor="DarkSeaGreen"
-											BackColor="ForestGreen"></asp:button><asp:button id="btnSave" runat="server" Width="80px" ForeColor="White" Text="Save" BorderColor="DarkSeaGreen"
-											BackColor="ForestGreen"></asp:button></TD>
+									<TD align="center"><asp:button id="btnAllocate" runat="server" Text="Allocate Privileges" ></asp:button>
+                                        <asp:button id="btnSave" runat="server" Width="80px"  Text="Save" ></asp:button></TD>
 								</TR>
 							</TABLE>
 						</td>

@@ -44,11 +44,9 @@
 							CssClass="FontStyle"></asp:textbox><A onClick="if(self.gfPop)gfPop.fPopCalendar(document.all.Textbox1);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A>
 						<asp:requiredfieldvalidator id="rfvDateTo" runat="server" ControlToValidate="Textbox1" ErrorMessage="Please Select To Date From the Calender">*</asp:requiredfieldvalidator>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnShow" runat="server" Width="70px" Text="View   " BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" Text="Print  " Runat="server" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;
-						<asp:button id="btnExcel" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							Text="Excel" Runat="server"></asp:button></td>	
+						<asp:button id="btnShow" runat="server" Width="70px" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="BtnPrint" Width="70px" Text="Print" Runat="server"></asp:button>&nbsp;&nbsp;
+						<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:button></td>	
 				<tr>
 					<td align="center">
 						<TABLE>

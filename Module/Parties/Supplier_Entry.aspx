@@ -174,8 +174,7 @@
 							</TR>
 							<TR>
 								<TD colSpan="4" align="right" style="WIDTH: 474px">
-									<asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen" ></asp:button>
+									<asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile"></asp:button>
 								</TD>
 							</TR>
 						</TABLE>

@@ -75,12 +75,9 @@
 										ValueToCompare="---Select---" Operator="NotEqual">*</asp:comparevalidator></TD>
 							</TR>
 							<tr>
-								<td align="center" colSpan="4"><asp:button id="btnShow" runat="server" Width="70px" Text="View" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="BtnPrint" runat="server" Width="70px" Text="Print " BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnExcel" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="DarkSeaGreen" Text="Excel"></asp:button></td>
+								<td align="center" colSpan="4"><asp:button id="btnShow" runat="server" Width="70px" Text="View" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:button id="BtnPrint" runat="server" Width="70px" Text="Print " ></asp:button>&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnExcel" runat="server" Width="70px"  Text="Excel"></asp:button></td>
 							</tr>
 							<TR>
 								<TD align="center" colSpan="6"><asp:datagrid id="GridReport" runat="server" Width="100%" BorderColor="DarkSeaGreen" BackColor="DarkSeaGreen"

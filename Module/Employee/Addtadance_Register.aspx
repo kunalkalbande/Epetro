@@ -120,7 +120,7 @@
 					</td>
 				</tr>
 				<TR>
-					<td align=center><asp:Button ID=Btnsave Text=Submit Runat=server OnClick="attan" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="btnEdit" Text=Edit Runat=server OnClick="View" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button></td>
+					<td align=center><asp:Button ID=Btnsave Text=Submit Runat=server OnClick="attan"  Width=70></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="btnEdit" Text=Edit Runat=server OnClick="View"  Width=70></asp:Button></td>
 				</TR>
 				<tr><td><asp:ValidationSummary ID=vs1 Runat=server ShowMessageBox=True ShowSummary=False></asp:ValidationSummary></td></tr>
 			</table><uc1:Footer id="Footer1" runat="server"></uc1:Footer>

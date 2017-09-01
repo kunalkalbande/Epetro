@@ -1458,7 +1458,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
                 <TD><asp:label id=lblInvoiceNo runat="server" ForeColor="Blue"></asp:label><asp:dropdownlist id=DropInvoiceNo runat="server" Width="117px" CssClass="FontStyle" AutoPostBack="True">
 <asp:ListItem Value="Select">Select</asp:ListItem>
 														</asp:dropdownlist></TD>
-                <td><asp:button id=btnEdit runat="server" Width="25px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" ToolTip="Click For Edit" Text="..." CausesValidation="False"></asp:button></td></TR>
+                <td><asp:button id=btnEdit runat="server" Width="25px"  ToolTip="Click For Edit" Text="..." CausesValidation="False"></asp:button></td></TR>
               <TR>
                 <TD>Invoice Date</TD>
                 <TD><asp:label id=lblInvoiceDate runat="server"></asp:label></TD></TR>
@@ -1689,7 +1689,7 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
           <TD>Entry Date &amp; Time</TD>
           <TD style="WIDTH: 251px">
             <P><asp:label id=lblETime runat="server">lblEntryTime</asp:label></P></TD>
-          <TD align=right colSpan=2><asp:button id=btnSave runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Save"></asp:button>&nbsp;<asp:button id=btnPrint runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:button>&nbsp;<asp:button onmouseup=checkDelRec() id=btnDelete runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Delete"></asp:button></TD></TR></TABLE></TD><asp:validationsummary id=ValidationSummary1 runat="server" Height="12px" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TR><INPUT 
+          <TD align=right colSpan=2><asp:button id=btnSave runat="server" Width="70px"  Text="Save"></asp:button>&nbsp;<asp:button id=btnPrint runat="server" Width="70px"  Text="Print" CausesValidation="False"></asp:button>&nbsp;<asp:button onmouseup=checkDelRec() id=btnDelete runat="server" Width="70px"  Text="Delete"></asp:button></TD></TR></TABLE></TD><asp:validationsummary id=ValidationSummary1 runat="server" Height="12px" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TR><INPUT 
   id=Duptext3 
   style="Z-INDEX: 102; LEFT: -224px; WIDTH: 24px; POSITION: absolute; TOP: -16px; HEIGHT: 22px" 
   type=text size=1 name=Duptext3> </TBODY></TABLE><IFRAME 

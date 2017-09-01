@@ -40,8 +40,7 @@
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist><asp:label id="lblRoleID" ForeColor="Blue" Width="100px" Runat="server"></asp:label>
-									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" CausesValidation="False"
-										ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button></TD>
+									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" CausesValidation="False"></asp:button></TD>
 							</TR>
 							<TR>
 								<TD>Role Name
@@ -58,10 +57,8 @@
 							</TR>
 							<TR>
 								<TD align="right" colSpan="4">
-									<asp:button id="btnUpdate" runat="server" Width="70px" Text="Save" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button>
-									<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" CausesValidation="False"
-										BackColor="ForestGreen" BorderColor="DarkSeaGreen" ForeColor="White"></asp:button></TD>
+									<asp:button id="btnUpdate" runat="server" Width="70px" Text="Save" ></asp:button>
+									<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" CausesValidation="False"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:ValidationSummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:ValidationSummary>

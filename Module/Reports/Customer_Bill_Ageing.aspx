@@ -63,12 +63,11 @@ return true;
 							</TR>
 							<tr>
 								<TD align="center">Interest Rate</TD>
-								<TD><asp:textbox id="InterestText" runat="server" Width="40px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox><asp:checkbox id="c" runat="server" Width="35px" Height="12px"></asp:checkbox><asp:button id="Update1" runat="server" Width="70px" Text="Update" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button></TD>
-								<td align="center" colSpan="2"><asp:button id="btnShow" runat="server" Width="60px" Text="View" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="BtnPrint" Width="60px" Runat="server" Text="Print" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnExcel" Width="60px" Runat="server" Text="Excel" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button></td>
+								<TD><asp:textbox id="InterestText" runat="server" Width="40px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox><asp:checkbox id="c" runat="server" Width="35px" Height="12px"></asp:checkbox>
+                                    <asp:button id="Update1" runat="server" Width="70px" Text="Update" ></asp:button></TD>
+								<td align="center" colSpan="2"><asp:button id="btnShow" runat="server" Width="60px" Text="View" ></asp:button>&nbsp;&nbsp;&nbsp;
+                                    <asp:button id="BtnPrint" Width="60px" Runat="server" Text="Print" ></asp:button>&nbsp;&nbsp;&nbsp;
+                                    <asp:button id="btnExcel" Width="60px" Runat="server" Text="Excel" ></asp:button></td>
 							</tr>
 							<TR>
 								<TD align="center" colSpan="6" height="170"><asp:datagrid id="GridReport" runat="server" Width="100%" BorderStyle="None" BackColor="DarkSeaGreen"

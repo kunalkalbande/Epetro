@@ -330,9 +330,9 @@
                     <input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;">
 			&nbsp;&nbsp;&nbsp;&nbsp;--%>
            <td valign=middle>&nbsp;&nbsp;&nbsp;Remark&nbsp;&nbsp;&nbsp;<input name="txtRemark" type=text size=90 maxlength=100 style="border-style:Groove; FONT-SIZE: 8pt;" value=>
-			<asp:Button ID=Btnsave Text=Submit Runat=server OnClick="save" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>
-			<asp:Button ID="btnEdit" Text=Edit Runat=server OnClick="Update" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>
-			<asp:Button ID="btnDelete" Text=Delete Runat=server OnClick="Del" BackColor=forestgreen BorderColor=darkseagreen ForeColor=white Width=70></asp:Button>
+			<asp:Button ID=Btnsave Text=Submit Runat=server OnClick="save"  Width=70></asp:Button>
+			<asp:Button ID="btnEdit" Text=Edit Runat=server OnClick="Update"  Width=70></asp:Button>
+			<asp:Button ID="btnDelete" Text=Delete Runat=server OnClick="Del"  Width=70></asp:Button>
 			</td></tr>
 			</table></td></tr></table>
 			<uc1:Footer id="Footer1" runat="server"></uc1:Footer>

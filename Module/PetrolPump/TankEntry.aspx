@@ -122,11 +122,10 @@
 								<TD align="center">(Liters)</TD>
 							</TR>
 							<TR>
-								<TD align="right" colSpan="3"><asp:button id="btnSave" runat="server" Width="65px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Add"></asp:button><asp:button id="Button1" runat="server" Width="65px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Edit"></asp:button><asp:button id="btnEdit" runat="server" Width="65px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Edit" CausesValidation="False"></asp:button><asp:button id="btnDelete" runat="server" Width="65px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Delete"></asp:button></TD>
+								<TD align="right" colSpan="3"><asp:button id="btnSave" runat="server" Width="65px" Text="Add"></asp:button>
+                                    <asp:button id="Button1" runat="server" Width="65px"  Text="Edit"></asp:button>
+                                    <asp:button id="btnEdit" runat="server" Width="65px" Text="Edit" CausesValidation="False"></asp:button>
+                                    <asp:button id="btnDelete" runat="server" Width="65px"  Text="Delete"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

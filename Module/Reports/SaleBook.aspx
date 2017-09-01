@@ -50,10 +50,9 @@
 														border="0"></A>
 												<asp:requiredfieldvalidator id="rfvDateTo" runat="server" ErrorMessage="Please Select To Date From the Calender"
 													ControlToValidate="Textbox1">*</asp:requiredfieldvalidator></TD>
-											<TD><asp:button id="btnShow" runat="server" Width="70px" Text="View" BorderColor="DarkSeaGreen"
-													BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" Text="Print " BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-													ForeColor="White" Runat="server"></asp:button>&nbsp;&nbsp;<asp:button id="btnExcel" Width="70px" Text="Excel" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-													ForeColor="White" Runat="server"></asp:button></TD>
+											<TD><asp:button id="btnShow" runat="server" Width="70px" Text="View" ></asp:button>&nbsp;&nbsp;
+                                                <asp:button id="BtnPrint" Width="70px" Text="Print "  Runat="server"></asp:button>&nbsp;&nbsp;
+                                                <asp:button id="btnExcel" Width="70px" Text="Excel"  Runat="server"></asp:button></TD>
 										</TR>
 										<tr>
 											<td>Sales Type</td>

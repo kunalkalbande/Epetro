@@ -45,8 +45,7 @@
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist>
 									<asp:label id="lblUserID" Runat="server" ForeColor="Blue" Width="100px"></asp:label>
-									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" CausesValidation="False"
-										ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button></TD>
+									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" CausesValidation="False"></asp:button></TD>
 							</TR>
 							<TR>
 								<TD class="auto-style1"></TD>
@@ -108,10 +107,8 @@
 							</TR>
 							<TR>
 								<TD align="right" colSpan="4">
-									<asp:button id="btnUpdate" runat="server" Width="90px" Text="Save Profile" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button>
-									<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" CausesValidation="False"
-										ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button></TD>
+									<asp:button id="btnUpdate" runat="server" Width="90px" Text="Save Profile" ></asp:button>
+									<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" CausesValidation="False"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:ValidationSummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:ValidationSummary>

@@ -42,8 +42,7 @@
 										<asp:DropDownList id="DropID" runat="server" Visible="False" AutoPostBack="True" CssClass="FontStyle">
 											<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 										</asp:DropDownList>
-										<asp:Button id="btnEdit" runat="server" Text="..." ToolTip="Click here to edit" ForeColor="White"
-											BackColor="ForestGreen" BorderColor="ForestGreen" CausesValidation="False"></asp:Button></FONT></TD>
+										<asp:Button id="btnEdit" runat="server" Text="..." ToolTip="Click here to edit" CausesValidation="False"></asp:Button></FONT></TD>
 							</TR>
 							<tr>
 								<td colspan="4">&nbsp;</td>
@@ -95,12 +94,9 @@
 							</tr>
 							<TR>
 								<TD align="center" colSpan="4">
-									<asp:button id="btnSave" runat="server" Width="70px" Text="Save" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:Button id="btnUpdate" runat="server" Width="70px" Text="Edit" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:Button id="btnDelete" runat="server" Text="Delete" Width="70px" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:Button></TD>
+									<asp:button id="btnSave" runat="server" Width="70px" Text="Save" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:Button id="btnUpdate" runat="server" Width="70px" Text="Edit"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:Button id="btnDelete" runat="server" Text="Delete" Width="70px" ></asp:Button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" Height="4px" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

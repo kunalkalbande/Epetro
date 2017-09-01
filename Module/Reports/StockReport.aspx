@@ -55,12 +55,9 @@ function window_onload()
 						Valuation &nbsp;&nbsp;&nbsp;<asp:RadioButton Runat="server" ID="RadioYes" GroupName="Yes" Text="Yes"></asp:RadioButton>
 						<asp:RadioButton Runat="server" ID="RadioNo" GroupName="Yes" Text="No"></asp:RadioButton>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<asp:button id="cmdrpt" runat="server" Width="70px" Text="View " BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnPrint" Width="70px" Text="Print  " BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							ForeColor="White" Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnExcel" Width="70px" Text="Excel" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							ForeColor="White" Runat="server"></asp:button></TD>
+						<asp:button id="cmdrpt" runat="server" Width="70px" Text="View " ></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="btnPrint" Width="70px" Text="Print"  Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="btnExcel" Width="70px" Text="Excel"  Runat="server"></asp:button></TD>
 				</TR>
 				<tr>
 					<td align="center"><asp:datagrid id="grdLeg" runat="server" BorderStyle="None" BorderColor="DarkSeaGreen" BackColor="DarkSeaGreen"

@@ -76,10 +76,9 @@
 							</TR>
 							<TR>
 								<TD align="right" colSpan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnSave" runat="server" ForeColor="White" Width="65px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Add"></asp:button><asp:button id="btnEdit" runat="server" ForeColor="White" Width="65px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Edit" CausesValidation="False"></asp:button><asp:button id="btnDelete" runat="server" ForeColor="White" Width="65px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Delete" CausesValidation="False"></asp:button></TD>
+									<asp:button id="btnSave" runat="server" Width="65px" Text="Add"></asp:button>
+                                    <asp:button id="btnEdit" runat="server"  Width="65px"  Text="Edit" CausesValidation="False"></asp:button>
+                                    <asp:button id="btnDelete" runat="server"  Width="65px" Text="Delete" CausesValidation="False"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

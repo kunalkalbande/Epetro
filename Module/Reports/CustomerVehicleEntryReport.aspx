@@ -35,10 +35,9 @@
 				<tr height="20">
 					<td align="center">Customer Name&nbsp;<asp:comparevalidator id="Comparevalidator1" runat="server" ValueToCompare="Select" Operator="NotEqual"	ErrorMessage="Please Select Customer Name" ControlToValidate="DropCustName">*</asp:comparevalidator>&nbsp;&nbsp;
 						<asp:dropdownlist id="DropCustName" Runat="server" Width="200" CssClass="FontStyle"></asp:dropdownlist>&nbsp;&nbsp;&nbsp;
-						<asp:button id="Button1" runat="server" Width="70px" Text="View " BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="Btnprint" Runat="server" Width="70px" Text="Print  " BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnExcel" Runat="server" Width="70px" Text="Excel" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>
+						<asp:button id="Button1" runat="server" Width="70px" Text="View " ></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="Btnprint" Runat="server" Width="70px" Text="Print  " ></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="btnExcel" Runat="server" Width="70px" Text="Excel" ></asp:button>
 					</td>
 				</tr>
 				<%

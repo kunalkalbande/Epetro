@@ -21,9 +21,8 @@
 						<font color="#006400">Density&nbsp;Chart</font>
 						<hr>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<asp:button id="Button1" runat="server" ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							Width="70px" Text="View "></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="Btnprint" ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							Width="70px" Text="Print  " Visible="False" Runat="server"></asp:button>
+						<asp:button id="Button1" runat="server" Width="70px" Text="View "></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:button id="Btnprint" 	Width="70px" Text="Print  " Visible="False" Runat="server"></asp:button>
 					</TH>
 				</TR>
 				<tr>

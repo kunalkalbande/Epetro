@@ -66,8 +66,8 @@
 					<TR vAlign="top" height="10">
 						<TD align="right"></TD>
 						<TD align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-							Bill No:&nbsp;&nbsp;&nbsp;&nbsp;<asp:label id="lblBillNo" runat="server" ForeColor="Blue"></asp:label><asp:dropdownlist id="DropBillNo" Width="238px" Runat="server" AutoPostBack="True"></asp:dropdownlist>&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnEdit" Width="20" ForeColor="White" Runat="server" ToolTip="Edit The Record"
-								BackColor="ForestGreen" BorderColor="DarkSeaGreen" CausesValidation="False" Text="..."></asp:button>
+							Bill No:&nbsp;&nbsp;&nbsp;&nbsp;<asp:label id="lblBillNo" runat="server" ForeColor="Blue"></asp:label><asp:dropdownlist id="DropBillNo" Width="238px" Runat="server" AutoPostBack="True"></asp:dropdownlist>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:button id="btnEdit" Width="20"  Runat="server" ToolTip="Edit The Record" CausesValidation="False" Text="..."></asp:button>
 						</TD>
 						<TD></TD>
 					</TR>
@@ -97,11 +97,10 @@
 							</asp:dropdownlist>&nbsp;
 							<asp:comparevalidator id="CompareValidator7" runat="server" ErrorMessage="Please Select Firm Name" ValueToCompare="Select"
 								ControlToValidate="DropCustID" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<asp:button id="btnView" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-								BorderColor="DarkSeaGreen" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="printBtn" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-								BorderColor="DarkSeaGreen" Text="Save"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnPrint" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-								BorderColor="DarkSeaGreen" Text="Print"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnExcel" Width="70px" ForeColor="White" Runat="server" BackColor="ForestGreen"
-								BorderColor="DarkSeaGreen" Text="Excel"></asp:button>
+							<asp:button id="btnView" runat="server" Width="70px"  Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+                            <asp:button id="printBtn" runat="server" Width="70px"  Text="Save"></asp:button>&nbsp;&nbsp;&nbsp;
+                            <asp:button id="btnPrint" runat="server" Width="70px"  Text="Print"></asp:button>&nbsp;&nbsp;&nbsp;
+                            <asp:button id="btnExcel" Width="70px"  Runat="server"  Text="Excel"></asp:button>
 						</TD>
 						<TD></TD>
 					</TR>

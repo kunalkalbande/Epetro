@@ -27,10 +27,9 @@
 					<TH align="center">
 						<font color="#006400">Tax Report</font>
 						<HR>
-						<asp:button id="btnView" runat="server" Width="70px" Text="View " BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" Text="Print  " Runat="server" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:button>
+						<asp:button id="btnView" runat="server" Width="70px" Text="View " ></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="BtnPrint" Width="70px" Text="Print  " Runat="server" ></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server" ></asp:button>
 					</TH>
 				</TR>
 				<tr>

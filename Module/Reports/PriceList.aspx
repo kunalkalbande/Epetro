@@ -38,10 +38,9 @@
 				</tr>
 				<tr height="20">
 					<td align="center">
-						<asp:Button id="Button1" runat="server" Text="View " Width="70px" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="Btnprint" Runat="server" Text="Print  " Width="70px" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="btnExcel" Runat="server" Text="Excel" Width="70px" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" ForeColor="White"></asp:Button>
+						<asp:Button id="Button1" runat="server" Text="View " Width="70px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Btnprint" Runat="server" Text="Print  " Width="70px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnExcel" Runat="server" Text="Excel" Width="70px" ></asp:Button>
 					</td>
 				</tr>
 				<tr>

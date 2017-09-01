@@ -81,11 +81,9 @@
 										<asp:ListItem Value="2019">2019</asp:ListItem>
 										<asp:ListItem Value="2020">2020</asp:ListItem>
 									</asp:dropdownlist></td>
-									<TD>&nbsp;&nbsp;<asp:button id="btnShow" runat="server" Width="70px" Text="View" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnprint" runat="server" Width="70px" Text="Print" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-									<asp:Button id="btnExcel" Width="70px" ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										Text="Excel" Runat="server"></asp:Button></TD>
+									<TD>&nbsp;&nbsp;<asp:button id="btnShow" runat="server" Width="70px" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+                                        <asp:button id="btnprint" runat="server" Width="70px" Text="Print" ></asp:button>&nbsp;&nbsp;&nbsp;
+									<asp:Button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:Button></TD>
 							</TR>
 						</TABLE>
 						<asp:datagrid id="GridMachineReport" style="TOP: 50px" runat="server" BorderColor="DarkSeaGreen"

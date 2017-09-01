@@ -155,8 +155,7 @@
 										<asp:ListItem Value="Cr.">Cr.</asp:ListItem>
 										<asp:ListItem Value="Dr.">Dr.</asp:ListItem>
 									</asp:dropdownlist></TD>
-								<TD align="right"><asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+								<TD align="right"><asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" Height="12px" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

@@ -75,12 +75,9 @@
 										<asp:ListItem Value="2014">2014</asp:ListItem>
 										<asp:ListItem Value="2015">2015</asp:ListItem>
 									</asp:dropdownlist></td>
-								<td align="center"><asp:button id="btnView" Runat="server" Width="70" ForeColor="White" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" Text="View"></asp:button>&nbsp;&nbsp;
-									<asp:button id="btnPrint" Runat="server" Width="70" ForeColor="White" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" Text="Print"></asp:button>&nbsp;&nbsp;
-									<asp:button id="btnExcel" Runat="server" Width="70" ForeColor="White" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" Text="Excel"></asp:button></td>
+								<td align="center"><asp:button id="btnView" Runat="server" Width="70"  Text="View"></asp:button>&nbsp;&nbsp;
+									<asp:button id="btnPrint" Runat="server" Width="70"  Text="Print"></asp:button>&nbsp;&nbsp;
+									<asp:button id="btnExcel" Runat="server" Width="70"  Text="Excel"></asp:button></td>
 							</tr>
 							<%if(DropMonth.SelectedIndex!=0 && DropYear.SelectedIndex!=0){%>
 							<tr>

@@ -47,8 +47,7 @@
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist><asp:dropdownlist id="DropLedgerName" runat="server" Width="190px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist>&nbsp;<asp:button id="btnEdit1" runat="server" Width="25px" CausesValidation="False" Text="..." ToolTip="Click here for edit"
-										BackColor="ForestGreen" BorderColor="ForestGreen" ForeColor="White"></asp:button></TD>
+									</asp:dropdownlist>&nbsp;<asp:button id="btnEdit1" runat="server" Width="25px" CausesValidation="False" Text="..." ToolTip="Click here for edit"></asp:button></TD>
 							</TR>
 							<TR>
 								<TD>By&nbsp;
@@ -86,14 +85,10 @@
 										accessKey="txtNarArea" name="TEXTAREA1" wrap="hard" cols="17" runat="server"></TEXTAREA></TD>
 							</TR>
 							<TR>
-								<TD align="center" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" BackColor="ForestGreen" BorderColor="ForestGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" BackColor="ForestGreen" BorderColor="ForestGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" BackColor="ForestGreen"
-										BorderColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnPrint" runat="server" Width="70px" CausesValidation="False" Text="Print"
-										BackColor="ForestGreen" BorderColor="ForestGreen" ForeColor="White"></asp:button></TD>
+								<TD align="center" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" ></asp:button>&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" ></asp:button>&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" ></asp:button>&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnPrint" runat="server" Width="70px" CausesValidation="False" Text="Print"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TD>

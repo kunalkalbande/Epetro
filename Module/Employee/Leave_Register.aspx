@@ -50,7 +50,7 @@
           <TD>Reason&nbsp;&nbsp; <asp:requiredfieldvalidator id=RequiredFieldValidator1 runat="server" ControlToValidate="txtReason" ErrorMessage="Please Specify the Reason of Leave"><font color="red">*</font></asp:requiredfieldvalidator></TD>
           <td><asp:textbox id=txtReason runat="server" Width="215px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="49" TextMode="MultiLine" Height="42px"></asp:textbox></TD></TR>
         <TR>
-          <TD align=right colSpan=2><asp:button id=btnApply runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen" BackColor="ForestGreen" Text="Apply"></asp:button></TD></TR></TABLE><asp:validationsummary id=ValidationSummary1 runat="server" Height="16px" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TD></TR></TABLE><iframe 
+          <TD align=right colSpan=2><asp:button id=btnApply runat="server" Width="70px"  Text="Apply"></asp:button></TD></TR></TABLE><asp:validationsummary id=ValidationSummary1 runat="server" Height="16px" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TD></TR></TABLE><iframe 
 id=gToday:contrast:agenda.js 
 style="Z-INDEX: 101; LEFT: -500px; VISIBILITY: visible; POSITION: absolute; TOP: 0px" 
 name=gToday:contrast:agenda.js src="../../HeaderFooter/DTPicker/ipopeng.htm" frameBorder=0 

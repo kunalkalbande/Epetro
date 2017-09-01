@@ -197,7 +197,7 @@
 					</td>
 				</tr>
 				<TR>
-					<TD align="center"><asp:Button ID=Btnsubmit1 Text=submit Runat=server OnClick="update" BackColor=forestgreen BorderColor=forestgreen ForeColor=white Height=25 Width=75></asp:Button></TD>
+					<TD align="center"><asp:Button ID=Btnsubmit1 Text=submit Runat=server OnClick="update"  Height=25 Width=75></asp:Button></TD>
 					
 				</TR>
 			</table><uc1:Footer id="Footer1" runat="server"></uc1:Footer>

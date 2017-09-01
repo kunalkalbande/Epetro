@@ -41,8 +41,7 @@
 								<td colSpan="5" height="20"><asp:dropdownlist id="DropDownList1" runat="server" Width="112px" AutoPostBack="True" Enabled="False"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:button id="btnbrw" runat="server" Width="25px" ForeColor="White" BorderColor="DarkSeaGreen"
-										BackColor="ForestGreen" Text="..."></asp:button></td>
+									</asp:dropdownlist><asp:button id="btnbrw" runat="server" Width="25px"  Text="..."></asp:button></td>
 							</tr>
 							<tr>
 								<td colSpan="8" height="20">&nbsp; Note : Annexure I to be filled by sales Officer 
@@ -1805,10 +1804,10 @@
 											border="0" runat="server"></A></td>
 							</tr>
 							<TR align="center">
-								<TD width="12%" colSpan="8"><input id="btnSave" style="BORDER-LEFT-COLOR: darkseagreen; BORDER-BOTTOM-COLOR: darkseagreen; WIDTH: 70px; COLOR: #ffffff; BORDER-TOP-STYLE: inset; BORDER-TOP-COLOR: darkseagreen; BORDER-RIGHT-STYLE: inset; BORDER-LEFT-STYLE: inset; BACKGROUND-COLOR: forestgreen; BORDER-RIGHT-COLOR: darkseagreen; BORDER-BOTTOM-STYLE: inset"
-										tabIndex="11" type="submit" value="Save" runat="server"> <input id="btnEdit" style="BORDER-LEFT-COLOR: darkseagreen; BORDER-BOTTOM-COLOR: darkseagreen; WIDTH: 70px; COLOR: #ffffff; BORDER-TOP-STYLE: inset; BORDER-TOP-COLOR: darkseagreen; BORDER-RIGHT-STYLE: inset; BORDER-LEFT-STYLE: inset; BACKGROUND-COLOR: forestgreen; BORDER-RIGHT-COLOR: darkseagreen; BORDER-BOTTOM-STYLE: inset"
-										tabIndex="1" type="submit" value="Edit" runat="server"> <input id="btndelete" style="BORDER-LEFT-COLOR: darkseagreen; BORDER-BOTTOM-COLOR: darkseagreen; WIDTH: 70px; COLOR: #ffffff; BORDER-TOP-STYLE: inset; BORDER-TOP-COLOR: darkseagreen; BORDER-RIGHT-STYLE: inset; BORDER-LEFT-STYLE: inset; BACKGROUND-COLOR: forestgreen; BORDER-RIGHT-COLOR: darkseagreen; BORDER-BOTTOM-STYLE: inset"
-										tabIndex="1" type="submit" value="Delete" runat="server"> <input id="btnPrint" type="submit" value="Print" runat="server" style="BORDER-LEFT-COLOR: darkseagreen; BORDER-BOTTOM-COLOR: darkseagreen; WIDTH: 70px; COLOR: #ffffff; BORDER-TOP-STYLE: inset; BORDER-TOP-COLOR: darkseagreen; BORDER-RIGHT-STYLE: inset; BORDER-LEFT-STYLE: inset; BACKGROUND-COLOR: forestgreen; BORDER-RIGHT-COLOR: darkseagreen; BORDER-BOTTOM-STYLE: inset">
+								<TD width="12%" colSpan="8"><input id="btnSave" tabIndex="11" type="submit" value="Save" runat="server"> 
+                                    <input id="btnEdit" tabIndex="1" type="submit" value="Edit" runat="server"> 
+                                    <input id="btndelete" tabIndex="1" type="submit" value="Delete" runat="server">
+                                     <input id="btnPrint" type="submit" value="Print" runat="server" >
 								</TD>
 							</TR>
 							<TR>

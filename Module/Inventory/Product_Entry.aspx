@@ -201,8 +201,7 @@
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist><asp:label id="lb" runat="server" ForeColor="Red">Except Fuel products</asp:label>
-									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" Height="20px"
-										ForeColor="White" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+									<asp:button id="btnEdit" runat="server" Width="25px" Text="..." ToolTip="Click For Edit" Height="20px"></asp:button></TD>
 							</TR>
 							<TR>
 								<TD>Product Name <asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtProdName" ErrorMessage="Please Enter Product Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
@@ -286,9 +285,8 @@
 							</tr>
 							<TR>
 								<TD height="20" colSpan="4" align="right">
-									<asp:button id="btnSave" runat="server" Width="80px" Text="Save" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen"></asp:button>&nbsp;&nbsp;<asp:button id="btnDelete" runat="server" Width="80px" Text="Delete" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Onmouseup="checkDelRec()"></asp:button></TD>
+									<asp:button id="btnSave" runat="server" Width="80px" Text="Save"></asp:button>&nbsp;&nbsp;
+                                    <asp:button id="btnDelete" runat="server" Width="80px" Text="Delete" Onmouseup="checkDelRec()"></asp:button></TD>
 							</TR>
 						</TABLE>
 					</TD>

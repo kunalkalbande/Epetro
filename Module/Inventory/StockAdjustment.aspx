@@ -500,10 +500,8 @@ var InPackTotal = 0;
 								<TD align="center" colSpan="2">&nbsp;</TD>
 							</TR>
 							<TR>
-								<TD align="center" colSpan="2"><asp:button id="btnPrint" runat="server" Width="70px" Text="Save" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:Button id="Button1" runat="server" ForeColor="White" Width="70px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:Button></TD>
+								<TD align="center" colSpan="2"><asp:button id="btnPrint" runat="server" Width="70px" Text="Save" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:Button id="Button1" runat="server"  Width="70px"  Text="Print" CausesValidation="False"></asp:Button></TD>
 							</TR>
 						</table>
 					</td>

@@ -650,9 +650,8 @@ var TempQty = new Array(document.all.tmpQty1,document.all.tmpQty2,document.all.t
 								<TD>Entry Date &amp; Time</TD>
 								<TD><asp:label id="lblEntryTime" runat="server"></asp:label></TD>
 								<TD></TD>
-								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen" Text="Save"></asp:button>&nbsp;<asp:Button id="btnPrint" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-										Text="Print" BorderColor="ForestGreen" CausesValidation="False"></asp:Button></TD>
+								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px"  Text="Save"></asp:button>&nbsp;
+                                    <asp:Button id="btnPrint" runat="server" Width="70px" 	Text="Print"  CausesValidation="False"></asp:Button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></td>

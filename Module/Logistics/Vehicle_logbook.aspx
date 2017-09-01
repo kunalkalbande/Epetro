@@ -80,8 +80,7 @@
 								<TD><asp:label id="lblVDLBID" runat="server" ForeColor="Blue" Width="56px"></asp:label><asp:dropdownlist id="DropVDLBID" runat="server" Width="80px" CssClass="FontStyle" Visible="False"
 										AutoPostBack="True">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:button id="btnEdit1" runat="server" ForeColor="White" Width="24px" Text="..." ToolTip="Click here for Edit"
-										CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+									</asp:dropdownlist><asp:button id="btnEdit1" runat="server" Width="24px" Text="..." ToolTip="Click here for Edit" CausesValidation="False"></asp:button></TD>
 								<TD>&nbsp;Vehicle No.
 									<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please select Vehicle No."
 										ControlToValidate="DropVehicleNo" InitialValue="Select"><font color="red">*</font></asp:requiredfieldvalidator>&nbsp;&nbsp;
@@ -177,14 +176,10 @@
 										Width="56px" CssClass="FontStyle" BorderStyle="Groove" MaxLength="10"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD align="center" colSpan="5"><asp:button id="btnSave" runat="server" ForeColor="White" Width="70px" Text="Save" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnEdit" runat="server" ForeColor="White" Width="70px" Text="Edit" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnDelete" runat="server" ForeColor="White" Width="70px" Text="Delete" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="Button1" runat="server" ForeColor="White" Width="70px" Text="Print" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button></TD>
+								<TD align="center" colSpan="5"><asp:button id="btnSave" runat="server"  Width="70px" Text="Save" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnEdit" runat="server"  Width="70px" Text="Edit" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnDelete" runat="server"  Width="70px" Text="Delete" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:button id="Button1" runat="server"  Width="70px" Text="Print" ></asp:button></TD>
 							</TR>
 							<tr>
 								<td colSpan="5"><asp:validationsummary id="vsVehicle_log" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

@@ -56,20 +56,17 @@
 								<TD align="center"><asp:listbox id="ListEmpAvailable" runat="server" Width="180px" Height="160px" CssClass="FontStyle"></asp:listbox></TD>
 								<TD align="center">
 									<P><asp:button id="btnIn" runat="server" Width="50px" ToolTip="Move selected items from available employee list to employee assigned list"
-											Font-Bold="True" Text=">" CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"
-											ForeColor="White"></asp:button></P>
+											Font-Bold="True" Text=">" CausesValidation="False" ></asp:button></P>
 									<P dir="ltr" align="justify"><asp:button id="btnout" runat="server" Width="50px" ToolTip="Move selected items from employee assigned list to available employee list "
-											Font-Bold="True" Text="<" CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen" ForeColor="White"></asp:button></P>
+											Font-Bold="True" Text="<" CausesValidation="False" ></asp:button></P>
 									<P><asp:button id="btn1" runat="server" Width="50px" Height="25px" ToolTip="Move all items from available employee list to employee assigned list"
-											Font-Bold="True" Text=">>" CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"
-											ForeColor="White"></asp:button></P>
+											Font-Bold="True" Text=">>" CausesValidation="False" ></asp:button></P>
 								</TD>
 								<TD align="center"><asp:listbox id="ListEmpAssigned" runat="server" Width="180px" Height="160px" CssClass="FontStyle"></asp:listbox></TD>
 							</TR>
 							<TR>
 								<TD align="center" colSpan="3" style="HEIGHT: 10px">
-									<asp:button id="btnSubmit" runat="server" Width="80px" Text="Submit" BackColor="ForestGreen"
-										BorderColor="ForestGreen" ForeColor="White"></asp:button></TD>
+									<asp:button id="btnSubmit" runat="server" Width="80px" Text="Submit" ></asp:button></TD>
 							</TR>
 							<TR>
 								<TD colSpan="3"><asp:validationsummary id="vsShiftAssignment" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></TD>

@@ -30,11 +30,9 @@
 						<asp:textbox id="txtDateFrom" runat="server"  Width="110px" BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A>
-						<asp:button id="Button1" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" Text=" View "></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							Text=" Print " Runat="server"></asp:button>&nbsp;&nbsp;
-						<asp:button id="btnExcel" Width="70px" Text="Excel" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							ForeColor="White" Runat="server"></asp:button></TH></TR>
+						<asp:button id="Button1" runat="server" Width="70px"  Text=" View "></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="BtnPrint" Width="70px" Text=" Print " Runat="server"></asp:button>&nbsp;&nbsp;
+						<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:button></TH></TR>
 				<tr>
 					<td align="center"><asp:datagrid id="GridTankDipReport" runat="server" BackColor="DarkSeaGreen" BorderColor="DarkSeaGreen"
 							OnSortCommand="SortCommand_Click" AllowSorting="True" CellSpacing="1" HorizontalAlign="Center" AutoGenerateColumns="False"

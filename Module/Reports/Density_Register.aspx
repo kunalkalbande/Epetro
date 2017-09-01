@@ -84,10 +84,8 @@
 					<td colspan="3" align="center"><asp:DropDownList id="DropTank" runat="server" Width="150px" CssClass="FontStyle">
 							<asp:ListItem Value="Select">Select</asp:ListItem>
 						</asp:DropDownList></td>
-					<td colspan="8" align="center"><asp:Button id="btnView" runat="server" Text="View " Width="70px" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:Button>
-						<asp:Button id="Button1" runat="server" Width="70px" Text="Print" ToolTip="Refer to the note at the bottom of this page"
-							BackColor="ForestGreen" BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button></td>
+					<td colspan="8" align="center"><asp:Button id="btnView" runat="server" Text="View " Width="70px" ></asp:Button>
+						<asp:Button id="Button1" runat="server" Width="70px" Text="Print" ToolTip="Refer to the note at the bottom of this page"></asp:Button></td>
 					</TD><td colspan="10"><b>Location:</b>&nbsp;<%=city%></td>
 				</tr>
 				<tr>

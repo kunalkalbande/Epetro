@@ -373,8 +373,7 @@
 													<TD vAlign="top"><asp:dropdownlist CssClass=fontstyle id="dropInvoiceNo" runat="server" Width="100px" onchange="FindTankName();"
 															AutoPostBack="True">
 															<asp:ListItem Value="Select">Select</asp:ListItem>
-														</asp:dropdownlist><asp:label id="lblInvoiceNo" runat="server" Width="107px" ForeColor="Blue"></asp:label><asp:Label ID=tempInvoice Runat=server ForeColor="red" Visible=false Font-Bold=True></asp:Label><asp:button id="btnEdit" runat="server" Width="25px" ForeColor="White" BorderColor="DarkSeaGreen"
-															BackColor="ForestGreen" CausesValidation="False" Text="..." ToolTip="Click For Edit"></asp:button></TD>
+														</asp:dropdownlist><asp:label id="lblInvoiceNo" runat="server" Width="107px" ForeColor="Blue"></asp:label><asp:Label ID=tempInvoice Runat=server ForeColor="red" Visible=false Font-Bold=True></asp:Label><asp:button id="btnEdit" runat="server" Width="25px"  CausesValidation="False" Text="..." ToolTip="Click For Edit"></asp:button></TD>
 												</TR>
 												<TR>
 													<TD>Invoice Date <STRONG>:</STRONG> &nbsp;</TD>
@@ -468,11 +467,10 @@
 								</TBODY>
 							</TABLE>
 					<TR>
-						<td align="right"><asp:button id="btnSave"  runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen" Text="Save"></asp:button>&nbsp;<asp:button id="Button1" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:button>&nbsp;<asp:Button id="btnPrePrint" runat="server" Width="80px" ForeColor="White" Text="PrePrint" CausesValidation="False"
-								BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:Button>&nbsp;<asp:button id="btnDelete" runat="server" Width="80px" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen" Text="Delete" onmouseup="checkDelRec()" CausesValidation=False></asp:button>
+						<td align="right"><asp:button id="btnSave"  runat="server" Width="80px"  Text="Save"></asp:button>&nbsp;
+                            <asp:button id="Button1" runat="server" Width="80px"  Text="Print" CausesValidation="False"></asp:button>&nbsp;
+                            <asp:Button id="btnPrePrint" runat="server" Width="80px"  Text="PrePrint" CausesValidation="False"></asp:Button>&nbsp;
+                            <asp:button id="btnDelete" runat="server" Width="80px"  Text="Delete" onmouseup="checkDelRec()" CausesValidation=False></asp:button>
 						</td>
 					</TR>
 					<asp:validationsummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td></tr></TBODY></table>

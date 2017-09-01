@@ -312,10 +312,9 @@ document.all.item('chkall').checked=false
 											</TD>
 										</TR>
 									</TABLE>
-									<asp:button id="btnAdd" accessKey="a" runat="server" Width="70px" Text="Add" BackColor="ForestGreen"
-										BorderColor="ForestGreen" ForeColor="White"></asp:button><asp:button id="btnEdit" accessKey="e" runat="server" Width="70px" Text="Edit" BackColor="ForestGreen"
-										BorderColor="ForestGreen" ForeColor="White"></asp:button><asp:button id="btnDelete" accessKey="e" runat="server" Width="70px" Text="Delete" BackColor="ForestGreen"
-										BorderColor="ForestGreen" ForeColor="White"></asp:button></TD>
+									<asp:button id="btnAdd" accessKey="a" runat="server" Width="70px" Text="Add"></asp:button>
+                                    <asp:button id="btnEdit" accessKey="e" runat="server" Width="70px" Text="Edit"></asp:button>
+                                    <asp:button id="btnDelete" accessKey="e" runat="server" Width="70px" Text="Delete"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" Height="16px" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></th></tr>

@@ -95,10 +95,8 @@
 					<td colspan="13"><b>Dealer Name:</b> &nbsp;<% =dealer %></td>
 				</tr>
 				<tr>
-					<td colspan="12" align="center"><asp:button id="btnView" runat="server" Width="70px" Text="View " BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<asp:button id="PrintBtn" runat="server" Width="70px" Text="Print" ToolTip="Refer to the note at the bottom of this page"
-							BackColor="ForestGreen" BorderColor="DarkSeaGreen" ForeColor="White"></asp:button></td>
+					<td colspan="12" align="center"><asp:button id="btnView" runat="server" Width="70px" Text="View " ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<asp:button id="PrintBtn" runat="server" Width="70px" Text="Print" ToolTip="Refer to the note at the bottom of this page"></asp:button></td>
 					<td colspan="15"><b>Location:</b>&nbsp;<%  =city %></td>
 				</tr>
 				<tr>

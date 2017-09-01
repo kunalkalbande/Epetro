@@ -39,12 +39,9 @@
 						<TD align="center">
 							<TABLE>
 								<TR>
-									<TD><asp:button id="btnview" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="ForestGreen" Text="View"></asp:button></TD>
-									<TD><asp:button id="btnPrint" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="ForestGreen" Text="Print"></asp:button></TD>
-									<TD><asp:button id="btnExcel" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="ForestGreen" Text="Excel"></asp:button></TD>
+									<TD><asp:button id="btnview" runat="server" Width="70px" Text="View"></asp:button></TD>
+									<TD><asp:button id="btnPrint" runat="server" Width="70px"  Text="Print"></asp:button></TD>
+									<TD><asp:button id="btnExcel" runat="server" Width="70px"  Text="Excel"></asp:button></TD>
 								</TR>
 							</TABLE>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>

@@ -42,12 +42,10 @@
 							BorderStyle="Groove"></asp:textbox><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A></td>
 				<TR>
-					<TD vAlign="top" align="center" colSpan="5"><asp:button id="btnShow" runat="server" Width="70px" Text="View" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="BtnPrint" Width="70px" Text="Print " Runat="server" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-						<asp:button id="btnExcel" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							Text="Excel" Runat="server"></asp:button></TD>
+					<TD vAlign="top" align="center" colSpan="5">
+                        <asp:button id="btnShow" runat="server" Width="70px" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="BtnPrint" Width="70px" Text="Print " Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
+						<asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:button></TD>
 				</TR>
 				<tr height="50">
 				</tr>

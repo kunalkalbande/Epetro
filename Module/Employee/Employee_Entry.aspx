@@ -189,8 +189,7 @@
 										Width="130px" BorderStyle="Groove" MaxLength="8" CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>
-								<TD align="right" colSpan="4"><asp:button id="btnUpdate" runat="server" Width="95px" ForeColor="White" Text="Save Profile"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+								<TD align="right" colSpan="4"><asp:button id="btnUpdate" runat="server" Width="95px" Text="Save Profile"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" Height="4px" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

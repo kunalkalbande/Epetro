@@ -67,11 +67,10 @@
 							<TR>
 								<TD align="center" colSpan="2">
 									<HR width="100%" color="#000099" SIZE="1">
-									<asp:button id="btnSave" runat="server" Width="60px" Text="Add" CausesValidation="true" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button>&nbsp;<asp:button id="btnEdit" runat="server" Width="60px" Text="Edit" CausesValidation="False" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button><asp:button id="Edit1" runat="server" Width="61px" Text="Edit" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;<asp:button id="btnDelete" runat="server" Width="60px" Text="Delete" CausesValidation="False"
-										ForeColor="White" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+									<asp:button id="btnSave" runat="server" Width="60px" Text="Add" CausesValidation="true"></asp:button>&nbsp;
+                                    <asp:button id="btnEdit" runat="server" Width="60px" Text="Edit" CausesValidation="False"></asp:button>
+                                    <asp:button id="Edit1" runat="server" Width="61px" Text="Edit" ></asp:button>&nbsp;
+                                    <asp:button id="btnDelete" runat="server" Width="60px" Text="Delete" CausesValidation="False"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></td>

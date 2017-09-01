@@ -109,7 +109,7 @@
 					</td>
 				</tr>
 				<TR>
-					<td align=center valign=top><asp:Button ID=Btnsave Runat=server Text=Submit OnClick="save1" BackColor=forestgreen BorderColor=forestgreen ForeColor=white Width=70></asp:Button></td>
+					<td align=center valign=top><asp:Button ID=Btnsave Runat=server Text=Submit OnClick="save1"  Width=70></asp:Button></td>
 				</TR>
 				<%}else{MessageBox.Show("Data Not Available");}%>
 			</table><uc1:Footer id="Footer1" runat="server"></uc1:Footer>

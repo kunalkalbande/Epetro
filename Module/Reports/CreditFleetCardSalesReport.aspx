@@ -58,10 +58,9 @@
 													<asp:ListItem Value="Credit Card Sale">Credit Card Sale</asp:ListItem>
 													<asp:ListItem Value="Fleet Card Sale">Fleet Card Sale</asp:ListItem>
 												</asp:dropdownlist></td>
-											<TD colSpan="2"><asp:button id="btnShow" runat="server" Width="70px" Text="View" BorderColor="DarkSeaGreen"
-													BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" Text="Print " BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-													ForeColor="White" Runat="server"></asp:button>&nbsp;&nbsp;<asp:button id="btnExcel" Width="70px" Text="Excel" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-													ForeColor="White" Runat="server"></asp:button></TD>
+											<TD colSpan="2"><asp:button id="btnShow" runat="server" Width="70px" Text="View" ></asp:button>&nbsp;&nbsp;
+                                                <asp:button id="BtnPrint" Width="70px" Text="Print "  Runat="server"></asp:button>&nbsp;&nbsp;
+                                                <asp:button id="btnExcel" Width="70px" Text="Excel"  Runat="server"></asp:button></TD>
 										</tr>
 									</table>
 								</TD>

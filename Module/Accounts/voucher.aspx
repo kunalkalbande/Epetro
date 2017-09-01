@@ -433,8 +433,8 @@ if(document.all.txtAmount1.value != "")
 										<P align="left" valign="top"><asp:dropdownlist id="DropDownID" runat="server" Width="69px" CssClass="FontStyle" AutoPostBack="True">
 												<asp:ListItem Value="Select">Select</asp:ListItem>
 											</asp:dropdownlist><INPUT id="txtVouchID" style="WIDTH: 69px; HEIGHT: 22px" disabled type="text" size="6"
-												name="txtVouchID" runat="server">&nbsp; <asp:button id="btnEdit1" runat="server" ForeColor="White" ToolTip="click here for Edit" CausesValidation="False"
-												Text="..." BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button><INPUT id="txtID" style="WIDTH: 9px; HEIGHT: 22px" type="hidden" size="1" name="txtID"
+												name="txtVouchID" runat="server">&nbsp; <asp:button id="btnEdit1" runat="server"  ToolTip="click here for Edit" CausesValidation="False"
+												Text="..." ></asp:button><INPUT id="txtID" style="WIDTH: 9px; HEIGHT: 22px" type="hidden" size="1" name="txtID"
 												runat="server"></P>
 									</TD>
 									<TD align="center">&nbsp; Voucher Date
@@ -582,12 +582,10 @@ if(document.all.txtAmount1.value != "")
 					<TD align="center" colSpan="7">&nbsp;</TD>
 				</tr>
 				<tr>
-					<TD align="center" colSpan="7"><asp:button id="btnAdd" runat="server" Width="70px" ForeColor="White" Text="Save" BackColor="ForestGreen"
-							BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnEdit" runat="server" Width="70px" ForeColor="White" Text="Edit" BackColor="ForestGreen"
-							BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnDelete" runat="server" Width="70px" ForeColor="White" Text="Delete" BackColor="ForestGreen"
-							BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<asp:button id="Button1" runat="server" Width="70px" ForeColor="White" CausesValidation="False"
-							Text="Print" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+					<TD align="center" colSpan="7"><asp:button id="btnAdd" runat="server" Width="70px"  Text="Save" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:button id="btnEdit" runat="server" Width="70px"  Text="Edit"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:button id="btnDelete" runat="server" Width="70px"  Text="Delete" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<asp:button id="Button1" runat="server" Width="70px"  CausesValidation="False" Text="Print" ></asp:button></TD>
 				</tr>
 			</TABLE>
 			<asp:validationsummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></TD></TR></TBODY></TABLE><IFRAME id="gToday:contrast:agenda.js" style="Z-INDEX: 101; LEFT: -500px; VISIBILITY: visible; POSITION: absolute; TOP: 0px"

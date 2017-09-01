@@ -368,8 +368,7 @@
 											<TD>Invoice No</TD>
 											<TD><asp:label id="lblInvoiceNo" runat="server" Width="63px" ForeColor="Blue" Height="16px"></asp:label><asp:dropdownlist id="DropInvoiceNo" runat="server" Width="114px" AutoPostBack="True" CssClass="FontStyle">
 													<asp:ListItem Value="Select">Select</asp:ListItem>
-												</asp:dropdownlist><asp:button id="BtnEdit" runat="server" Text="..." ForeColor="White" BackColor="ForestGreen"
-													BorderColor="ForestGreen" CausesValidation="False"></asp:button></TD>
+												</asp:dropdownlist><asp:button id="BtnEdit" runat="server" Text="..."  CausesValidation="False"></asp:button></TD>
 										</TR>
 										<TR>
 											<TD>Invoice Date</TD>
@@ -691,10 +690,9 @@
 								<TD>Entry Date &amp; Time&nbsp;&nbsp;&nbsp;
 								</TD>
 								<TD><asp:label id="lblEntryTime" runat="server"></asp:label></TD>
-								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;<asp:Button id="btnPrint" runat="server" Width="70px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Print" CausesValidation="False"></asp:Button>&nbsp;&nbsp;<asp:button id="btnDelete" runat="server" Width="70px" Text="Delete" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen" onmouseup="checkDelRec()"></asp:button></TD>
+								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="50px" Text="Save" ></asp:button>&nbsp;&nbsp;
+                                    <asp:Button id="btnPrint" runat="server" Width="50px"  Text="Print" CausesValidation="False"></asp:Button>&nbsp;&nbsp;
+                                    <asp:button id="btnDelete" runat="server" Width="50px" Text="Delete"  onmouseup="checkDelRec()"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:ValidationSummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:ValidationSummary>

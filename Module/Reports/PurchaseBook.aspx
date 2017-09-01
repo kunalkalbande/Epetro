@@ -58,10 +58,9 @@
 							ControlToValidate="Textbox1">
 							<span class="style3">*</span></asp:requiredfieldvalidator></td>
 				<tr>
-					<td vAlign="top" align="center"><asp:button id="btnShow" runat="server" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen"
-							BackColor="ForestGreen" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="BtnPrint" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							Text="Print  " Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;<asp:button id="btnExcel" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-							Text="Excel" Runat="server"></asp:button></td>
+					<td vAlign="top" align="center"><asp:button id="btnShow" runat="server" Width="70px"  Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="BtnPrint" Width="70px" Text="Print  " Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
+                        <asp:button id="btnExcel" Width="70px" Text="Excel" Runat="server"></asp:button></td>
 				</tr>
 				<tr>
 					<td align="center" height="150"><asp:datagrid id="GridReport" runat="server" Width="100%" BorderColor="DarkSeaGreen" BackColor="DarkSeaGreen"

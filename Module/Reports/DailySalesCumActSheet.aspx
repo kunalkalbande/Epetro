@@ -47,11 +47,10 @@
 								<td width="20%"><asp:textbox id="txtDateTo" runat="server" Width="80px"  BorderStyle="Groove"
 										CssClass="FontStyle"></asp:textbox>&nbsp;&nbsp;<A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 											border="0"></A></td>
-								<td align="center" colSpan="2" width="40%"><asp:button id="btnView" Width="65" Text="View" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="btnSave" Width="65" Text="Save" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="btnPrint" Width="65" Text="Print" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="btnExcel" Width="65" Text="Excel" Runat="server" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-										ForeColor="White"></asp:button></td>
+								<td align="center" colSpan="2" width="40%"><asp:button id="btnView" Width="55" Text="View" Runat="server" ></asp:button>&nbsp;&nbsp;
+                                    <asp:button id="btnSave" Width="55" Text="Save" Runat="server" ></asp:button>&nbsp;&nbsp;
+                                    <asp:button id="btnPrint" Width="55" Text="Print" Runat="server" ></asp:button>&nbsp;&nbsp;
+                                    <asp:button id="btnExcel" Width="55" Text="Excel" Runat="server" ></asp:button></td>
 							</tr>
 							<%if(Flag==1)
 							{%>

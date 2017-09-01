@@ -65,12 +65,9 @@
 								</TR>
 								<TR>
 								<tr>
-									<TD align="center" colSpan="11"><asp:button id="cmdrpt" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="DarkSeaGreen" Text="View "></asp:button>&nbsp;&nbsp;&nbsp;
-										<asp:button id="BtnPrint" Width="70px" ForeColor="White" BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-											Text="Print" Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
-										<asp:button id="btnExcel" Width="70px" Text="Excel" BorderColor="DarkSeaGreen" BackColor="ForestGreen"
-											ForeColor="White" Runat="server"></asp:button></TD>
+									<TD align="center" colSpan="11"><asp:button id="cmdrpt" runat="server" Width="70px"  Text="View "></asp:button>&nbsp;&nbsp;&nbsp;
+										<asp:button id="BtnPrint" Width="70px" Text="Print" Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
+										<asp:button id="btnExcel" Width="70px" Text="Excel"  Runat="server"></asp:button></TD>
 								</tr>
 							</TABLE>
 						</TD>

@@ -65,8 +65,7 @@
 										InitialValue="Select"></asp:RequiredFieldValidator></TD>
 								<TD><asp:label id="lblMachineID" runat="server" ForeColor="Purple" Width="80px"></asp:label><asp:DropDownList ID="dropMachineID" Runat="server" Width="150px" AutoPostBack="True">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:DropDownList><asp:button id="btnEdit" runat="server" Width="24px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="..." CausesValidation="False" ToolTip="To Edit The particulars Record"></asp:button></TD>
+									</asp:DropDownList><asp:button id="btnEdit" runat="server" Width="24px" Text="..." CausesValidation="False" ToolTip="To Edit The particulars Record"></asp:button></TD>
 								<TD style="WIDTH: 93px"></TD>
 								<TD></TD>
 							</TR>
@@ -97,10 +96,8 @@
 										CssClass="FontStyle" MaxLength="49"></asp:TextBox></TD>
 							</tr>
 							<TR>
-								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnDelete" runat="server" Width="65px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Delete"></asp:button></TD>
+								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save"></asp:button>&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnDelete" runat="server" Width="65px"  Text="Delete"></asp:button></TD>
 								<TD style="WIDTH: 93px" align="right"></TD>
 								<TD align="right"></TD>
 							</TR>

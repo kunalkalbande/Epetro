@@ -53,11 +53,10 @@
 									<td colspan="2">&nbsp;</td>
 								</tr>
 								<TR>
-									<TD align="center" colSpan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="Button1" runat="server" Width="65px" Text="Add " BackColor="ForestGreen" BorderColor="ForestGreen"
-											ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="btnsave" runat="server" Width="65px" Text="Edit " BackColor="ForestGreen" BorderColor="ForestGreen"
-											ForeColor="White"></asp:button><asp:button id="btnEdit" runat="server" Width="65px" Text="Edit  " BackColor="ForestGreen" BorderColor="ForestGreen"
-											ForeColor="White"></asp:button>&nbsp;&nbsp;<asp:button id="btnDel" runat="server" Text="Delete" Width="65px" BackColor="ForestGreen" BorderColor="ForestGreen"
-											ForeColor="White"></asp:button></TD>
+									<TD align="center" colSpan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="Button1" runat="server" Width="65px" Text="Add "></asp:button>&nbsp;&nbsp;
+                                        <asp:button id="btnsave" runat="server" Width="65px" Text="Edit"></asp:button>
+                                        <asp:button id="btnEdit" runat="server" Width="65px" Text="Edit"></asp:button>&nbsp;&nbsp;
+                                        <asp:button id="btnDel" runat="server" Text="Delete" Width="65px"></asp:button></TD>
 								</TR>
 								<tr>
 									<td vAlign="middle" align="center" colSpan="2"></td>

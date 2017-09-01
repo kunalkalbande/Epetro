@@ -182,8 +182,7 @@
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 									</asp:dropdownlist><asp:textbox id="TxtLedger" runat="server" Width="229px" CssClass="FontStyle" BorderStyle="Groove"
-										MaxLength="49"></asp:textbox><asp:button id="btnEdit1" runat="server" Text="..." ToolTip="Click Here For Edit" CausesValidation="False"
-										BorderColor="ForestGreen" BackColor="ForestGreen" ForeColor="White"></asp:button></TD>
+										MaxLength="49"></asp:textbox><asp:button id="btnEdit1" runat="server" Text="..." ToolTip="Click Here For Edit" CausesValidation="False"></asp:button></TD>
 							</TR>
 							<TR>
 								<TD style="WIDTH: 98px; HEIGHT: 15px" align="left">SubGroup Name 
@@ -241,11 +240,9 @@
 								<td colSpan="2" height="5"></td>
 							</tr>
 							<TR>
-								<TD style="HEIGHT: 8px" align="center" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Add" BorderColor="ForestGreen" BackColor="ForestGreen"
-										ForeColor="White" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" BorderColor="ForestGreen" BackColor="ForestGreen"
-										ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-									&nbsp;<asp:button id="btnDelete" runat="server" Width="71px" Text="Delete" CausesValidation="False"
-										BorderColor="ForestGreen" BackColor="ForestGreen" ForeColor="White"></asp:button></TD>
+								<TD style="HEIGHT: 8px" align="center" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Add"  ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:button id="btnEdit" runat="server" Width="70px" Text="Edit" ></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+									&nbsp;<asp:button id="btnDelete" runat="server" Width="71px" Text="Delete" CausesValidation="False"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"

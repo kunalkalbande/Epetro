@@ -138,14 +138,10 @@
 							<TR>
 								<TD align="right" colSpan="2">
 									<HR width="100%" color="#000099" SIZE="1">
-									<asp:button id="btnUpdate" runat="server" Width="60px" Text="Add" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>
-									<asp:button id="btnEdit" runat="server" Width="60px" Text="Edit" CausesValidation="False" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button>
-									<asp:Button id="Edit1" runat="server" Width="57px" Text="Edit" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:Button>
-									<asp:button id="btnDelete" runat="server" Width="60px" Text="Delete" CausesValidation="False"
-										ForeColor="White" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+									<asp:button id="btnUpdate" runat="server" Width="60px" Text="Add" ></asp:button>
+									<asp:button id="btnEdit" runat="server" Width="60px" Text="Edit" CausesValidation="False"></asp:button>
+									<asp:Button id="Edit1" runat="server" Width="57px" Text="Edit" ></asp:Button>
+									<asp:button id="btnDelete" runat="server" Width="60px" Text="Delete" CausesValidation="False"></asp:button></TD>
 							</TR>
 							<TR>
 							</TR>

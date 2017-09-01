@@ -57,12 +57,9 @@ function window_onload()
 												border="0"></A><A onclick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateFrom);return false;"></A></TD>
 								</TR>
 							</TABLE>
-							<asp:button id="cmdrpt" runat="server" Width="71px" Text="View  " BorderColor="ForestGreen"
-								BackColor="ForestGreen" ForeColor="White"></asp:button>&nbsp;&nbsp;&nbsp;
-							<asp:button id="BtnPrint" Width="71px" Text="Print  " BorderColor="ForestGreen" BackColor="ForestGreen"
-								ForeColor="White" Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
-							<asp:button id="btnExcel" Width="71px" Text="Excel" BorderColor="ForestGreen" BackColor="ForestGreen"
-								ForeColor="White" Runat="server"></asp:button></TD>
+							<asp:button id="cmdrpt" runat="server" Width="71px" Text="View" ></asp:button>&nbsp;&nbsp;&nbsp;
+							<asp:button id="BtnPrint" Width="71px" Text="Print"  Runat="server"></asp:button>&nbsp;&nbsp;&nbsp;
+							<asp:button id="btnExcel" Width="71px" Text="Excel"  Runat="server"></asp:button></TD>
 					</TR>
 					<tr>
 						<td align="center"><asp:datagrid id="grdLeg1" runat="server" BorderColor="DarkSeaGreen" BackColor="DarkSeaGreen"

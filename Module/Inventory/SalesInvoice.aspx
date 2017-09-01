@@ -560,8 +560,8 @@
 														AutoPostBack="True" Height="22px">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist><br>
-													<asp:label id="lblInvoiceNo" runat="server" Width="107px" BorderStyle="none" ForeColor="Blue"></asp:label><asp:button id="btnEdit" runat="server" Width="25px" ForeColor="White" ToolTip="Click For Edit"
-														Text="..." CausesValidation="False" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+													<asp:label id="lblInvoiceNo" runat="server" Width="107px" BorderStyle="none" ForeColor="Blue"></asp:label>
+                                                    <asp:button id="btnEdit" runat="server" Width="25px" ToolTip="Click For Edit"	Text="..." CausesValidation="False" ></asp:button></TD>
 											</TR>
 											<TR>
 												<TD>&nbsp; Invoice Date</TD>
@@ -877,10 +877,9 @@
 							<TR>
 								<TD>Entry Date &amp; Time</TD>
 								<TD><asp:label id="lblEntryTime" runat="server"></asp:label></TD>
-								<TD align="right" colSpan="3"><asp:button id="btnSave" runat="server" Width="80px" ForeColor="White" Text="Save" BackColor="ForestGreen"
-										BorderColor="DarkSeaGreen"></asp:button>&nbsp;&nbsp;<asp:button id="Button1" runat="server" Width="80px" ForeColor="White" Text=" Print" CausesValidation="False"
-										BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button>&nbsp;&nbsp;<asp:button onmouseup="checkDelRec();" id="btnDelete" runat="server" Width="80px" ForeColor="White"
-										Text="Delete" CausesValidation="False" BackColor="ForestGreen" BorderColor="DarkSeaGreen"></asp:button></TD>
+								<TD align="right" colSpan="3"><asp:button id="btnSave" runat="server" Width="80px" Text="Save"></asp:button>&nbsp;&nbsp;
+                                    <asp:button id="Button1" runat="server" Width="80px"  Text=" Print" CausesValidation="False"></asp:button>&nbsp;&nbsp;
+                                    <asp:button onmouseup="checkDelRec();" id="btnDelete" runat="server" Width="80px" Text="Delete" CausesValidation="False" ></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

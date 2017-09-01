@@ -41,8 +41,7 @@
 								<TD style="HEIGHT: 24px" align="left" colSpan="3"><asp:label id="lblVehicleID" runat="server" ForeColor="Blue" Height="20px" Width="100px"></asp:label><asp:dropdownlist id="DropVehicleID" runat="server" Width="100px" AutoPostBack="True" Visible="False"
 										CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:button id="btnEdit1" runat="server" ForeColor="White" Width="24px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" CausesValidation="False" ToolTip="Click here for edit" Text="..."></asp:button></TD>
+									</asp:dropdownlist><asp:button id="btnEdit1" runat="server"  Width="24px" CausesValidation="False" ToolTip="Click here for edit" Text="..."></asp:button></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;Vehicle's Type</TD>
@@ -197,12 +196,9 @@
 										Display="Dynamic" Runat="server" Enabled="False" Operator="DataTypeCheck">*</asp:comparevalidator></TD>
 							</TR>
 							<TR>
-								<TD align="center" colSpan="5"><asp:button id="btnSave" runat="server" ForeColor="White" Width="70px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Save"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnEdit" runat="server" ForeColor="White" Width="70px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Edit"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnDelete" runat="server" ForeColor="White" Width="70px" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Delete"></asp:button></TD>
+								<TD align="center" colSpan="5"><asp:button id="btnSave" runat="server"  Width="70px"  Text="Save"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnEdit" runat="server"  Width="70px"  Text="Edit"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<asp:button id="btnDelete" runat="server"  Width="70px"  Text="Delete"></asp:button></TD>
 							</TR>
 							<tr>
 								<td colSpan="5"><asp:validationsummary id="vsVehicle" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

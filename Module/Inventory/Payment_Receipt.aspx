@@ -326,11 +326,10 @@ function chkSelect1(t)
 				</tr>
 				<TR>
 					<TD></TD>
-					<TD align="right"><asp:button id="btnSave" runat="server" Width="70px" ForeColor="White" Text="Save" BackColor="ForestGreen"
-							BorderColor="ForestGreen"></asp:button>&nbsp;<asp:button id="btnEdit" runat="server" Width="70px" ForeColor="White" Text="Edit" BackColor="ForestGreen"
-							BorderColor="ForestGreen" CausesValidation="False"></asp:button>&nbsp;<asp:button id="btnPrint" runat="server" Width="70px" ForeColor="White" Text="Print" BackColor="ForestGreen"
-							BorderColor="ForestGreen" CausesValidation="False"></asp:button>&nbsp;<asp:button id="btnDelete" runat="server" Width="70px" ForeColor="White" Text="Delete" BackColor="ForestGreen"
-							BorderColor="ForestGreen" CausesValidation="False"></asp:button></TD>
+					<TD align="right"><asp:button id="btnSave" runat="server" Width="70px"  Text="Save" ></asp:button>&nbsp;
+                        <asp:button id="btnEdit" runat="server" Width="70px" Text="Edit"  CausesValidation="False"></asp:button>&nbsp;
+                        <asp:button id="btnPrint" runat="server" Width="70px"  Text="Print"  CausesValidation="False"></asp:button>&nbsp;
+                        <asp:button id="btnDelete" runat="server" Width="70px"  Text="Delete" CausesValidation="False"></asp:button></TD>
 					<TD></TD>
 				</TR>
 				<TR>

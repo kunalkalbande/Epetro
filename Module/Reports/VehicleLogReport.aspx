@@ -98,12 +98,9 @@
 <asp:dropdownlist id=Dropvehicleno runat="server" Width="170px" CssClass="FontStyle">
 												<asp:ListItem Value="Select">Select</asp:ListItem>
 											</asp:dropdownlist></asp:panel></td>
-									<td align="right" colSpan="2"><asp:button id="btnView" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="DarkSeaGreen" Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
-										<asp:button id="btnPrint" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="DarkSeaGreen" Text="Print"></asp:button>&nbsp;&nbsp;&nbsp;
-										<asp:button id="btnExcel" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-											BorderColor="DarkSeaGreen" Text="Excel"></asp:button></td>
+									<td align="right" colSpan="2"><asp:button id="btnView" runat="server" Width="70px"  Text="View"></asp:button>&nbsp;&nbsp;&nbsp;
+										<asp:button id="btnPrint" runat="server" Width="70px"  Text="Print"></asp:button>&nbsp;&nbsp;&nbsp;
+										<asp:button id="btnExcel" runat="server" Width="70px"  Text="Excel"></asp:button></td>
 								</tr>
 							</TABLE>
 						</TD>

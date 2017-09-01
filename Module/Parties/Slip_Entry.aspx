@@ -53,8 +53,7 @@ function window_onblur() {
 								<TD>Slip Book&nbsp;ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 								<TD style="WIDTH: 171px"><asp:label id="lblSlipBookID" runat="server" Width="56px" ForeColor="Blue" Height="1px"></asp:label><asp:dropdownlist id="dropslipID" runat="server" Width="105px" AutoPostBack="True" CssClass="FontStyle">
 <asp:ListItem Value="Select">Select</asp:ListItem>
-									</asp:dropdownlist><asp:button id="Button1" runat="server" Width="20px" Text="..." ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button></TD>
+									</asp:dropdownlist><asp:button id="Button1" runat="server" Width="20px" Text="..."></asp:button></TD>
 								<TD colSpan="2"></TD>
 							</TR>
 							<TR>
@@ -90,9 +89,8 @@ function window_onblur() {
 							</tr>
 							<TR>
 								<TD align="right" colSpan="4">
-									<asp:button id="Update" runat="server" Text="Update" CausesValidation="False" Width="70px" ForeColor="White"
-										BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button><asp:button id="btnUpdate" runat="server" Width="70px" Text="Save " ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button></TD>
+									<asp:button id="Update" runat="server" Text="Update" CausesValidation="False" Width="70px"></asp:button>
+                                    <asp:button id="btnUpdate" runat="server" Width="70px" Text="Save "></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False"></asp:validationsummary></td>

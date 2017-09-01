@@ -25,10 +25,9 @@
 				<TR>
 					<TH align="center" style="HEIGHT: 4px">
 						<font color="#006400">Tank&nbsp;Report</font><HR>
-						<asp:Button id="Button1" runat="server" Text="View  " BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White" Width="70px"></asp:Button>&nbsp;&nbsp;&nbsp;<asp:Button ID="Btnreport" Runat="server" Text="Print  " BackColor="ForestGreen" BorderColor="DarkSeaGreen"
-							ForeColor="White" Width="70px"></asp:Button>&nbsp;&nbsp;&nbsp;
-<asp:Button id=btnExcel Width="70px" ForeColor="White" BorderColor="DarkSeaGreen" BackColor="ForestGreen" Text="Excel" Runat="server"></asp:Button>
+						<asp:Button id="Button1" runat="server" Text="View"  Width="70px"></asp:Button>&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Btnreport" Runat="server" Text="Print"  Width="70px"></asp:Button>&nbsp;&nbsp;&nbsp;
+<asp:Button id=btnExcel Width="70px"  Text="Excel" Runat="server"></asp:Button>
 					</TH>
 				</TR>
 				<tr>

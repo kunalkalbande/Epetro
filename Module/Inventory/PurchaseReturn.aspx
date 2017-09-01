@@ -1050,9 +1050,8 @@ function calcTax(txtQty,txtTempQty)
 								<TD style="WIDTH: 150px">Entry Date &amp; Time</TD>
 								<TD style="WIDTH: 184px"><asp:label id="lblEntryTime" runat="server"></asp:label></TD>
 								<TD style="WIDTH: 24px"></TD>
-								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-										Text="Save" BorderColor="ForestGreen"></asp:button>&nbsp;<asp:button id="btnPrint" runat="server" Width="70px" ForeColor="White" BackColor="ForestGreen"
-										CausesValidation="False" Text="Print" BorderColor="ForestGreen"></asp:button></TD>
+								<TD align="right" colSpan="2"><asp:button id="btnSave" runat="server" Width="70px" Text="Save" ></asp:button>&nbsp;
+                                    <asp:button id="btnPrint" runat="server" Width="70px" CausesValidation="False" Text="Print" ></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

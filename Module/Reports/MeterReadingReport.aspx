@@ -30,12 +30,9 @@
 						<asp:textbox id="txtDateTo" runat="server" Width="110px"  BorderStyle="Groove"
 							CssClass="FontStyle"></asp:textbox><A onClick="if(self.gfPop)gfPop.fPopCalendar(document.all.txtDateTo);return false;"><IMG class="PopcalTrigger" alt="" src="../../HeaderFooter/DTPicker/calendar_icon.gif" align="absMiddle"
 								border="0"></A>
-						<asp:Button id="btnView" runat="server" Text="View  " Width="70px" Height="26px" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;
-						<asp:Button ID="BtnPrint" Runat="server" Text="Print " Width="70px" Height="26px" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button>&nbsp;&nbsp;&nbsp;
-						<asp:Button ID="btnExcel" Runat="server" Text="Excel" Width="70px" Height="26px" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button></TH>
+						<asp:Button id="btnView" runat="server" Text="View  " Width="70px" Height="26px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+						<asp:Button ID="BtnPrint" Runat="server" Text="Print " Width="70px" Height="26px" ></asp:Button>&nbsp;&nbsp;&nbsp;
+						<asp:Button ID="btnExcel" Runat="server" Text="Excel" Width="70px" Height="26px" ></asp:Button></TH>
 				</TR>
 				<tr>
 					<td align="center" style="HEIGHT: 210px">
