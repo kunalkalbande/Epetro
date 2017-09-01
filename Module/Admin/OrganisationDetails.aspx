@@ -47,7 +47,7 @@
 								<TD>&nbsp;<asp:label id="Label1" runat="server" Width="64px">Company ID</asp:label></TD>
 								<TD colspan="3"><asp:label id="LblCompanyID" Width="72px" Runat="server" ForeColor="Blue"></asp:label>
                                     <asp:dropdownlist id="Drop" runat="server" Width="104px" Visible="False" AutoPostBack="True" CssClass="FontStyle"><asp:ListItem Value="Select">Select</asp:ListItem></asp:dropdownlist>
-                                    <asp:button id="Button1" runat="server" Text="..." CausesValidation="False" ForeColor="White" BackColor="ForestGreen" BorderColor="ForestGreen"></asp:button></TD>
+                                    <asp:button id="Button1" runat="server" Text="..." CausesValidation="False" ></asp:button></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;Name Of Dealer&nbsp;

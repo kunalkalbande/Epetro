@@ -205,7 +205,7 @@
 							</TR>
 							<TR>
 								<TD>Product Name <asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" ControlToValidate="txtProdName" ErrorMessage="Please Enter Product Name"><font color="red">*</font></asp:requiredfieldvalidator></TD>
-								<TD colspan="3"><asp:textbox id="txtProdName" runat="server" Width="382px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
+								<TD colspan="3"><asp:textbox id="txtProdName" runat="server" Width="160px" BorderStyle="Groove" CssClass="FontStyle"></asp:textbox>
 									<asp:label id="lblProd" runat="server"></asp:label></TD>
 							</TR>
 							<TR>

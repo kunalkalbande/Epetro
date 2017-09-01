@@ -153,8 +153,7 @@
 									</asp:dropdownlist></TD>
 							</TR>
 							<TR>
-								<TD align="right" colSpan="4"><asp:button id="btnUpdate" runat="server" Width="110px" ForeColor="White" BorderColor="ForestGreen"
-										BackColor="ForestGreen" Text="Update Profile"></asp:button></TD>
+								<TD align="right" colSpan="4"><asp:button id="btnUpdate" runat="server" Width="110px"  Text="Update Profile"></asp:button></TD>
 							</TR>
 						</TABLE>
 						<asp:validationsummary id="ValidationSummary1" runat="server" Height="4px" ShowSummary="False" ShowMessageBox="True"></asp:validationsummary></td>

@@ -49,7 +49,7 @@
 							</TR>
 							<TR>
 								<TD>Nozzle&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-								<TD><asp:textbox id="lblNozzleName" runat="server" ForeColor="Purple" BorderStyle="None" Width="164px"
+								<TD><asp:textbox id="lblNozzleName" runat="server" ForeColor="Purple" BorderStyle="Groove" Width="200px"
 										 CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
 							<TR>

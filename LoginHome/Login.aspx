@@ -266,7 +266,8 @@
 				</TR>
 				<TR >
 					<TD colSpan="3" rowSpan="2"></TD>
-					<TD colSpan="10" rowSpan="2" style="color:red;" ><asp:validationsummary id="ValidationSummary1"  runat="server"></asp:validationsummary></TD>
+                    <TD colSpan="3" rowSpan="2"></TD>
+					<TD colSpan="10" rowSpan="2" style="color:red;" >&nbsp;&nbsp;&nbsp;&nbsp; <asp:validationsummary id="ValidationSummary1"  runat="server" Width="165px"></asp:validationsummary></TD>
 					<TD height="16" class="auto-style21"></TD>
 				</TR>
 				<TR>

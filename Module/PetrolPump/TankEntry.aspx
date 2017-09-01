@@ -70,7 +70,7 @@
 								<TD>Tank 
 									Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 								<TD>
-									<asp:TextBox id="lblTankName" runat="server" Width="147px" BorderStyle="None" 
+									<asp:TextBox id="lblTankName" runat="server" Width="147px" BorderStyle="Groove" 
 										CssClass="FontStyle"></asp:TextBox></TD>
 								<TD></TD>
 							</TR>

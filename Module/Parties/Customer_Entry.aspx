@@ -115,14 +115,14 @@
 							</TR>
 							<TR>
 								<TD>Address</TD>
-								<TD colSpan="3"><asp:textbox id="txtAddress" runat="server" Width="392px" BorderStyle="Groove" Height="21px"
+								<TD colSpan="3"><asp:textbox id="txtAddress" runat="server" Width="180px" BorderStyle="Groove" Height="25px"
 										TextMode="MultiLine" Font-Name="Arial" CssClass="FontStyle" MaxLength="99"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>E - Mail
 									<asp:regularexpressionvalidator id="RegularExpressionValidator2" runat="server" ControlToValidate="txtEMail" ErrorMessage="Please Fill Valid E-mail"
 										ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"><font color="red">*</font></asp:regularexpressionvalidator></TD>
-								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="392px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
+								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="180px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>Credit Limit&nbsp;

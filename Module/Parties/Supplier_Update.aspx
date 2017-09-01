@@ -151,8 +151,7 @@
 							</TR>
 							<TR>
 								<TD align="right" colSpan="4">
-									<asp:button id="btnUpdate" runat="server" Width="80px" Text="Update" ForeColor="White" BackColor="ForestGreen"
-										BorderColor="ForestGreen"></asp:button>
+									<asp:button id="btnUpdate" runat="server" Width="80px" Text="Update" ></asp:button>
 								</TD>
 							</TR>
 						</TABLE>

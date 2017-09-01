@@ -135,7 +135,7 @@
 							<TR>
 								<TD>
 									Address</TD>
-								<TD colSpan="3" style="WIDTH: 398px"><asp:textbox id="txtAddress" runat="server" Height="21px" Width="398px" TextMode="MultiLine"
+								<TD colSpan="3" style="WIDTH: 398px"><asp:textbox id="txtAddress" runat="server" Height="25px" Width="180px" TextMode="MultiLine"
 										BorderStyle="Groove" Font-Names="Arial" CssClass="FontStyle" MaxLength="99"></asp:textbox></TD>
 							</TR>
 							<TR>
@@ -143,7 +143,7 @@
 									E - Mail&nbsp;
 									<asp:RegularExpressionValidator id="RegularExpressionValidator1" runat="server" ControlToValidate="txtEMail" ErrorMessage="Please Fill Valid E-mail"
 										ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator></TD>
-								<TD colSpan="2"><asp:textbox id="txtEMail" runat="server" Width="268px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
+								<TD colSpan="2"><asp:textbox id="txtEMail" runat="server" Width="180px" BorderStyle="Groove" CssClass="FontStyle" MaxLength="49"></asp:textbox></TD>
 								<td style="WIDTH: 127px"></td>
 							</TR>
 							<TR>
