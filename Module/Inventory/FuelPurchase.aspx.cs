@@ -1641,7 +1641,7 @@ namespace EPetro.Module.Inventory
 		{
 			InventoryClass obj=new InventoryClass();
 			obj.Invoice_No =DropInvoiceNo.SelectedItem.Value .ToString(); 
-			obj.Invoice_Date =System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
+			obj.Invoice_Date =System.Convert.ToDateTime(lblInvoiceDate.Text);
 			//obj.Invoice_Date =DateTime.Now;
 			obj.Mode_of_Payment=DropModeType.SelectedItem.Text;
 			obj.Vehicle_No=txtVehicleNo.Text.ToString();

@@ -66,9 +66,8 @@ function Check(t)
 					</tr>
 					<tr>
 						<td vAlign="middle" align="center" height="100"><INPUT id="ff1" style="BORDER-TOP-STYLE: groove; BORDER-RIGHT-STYLE: groove; BORDER-LEFT-STYLE: groove; BORDER-BOTTOM-STYLE: groove"
-								type="file" onchange="Check(this);" size="70" name="ff1">&nbsp;&nbsp;<asp:button id="btnRestore" runat="server" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen" Text="Restore"></asp:button>&nbsp;&nbsp;<asp:button id="btnBackup" runat="server" Width="70px" ForeColor="White" BorderColor="DarkSeaGreen"
-								BackColor="ForestGreen" Text="Backup"></asp:button></td>
+								type="file" onchange="Check(this);" size="70" name="ff1">&nbsp;&nbsp;<asp:button id="btnRestore" runat="server" Width="70px"  Text="Restore"></asp:button>&nbsp;&nbsp;
+                            <asp:button id="btnBackup" runat="server" Width="70px" Text="Backup"></asp:button></td>
 					</tr>
 					<tr>
 						<td vAlign="bottom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT size="5"><FONT color="black" size="2"><STRONG><U>Remark&nbsp;:</U></STRONG>&nbsp; 

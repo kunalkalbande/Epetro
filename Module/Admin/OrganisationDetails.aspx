@@ -53,14 +53,14 @@
 								<TD>&nbsp;Name Of Dealer&nbsp;
 									<asp:RequiredFieldValidator id="Requiredfieldvalidator2" runat="server" ErrorMessage="Please Fill the Dealer Name"
 										ControlToValidate="txtDealerName"><font color="red">*</font></asp:RequiredFieldValidator></TD>
-								<TD colSpan="3"><asp:textbox id="txtDealerName" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
+								<TD colSpan="3"><asp:textbox id="txtDealerName" runat="server" Width="220px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD valign="top">&nbsp;Dealership&nbsp;
 									<asp:comparevalidator id="Comparevalidator1" runat="server" ControlToValidate="DropDealerShip" ErrorMessage="Please Select DealerShip Name"
 										ValueToCompare="Select" Operator="NotEqual"><font color="red">*</font></asp:comparevalidator></TD>
-								<TD colSpan="3"><asp:dropdownlist id="DropDealerShip" runat="server" Width="362px" CssClass="FontStyle">
+								<TD colSpan="3"><asp:dropdownlist id="DropDealerShip" runat="server" Width="220px" CssClass="FontStyle">
 										<asp:ListItem Value="Select">Select</asp:ListItem>
 										<asp:ListItem Value="BHARAT PETROLEUM CORP LTD.">BHARAT PETROLEUM CORP LTD.</asp:ListItem>
 										<asp:ListItem Value="ESSAR OIL COMPANY.">ESSAR OIL COMPANY.</asp:ListItem>
@@ -75,17 +75,17 @@
 								<TD>&nbsp;Address&nbsp;
 									<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="Please Fill the Address"
 										ControlToValidate="TxtAddress"><font color="red">*</font></asp:RequiredFieldValidator></TD>
-								<TD colSpan="3"><asp:textbox CausesValidation="true" id="TxtAddress" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
+								<TD colSpan="3"><asp:textbox CausesValidation="true" id="TxtAddress" runat="server" Width="220px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="50"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD></TD>
-								<TD colSpan="3"><asp:textbox id="TxtAddress1" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
+								<TD colSpan="3"><asp:textbox id="TxtAddress1" runat="server" Width="220px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="50"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD></TD>
-								<TD colSpan="3"><asp:textbox id="TxtAddress2" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
+								<TD colSpan="3"><asp:textbox id="TxtAddress2" runat="server" Width="220px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="50"></asp:textbox></TD>
 							</TR>
 							<TR>
@@ -123,12 +123,12 @@
 							<TR>
 								<TD>&nbsp;E - Mail<asp:regularexpressionvalidator id="Regularexpressionvalidator3" runat="server" ErrorMessage="Please Fill Valid E-mail"
 										ControlToValidate="txtEMail" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:regularexpressionvalidator></TD>
-								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="362px" BorderStyle="Groove" CssClass="FontStyle"
+								<TD colSpan="3"><asp:textbox id="txtEMail" runat="server" Width="220px" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="49"></asp:textbox></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;Web Site</TD>
-								<TD colSpan="3"><asp:textbox id="TxtWebsite" runat="server" Width="362" BorderStyle="Groove" CssClass="FontStyle"
+								<TD colSpan="3"><asp:textbox id="TxtWebsite" runat="server" Width="220" BorderStyle="Groove" CssClass="FontStyle"
 										MaxLength="29"></asp:textbox></TD>
 							</TR>
 							<TR>

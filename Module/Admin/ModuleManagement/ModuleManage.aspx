@@ -31,8 +31,7 @@
 				</tr>
 				<tr>
 					<td align="center">
-						<asp:Button id="btnUpdate" runat="server" Text="Update Stock Management" BackColor="ForestGreen"
-							BorderColor="DarkSeaGreen" ForeColor="White"></asp:Button>
+						<asp:Button id="btnUpdate" runat="server" Text="Update Stock Management" ></asp:Button>
 					</td>
 				</tr>
 			</table>
