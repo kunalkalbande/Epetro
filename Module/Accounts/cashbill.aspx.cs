@@ -576,7 +576,7 @@ namespace EPetro.Module.Accounts
                 if (lblInvoiceNo.Visible == true)
                     obj.Invoice_date1 = DateTime.Now.ToString("dd/MM/yyyy");
                 else
-                    obj.Invoice_date1 = GenUtil.str2MMDDYYYY(lblInvoiceDate.Text);
+                    obj.Invoice_date1 = GenUtil.str2DDMMYYYY(lblInvoiceDate.Text);
                 obj.Cust_name1 = txtcustname.Text;
                 obj.Vehicle_no1 = txtVehicleNo.Text;
                 obj.Remark1 = txtRemark.Text;
@@ -2311,8 +2311,9 @@ namespace EPetro.Module.Accounts
                             else
                                 OS = CS;
                             CS = OS + double.Parse(rdr1["receipt"].ToString()) - double.Parse(rdr1["sales"].ToString());
+                            DateTime SD = System.Convert.ToDateTime(rdr1["stock_date"].ToString());
                             Con.Open();
-                            cmd = new SqlCommand("update Stock_Master set opening_stock='" + OS.ToString() + "', Closing_Stock='" + CS.ToString() + "' where ProductID='" + rdr1["Productid"].ToString() + "' and Stock_Date='" + rdr1["stock_date"].ToString() + "'", Con);
+                            cmd = new SqlCommand("update Stock_Master set opening_stock='" + OS.ToString() + "', Closing_Stock='" + CS.ToString() + "' where ProductID='" + rdr1["Productid"].ToString() + "' and Stock_Date='" + GenUtil.str2MMDDYYYY(SD.ToString()) + "'", Con);
                             cmd.ExecuteNonQuery();
                             cmd.Dispose();
                             Con.Close();
@@ -2410,8 +2411,9 @@ namespace EPetro.Module.Accounts
                     else
                         OS = CS;
                     CS = OS + double.Parse(rdr1["receipt"].ToString()) - double.Parse(rdr1["sales"].ToString());
+                    DateTime SD = System.Convert.ToDateTime(rdr1["stock_date"].ToString());
                     Con.Open();
-                    cmd = new SqlCommand("update Stock_Master set opening_stock='" + OS.ToString() + "', Closing_Stock='" + CS.ToString() + "' where ProductID='" + rdr1["Productid"].ToString() + "' and Stock_Date='" + rdr1["stock_date"].ToString() + "'", Con);
+                    cmd = new SqlCommand("update Stock_Master set opening_stock='" + OS.ToString() + "', Closing_Stock='" + CS.ToString() + "' where ProductID='" + rdr1["Productid"].ToString() + "' and Stock_Date='" + GenUtil.str2MMDDYYYY(SD.ToString()) + "'", Con);
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
                     Con.Close();
