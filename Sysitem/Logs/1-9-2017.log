@@ -1,0 +1,28 @@
+01/09/2017 17:19:25 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 17:19:37 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 17:19:37 ==> Form:Daily_Entry ,Method:save Dialy Entry Saved.
+01/09/2017 17:19:41 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 17:19:44 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 17:19:50 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 17:19:50 ==> Form:Daily_Entry ,Method:save Dialy Entry Update
+01/09/2017 17:19:53 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 17:19:54 ==> Form:Daily_Entry ,Method:Page_load,  user : admin
+01/09/2017 10:32:41 ==> Form:SalesInvoice.aspx,Method:pageloadObject reference not set to an instance of an object.  EXCEPTION    
+01/09/2017 10:33:11 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 10:37:23 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 10:37:28 ==> Form:cashbilling.aspx,Method:PageLoad.  user admin
+01/09/2017 10:37:32 ==> Form:cashbilling.aspx,Method:btnEdit.  user admin
+01/09/2017 10:39:08 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 10:39:13 ==> Form:cashbilling.aspx,Method:PageLoad.  user admin
+01/09/2017 10:41:06 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 10:41:10 ==> Form:cashbilling.aspx,Method:PageLoad.  user admin
+01/09/2017 10:42:47 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 10:42:50 ==> Form:cashbilling.aspx,Method:PageLoad.  user admin
+01/09/2017 11:28:03 ==> Form:FuelPerchase.aspx,Method:pageload EXCEPTION Object reference not set to an instance of an object.
+01/09/2017 11:28:29 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 12:09:26 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 12:09:28 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 12:09:39 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 12:14:09 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 12:14:14 ==> Form:Login.aspx,Method: btnSign_Click, Login Type Administrator and  Login User   admin
+01/09/2017 12:14:48 ==> Form:User_Profile.aspx,Method:brnUpdate_Click. New User With ID 1004 Created.  User: admin
