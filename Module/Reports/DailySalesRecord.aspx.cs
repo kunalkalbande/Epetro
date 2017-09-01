@@ -238,7 +238,7 @@ namespace EPetro.Module.Reports
 					tData[i,0]=eDate;
 
 					#region Fetch Tank Dip and Water Dip
-					sql = "select d.Entry_Date,d.Tank_Dip,d.Water_Dip,d.Testing from daily_Tank_Reading d,Tank t where d.Entry_Date='"+ToMMddYYYY(eDate).ToShortDateString()+"' and d.Tank_ID=t.Tank_ID and t.Prod_Name =(Select Prod_Name from Products where Prod_ID ='"+Prod_ID+"')  order by d.Tank_ID ";
+					sql = "select d.Entry_Date,d.Tank_Dip,d.Water_Dip,d.Testing from daily_Tank_Reading d,Tank t where d.Entry_Date='"+ GenUtil.str2MMDDYYYY(eDate)+"' and d.Tank_ID=t.Tank_ID and t.Prod_Name =(Select Prod_Name from Products where Prod_ID ='"+Prod_ID+"')  order by d.Tank_ID ";
 					SqlDtr=obj.GetRecordSet(sql); 
 					int temp=0;
 					while(SqlDtr.Read())
@@ -306,7 +306,7 @@ namespace EPetro.Module.Reports
 					#endregion
 
 					#region Fetch Meter Reading
-					sql="select d.Entry_Date,d.Nozzle_ID,d.Reading from daily_meter_reading d,Nozzle n,Tank t where d.Entry_Date='"+ToMMddYYYY(eDate).ToShortDateString()+"' and d.Nozzle_ID = n.Nozzle_ID and n.Tank_ID = t.Tank_ID and t.Prod_Name =(Select Prod_Name from Products where Prod_ID = '"+Prod_ID+"')  order by cast(d.Nozzle_ID as numeric)";
+					sql="select d.Entry_Date,d.Nozzle_ID,d.Reading from daily_meter_reading d,Nozzle n,Tank t where d.Entry_Date='"+GenUtil.str2MMDDYYYY(eDate) +"' and d.Nozzle_ID = n.Nozzle_ID and n.Tank_ID = t.Tank_ID and t.Prod_Name =(Select Prod_Name from Products where Prod_ID = '"+Prod_ID+"')  order by cast(d.Nozzle_ID as numeric)";
 					SqlDtr=obj.GetRecordSet(sql); 
 					temp=0;
 					while(SqlDtr.Read())
@@ -348,7 +348,7 @@ namespace EPetro.Module.Reports
 								Prod_ID1 = SqlDtr["Prod_ID"].ToString();
 								if(unit.Trim().IndexOf("Loose") != -1)
 								{
-									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ToMMddYYYY(eDate).ToShortDateString()+"' and Productid = '"+Prod_ID1+"'");
+									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ GenUtil.str2MMDDYYYY(eDate) +"' and Productid = '"+Prod_ID1+"'");
 									if(SqlDtr1.Read())
 									{
 										loose = loose + System.Convert.ToDouble(SqlDtr1["sales"].ToString()); 
@@ -363,7 +363,7 @@ namespace EPetro.Module.Reports
 								}
 								else
 								{
-									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ToMMddYYYY(eDate).ToShortDateString()+"' and Productid = '"+Prod_ID1+"'");
+									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ GenUtil.str2MMDDYYYY(eDate) +"' and Productid = '"+Prod_ID1+"'");
 									if(SqlDtr1.Read())
 									{
 										packed = packed + System.Convert.ToDouble(SqlDtr1["sales"].ToString()); 
@@ -407,7 +407,7 @@ namespace EPetro.Module.Reports
 								Prod_ID1 = SqlDtr["Prod_ID"].ToString();
 								if(unit.Trim().IndexOf("Loose") != -1)
 								{
-									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ToMMddYYYY(eDate).ToShortDateString()+"' and Productid = '"+Prod_ID1+"'");
+									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ GenUtil.str2MMDDYYYY(eDate)+"' and Productid = '"+Prod_ID1+"'");
 									if(SqlDtr1.Read())
 									{
 										loose1 = loose1 + System.Convert.ToDouble(SqlDtr1["sales"].ToString()); 
@@ -422,7 +422,7 @@ namespace EPetro.Module.Reports
 								}
 								else
 								{
-									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ToMMddYYYY(eDate).ToShortDateString()+"' and Productid = '"+Prod_ID1+"'");
+									SqlDtr1 = obj1.GetRecordSet("select sales from stock_master where cast(floor(cast(stock_date as float)) as datetime) ='"+ GenUtil.str2MMDDYYYY(eDate) +"' and Productid = '"+Prod_ID1+"'");
 									if(SqlDtr1.Read())
 									{
 										packed1 = packed1 + System.Convert.ToDouble(SqlDtr1["sales"].ToString()); 
