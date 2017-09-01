@@ -77,7 +77,7 @@
 							<asp:ListItem Value="December">December</asp:ListItem>
 						</asp:dropdownlist></td>
 					<td colspan="2"><asp:dropdownlist id="DropYear" runat="server" AutoPostBack="True" CssClass="FontStyle">
-							<asp:ListItem Value="2000" Selected="True">Select</asp:ListItem>
+							<asp:ListItem Value="Select" Selected="True">Select</asp:ListItem>
 							<asp:ListItem Value="2000">2000</asp:ListItem>
 							<asp:ListItem Value="2001">2001</asp:ListItem>
 							<asp:ListItem Value="2002">2002</asp:ListItem>
