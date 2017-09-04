@@ -1669,11 +1669,11 @@ id=tempInvoiceInfo style="WIDTH: 1px" type=hidden name=tempInvoiceInfo runat="se
           <TD style="WIDTH: 251px"><asp:textbox id=txtRemark runat="server" Width="246px" CssClass="FontStyle" BorderStyle="Groove"></asp:textbox></TD>
           <TD 
             >Discount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-          <TD><asp:textbox id=txtDisc onblur=GetNetAmount() runat="server" Width="30px" CssClass="FontStyle" Height="22px" BorderStyle="Groove" MaxLength="2"></asp:textbox><asp:dropdownlist id=DropDiscType runat="server" Width="45px" CssClass="FontStyle" onchange="GetNetAmount()">
+          <TD><asp:textbox id=txtDisc onblur=GetNetAmount() runat="server" Width="123px" CssClass="FontStyle" Height="22px" BorderStyle="Groove" MaxLength="2"></asp:textbox><asp:dropdownlist id=DropDiscType runat="server" Width="45px" CssClass="FontStyle" onchange="GetNetAmount()">
 <asp:ListItem Value="Per">%</asp:ListItem>
 <asp:ListItem Value="Rs" Selected="True">Rs.</asp:ListItem>
 <asp:ListItem Value="KL">KL</asp:ListItem>
-									</asp:dropdownlist><asp:textbox id=TotalDisc runat="server" Width="46px" Height="22px" BorderStyle="None" ></asp:textbox></TD></TR>
+									</asp:dropdownlist><asp:textbox id=TotalDisc runat="server" Width="123px" Height="22px" BorderStyle="Groove" ></asp:textbox></TD></TR>
         <TR>
           <TD>Message</TD>
           <TD style="WIDTH: 251px"><asp:textbox id=txtMessage runat="server" Width="246px" CssClass="FontStyle" BorderStyle="Groove" ></asp:textbox></TD>
