@@ -1273,7 +1273,7 @@ namespace EPetro.Module.Inventory
 						return;
 					}*/
 					
-					obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text)+" "+DateTime.Now.TimeOfDay.ToString()) ; 
+					obj.Invoice_Date = System.Convert.ToDateTime(lblInvoiceDate.Text+" "+DateTime.Now.TimeOfDay.ToString()) ; 
 					//obj.Invoice_Date=DateTime.Now;
 					obj.Sales_Type=DropSalesType.SelectedItem.Value;
 					obj.Under_SalesMan =DropUnderSalesMan.SelectedItem.Value;
@@ -1393,8 +1393,9 @@ namespace EPetro.Module.Inventory
 							//temp = System.Convert.ToString(System.Convert.ToDouble(Qty[j].Text)-System.Convert.ToDouble(Quantity[j].Text)); 
 							temp = Qty[j].Text; 
 						}
-						//Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()),GenUtil.strNumericFormat(CashDisc.ToString()));
-						Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString())+" "+DateTime.Now.TimeOfDay.ToString(),GenUtil.strNumericFormat(CashDisc.ToString()));
+                        DateTime A = System.Convert.ToDateTime(lblInvoiceDate.Text + " " + DateTime.Now.TimeOfDay.ToString());
+                        //Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()),GenUtil.strNumericFormat(CashDisc.ToString()));
+                        Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,A.ToString(),GenUtil.strNumericFormat(CashDisc.ToString()));
 						if(lblInvoiceNo.Visible==false)
 							StockMaster(ProdType[j].SelectedItem.Text,ProdName[j].Value,PackType[j].Value);
 					}
@@ -1530,7 +1531,7 @@ namespace EPetro.Module.Inventory
 							temp = Qty[j].Text; 
 						}
 						//Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()),GenUtil.strNumericFormat(CashDisc.ToString()));
-						Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp,GenUtil.str2DDMMYYYY(lblInvoiceDate.Text.ToString())+" "+DateTime.Now.TimeOfDay.ToString(),GenUtil.strNumericFormat(CashDisc.ToString()));
+						Save(ProdName[j].Value,PackType[j].Value,Qty[j].Text.ToString(),Rate[j].Text.ToString (),Amount[j].Text.ToString (),temp, GenUtil.str2DDMMYYYY(lblInvoiceDate.Text.ToString()) + " "+DateTime.Now.TimeOfDay.ToString(),GenUtil.strNumericFormat(CashDisc.ToString()));
 						if(lblInvoiceNo.Visible==false)
 							StockMaster(ProdType[j].SelectedItem.Text,ProdName[j].Value,PackType[j].Value);
 					}
