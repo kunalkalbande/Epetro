@@ -666,9 +666,9 @@
 								<TD>&nbsp;</TD>
 								<TD></TD>
 								<TD>VAT
-									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" BackColor="#FFE0C0" GroupName="VAT"
+									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" GroupName="VAT"
 										ToolTip="Not Applied"></asp:radiobutton>
-									<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" BackColor="#C0FFC0" GroupName="VAT"
+									<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" GroupName="VAT"
 										ToolTip="Apply" Checked="True"></asp:radiobutton>
 								</TD>
 								<TD>

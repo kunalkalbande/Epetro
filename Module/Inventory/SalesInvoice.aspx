@@ -841,8 +841,8 @@
 										CssClass="FontStyle"></asp:textbox></TD>
 								<TD></TD>
 								<TD>VAT
-									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" ToolTip="Not Applied" BackColor="#FFE0C0"
-										GroupName="VAT" Checked="True"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" ToolTip="Apply" BackColor="#C0FFC0"
+									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" ToolTip="Not Applied" 
+										GroupName="VAT" Checked="True"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" ToolTip="Apply" 
 										GroupName="VAT"></asp:radiobutton></TD>
 								<TD style="HEIGHT: 27px"><asp:textbox id="txtVAT" runat="server" Width="124px" BorderStyle="Groove"  CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
