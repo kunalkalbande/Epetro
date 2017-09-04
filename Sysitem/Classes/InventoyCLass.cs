@@ -3593,7 +3593,15 @@ namespace EPetro.Sysitem.Classes
 			SqlCmd.Parameters .Add("@VAT_Amount",VAT_Amount);
 			SqlCmd.Parameters .Add("@Credit_Limit",Credit_Limit);
 			SqlCmd.Parameters .Add("@ChallanNo",ChallanNo);
-			SqlCmd.Parameters .Add("@ChallanDate",ChallanDate);
+            if(ChallanDate != "")
+            {
+                SqlCmd.Parameters.Add("@ChallanDate", System.Convert.ToDateTime(ChallanDate));
+            }
+            else
+            {
+                SqlCmd.Parameters.Add("@ChallanDate", "");
+            }
+			
 			SqlCmd.ExecuteNonQuery();
 		}
 
@@ -3791,8 +3799,15 @@ namespace EPetro.Sysitem.Classes
 			SqlCmd.Parameters .Add("@Cash_Disc_Type",Cash_Disc_Type );
 			SqlCmd.Parameters .Add("@VAT_Amount",VAT_Amount);
 			SqlCmd.Parameters .Add("@ChallanNo",ChallanNo);
-			SqlCmd.Parameters .Add("@ChallanDate",ChallanDate);
-			SqlCmd.ExecuteNonQuery();
+            if (ChallanDate != "")
+            {
+                SqlCmd.Parameters.Add("@ChallanDate", System.Convert.ToDateTime(ChallanDate));
+            }
+            else
+            {
+                SqlCmd.Parameters.Add("@ChallanDate", "");
+            }
+            SqlCmd.ExecuteNonQuery();
 		}
 		
 		/// <summary>
