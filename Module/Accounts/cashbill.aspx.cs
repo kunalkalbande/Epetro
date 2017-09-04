@@ -574,7 +574,7 @@ namespace EPetro.Module.Accounts
                 prePrintCashMemo();
                 //InventoryClass  obj=new InventoryClass ();
                 if (lblInvoiceNo.Visible == true)
-                    obj.Invoice_date1 = DateTime.Now.ToString("dd/MM/yyyy");
+                    obj.Invoice_date1 = GenUtil.str2DDMMYYYY(lblInvoiceDate.Text);
                 else
                     obj.Invoice_date1 = GenUtil.str2DDMMYYYY(lblInvoiceDate.Text);
                 obj.Cust_name1 = txtcustname.Text;

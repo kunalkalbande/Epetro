@@ -615,7 +615,7 @@
 												<TD style="HEIGHT: 16px">Customer Name
 													<asp:comparevalidator id="CompareValidator1" runat="server" ControlToValidate="DropCustName" ErrorMessage="Please Select Customer Name"
 														Operator="NotEqual" ValueToCompare="Select"><font color="red">*</font></asp:comparevalidator></TD>
-												<TD style="HEIGHT: 16px"><asp:dropdownlist id="DropCustName" runat="server" Width="172px" CssClass="FontStyle" AutoPostBack="True"
+												<TD style="HEIGHT: 16px"><asp:dropdownlist id="DropCustName" runat="server" Width="167px" CssClass="FontStyle" AutoPostBack="True"
 														onChange="getcustomerinfo(this,document.all.lblPlace,document.all.lblDueDate,document.all.lblCurrBalance,document.all.lblCreditLimit,document.all.DropVehicleNo);">
 														<asp:ListItem Value="Select">Select</asp:ListItem>
 													</asp:dropdownlist></TD>
