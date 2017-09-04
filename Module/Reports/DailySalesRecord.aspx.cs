@@ -200,8 +200,8 @@ namespace EPetro.Module.Reports
 				SqlDataReader SqlDtr;
 				string Prod_ID=ID;
 				int month=DropMonth.SelectedIndex;
-				/**02**/
-				int year = DropYear.SelectedIndex;
+                /**02**/
+                int year = DateTime.Now.Year;
 				//**int Days_in_Months=DateTime.DaysInMonth(DateTime.Now.Year,month);
 				int Days_in_Months=DateTime.DaysInMonth(year,month);
 				/**02**/

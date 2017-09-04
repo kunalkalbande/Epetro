@@ -149,7 +149,7 @@
 				{
 				%>
 				<tr>
-					<td width="39" style="WIDTH: 39px">&nbsp;<%=tData[i,0].ToString()%></td>
+					<td width="39" style="WIDTH: 39px">&nbsp;<%=GenUtil.strNumericFormat(tData[i,0].ToString())%></td>
 					<td width="4%">&nbsp;<%=tData[i,1].ToString()%></td>
 					<td width="4%">&nbsp;<%=tData[i,2].ToString()%></td>
 					<td width="4%">&nbsp;<%=tData[i,3].ToString()%></td>
@@ -162,7 +162,7 @@
 					<td width="4%">&nbsp;<%=tData[i,10].ToString()%></td>
 					<td width="4%">&nbsp;<%=tData[i,11].ToString()%></td>
 					<td width="4%">&nbsp;<%=tData[i,12].ToString()%></td>
-					<td width="4%">&nbsp;<%=tData[i,13].ToString()%></td>
+					<td width="4%">&nbsp;<%=GenUtil.strNumericFormat(tData[i,13].ToString())%></td>
 					<td width="4%">&nbsp;<%=tData[i,14].ToString()%></td>
 					<td width="4%">&nbsp;<%=tData[i,15].ToString()%></td>
 					<td width="4%">&nbsp;<%=tData[i,16].ToString()%></td>
