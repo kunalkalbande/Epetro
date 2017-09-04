@@ -1015,8 +1015,8 @@ function calcTax(txtQty,txtTempQty)
 										CssClass="FontStyle" Enabled="False"></asp:textbox></TD>
 								<TD style="WIDTH: 24px"></TD>
 								<TD style="WIDTH: 80px">VAT
-									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" Enabled="False" BackColor="#FFE0C0"
-										GroupName="VAT" ToolTip="Not Applied"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" Enabled="False" BackColor="#C0FFC0"
+									<asp:radiobutton id="No" onclick="return GetNetAmount();" runat="server" Enabled="False" 
+										GroupName="VAT" ToolTip="Not Applied"></asp:radiobutton>&nbsp;<asp:radiobutton id="Yes" onclick="return GetNetAmount();" runat="server" Enabled="False" 
 										GroupName="VAT" ToolTip="Applied" Checked="True"></asp:radiobutton></TD>
 								<TD><asp:textbox id="txtVAT" runat="server" Width="124px" BorderStyle="Groove"  CssClass="FontStyle"></asp:textbox></TD>
 							</TR>
