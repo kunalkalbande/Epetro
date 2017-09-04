@@ -647,7 +647,7 @@ namespace EPetro.Module.Accounts
                         temp = Qty[j].Text;
                     }
 
-                    Save(ProdName[j].Value, ProdName1[j].Value, PackType[j].Value, Qty[j].Text.ToString(), Rate[j].Text.ToString(), Amount[j].Text.ToString(), temp, GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
+                    Save(ProdName[j].Value, ProdName1[j].Value, PackType[j].Value, Qty[j].Text.ToString(), Rate[j].Text.ToString(), Amount[j].Text.ToString(), temp, GenUtil.str2DDMMYYYY(lblInvoiceDate.Text.ToString()));
                     if (lblInvoiceNo.Visible == false)
                         StockMaster(ProdType[j].SelectedItem.Text, ProdName[j].Value, PackType[j].Value);
                 }
@@ -2346,7 +2346,7 @@ namespace EPetro.Module.Accounts
                     if (rdr.Read())
                     {
                         Con.Open();
-                        cmd = new SqlCommand("update Stock_Master set sales=sales-" + double.Parse(ProductQty[i].ToString()) + ", Closing_Stock=Closing_Stock+" + double.Parse(ProductQty[i].ToString()) + " where ProductID='" + rdr["Prod_ID"].ToString() + "' and cast(floor(cast(cast(Stock_Date as datetime) as float)) as datetime)='" + GenUtil.str2MMDDYYYY(lblInvoiceDate.Text) + "'", Con);
+                        cmd = new SqlCommand("update Stock_Master set sales=sales-" + double.Parse(ProductQty[i].ToString()) + ", Closing_Stock=Closing_Stock+" + double.Parse(ProductQty[i].ToString()) + " where ProductID='" + rdr["Prod_ID"].ToString() + "' and cast(floor(cast(cast(Stock_Date as datetime) as float)) as datetime)='" + GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()) + "'", Con);
                         cmd.ExecuteNonQuery();
                         cmd.Dispose();
                         Con.Close();
@@ -2446,12 +2446,12 @@ namespace EPetro.Module.Accounts
             {
                 //DateTime dt =
                 if (DateTime.Compare(System.Convert.ToDateTime(Invoice_Date), System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(lblInvoiceDate.Text))) > 0)
-                    Invoice_Date = GenUtil.str2MMDDYYYY(lblInvoiceDate.Text);
+                    //Invoice_Date = GenUtil.str2MMDDYYYY(lblInvoiceDate.Text);
                 dbobj.ExecProc(OprType.Update, "UpdateAccountsLedgerForCustomer", ref op, "@Ledger_ID", Ledger_ID, "@Invoice_Date", GenUtil.str2MMDDYYYY(Invoice_Date));
             }
             else
             {
-                dbobj.ExecProc(OprType.Update, "UpdateAccountsLedgerForCustomer", ref op, "@Ledger_ID", Ledger_ID, "@Invoice_Date", GenUtil.str2MMDDYYYY(lblInvoiceDate.Text));
+                dbobj.ExecProc(OprType.Update, "UpdateAccountsLedgerForCustomer", ref op, "@Ledger_ID", Ledger_ID, "@Invoice_Date", GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
             }
             /*rdr = obj.GetRecordSet("select top 1 Entry_Date from AccountsLedgerTable where Ledger_ID=(Select top 1 Ledger_ID from Ledger_Master lm, Ledger_Master_Sub_Grp lmsg  where lm.Sub_grp_ID = lmsg.sub_grp_id and lmsg.Sub_grp_Name = 'Cash in hand') and Entry_Date<='"+Invoice_Date+"' order by entry_date desc");
 			if(rdr.Read())
