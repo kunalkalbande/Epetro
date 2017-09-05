@@ -687,8 +687,8 @@ namespace EPetro.Module.Inventory
                     }
                     else
                     {
-                        //obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2MMDDYYYY (lblInvoiceDate.Text.ToString() )) ;
-                        obj.Invoice_Date = DateTime.Now;
+                        obj.Invoice_Date=System.Convert.ToDateTime(GenUtil.str2DDMMYYYY (lblInvoiceDate.Text.ToString() )) ;
+                        //obj.Invoice_Date = DateTime.Now;
                         obj.Mode_of_Payment = DropModeType.SelectedItem.Value;
                         obj.Vendor_Name = DropVendorID.SelectedItem.Value;
                         obj.City = lblPlace.Value.ToString();
