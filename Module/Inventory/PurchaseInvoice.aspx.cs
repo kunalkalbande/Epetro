@@ -751,7 +751,7 @@ namespace EPetro.Module.Inventory
                     {
                         string temp = "";
                         obj.Invoice_No = DropInvoiceNo.SelectedItem.Value;
-                        obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2MMDDYYYY(lblInvoiceDate.Text.ToString()));
+                        obj.Invoice_Date = System.Convert.ToDateTime(GenUtil.str2DDMMYYYY(lblInvoiceDate.Text.ToString()));
                         obj.Mode_of_Payment = DropModeType.SelectedItem.Value;
                         obj.Vendor_Name = DropVendorID.SelectedItem.Value;
                         obj.City = lblPlace.Value.ToString();
