@@ -1031,7 +1031,7 @@ namespace EPetro.Module.Accounts
                             ProdName[i].SelectedIndex = 0;
                             ProdName[i].Enabled = false;
                             PackType[i].Items.Clear();
-                            PackType[i].SelectedIndex = 0;
+                            //PackType[i].SelectedIndex = 0;
                             PackType[i].Enabled = false;
                             Qty[i].Text = "";
                             Qty[i].Enabled = false;
@@ -1056,7 +1056,7 @@ namespace EPetro.Module.Accounts
                             ProdName[i].SelectedIndex = 0;
                             ProdName[i].Enabled = true;
                             PackType[i].Items.Clear();
-                            PackType[i].SelectedIndex = 0;
+                            //PackType[i].SelectedIndex = 0;
                             PackType[i].Enabled = true;
                             Qty[i].Text = "";
                             Qty[i].Enabled = true;
